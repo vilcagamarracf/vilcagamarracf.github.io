@@ -54,65 +54,37 @@
         </div>
       </nav>
     </header>
-    <div id="loginModal" tabindex="-1" role="dialog" aria-lebelledby="loginModalLabel" aria-hidden="true" class="modal fade">
-      <div role="document" class="modal-dialog modal-sm">
-        <div class="modal-content rounded-0">
-          <div class="modal-header">
-            <h5 id="loginModalLabel" class="text-uppercase modal-title m-0">Customers login</h5>
-            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true" class="small text-muted">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <form action="">
-              <div class="form-group">
-                <input type="email" placeholder="email" class="form-control">
-              </div>
-              <div class="form-group">
-                <input type="password" placeholder="password" class="form-control">
-              </div>
-              <div class="form-group text-center">
-                <button type="submit" class="btn btn-outline-primary nav-btn btn-sm"> <i class="fas fa-sign-out-alt mr-2"></i>Login </button>
-              </div>
-            </form>
-            <div class="text-center">   
-              <p class="text-muted small">Not registered yet?</p>
-              <p class="small text-muted"> <a href="#" class="font-weight-bold">Register now!</a> It is easy and done in 1 minute and gives you access to special discounts and much more!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <section style="background: url(img/chincha_canny.png)" class="py-5 bg-cover bg-center">
+    <section style="background: url(img/jumbotron1.jpg)" class="py-5 bg-cover bg-center"> 
       <div class="hero-overlay"></div>
       <div class="container py-7 text-white text-center">
         <h1 class="text-shadow hero-heading">Blog</h1>
+        <p class="text-shadow lead my-4 font-weight-bold">Agricultura, Teledetección, Programación y más</p>
       </div>
     </section>
 
     <section class="py-5 bg-cover bg-gray">
-      <div class="container py-5">
-        <div aria-label="breadcrumb" class="nav">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./">Inicio</a></li>
-            <li aria-current="page" class="breadcrumb-item active">Blog</li>
-          </ol>
-        </div>
-        <h1 class="lined">Acerca del blog</h1>
-        <p class="lead my-4">Tutoriales básicos sobre descarga y manipulación de imágenes (machine learning y computer vision) con aplicación al campo de la Agricultura.</p>
-        <p class="lead my-4">Se usarán los siguientes lenguajes de programación:</p>
+      <div class="container py-1">
+        <h2 class="lined">Acerca del blog</h2>
+        <p align='justify' class="lead">
+          En la presente página estaré compartiendo información referente a lo anterior mencionado: avances tecnológicos 
+          en el campo de la Agricultura de Precisión, su relación con el Aprendizaje Automático (Machine Learning),
+          Computer Vision y el sensoramiento remoto mediante el uso de lenguajes de programación como Python, R y JavaScript (en Google Earth Engine).
+        </p>
+        <!--<p class="lead my-4">Se usarán los siguientes lenguajes de programación:</p>
         <ol>
          <li>Python</li>
          <li>R</li> 
          <li>JavaScript</li> 
-        </ol>
+        </ol>-->
       </div>
     </section>
 
-    
-
     <figure>
-      <img src="img/jumbotron1.jpg" alt="" class="w-100">
-      <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">Caption of the Image</figcaption>
+      <img src="img/chincha_canny.png" alt="" class="w-100">
+      <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+        Aplicación del filtro Canny (Detector de bordes) sobre una imagen EVI de Sentinel-2 en Earth Engine, Valle de Chincha, Ica
+      </figcaption>
     </figure>
 
 
@@ -150,14 +122,15 @@
     <footer style="background: #eee;" class="pt-2">
       <div class="container py-3">
         <div class="row">
+          
           <div class="col-lg-8 col-md-6 mb-2">
             <h5 class="lined lined-dark mb-3">Acerca de la página</h5>
             <p class="text-muted text-small">
               El objetivo de ésta página es ir redactando posts con información de interés personal. Para algún contacto 
               lo puedes hacer mediante los enlaces en la sección contacto.
             </p>
-
           </div>
+
           <div class="col-lg-4 col-md-6 mb-2">
             <h5 class="lined lined-dark mb-3">Contacto</h5>
             <ul>
@@ -166,6 +139,7 @@
               <li><p class="text-muted mb-0 text-small"> Twitter: <a href="https://twitter.com/CesarVilca19">@CesarVilca19</a></p></li>
             </ul>
           </div>
+
         </div>
       </div>
 

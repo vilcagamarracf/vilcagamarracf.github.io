@@ -10,14 +10,14 @@ $(function () {
  function map() {
 
      var mapId = 'map',
-         mapCenter = [53.14, 8.22],
+         mapCenter = [-12.067322, -76.948439],
          mapMarker = true;
 
      if ($('#' + mapId).length > 0) {
 
          var icon = L.icon({
              iconUrl: 'img/marker.svg',
-             iconSize: [50, 50],
+             iconSize: [25, 25],
              popupAnchor: [0, -18],
              tooltipAnchor: [0, 19]
          });
