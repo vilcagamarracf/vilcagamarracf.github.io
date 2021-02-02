@@ -36,18 +36,6 @@
             <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
               <li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Inicio</a></li>
               <li class="nav-item"><a href="blog.html"  class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog</a></li>
-              <!--<li class="nav-item"><a href="posts.html"  class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Posts</a></li>
-              
-              <li class="nav-item dropdown">
-                <a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" 
-                   aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Temas de interés</a>
-                <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0">
-                  <a href="#" class="dropdown-item small text-uppercase">Agricultura de Precisión</a>
-                  <a href="#" class="dropdown-item small text-uppercase">Información de utilidad</a>
-                  <a href="#" class="dropdown-item small text-uppercase">Algo de programación</a>
-                  <a href="#" class="dropdown-item small text-uppercase">Otros</a></div>
-                -->
-              </li>
               <li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a></li>
             </ul>
           </div>
@@ -60,12 +48,19 @@
       <div class="container py-7 text-white text-center">
         <h1 class="text-shadow hero-heading">Bienvenido </h1>
         <p class="text-shadow lead my-4 font-weight-bold">Agricultura, Teledetección, Programación y más</p>
-          <!-- <a href="#" class="btn btn-outline-light btn-sm">Learn More</a>-->
       </div>
     </section>
 
+        
     <section class="py-5">
       <div class="container py-1">
+        <div aria-label="breadcrumb" class="nav">
+          <ol class="breadcrumb">
+            <li aria-current="page" class="breadcrumb-item active">Inicio</li>
+            <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+            <li class="breadcrumb-item"><a href="contact.html">Contacto</a></li>
+          </ol>
+        </div>
         <h2 class="lined mb-4">Acerca de esta página</h2> <!-- <p class="lead">-->
         <p align='justify' class="lead">
           Soy Cesar Vilca, egresado de la carrera de Ingeniería Agrícola de la UNALM, Perú. 
@@ -113,6 +108,7 @@
       </div>
     </section>
    
+   <!-- Portafolio de Imágenes -->
    <!--<section class="py-5 bg-gray">
       <div class="container py-1">
         <h2 class="lined mb-4">Portfolio</h2>
@@ -139,18 +135,22 @@
         </div>
       </div>
     </section>--> 
-  
+
+    <!--Footer-->
     <footer style="background: #eee;" class="pt-2">
       <div class="container py-3">
         <div class="row">
+
+          <!-- Lado izquierdo -->
           <div class="col-lg-8 col-md-6 mb-2">
             <h5 class="lined lined-dark mb-3">Acerca de la página</h5>
             <p class="text-muted text-small">
               El objetivo de ésta página es ir redactando posts con información de interés personal. Para algún contacto 
               lo puedes hacer mediante los enlaces en la sección contacto.
             </p>
-
           </div>
+
+          <!-- Lado derecho -->
           <div class="col-lg-4 col-md-6 mb-2">
             <h5 class="lined lined-dark mb-3">Contacto</h5>
             <ul>
@@ -163,6 +163,7 @@
         </div>
       </div>
 
+      <!-- Footer de template -->
       <div class="bg-dark py-1">    
         <div class="container">
           <div class="row">
@@ -175,8 +176,8 @@
           </div>
         </div>
       </div>
-
     </footer>
+
     <!-- JavaScript files-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
