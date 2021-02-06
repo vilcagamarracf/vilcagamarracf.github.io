@@ -26,6 +26,17 @@
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <style>
+            pre {
+                display: block;
+                background: black;
+                color: white;
+                /* font-size: small; */
+                /* font-family: Consolas; */
+                /* white-space: pre; */
+                /* margin: 1em 0; */
+            } 
+        </style>
     </head>
 
     <body>
@@ -45,68 +56,742 @@
                 </div>
             </nav>
         </header>
-    
+        
         <!-- jumbotron -->
-        <section style="background: url(../img/jumbotron1.jpg)" class="py-5 bg-cover bg-center">
+        <section style="background: url(../img/fondo-slider.jpg)" class="py-5 bg-cover bg-center">
             <div class="hero-overlay"></div>
             <div class="container py-7 text-white text-center">
-                <h2 class="text-shadow">Hablando sobre Agricultura de Precisión </h2>
+                <h2 class="text-shadow">CONDA Essentials - Práctica </h2>
                 <p class="text-shadow lead my-4 font-weight-bold">Por Cesar Vilca</p>
             </div>
         </section>
-
+        
         <!-- Redacción de post -->
-        <div class="container py-5">
-            <h3>Entendiendo el término</h3>
-            <p class="my-4">
-                La visión por computadora se ocupa de la extracción, el análisis y la comprensión automáticos de información útil y significativa 
-                a partir de una sola imagen o una secuencia de imágenes. Implica el desarrollo de una base teórica y algorítmica para lograr 
-                la comprensión visual automática. </p>
-            <img class='rounded mx-auto d-block' src="http://blogs.upn.edu.pe/ingenieria/wp-content/uploads/sites/4/2015/11/upn_blog_ing_visi%C3%B3n-artif_23-nov.png" width="50%"> <!--width="300px" height="300px"-->
+        <div align='justify' class="container py-5">
+            <h3>Práctica de Conda (Python)</h3>
+            <div class="container py-5">
+                <img class='rounded mx-auto d-block' src="https://docs.conda.io/en/latest/_images/conda_logo.svg" alt="">
+            </div>
 
+            <h5>Packages: What are and why are they needed?</h5>
+            <p></p>
+            <p>
+                Conda packages are files containing a bundle of resources: usually libraries and executables, but not always. In principle, Conda packages can include data, images, notebooks, or other assets. The command-line tool <code>conda</code> is used to install, remove and examine packages; other tools such as the GUI Anaconda Navigator also expose the same capabilites. This post focuses on the <code>conda</code> tool itself (you'll see use cases other than package management in a few minutes).
+            </p>
+            <p>
+                Conda packages are most widely used with Python, but that's not all. Nothing about the Conda package format or the <code>conda</code> tool itself assumes any specific programming language. Conda packages can also be used for bundling libraries in other languages (like R, Scala, Julia, etc.) or simply for distributing pure binary executables generated from any programming language.</p>
+            <p>
+                One of the powerful aspects of <code>conda</code> -both the tool and the package format- is that dependencies are taken care of. That is, when you install any Conda package, any other packages needed get installed automatically. Tracking and determining software dependencies is a hard problem that package managers like Conda are designed to solve.</p>
+            <p>
+                A Conda package, then, is a file containing all files needed to make a given program execute correctly on a given system. Moreover, a Conda package can contain binary artifacts specific to a particular platform or operating system. Most packages (and their dependencies) are available for Windows (<code>win-32</code> or <code>win-64</code>), for OSX(<code>osc-64</code>), and for Linux (<code>linux-32</code> or <code>linux-64</code>). A small number of Conda packages are available for more specialized platforms (e.g., Raspberry Pi 2 or POWER8 LE). As a user, you do not need to specify the platform since Conda will simply choose the Conda package appropriate for the platform you are using.</p>
+            <!-- <img class='rounded mx-auto d-block' src="http://blogs.upn.edu.pe/ingenieria/wp-content/uploads/sites/4/2015/11/upn_blog_ing_visi%C3%B3n-artif_23-nov.png" width="50%"> width="300px" height="300px" -->
+            <h5>What version of conda do I have?</h5>
+            <p>
+                The tool <code>conda</code> takes a variety of commands and arguments. Most of the time, you will use <code>conda COMMAND OPTIONS --SWITCH</code>. You will learn the collection of <code>COMMAND</code> s available in the next lessons.
+            </p>
+            <p>
+                1. Ayuda: <code>conda --help</code>
+            </p>
+            <p>Output:</p>
+            <pre class="pre-scrollable">
+                (base) C:\Users\LENOVO>conda --help
+
+                usage: conda-script.py [-h] [-V] command ...
+
+                conda is a tool for managing and deploying applications, environments and packages.
+
+                Options:
+
+                positional arguments:
+                command
+                    clean       Remove unused packages and caches.
+                    compare     Compare packages between conda environments.
+                    config      Modify configuration values in .condarc. This is modeled 
+                                after the git config command. Writes to the user .condarc
+                                file (C:\Users\LENOVO\.condarc) by default.
+                    create      Create a new conda environment from a list of specified
+                                packages.
+                    help        Displays a list of available conda commands and their help
+                                strings.
+                    info        Display information about current conda install.
+                    init        Initialize conda for shell interaction. [Experimental]
+                    install     Installs a list of packages into a specified conda
+                                environment.
+                    list        List linked packages in a conda environment.
+                    package     Low-level conda package utility. (EXPERIMENTAL)
+                    remove      Remove a list of packages from a specified conda environment.
+                    uninstall   Alias for conda remove.
+                    run         Run an executable in a conda environment. [Experimental]
+                    search      Search for packages and display associated information. The
+                                input is a MatchSpec, a query language for conda packages.
+                                See examples below.
+                    update      Updates conda packages to the latest compatible version.
+                    upgrade     Alias for conda update.
+
+                optional arguments:
+                -h, --help     Show this help message and exit.
+                -V, --version  Show the conda version number and exit.
+
+                conda commands available from other packages:
+                build
+                convert
+                debug
+                develop
+                env
+                index
+                inspect
+                metapackage
+                render
+                server
+                skeleton
+                verify
+            </pre>
+            <p>
+                2. Versión de conda: <code>conda --version</code>
+            </p>
             <pre>
+                (base) C:\Users\LENOVO>conda --version
 
+                conda 4.9.2
+            </pre>
+            <p>
+                3. Instalación de paquetes: <code>conda install --help</code>
+            </p>
+            <pre class="pre-scrollable">
+                (base) C:\Users\LENOVO>conda install --help
+                usage: conda-script.py install [-h] [--revision REVISION]
+                                            [-n ENVIRONMENT | -p PATH] [-c CHANNEL]
+                                            [--use-local] [--override-channels]
+                                            [--repodata-fn REPODATA_FNS]
+                                            [--strict-channel-priority]
+                                            [--no-channel-priority]
+                                            [--no-deps | --only-deps] [--no-pin] [--copy]
+                                            [--no-shortcuts] [-C] [-k] [--offline] [-d]
+                                            [--json] [-q] [-v] [-y] [--download-only]
+                                            [--show-channel-urls] [--file FILE]
+                                            [--force-reinstall]
+                                            [--freeze-installed | --update-deps | -S | --update-all | --update-specs]
+                                            [-m] [--clobber] [--dev]
+                                            [package_spec [package_spec ...]]
+                
+                Installs a list of packages into a specified conda environment.
+                
+                    This command accepts a list of package specifications (e.g, bitarray=0.8)
+                    and installs a set of packages consistent with those specifications and
+                    compatible with the underlying environment. If full compatibility cannot
+                    be assured, an error is reported and the environment is not changed.
+                
+                    Conda attempts to install the newest versions of the requested packages. To
+                    accomplish this, it may update some packages that are already installed, or
+                    install additional packages. To prevent existing packages from updating,
+                    use the --freeze-installed option. This may force conda to install older
+                    versions of the requested packages, and it does not prevent additional
+                    dependency packages from being installed.
+                
+                    If you wish to skip dependency checking altogether, use the '--no-deps'
+                    option. This may result in an environment with incompatible packages, so
+                    this option must be used with great caution.
+                
+                    conda can also be called with a list of explicit conda package filenames
+                    (e.g. ./lxml-3.2.0-py27_0.tar.bz2). Using conda in this mode implies the
+                    --no-deps option, and should likewise be used with great caution. Explicit
+                    filenames and package specifications cannot be mixed in a single command.
+                
+                Options:
+                
+                positional arguments:
+                package_spec          Packages to install or update in the conda
+                                        environment.
+                
+                optional arguments:
+                -h, --help            Show this help message and exit.
+                --revision REVISION   Revert to the specified REVISION.
+                --file FILE           Read package versions from the given file. Repeated
+                                        file specifications can be passed (e.g. --file=file1
+                                        --file=file2).
+                --dev                 Use `sys.executable -m conda` in wrapper scripts
+                                        instead of CONDA_EXE. This is mainly for use during
+                                        tests where we test new conda source against old
+                                        Python versions.
+                
+                Target Environment Specification:
+                -n ENVIRONMENT, --name ENVIRONMENT
+                                        Name of environment.
+                -p PATH, --prefix PATH
+                                        Full path to environment location (i.e. prefix).
+                
+                Channel Customization:
+                -c CHANNEL, --channel CHANNEL
+                                        Additional channel to search for packages. These are
+                                        URLs searched in the order they are given (including
+                                        local directories using the 'file://' syntax or simply
+                                        a path like '/home/conda/mychan' or '../mychan').
+                                        Then, the defaults or channels from .condarc are
+                                        searched (unless --override-channels is given). You
+                                        can use 'defaults' to get the default packages for
+                                        conda. You can also use any name and the .condarc
+                                        channel_alias value will be prepended. The default
+                                        channel_alias is http://conda.anaconda.org/.
+                --use-local           Use locally built packages. Identical to '-c local'.
+                --override-channels   Do not search default or .condarc channels. Requires
+                                        --channel.
+                --repodata-fn REPODATA_FNS
+                                        Specify name of repodata on remote server. Conda will
+                                        try whatever you specify, but will ultimately fall
+                                        back to repodata.json if your specs are not
+                                        satisfiable with what you specify here. This is used
+                                        to employ repodata that is reduced in time scope. You
+                                        may pass this flag more than once. Leftmost entries
+                                        are tried first, and the fallback to repodata.json is
+                                        added for you automatically.
+                
+                Solver Mode Modifiers:
+                --strict-channel-priority
+                                        Packages in lower priority channels are not considered
+                                        if a package with the same name appears in a higher
+                                        priority channel.
+                --no-channel-priority
+                                        Package version takes precedence over channel
+                                        priority. Overrides the value given by `conda config
+                                        --show channel_priority`.
+                --no-deps             Do not install, update, remove, or change
+                                        dependencies. This WILL lead to broken environments
+                                        and inconsistent behavior. Use at your own risk.
+                --only-deps           Only install dependencies.
+                --no-pin              Ignore pinned file.
+                --force-reinstall     Ensure that any user-requested package for the current
+                                        operation is uninstalled and reinstalled, even if that
+                                        package already exists in the environment.
+                --freeze-installed, --no-update-deps
+                                        Do not update or change already-installed
+                                        dependencies.
+                --update-deps         Update dependencies.
+                -S, --satisfied-skip-solve
+                                        Exit early and do not run the solver if the requested
+                                        specs are satisfied. Also skips aggressive updates as
+                                        configured by 'aggressive_update_packages'. Similar to
+                                        the default behavior of 'pip install'.
+                --update-all, --all   Update all installed packages in the environment.
+                --update-specs        Update based on provided specifications.
+                
+                Package Linking and Install-time Options:
+                --copy                Install all packages using copies instead of hard- or
+                                        soft-linking.
+                --no-shortcuts        Don't install start menu shortcuts
+                -m, --mkdir           Create the environment directory if necessary.
+                --clobber             Allow clobbering of overlapping file paths within
+                                        packages, and suppress related warnings.
+                
+                Networking Options:
+                -C, --use-index-cache
+                                        Use cache of channel index files, even if it has
+                                        expired.
+                -k, --insecure        Allow conda to perform "insecure" SSL connections and
+                                        transfers. Equivalent to setting 'ssl_verify' to
+                                        'false'.
+                --offline             Offline mode. Don't connect to the Internet.
+                
+                Output, Prompt, and Flow Control Options:
+                -d, --dry-run         Only display what would have been done.
+                --json                Report all output as json. Suitable for using conda
+                                        programmatically.
+                -q, --quiet           Do not display progress bar.
+                -v, --verbose         Can be used multiple times. Once for INFO, twice for
+                                        DEBUG, three times for TRACE.
+                -y, --yes             Do not ask for confirmation.
+                --download-only       Solve an environment and ensure package caches are
+                                        populated, but exit prior to unlinking and linking
+                                        packages into the prefix.
+                --show-channel-urls   Show channel urls. Overrides the value given by `conda
+                                        config --show show_channel_urls`.
+                
+                Examples:
+                
+                    conda install -n myenv scipy
+            </pre>
+            <p>
+                4. Instalar un paquete conda: <code>conda list</code><br> 
+                The --yes flag is added here to avoid interactivity when the course builds.
+            </p>
+            <pre>
+                (base) C:\Users\LENOVO>conda install cytoolz --yes
+
+                Collecting package metadata (current_repodata.json): done
+                Solving environment: done
+
+                # All requested packages already installed.
+            </pre>
+            <p>
+                Visualizar ayuda en paquetes
+            </p>
+            <pre class="pre-scrollable">
+                (base) C:\Users\LENOVO>conda list --help
+                usage: conda-script.py list [-h] [-n ENVIRONMENT | -p PATH] [--json] [-v] [-q]
+                                            [--show-channel-urls] [-c] [-f] [--explicit]
+                                            [--md5] [-e] [-r] [--no-pip]
+                                            [regex]
+                
+                List linked packages in a conda environment.
+                
+                Options:
+                
+                positional arguments:
+                  regex                 List only packages matching this regular expression.
+                
+                optional arguments:
+                  -h, --help            Show this help message and exit.
+                  --show-channel-urls   Show channel urls. Overrides the value given by `conda
+                                        config --show show_channel_urls`.
+                  -c, --canonical       Output canonical names of packages only. Implies --no-
+                                        pip.
+                  -f, --full-name       Only search for full names, i.e., ^<regex>$.
+                  --explicit            List explicitly all installed conda packaged with URL
+                                        (output may be used by conda create --file).
+                  --md5                 Add MD5 hashsum when using --explicit
+                  -e, --export          Output requirement string only (output may be used by
+                                        conda create --file).
+                  -r, --revisions       List the revision history and exit.
+                  --no-pip              Do not include pip-only installed packages.
+                
+                Target Environment Specification:
+                  -n ENVIRONMENT, --name ENVIRONMENT
+                                        Name of environment.
+                  -p PATH, --prefix PATH
+                                        Full path to environment location (i.e. prefix).
+                
+                Output, Prompt, and Flow Control Options:
+                  --json                Report all output as json. Suitable for using conda
+                                        programmatically.
+                  -v, --verbose         Use once for info, twice for debug, three times for
+                                        trace.
+                  -q, --quiet           Do not display progress bar.
+                
+                Examples:
+                
+                List all packages in the current environment:
+                
+                    conda list
+                
+                List all packages installed into the environment 'myenv':
+                
+                    conda list -n myenv
+                
+                Save packages for future use:
+                
+                    conda list --export > package-list.txt
+                
+                Reinstall packages from an export file:
+                
+                    conda create -n myenv --file package-list.txt
+            </pre>
+            <p>
+                5. Visualizar paquetes (instalados en local) y sus versiones
+            </p>
+            <pre class="pre-scrollable">
+                (base) C:\Users\LENOVO>conda list
+
+                # packages in environment at C:\Users\LENOVO\anaconda3:
+                #
+                # Name                    Version                   Build  Channel
+                _ipyw_jlab_nb_ext_conf    0.1.0                    py37_0
+                absl-py                   0.10.0           py37hc8dfbb8_1    conda-forge
+                aiohttp                   3.6.2            py37h4ab8f01_1    conda-forge
+                alabaster                 0.7.12                   py37_0
+                anaconda                  2020.02                  py37_0
+                anaconda-client           1.7.2                    py37_0
+                anaconda-navigator        1.9.12                   py37_0
+                anaconda-project          0.8.4                      py_0
+                argh                      0.26.2                   py37_0
+                asn1crypto                1.3.0                    py37_0    conda-forge
+                astor                     0.8.1              pyh9f0ad1d_0    conda-forge
+                astroid                   2.3.3                    py37_0
+                astropy                   4.0              py37he774522_0
+                async-timeout             3.0.1                   py_1000    conda-forge
+                atomicwrites              1.3.0                    py37_1
+                attrs                     19.3.0                     py_0    conda-forge
+                autopep8                  1.4.4                      py_0
+                babel                     2.8.0                      py_0    conda-forge
+                backcall                  0.1.0                    py37_0
+                backports                 1.0                        py_2    conda-forge
+                backports.functools_lru_cache 1.6.1                      py_0    conda-forge
+                backports.shutil_get_terminal_size 1.0.0                    py37_2
+                backports.tempfile        1.0                        py_0    conda-forge
+                backports.weakref         1.0.post1       py37hc8dfbb8_1002    conda-forge
+                bcrypt                    3.1.7            py37he774522_0
+                beautifulsoup4            4.8.2                    py37_0
+                bitarray                  1.2.1            py37he774522_0
+                bkcharts                  0.2                      py37_0
+                blas                      1.0                         mkl
+                bleach                    3.1.0                    py37_0
+                blosc                     1.16.3               h7bd577a_0
+                bokeh                     1.4.0                    py37_0    conda-forge
+                boto                      2.49.0                   py37_0
+                bottleneck                1.3.2            py37h2a96729_0
+                branca                    0.4.1                      py_0    conda-forge
+                bzip2                     1.0.8                he774522_0
+                ca-certificates           2020.1.1                      0    anaconda
+                cachetools                4.1.1                      py_0    conda-forge
+                certifi                   2019.11.28               py37_0    conda-forge
+                cffi                      1.14.0           py37h7a1dbc1_0
+                chardet                   3.0.4                 py37_1003    conda-forge
+                click                     7.0                      py37_0
+                cloudpickle               1.3.0                      py_0
+                clyent                    1.2.2                    py37_1
+                colorama                  0.4.3                      py_0    conda-forge
+                comtypes                  1.1.7                    py37_0
+                conda                     4.9.2            py37h03978a9_0    conda-forge
+                conda-build               3.18.11                  py37_0
+                conda-env                 2.6.0                         1
+                conda-package-handling    1.7.0            py37h6dbccfb_6    conda-forge
+                conda-verify              3.4.2                      py_1
+                console_shortcut          0.1.1                         4
+                contextlib2               0.6.0.post1                py_0    conda-forge
+                cryptography              2.8              py37h7a1dbc1_0
+                curl                      7.68.0               h2a8f88b_0
+                cycler                    0.10.0                   py37_0
+                cython                    0.29.15          py37ha925a31_0
+                cytoolz                   0.10.1           py37he774522_0
+                dask                      2.11.0                     py_0
+                dask-core                 2.11.0                     py_0
+                decorator                 4.4.1                      py_0
+                defusedxml                0.6.0                      py_0    conda-forge
+                diff-match-patch          20181111                   py_0
+                distributed               2.11.0                   py37_0    conda-forge
+                docutils                  0.16                     py37_0    conda-forge
+                earthengine-api           0.1.250                  pypi_0    pypi
+                entrypoints               0.3                      py37_0
+                et_xmlfile                1.0.1                    py37_0
+                fastcache                 1.1.0            py37he774522_0
+                filelock                  3.0.12                     py_0
+                flake8                    3.7.9                    py37_0    conda-forge
+                flask                     1.1.1                      py_0
+                folium                    0.11.0                     py_0    conda-forge
+                freetype                  2.9.1                ha9979f8_1
+                fsspec                    0.6.2                      py_0
+                future                    0.18.2                   py37_0    conda-forge
+                gast                      0.4.0              pyh9f0ad1d_0    conda-forge
+                geos                      3.9.0                h39d44d4_0    conda-forge
+                get_terminal_size         1.0.0                h38e98db_0
+                gevent                    1.4.0            py37he774522_0
+                glob2                     0.7                        py_0    conda-forge
+                google-api-core           1.22.4             pyh9f0ad1d_0    conda-forge
+                google-api-python-client  1.12.3             pyh9f0ad1d_0    conda-forge
+                google-auth               1.22.0                     py_0    conda-forge
+                google-auth-httplib2      0.0.4              pyh9f0ad1d_0    conda-forge
+                google-cloud-core         1.4.3              pyh9f0ad1d_0    conda-forge
+                google-cloud-storage      1.31.2             pyh9f0ad1d_0    conda-forge
+                google-crc32c             1.0.0            py37h6f2f0b9_1    conda-forge
+                google-pasta              0.2.0              pyh8c360ce_0    conda-forge
+                google-resumable-media    1.1.0              pyh9f0ad1d_0    conda-forge
+                googleapis-common-protos  1.52.0           py37h1f41ff6_0    conda-forge
+                greenlet                  0.4.15           py37hfa6e2cd_0
+                grpcio                    1.27.2           py37h351948d_0    anaconda
+                h5py                      2.10.0           py37h5e291fa_0
+                hdf5                      1.10.4               h7ebc959_0
+                heapdict                  1.0.1                      py_0    conda-forge
+                html5lib                  1.0.1                    py37_0
+                httplib2                  0.18.1             pyh9f0ad1d_0    conda-forge
+                httplib2shim              0.0.3                    pypi_0    pypi
+                hypothesis                5.5.4                      py_0
+                icc_rt                    2019.0.0             h0cc432a_1
+                icu                       58.2                 ha66f8fd_1
+                idna                      2.8                      py37_0
+                imageio                   2.6.1                    py37_0    conda-forge
+                imagesize                 1.2.0                      py_0    conda-forge
+                importlib-metadata        2.0.0                      py_1    conda-forge
+                importlib_metadata        1.5.0                    py37_0    conda-forge
+                intel-openmp              2020.0                      166
+                intervaltree              3.0.2                      py_0    conda-forge
+                ipykernel                 5.1.4            py37h39e3cac_0
+                ipyleaflet                0.13.4             pyhd3deb0d_0    conda-forge
+                ipython                   7.12.0           py37h5ca1d4c_0    conda-forge
+                ipython_genutils          0.2.0                    py37_0
+                ipywidgets                7.5.1                      py_0    conda-forge
+                isort                     4.3.21                   py37_0
+                itsdangerous              1.1.0                    py37_0
+                jdcal                     1.4.1                      py_0    conda-forge
+                jedi                      0.14.1                   py37_0
+                jinja2                    2.11.1                     py_0
+                joblib                    0.14.1                     py_0
+                jpeg                      9b                   hb83a4c4_2
+                json5                     0.9.1                      py_0
+                jsonschema                3.2.0                    py37_0    conda-forge
+                jupyter                   1.0.0                    py37_7
+                jupyter_client            5.3.4                    py37_0    conda-forge
+                jupyter_console           6.1.0                      py_0
+                jupyter_core              4.6.1                    py37_0
+                jupyterlab                1.2.6              pyhf63ae98_0
+                jupyterlab_server         1.0.6                      py_0
+                keras                     2.3.1                         0    anaconda
+                keras-applications        1.0.8                      py_1    conda-forge
+                keras-base                2.3.1                    py37_0    anaconda
+                keras-preprocessing       1.1.0                      py_0    conda-forge
+                keyring                   21.1.0                   py37_0
+                kiwisolver                1.1.0            py37ha925a31_0
+                krb5                      1.17.1               hc04afaa_0
+                lazy-object-proxy         1.4.3            py37he774522_0
+                libarchive                3.3.3                h0643e63_5
+                libcrc32c                 1.1.1                ha925a31_2    conda-forge
+                libcurl                   7.68.0               h2a8f88b_0
+                libiconv                  1.15                 h1df5818_7
+                liblief                   0.9.0                ha925a31_2
+                libpng                    1.6.37               h2a8f88b_0
+                libprotobuf               3.13.0.1             h200bbdf_0    conda-forge
+                libsodium                 1.0.16               h9d3ae62_0
+                libspatialindex           1.9.3                h33f27b4_0
+                libssh2                   1.8.2                h7a1dbc1_0
+                libtiff                   4.1.0                h56a325e_0
+                libxml2                   2.9.9                h464c3ec_0
+                libxslt                   1.1.33               h579f668_0
+                llvmlite                  0.31.0           py37ha925a31_0
+                locket                    0.2.0                    py37_1
+                lxml                      4.5.0            py37h1350720_0
+                lz4-c                     1.8.1.2              h2fa13f4_0
+                lzo                       2.10                 h6df0209_2
+                m2w64-gcc-libgfortran     5.3.0                         6
+                m2w64-gcc-libs            5.3.0                         7
+                m2w64-gcc-libs-core       5.3.0                         7
+                m2w64-gmp                 6.1.0                         2
+                m2w64-libwinpthread-git   5.0.0.4634.697f757               2
+                markdown                  3.3.1              pyh9f0ad1d_0    conda-forge
+                markupsafe                1.1.1            py37he774522_0
+                matplotlib                3.1.3                    py37_0
+                matplotlib-base           3.1.3            py37h64f37c6_0
+                mccabe                    0.6.1                    py37_1
+                menuinst                  1.4.16           py37he774522_0
+                mistune                   0.8.4            py37he774522_0
+                mkl                       2020.0                      166
+                mkl-service               2.3.0            py37hb782905_0
+                mkl_fft                   1.0.15           py37h14836fe_0
+                mkl_random                1.1.0            py37h675688f_0
+                mock                      4.0.1                      py_0
+                more-itertools            8.2.0                      py_0
+                mpmath                    1.1.0                    py37_0
+                msgpack-python            0.6.1            py37h74a9793_1
+                msys2-conda-epoch         20160418                      1
+                multidict                 4.7.5            py37h4ab8f01_2    conda-forge
+                multipledispatch          0.6.0                    py37_0
+                navigator-updater         0.2.1                    py37_0
+                nbconvert                 5.6.1                    py37_0
+                nbformat                  5.0.4                      py_0
+                networkx                  2.4                        py_0
+                nltk                      3.4.5                    py37_0
+                nose                      1.3.7                    py37_2    conda-forge
+                notebook                  6.0.3                    py37_0
+                numba                     0.48.0           py37h47e9c7a_0
+                numexpr                   2.7.1            py37h25d0782_0
+                numpy                     1.18.1           py37h93ca92e_0
+                numpy-base                1.18.1           py37hc3f5095_1
+                numpydoc                  0.9.2                      py_0
+                olefile                   0.46                     py37_0
+                openpyxl                  3.0.3                      py_0
+                openssl                   1.1.1d               he774522_4    anaconda
+                packaging                 20.1                       py_0
+                pandas                    1.0.1            py37h47e9c7a_0
+                pandoc                    2.2.3.2                       0
+                pandocfilters             1.4.2                    py37_1
+                paramiko                  2.7.1                      py_0
+                parso                     0.5.2                      py_0
+                partd                     1.1.0                      py_0    conda-forge
+                path                      13.1.0                   py37_0
+                path.py                   12.4.0                        0
+                pathlib2                  2.3.5                    py37_0    conda-forge
+                pathtools                 0.1.2                      py_1    conda-forge
+                patsy                     0.5.1                    py37_0
+                pep8                      1.7.1                    py37_0
+                pexpect                   4.8.0                    py37_0    conda-forge
+                pickleshare               0.7.5                    py37_0
+                pillow                    7.0.0            py37hcc1f983_0
+                pip                       20.0.2                   py37_1    conda-forge
+                pkginfo                   1.5.0.1                  py37_0
+                pluggy                    0.13.1                   py37_0
+                ply                       3.11                     py37_0
+                powershell_shortcut       0.0.1                         3
+                prometheus_client         0.7.1                      py_0
+                prompt_toolkit            3.0.3                      py_0
+                protobuf                  3.13.0.1         py37h1834ac0_1    conda-forge
+                psutil                    5.6.7            py37he774522_0
+                py                        1.8.1                      py_0
+                py-lief                   0.9.0            py37ha925a31_2
+                pyasn1                    0.4.8                      py_0    conda-forge
+                pyasn1-modules            0.2.7                      py_0    conda-forge
+                pycodestyle               2.5.0                    py37_0
+                pycosat                   0.6.3            py37he774522_0
+                pycparser                 2.19                     py37_0
+                pycrypto                  2.6.1            py37hfa6e2cd_9
+                pycurl                    7.43.0.5         py37h7a1dbc1_0
+                pydocstyle                4.0.1                      py_0
+                pyflakes                  2.1.1                    py37_0
+                pygments                  2.5.2                      py_0
+                pylint                    2.4.4                    py37_0
+                pynacl                    1.3.0            py37h62dcd97_0
+                pyodbc                    4.0.30           py37ha925a31_0
+                pyopenssl                 19.1.0                   py37_0    conda-forge
+                pyparsing                 2.4.6                      py_0
+                pyqt                      5.9.2            py37h6538335_2
+                pyreadline                2.1                      py37_1
+                pyrsistent                0.15.7           py37he774522_0
+                pysocks                   1.7.1                    py37_0    conda-forge
+                pytables                  3.6.1            py37h1da0976_0
+                pytest                    5.3.5                    py37_0
+                pytest-arraydiff          0.3              py37h39e3cac_0
+                pytest-astropy            0.8.0                      py_0
+                pytest-astropy-header     0.1.2                      py_0    conda-forge
+                pytest-doctestplus        0.5.0                      py_0
+                pytest-openfiles          0.4.0                      py_0
+                pytest-remotedata         0.3.2                    py37_0
+                python                    3.7.6                h60c2a47_2
+                python-dateutil           2.8.1                      py_0    conda-forge
+                python-jsonrpc-server     0.3.4                      py_0
+                python-language-server    0.31.7                   py37_0
+                python-libarchive-c       2.8                     py37_13
+                python_abi                3.7                     1_cp37m    conda-forge
+                pytz                      2019.3                     py_0
+                pywavelets                1.1.1            py37he774522_0
+                pywin32                   227              py37he774522_1
+                pywin32-ctypes            0.2.0                 py37_1000    conda-forge
+                pywinpty                  0.5.7                    py37_0    conda-forge
+                pyyaml                    5.3              py37he774522_0
+                pyzmq                     18.1.1           py37ha925a31_0
+                qdarkstyle                2.8                        py_0
+                qt                        5.9.7            vc14h73c81de_0
+                qtawesome                 0.6.1                      py_0
+                qtconsole                 4.6.0                      py_1
+                qtpy                      1.9.0                      py_0    conda-forge
+                requests                  2.22.0                   py37_1    conda-forge
+                rope                      0.16.0                     py_0
+                rsa                       4.6                pyh9f0ad1d_0    conda-forge
+                rtree                     0.9.3            py37h21ff451_0
+                ruamel_yaml               0.15.87          py37he774522_0
+                scikit-image              0.16.2           py37h47e9c7a_0
+                scikit-learn              0.22.1           py37h6288b17_0
+                scipy                     1.4.1            py37h9439919_0
+                seaborn                   0.10.0                     py_0
+                send2trash                1.5.0                    py37_0
+                setuptools                45.2.0                   py37_0
+                shapely                   1.7.1            py37h4ffbdd8_2    conda-forge
+                simplegeneric             0.8.1                    py37_2
+                simplejson                3.17.2           py37h4ab8f01_1    conda-forge
+                singledispatch            3.4.0.3                  py37_0
+                sip                       4.19.8           py37h6538335_0
+                six                       1.14.0                   py37_0    conda-forge
+                snappy                    1.1.7                h777316e_3
+                snowballstemmer           2.0.0                      py_0    conda-forge
+                sortedcollections         1.1.2                    py37_0
+                sortedcontainers          2.1.0                    py37_0
+                soupsieve                 1.9.5                    py37_0
+                sphinx                    2.4.0                      py_0
+                sphinxcontrib             1.0                      py37_1
+                sphinxcontrib-applehelp   1.0.1                      py_0
+                sphinxcontrib-devhelp     1.0.1                      py_0
+                sphinxcontrib-htmlhelp    1.0.2                      py_0
+                sphinxcontrib-jsmath      1.0.1                      py_0    conda-forge
+                sphinxcontrib-qthelp      1.0.2                      py_0
+                sphinxcontrib-serializinghtml 1.1.3                      py_0
+                sphinxcontrib-websupport  1.2.0                      py_0
+                spyder                    4.0.1                    py37_0
+                spyder-kernels            1.8.1                    py37_0
+                sqlalchemy                1.3.13           py37he774522_0
+                sqlite                    3.31.1               he774522_0
+                statsmodels               0.11.0           py37he774522_0
+                sympy                     1.5.1                    py37_0    conda-forge
+                tbb                       2020.0               h74a9793_0
+                tblib                     1.6.0                      py_0    conda-forge
+                tensorboard               1.14.0                   py37_0    conda-forge
+                tensorflow                1.14.0               h1f41ff6_0    conda-forge
+                tensorflow-base           1.14.0           py37hc8dfbb8_0    conda-forge
+                tensorflow-estimator      1.14.0           py37h5ca1d4c_0    conda-forge
+                termcolor                 1.1.0                      py_2    conda-forge
+                terminado                 0.8.3                    py37_0
+                testpath                  0.4.4                      py_0    conda-forge
+                tk                        8.6.8                hfa6e2cd_0
+                toolz                     0.10.0                     py_0    conda-forge
+                tornado                   6.0.3            py37he774522_3
+                tqdm                      4.42.1                     py_0
+                traitlets                 4.3.3                    py37_0    conda-forge
+                traittypes                0.2.1              pyh9f0ad1d_2    conda-forge
+                typing-extensions         3.7.4.3                  pypi_0    pypi
+                ujson                     1.35             py37hfa6e2cd_0
+                unicodecsv                0.14.1                   py37_0
+                uritemplate               3.0.1                      py_0    conda-forge
+                urllib3                   1.25.8                   py37_0
+                vc                        14.1                 h0510ff6_4
+                vs2015_runtime            14.16.27012          hf0eaf9b_1
+                watchdog                  0.10.2                   py37_0
+                wcwidth                   0.1.8                      py_0
+                webencodings              0.5.1                    py37_1
+                werkzeug                  1.0.0                      py_0
+                wheel                     0.34.2                   py37_0    conda-forge
+                widgetsnbextension        3.5.1                    py37_0    conda-forge
+                win_inet_pton             1.1.0                    py37_0    conda-forge
+                win_unicode_console       0.5                      py37_0    conda-forge
+                wincertstore              0.2                      py37_0
+                winpty                    0.4.3                         4    conda-forge
+                wrapt                     1.11.2           py37he774522_0
+                xlrd                      1.2.0                    py37_0
+                xlsxwriter                1.2.7                      py_0
+                xlwings                   0.17.1                   py37_0
+                xlwt                      1.3.0                    py37_0
+                xmltodict                 0.12.0                     py_0    conda-forge
+                xz                        5.2.4                h2fa13f4_4
+                yaml                      0.1.7                hc54c509_2
+                yapf                      0.28.0                     py_0
+                yarl                      1.6.0            py37h4ab8f01_0    conda-forge
+                zeromq                    4.3.1                h33f27b4_3
+                zict                      1.0.0                      py_0
+                zipp                      2.2.0                      py_0
+                zlib                      1.2.11               h62dcd97_3
+                zstd                      1.3.7                h508b16e_0
             </pre>
 
-            <h3>Algo de historia</h3>
-            <p align='justify' class="my-4">
-                El concepto de agricultura de precisión, en su forma actual, apareció en Estados Unidos a principios de los años 80.
-                En 1985, investigadores de la Universidad de Minnesota, hicieron variar las aportaciones de abonos cálcicos en parcelas agrícolas.<br>
 
-                Fue en esta época cuando apareció la práctica del grid-sampling (recogida de muestras sobre una red fija de un punto por hectárea). <br>
-                Hacia finales de los años 80 y gracias a las extracciones realizadas mediante muestras, aparecieron los primeros mapas de preconización 
-                para las aportaciones moduladas de elementos fertilizados y para las correcciones de pH.<br>
+            
 
-                La evolución de las tecnologías permitió el desarrollo de sensores de rendimiento y su uso, unido a la aparición del GPS, no ha dejado 
-                de crecer hasta alcanzar en la actualidad varios millones de hectáreas cubiertos por estos sistemas. A través del mundo, la agricultura 
-                de precisión se desarrolla a ritmos diferentes en función de los países. Entre los países pioneros encontramos por supuesto a los 
-                Estados Unidos, a Canadá y Australia. </p>
 
-            <p align='justify' class="my-4">
-                El país de América latina más involucrado con esta metodología de manejo de cultivos, tanto en tasa de adopción, como en desarrollo 
-                de agro-componentes de alta complejidad es sin lugar a dudas la República Argentina, país que gracias a los esfuerzos del sector privado 
-                y de instituciones de investigación de dependencia oficial, cuenta hoy con una gran cantidad de superficie sembrada bajo esta modalidad 
-                y con una importante cantidad de profesionales muy bien entrenados para este nuevo paradigma de la agricultura moderna; otro país de 
-                América latina que se perfila como un gran demandante de este tipo de tecnologías es Brasil.</p>
-                
-            <p align='justify' class="my-4">
-                El escenario actual de la agricultura en 
-                Brasil camina hacia una producción eficiente con la protección del medio ambiente por lo tanto, Embrapa estableció la Red Brasileña de 
-                Investigación en Agricultura de Precisión, con el objetivo de generación de conocimientos, herramientas y tecnologías para la agricultura 
-                de precisión aplicada a los cultivos de soja, maíz, trigo, arroz, algodón, pastos , eucaliptos, pinos, uva, melocotón, naranja y caña de 
-                azúcar. </p>
 
-            <p align='justify' class="my-4">
-                En Europa, los precursores fueron los ingleses, seguidos de cerca por los franceses. En Francia, la agricultura de precisión 
-                apareció en 1997-1998. El desarrollo del GPS y de las técnicas de esparcimiento modular contribuyó a arraigar estas prácticas.</p>
 
-            <p align='justify' class="my-4">
-                En la actualidad, menos del 10% de la población agrícola francesa está equipada con herramientas de modulación de este tipo. 
-                El GPS está más extendido. Pero esto no impide que utilicen servicios, que suministra mapas de recomendaciones por parcelas, considerando 
-                su heterogeneidad.</p>
 
-            <img class="rounded mx-auto d-block" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/DroneMapper_Processed_NDVI_4cm_GSD.png/220px-DroneMapper_Processed_NDVI_4cm_GSD.png" width="50%">
+
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!--Footer-->
         <footer style="background: #eee;" class="pt-2">
