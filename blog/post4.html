@@ -26,17 +26,6 @@
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-        <style>
-            pre {
-                display: block;
-                background: black;
-                color: white;
-                /* font-size: small; */
-                /* font-family: Consolas; */
-                /* white-space: pre; */
-                /* margin: 1em 0; */
-            } 
-        </style>
     </head>
 
     <body>
@@ -61,7 +50,7 @@
         <section style="background: url(../img/chincha_canny.png)" class="py-5 bg-cover bg-center">
             <div class="hero-overlay"></div>
             <div class="container py-7 text-white text-center">
-                <h2 class="text-shadow">Earth Engine - Práctica </h2>
+                <h2 class="text-shadow">Earth Engine: Aprendiendo practicando</h2>
                 <p class="text-shadow lead my-4 font-weight-bold">Por Cesar Vilca</p>
             </div>
         </section>
@@ -69,111 +58,112 @@
         <!-- Redacción de post -->
         <div align='justify' class="container py-5">
             <div class="container py-5">
-                <img class='rounded mx-auto d-block' src="../img/GoogleEarthEngine_Grey_108.png" alt="">
+				<img class='rounded mx-auto d-block img-fluid' src="../img/GoogleEarthEngine_Grey_108.png" alt="">
                 <h4>Introducción a la API</h4>
                 <p class="my-4">
-                  Google Earth Engine nace a partir de la necesidad de una base de datos geoespaciales de fácil acceso (diseñado para investigadores sin experiencia previa en programación).
+					Google Earth Engine nace a partir de la necesidad de una base de datos geoespaciales de fácil acceso (diseñado para investigadores sin experiencia previa en programación).
                 </p>
                 <p>
-                  Para mayor información:
-                  <ul>
-                    <li><a href="https://earthengine.google.com/">Google Earth Engine - Portal</a></li>
-                    <li><a href="https://earthengine.google.com/signup/">Google Earth Engine - Creación de cuenta</a></li>
-                    <li><a href="https://earthengine.google.com/faq/">Google Earth Engine - FAQ</a></li>
-                    <li><a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">Artículo científico - Google Earth Engine: Planetary-scale geospatial analysis for everyone</a></li>
-                    <li><a href="https://developers.google.com/earth-engine/">Google Earth Engine - Documentación</a></li>
-                    <li><a href="https://developers.google.com/earth-engine/guides/python_install">Google Earth Engine - Instalación de la API de Python</a></li>
-                    <li><a href="https://developers.google.com/earth-engine/apidocs">Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
-                    <li><a href="https://developers.google.com/earth-engine/guides">Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
-                    <li><a href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">Google Earth Engine - Tutoriales</a></li>
-                  </ul>
-
-				  <h4>Probando EE</h4>
-					<p class="my-4">
-					A continuación presentaré algunos ejemplos sobre los resultados que he podido generar usando la plataforma de Earth Engine (en <code>Python</code> y en <code>JavaScript</code>).
-					</p>
+					Para mayor información:
 					<ul>
-						<li>Nevado Yerupajá, Dataset: Sentinel-2A</li>
-						<img src="../img/ee_foto3_nevado_yerupaja.JPG" width="100%">
+						<li><a href="https://earthengine.google.com/">Google Earth Engine - Portal</a></li>
+						<li><a href="https://earthengine.google.com/signup/">Google Earth Engine - Creación de cuenta</a></li>
+						<li><a href="https://earthengine.google.com/faq/">Google Earth Engine - FAQ</a></li>
+						<li><a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">Artículo científico - Google Earth Engine: Planetary-scale geospatial analysis for everyone</a></li>
+						<li><a href="https://developers.google.com/earth-engine/">Google Earth Engine - Documentación</a></li>
+						<li><a href="https://developers.google.com/earth-engine/guides/python_install">Google Earth Engine - Instalación de la API de Python</a></li>
+						<li><a href="https://developers.google.com/earth-engine/apidocs">Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
+						<li><a href="https://developers.google.com/earth-engine/guides">Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
+						<li><a href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">Google Earth Engine - Tutoriales</a></li>
 					</ul>
-					<ul>
-						<li>Valle de Chincha, Dataset: Sentinel-2A</li>
-						<img src="../img/ee_foto1_s2_chincha.JPG" width="100%">
-					</ul>
-					<ul>
-						<li>Valle de Chincha, Dataset: Landsat 7</li>
-						<img src="../img/ee_foto2_l7_chincha.JPG" width="100%">
-					</ul>
-
-					<ul>
-						<li>El Perú, Dataset: Landsat 7</li>
-						<img src="../img/ee_foto4_l7_peru.JPG" width="100%">
-					</ul>
-					<ul>
-						<li>El Perú, Dataset: Landsat 8</li>
-						<img src="../img/ee_foto5_l8_peru.JPG" width="100%">
-					</ul>
-					<ul>
-						<li>Valle de Chincha - NDVI, Dataset: Landsat 8</li>
-						<img src="../img/ee_foto6_l8_peru.JPG" width="100%">
-					</ul>
-					<ul>
-						<li>Valle de Chincha - EVI, Dataset: Landsat 8</li>
-						<img src="../img/ee_foto7_s2_evi.JPG" width="100%">
-					</ul>
-
-                </p>
+				</p>
+				<h4>Probando EE</h4>
+				<p class="my-4">
+					A continuación presentaré algunos ejemplos sobre los resultados que he podido generar usando la plataforma de Earth Engine (en <code>Python</code> y en <code>JavaScript</code>). <br>
+					Cabe destacar que gracias a su base de datos bien estructurada, es posible conseguir visualizaciones en cuestión de segundos.
+				</p> 
+					<div class="container py-1">
+						<div class="row">
+						<a href="../img/ee_foto1_s2_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Sentinel-2A" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_foto1_s2_chincha.JPG" alt="" class="img-fluid"></a>
+						<a href="../img/ee_foto2_l7_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Landsat 7 (Nótese el error del escáner a bordo del sátelite lo cual produjo la pérdida del 22% de data en imágenes)" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_foto2_l7_chincha.JPG" alt="" class="img-fluid"></a>
+						<a href="../img/ee_foto3_nevado_yerupaja.JPG" data-lightbox="gallery" data-title="Nevado Yerupajá, Dataset: Sentinel-2A" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_foto3_nevado_yerupaja.JPG" alt="" class="img-fluid"></a>
+						<a href="../img/ee_foto4_l7_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 7" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_foto4_l7_peru.JPG" alt="" class="img-fluid"></a>
+						<a href="../img/ee_foto5_l8_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 8" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_foto5_l8_peru.JPG" alt="" class="img-fluid"></a>
+						<a href="../img/ee_foto6_l8_peru.JPG" data-lightbox="gallery" data-title="Valle de Chincha - NDVI, Dataset: Sentinel-2A" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_foto6_l8_peru.JPG" alt="" class="img-fluid"></a>
+						<a href="../img/ee_foto7_s2_evi.JPG" data-lightbox="gallery" data-title="Valle de Chincha - EVI, Dataset: Sentinel-2A" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_foto7_s2_evi.JPG" alt="" class="img-fluid"></a>
+						<a href="../img/ee_canny_detector.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_canny_detector.png" alt="" class="img-fluid"></a>
+						<a href="../img/canny.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/canny.png" alt="" class="img-fluid"></a>
+						<a href="../img/ee_sample.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_sample.png" alt="" class="img-fluid"></a>
+						<a href="../img/ee_sampleo.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_sampleo.png" alt="" class="img-fluid"></a>
+						<a href="../img/ee_split_panel.png" data-lightbox="gallery" data-title="Split Panel: Landsat 8 (lado izquierdo) y Sentinel-2A (lado derecho)" class="col-lg-3 col-sm-6 p-0">
+							<img src="../img/ee_split_panel.png" alt="" class="img-fluid"></a>
+						</div>
+					</div>
+                </div>
             </div>
         </div>
 
+		
+
         <!--Footer-->
         <footer style="background: #eee;" class="pt-2">
-          <div class="container py-3">
-              <div class="row">
-                  <!-- Lado izquierdo -->
-                  <div class="col-lg-8 col-md-6 mb-2">
-                      <h5 class="lined lined-dark mb-3">Acerca de la página</h5>
-                      <p class="text-muted text-small">
-                      El objetivo de ésta página es ir redactando posts con información de interés personal. Para algún contacto 
-                      lo puedes hacer mediante los enlaces en la sección contacto.
-                      </p>
-                  </div>
+			<div class="container py-3">
+				<div class="row">
+					<!-- Lado izquierdo -->
+					<div class="col-lg-8 col-md-6 mb-2">
+						<h5 class="lined lined-dark mb-3">Acerca de la página</h5>
+						<p class="text-muted text-small">
+						El objetivo de ésta página es ir redactando posts con información de interés personal. Para algún contacto 
+						lo puedes hacer mediante los enlaces en la sección contacto.
+						</p>
+					</div>
 
-                  <!-- Lado derecho -->
-                  <div class="col-lg-4 col-md-6 mb-2">
-                      <h5 class="lined lined-dark mb-3">Contacto</h5>
-                      <ul>
-                      <li><p class="text-muted mb-0 text-small"> Gmail: vilcagamarracf@gmail.com</p></li>
-                      <li><p class="text-muted mb-0 text-small"> Github: <a href="https://github.com/vilcagamarracf">vilcagamarracf</a></p></li>
-                      <li><p class="text-muted mb-0 text-small"> Twitter: <a href="https://twitter.com/CesarVilca19">@CesarVilca19</a></p></li>
-                      <li><p class="text-muted mb-0 text-small"> Linkedin: <a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/">Cesar Vilca</a></p></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+					<!-- Lado derecho -->
+					<div class="col-lg-4 col-md-6 mb-2">
+						<h5 class="lined lined-dark mb-3">Contacto</h5>
+						<ul>
+						<li><p class="text-muted mb-0 text-small"> Gmail: vilcagamarracf@gmail.com</p></li>
+						<li><p class="text-muted mb-0 text-small"> Github: <a href="https://github.com/vilcagamarracf">vilcagamarracf</a></p></li>
+						<li><p class="text-muted mb-0 text-small"> Twitter: <a href="https://twitter.com/CesarVilca19">@CesarVilca19</a></p></li>
+						<li><p class="text-muted mb-0 text-small"> Linkedin: <a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/">Cesar Vilca</a></p></li>
+						</ul>
+					</div>
+                </div>
+            </div>
 
-          <!-- Footer de template -->
-          <div class="bg-dark py-1">    
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
-                          <p class="small text-gray mb-0">2021 - Cesar Vilca</p>
-                      </div>
-                      <div class="col-lg-6 text-center text-lg-right">
-                          <p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </footer>
+			<!-- Footer de template -->
+			<div class="bg-dark py-1">    
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
+							<p class="small text-gray mb-0">2021 - Cesar Vilca</p>
+						</div>
+						<div class="col-lg-6 text-center text-lg-right">
+							<p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+     	</footer>
 
-      <!-- JavaScript files-->
-      <script src="../vendor/jquery/jquery.min.js"></script>
-      <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="../vendor/lightbox2/js/lightbox.min.js"></script>
-      <script src="../vendor/leaflet/leaflet.js"></script>
-      <script src="../js/front.js"></script>
-      <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  </body>
+		<!-- JavaScript files-->
+		<script src="../vendor/jquery/jquery.min.js"></script>
+		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../vendor/lightbox2/js/lightbox.min.js"></script>
+		<script src="../vendor/leaflet/leaflet.js"></script>
+		<script src="../js/front.js"></script>
+		<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	</body>
 </html>
