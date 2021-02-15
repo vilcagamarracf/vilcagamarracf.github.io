@@ -1,1 +1,20 @@
 /* your styles go here */
+
+.blog-img {
+    float: left;
+    width: 14em;
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 0 1.5em 1.5em 0;
+    border: thin solid #ccc;
+}
+
+.blog-img-exception {
+    float: left;
+    width: 14em;
+    height: 7em;
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 0 1.5em 1.5em 0;
+    border: thin solid #ccc;
+}
