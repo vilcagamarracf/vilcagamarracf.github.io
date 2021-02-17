@@ -61,7 +61,7 @@
         <section style="background: url(../img/jumbotron1.jpg)" class="py-5 bg-cover bg-center">
             <div class="hero-overlay"></div>
             <div class="container py-7 text-white text-center">
-                <h2 class="text-shadow">Práctica de Conda</h2>
+                <h2 class="text-shadow">Manejo de paquetes de Python usando la terminal Anaconda</h2>
                 <p class="text-shadow lead my-4 font-weight-bold">16 de Febrero, 2021</p>
             </div>
         </section>
@@ -81,6 +81,19 @@
             </p>
             <p>
                 Conda como administrador de paquetes le ayuda a encontrar e instalar paquetes. Si necesita un paquete que requiere una versión diferente de Python, no es necesario que cambie a un administrador de entorno diferente porque conda también es un administrador de entorno. Con solo unos pocos comandos, puede configurar un entorno totalmente separado para ejecutar esa versión diferente de Python, mientras continúa ejecutando su versión habitual de Python en su entorno normal.
+            </p>
+
+            <h5 class="my-4">¿y Anaconda?</h5>
+            <p>
+                Anaconda es una distribución de los lenguajes de programación Python y R para computación científica (ciencia de datos, aplicaciones de aprendizaje automático, procesamiento de datos a gran escala, análisis predictivo, etc.), que tiene como objetivo simplificar la administración y la implementación de paquetes.
+            </p>
+            <p>
+                Entonces:
+                <ul>
+                    <li><b>Conda:</b> administrador de paquetes.</li>  
+                    <li><b>Anaconda:</b> conjunto de paquetes (muchísimos) que incluyen conda, numpy, scipy, ipython notebook, etc.</li> 
+                    <li><b>Miniconda:</b> alternativa más pequeña a Anaconda que es solo conda y sus dependencias, no las enumeradas anteriormente. Una vez que tenga Miniconda, puede instalar Anaconda fácilmente con <code>conda install anaconda</code>.</li> 
+                </ul>
             </p>
             <h5 class="my-4">Paquetes (o <i>Packages</i>): ¿Qué son y por qué son tan necesarios?</h5>
             <p>
@@ -1144,6 +1157,10 @@
             <p>
                 Link alternativo: <a href="https://alimanfoo.github.io/2017/05/18/installing-python.html">Alistair Miles - Installing Python for data analysis</a>
             </p>
+                <h5 class="my-4">Conclusiones</h5>
+                El manejo de datos en local como en la nube (Colab) tiene sus ventajas y desventajas. Mientras Colab permite la instalación ráída de paquetes mediante <code>pip install</code> o <code>sudo apt</code>, al usarse una máquina virtual (en los servidores de google), la información se pierde al pasar 12 horas. Trabajar en local demanda conocer los métodos de instalación y manejo de paquetes pero permite aprovechar el rápido procesamiento de una máquina personal (puede variar dependiendo de su hardware y demás).
+            </p>
+            <p>
                 Gracias por leer :)
             </p>
         </div>
