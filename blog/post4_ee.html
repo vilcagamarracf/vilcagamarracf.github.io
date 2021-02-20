@@ -54,52 +54,83 @@
                 <p class="text-shadow lead my-4 font-weight-bold">Por Cesar Vilca</p>
             </div>
         </section>
-        
+			
         <!-- Redacción de post -->
         <div align='justify' class="container py-5">
-            <div class="container py-5">
-				<img class='rounded mx-auto d-block img-fluid' src="../img/GoogleEarthEngine_Grey_108.png" alt="">
-                <h4>Introducción a la API</h4>
+            <div class="container py-2">
+                <h4>Introducción a Google Earth Engine</h4>
+				<p class="my-4">
+					<b>Objetivo:</b> Brindar una breve introducción a la plataforma, aplicaciones en la Agricultura y links relacionados (al final del post). 
+				</p>
+				<img class='rounded mx-auto d-block img-fluid' src="../img/GoogleEarthEngine_Grey_108.png">
                 <p class="my-4">
-					Google Earth Engine nace a partir de la necesidad de una base de datos geoespaciales de fácil acceso (diseñado para investigadores sin experiencia previa en programación).
+					<a href="https://earthengine.google.com/">Google Earth Engine</a> nace a partir de una necesidad: disponer de una base de datos geoespaciales a investigadores con poca o nula experiencia previa en administración de bases de datos.
                 </p>
-                <p>
-					Para mayor información:
+				<p class="my-4">
+					<h5 class="my-4">¿Qué es precisamente Earth Engine?</h5>
+					En la sección de <a href="https://earthengine.google.com/faq/">Preguntas más frecuentes (FAQ)</a> se menciona lo siguiente: 
+					<blockquote class="blockquote my-4">
+						<p>Earth Engine es una plataforma para el análisis científico y la visualización de conjuntos de datos geoespaciales, para usuarios académicos, sin fines de lucro, comerciales y gubernamentales.</p>
+
+						<p>Earth Engine aloja imágenes de satélite y las almacena en un archivo de datos público que incluye imágenes históricas de la Tierra que se remontan a más de cuarenta años. Las imágenes, que se ingieren a diario, se ponen a disposición para la minería de datos a escala global.</p>
+
+						<p>Earth Engine también proporciona API y otras herramientas para permitir el análisis de grandes conjuntos de datos.</p>
+					</blockquote>
+					Además, responde a ciertas inquietudes tales como:
+
 					<ul>
-						<li><a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">
-							Artículo científico - Google Earth Engine: Planetary-scale geospatial analysis for everyone</a></li>
-						<li><a href="https://earthengine.google.com/">
-							Google Earth Engine - Portal</a></li>
-						<li><a href="https://earthengine.google.com/signup/">
-							Google Earth Engine - Creación de cuenta</a></li>
-						<li><a href="https://earthengine.google.com/faq/">
-							Google Earth Engine - Preguntas frecuentes (FAQ)</a></li>
-						<li><a href="https://developers.google.com/earth-engine/">
-							Google Earth Engine - Documentación</a></li>
-						<li>Ambientes de trabajo e Integraciones disponibles:
-							<ul> 
-								<li>JavaScript: <a href="https://developers.google.com/earth-engine/guides/getstarted">
-									Get Started with Earth Engine</a></li>
-								<li>Python: <a href="https://developers.google.com/earth-engine/guides/python_install">
-									Instalación de la API de Python</a></li>
-								<li>R: <a href="https://r-spatial.github.io/rgee/">
-									Google Earth Engine for R</a></li>
-								<li>QGIS: <a href="https://gee-community.github.io/qgis-earthengine-plugin/">
-									Integrates Google Earth Engine and QGIS using Python API</a></li>
-							</ul>
-						</li>
-						<li><a href="https://developers.google.com/earth-engine/apidocs">
-							Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
-						<li><a href="https://developers.google.com/earth-engine/guides">
-							Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
-						<li><a href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">
-							Google Earth Engine - Tutoriales</a></li>
+						<li>Comparación con Google Earth</li> 
+						<li>Por qué Google trabaja en este proyecto</li>
+						<li>Cómo Acceder</li>
+						<li>Bases de datos disponibles</li>
+						<li>Limitaciones de uso</li>
+						<li>y más</li>
+					</ul>	
+				</p>
+
+				<h5 class="my-4">Cómo acceder</h5>
+				<p>
+					Earth Engine al ser un proyecto (o aplicación) de Google, permite la conexión con otras aplicaciones tales como Google Cloud, Google Drive (entre las principales). Por ello, requiere una cuenta de gmail activa <a href="https://earthengine.google.com/signup/">(Registrate aquí)</a>.
+				</p>
+				<p>
+					Nota:
+					<ul>
+						<li>Es preferible usar cuentas de tipo empresarial ya que no presentan limitaciones con el almacenamiento en el Drive. En caso de usar una cuenta corriente de gmail, abstenerse de exportar resultados a su Drive ya que ocuparía el almacenamiento disponible rápidamente al manejar datos geoespaciales (comúnmente archivos pesados). </li>
+						<li>Registrar la cuenta en modo no comercial.</li>
+						<li>El tiempo de respuesta de activación de cuenta es relativo: puede demorar minutos o hasta horas.</li>
 					</ul>
 				</p>
-				<h4>Probando EE</h4>
+
+				<h5 class="my-4">Ambientes de Desarrollo</h5>
+				<p>
+					Hay dos formas de usar Earth Engine:
+					<ul>
+						<li class="my-1">De forma interactiva en la web: <a href="https://explorer.earthengine.google.com/#workspace">Explorer</a></li>
+						<li class="my-1">Usando lenguajes de Programación para acceder a la Interfaz de Programación de Aplicaciones (API) de Earth Engine:</li>
+						<ul>
+							<li class="my-1"><b>JavaScript:</b> El <a href="https://code.earthengine.google.com/">Code Editor</a> es un IDE desarrollado en la web. Viene con una ventana de visualización ya integrada y otros widgets para edición de figuras geométricas.</li>
+							<li class="my-1"><b>Python: </b> Mediante el paquete <code>earthengine-api</code> es posible acceder a la API de Earth Engine. Permite trabajar mediante el uso de scripts (.py) o con las libretas jupyter notebooks (.ipynb).</li>
+							<li class="my-1"><b>R:</b> Mediante la librería <code>rgee</code> (es posible acceder a lenguaje Python en un ambiente de R con la librería <code>reticulate</code>, lo cual ha permitido el acceso a la API de Python).</li>
+						</ul>
+					</ul>  
+					También existe la integración de Earth Engine en <b>QGIS</b> mediante un plugin. 
+				</p>
+
+				<h5 class="my-4">Aplicaciones relacionadas a la Agricultura</h5>
+				<p>
+					Al disponerse de una base de datos geoespaciales de manera gratuita y disponibilidad de hacer análisis en la nube (servidores de Google), las principales aplicaciones serían:
+					<ul>
+						<li class="my-1">Monitoreo de cultivos</li>
+						<li class="my-1">Detección y clasificación de cultivos</li>
+						<li class="my-1">Análisis de cambio de cobertura</li>
+						<li class="my-1">muchos más por descubrir</li>
+					</ul>
+				</p>
+
+
+				<h5 class="my-4">Probando EE</h5>
 				<p class="my-4">
-					A continuación presentaré algunos ejemplos sobre los resultados que he podido generar usando la plataforma de Earth Engine (en <code>Python</code> y <code>JavaScript</code>). <br>
-					Cabe destacar que gracias a su base de datos bien estructurada y el procesamiento en la nube es posible conseguir visualizaciones en cuestión de segundos.
+					A continuación presentaré algunos ejemplos sobre los resultados que he podido generar usando la plataforma de Earth Engine (en <code>Python</code> y <code>JavaScript</code>). Cabe destacar que gracias a su base de datos bien estructurada y el procesamiento en la nube es posible conseguir visualizaciones en cuestión de segundos.
 				</p> 
 				<div class="container py-1">
 					<a href="../img/ee_foto1_s2_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Sentinel-2A">
@@ -123,6 +154,54 @@
 					<a href="../img/ee_split_panel.png" data-lightbox="gallery" data-title="Split Panel: Landsat 8 (lado izquierdo) y Sentinel-2A (lado derecho)">
 						<img src="../img/ee_split_panel.png" class="img-fluid" width="300px" height="200px"></a>
 				</div>
+
+				<!-- Mensaje de Proceso de Expansión -->
+				<center>	
+					<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡Códigos de ejemplos en proceso! </b></marquee>
+				</center>
+
+                <p>
+					<h5 class="my-4">Lista de Referencias</h5>
+					<ul>
+						<li><a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">
+							Artículo científico - Google Earth Engine: Planetary-scale geospatial analysis for everyone</a></li>
+						<li><a href="https://earthengine.google.com/">
+							Google Earth Engine - Portal</a></li>
+						<li><a href="https://earthengine.google.com/signup/">
+							Google Earth Engine - Creación de cuenta</a></li>
+						<li><a href="https://earthengine.google.com/faq/">
+							Google Earth Engine - Preguntas frecuentes (FAQ)</a></li>
+						<li><a href="https://developers.google.com/earth-engine/">
+							Google Earth Engine - Documentación</a></li>
+						<li>Ambientes de Desarrollo e Integraciones disponibles:
+							<ul> 
+								<li>JavaScript: <a href="https://developers.google.com/earth-engine/guides/getstarted">
+									Get Started with Earth Engine</a></li>
+								<li>Python: <a href="https://developers.google.com/earth-engine/guides/python_install">
+									Instalación de la API de Python</a></li>
+								<li>R: <a href="https://r-spatial.github.io/rgee/">
+									Google Earth Engine for R</a></li>
+								<li>QGIS: <a href="https://gee-community.github.io/qgis-earthengine-plugin/">
+									Integrates Google Earth Engine and QGIS using Python API</a></li>
+							</ul>
+						</li>
+						<li><a href="https://github.com/google/earthengine-api">Google Earth Engine API - Repositorio en Github</a></li>
+						<li><a href="https://developers.google.com/earth-engine/apidocs">
+							Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
+						<li><a href="https://developers.google.com/earth-engine/guides">
+							Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
+						<li><a href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">
+							Google Earth Engine - Tutoriales</a></li>
+					</ul>
+				</p>
+
+				<h5 class="my-4">Conclusiones</h5>
+				<p>
+					La plataforma se encuentra operando desde el año 2011 y ha ido ganando popularidad con el paso de los años debido a la potencia computacional que ofrece de manera gratuita a los investigadores, lo cual ha permitido el aumento de publicaciones académicas en gran cantidad.
+				</p>
+				<p>
+					Muchas gracias por leer :)
+				</p>
             </div>
         </div>
 
