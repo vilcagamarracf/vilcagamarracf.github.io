@@ -25,24 +25,25 @@
         <!-- Favicon-->
         <link rel="shortcut icon" href="../img/favicon.png">
 
-		<style>
+		<!-- <style>
 		.carousel-inner img {
-			width: 100%;
-			height: 100%;
+			/* height: 100%; */
+			/* width: 100%; */
 		}
 
 		.carousel-item img{
-			height: 650px;
+			height: auto;
 			width: 100%;
 		}
 		.carousel-caption{
 			background: rgba(76, 175, 80, 0.7);
 			color:white;
 		}
-		</style>
+		</style> -->
         <!-- Tweaks for older IEs--><!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
     </head>
 
     <body>
@@ -151,8 +152,8 @@
 				</p> 
 			</div>
 
-			<!-- Galería de fotos -->
-			<div id="demo" class="carousel slide" data-ride="carousel">
+			
+			<!-- <div id="demo" class="carousel slide" data-ride="carousel">
 
 				<ul class="carousel-indicators">
 					<li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -239,23 +240,48 @@
 					</div>   
 					</div>
 					
-				</div>
+				</div> -->
 
 				<!-- Botones -->
-				<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
 					<span class="carousel-control-prev-icon"></span>
 				</a>
 				<a class="carousel-control-next" href="#demo" data-slide="next">
 					<span class="carousel-control-next-icon"></span>
 				</a>
+			</div> 
+		</div>	 -->
+
+			<!-- Galería de fotos -->
+			<div class="row">
+				<a href="../img/ee_foto1_s2_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_foto1_s2_chincha.JPG" alt="" class="img-fluid"></a>
+				<a href="../img/ee_foto2_l7_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Landsat 7 (Nótese el error del escáner a bordo del sátelite lo cual produjo la pérdida del 22% de data en imágenes)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_foto2_l7_chincha.JPG" alt="" class="img-fluid"></a>
+				<a href="../img/ee_foto3_nevado_yerupaja.JPG" data-lightbox="gallery" data-title="Nevado Yerupajá, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_foto3_nevado_yerupaja.JPG" alt="" class="img-fluid"></a>
+				<a href="../img/ee_foto4_l7_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 7" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_foto4_l7_peru.JPG" alt="" class="img-fluid"></a>
+				<a href="../img/ee_foto5_l8_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 8" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_foto5_l8_peru.JPG" alt="" class="img-fluid"></a>
+				<a href="../img/ee_foto6_l8_peru.JPG" data-lightbox="gallery" data-title="Valle de Chincha - NDVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_foto6_l8_peru.JPG" alt="" class="img-fluid"></a>
+				<a href="../img/ee_foto7_s2_evi.JPG" data-lightbox="gallery" data-title="Valle de Chincha - EVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_foto7_s2_evi.JPG" alt="" class="img-fluid"></a>
+				<a href="../img/ee_canny_detector.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_canny_detector.png" alt="" class="img-fluid"></a>
+				<a href="../img/canny.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/canny.png" alt="" class="img-fluid"></a>
+				<a href="../img/ee_sample.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_sample.png" alt="" class="img-fluid"></a>
+				<a href="../img/ee_sampleo.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_sampleo.png" alt="" class="img-fluid"></a>
+				<a href="../img/ee_split_panel.png" data-lightbox="gallery" data-title="Split Panel: Landsat 8 (lado izquierdo) y Sentinel-2A (lado derecho)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+					<img src="../img/ee_split_panel.png" alt="" class="img-fluid"></a>
 			</div>
-		</div>
 
-				<br>
-
-		<div class="container py-2 col-lg-8">
 			<!-- Mensaje de Proceso de Expansión -->
-			<center>	
+			<center>
 				<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡Próximamente los códigos en mi repositorio de Github! </b></marquee>
 			</center>
 
