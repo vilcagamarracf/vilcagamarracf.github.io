@@ -43,8 +43,13 @@ aside{
 }
 
 .section-nav{
-    border-left: 1px solid rgb(79, 138, 50);
+    border-right: 2px solid rgb(79, 138, 50);
     text-align: left;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 10px;
+    padding-left: 0px
+}
+
+a.gray {
+  color: #878c8f;
+  text-decoration: none;
 }

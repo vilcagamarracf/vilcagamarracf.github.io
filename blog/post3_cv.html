@@ -26,6 +26,15 @@
 	<!-- Tweaks for older IEs--><!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	<style>
+	body {
+		position: relative;
+	}
+	ul.nav-pills {
+		top: 350px;
+		position: fixed;
+	}
+	</style>
 </head>
 
 <body>
@@ -59,110 +68,114 @@
 
 
 <!-- Redacción de post -->
-<div class="container py-4">
+<div class="container-fluid py-4">
 <div class="row">
-<div class="col-1"></div>
-
-	<!-- Columna izquierda -->
-	<div class="col-10">
-		<div class="container py-2">
-
-		<!-- Banner -->
-		<center>	
-			<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso! </b></marquee>
-		</center>
-		<hr>
-
-		
-		<h4 class="my-4">Entendiendo qué es Computer Vision</h4>
-		<p>
-			<b>Objetivo:</b> Reunir información bibliográfica sobre la Visión por computadora (<i>Computer Vision</i> en inglés) con el fin de entender las publicaciones académicas relacionadas a la Agricultura.
-		</p>
-
-		<h5 class="my-4" id="intro">Introducción</h5>
-		<p>
-			El crecimiento anual de las computadoras es 
-		</p>
-				
-
-		<h5 class="my-4" id="cv">¿Computer Vision?</h5>
-		<p>
-			De manera concisa, <a href="https://www.ibm.com/topics/computer-vision" class="">IBM</a> menciona lo siguiente acerca de la Visión por Computadora:
-			<blockquote class="blockquote my-4">
-				La visión por computadora es un <b>campo de inteligencia artificial (IA)</b> que <i>permite que las computadoras y los sistemas obtengan información significativa de imágenes digitales, videos y otras entradas visuales, y tomen acciones o hagan recomendaciones basadas en esa información.</i> <br><br>
-				<b>Si la IA permite que las computadoras piensen, la visión por computadora les permite ver, observar y comprender.</b>
-				<br><br>
-				La visión por computadora funciona de manera muy similar a la visión humana, excepto que los humanos tienen una ventaja. La vista humana tiene la ventaja de la vida útil del contexto para entrenar cómo distinguir los objetos, qué tan lejos están, si se mueven y si hay algo mal en una imagen.
-				<br><br>
-				La visión por computadora entrena a las máquinas para realizar estas funciones, pero tiene que hacerlo en mucho menos tiempo con cámaras, datos y algoritmos en lugar de retinas, nervios ópticos y una corteza visual. Debido a que un sistema capacitado para inspeccionar productos o observar un activo de producción puede analizar miles de productos o procesos por minuto, notando defectos o problemas imperceptibles, puede superar rápidamente las capacidades humanas.
-			</blockquote>
-		</p>
-		<p>
-			Sushant Kumar Jha en <a href="https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb" class="">Medium</a>  menciona lo siguiente:
-
-			<blockquote class="blockquote my-4">
-				Los seres humanos usan sus ojos y su cerebro para ver y sentir visualmente el mundo que los rodea. 
-				La visión por computadora es la ciencia que tiene como objetivo brindar una capacidad similar, si no mejor, a una máquina o computadora. 
-				Se ocupa de la extracción, el análisis y la comprensión automática de información útil y significativa de una sola imagen o una secuencia de imágenes. Implica el desarrollo de una base teórica y algorítmica para lograr la comprensión visual automática.
-			</blockquote>
-
-			Dicho esto, ¿es posible la idea de darle una capacidad humana a una computadora?. Actualmente organizaciones en diversas partes del mundo se encuentran desarrollando investigaciones en este tópico ya que son conscientes de los beneficios que ésta brinda. 
-		</p>
-		
-		<h5 class="my-4" id="aplications">Aplicaciones</h5>
-		<p>
-			Plantearse la pregunta: ¿Qué proceso repetitivo que necesite el uso constante de la vista puede ser automatizado? puede ayudarnos a entender las aplicaciones del Computer Vision. Compañías con grandes cadenas de producción son los primeros en implementar estas tecnologías. 
-		</p>
-		<p>
-			Con el uso de nuevas tecnologías es posible la disminución de trabajo manual en el campo mientras se agiliza la eficiencia de monitoreo de cultivos.
-		</p>
-		<img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas"> <!--width="300px" height="300px"-->
-
-		<h5 class="my-4" id="end">Conclusiones</h5>
-		<p>
-			Una conclusión genial aquí.
-		</p>
-
-		<h5 class="my-4" id="links">Lista de Referencias</h5>
-		<p> Mayor información:
-		<ol>
-			<li><a href='https://www.ibm.com/topics/computer-vision'>IBM - Computer Vision</a></li>
-			<li><a href='https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb'>Computer Vision In Agriculture</a></li>
-			<li><a href='https://medium.com/@sushantjha8/how-artificial-intelligence-can-help-in-photogrammetry-with-drones-95046a4c8fd4'>How Artificial Intelligence helping into photogrammetry?</a></li>
-		</ol>
-		</p>
-
-		
-		</div>
-		<!-- Fin del container -->
-	</div>	
-	<!-- Fin de columna -->
-
-	<!-- Columna Derecha -->
-	<div class="col-lg-1">
-		<div class="container-fluid">
-		<ul class="section-nav">
-			<a class="text-muted mb-0 text-small" href="#intro">Introducción</a><br>
-			<a class="text-muted mb-0 text-small" href="#cv">¿Computer Vision?</a><br>
-			<a class="text-muted mb-0 text-small" href="#aplications">Aplicaciones</a><br>
-			<a class="text-muted mb-0 text-small" href="#end">Conclusiones</a><br>
-			<!-- <a class="text-muted mb-0 text-small" href="#free">De acceso gratuito</a><br>
-			<a class="text-muted mb-0 text-small" href="#nofree">De pago</a><br> -->
-			<a class="text-muted mb-0 text-small" href="#links">Lista de Referencias</a>
+	
+<div class="col-2">
+	<nav class="col-2" id="myScrollspy">
+	<div class="container-fluid">
+	<ul class="navbar-nav nav nav-pills flex-column">
+		<ul class="section-nav ml-auto align-items-lg-center">
+			<a class="nav-link text-small gray" href="#intro">Introducción</a>
+			<a class="nav-link text-small gray" href="#cv">¿Computer Vision?</a>
+			<a class="nav-link text-small gray" href="#aplications">Aplicaciones</a>
+			<a class="nav-link text-small gray" href="#end">Conclusiones</a>
+			<a class="nav-link text-small gray" href="#links">Lista de Referencias</a>
 		</ul>
-		</div>
+	</ul>
 	</div>
-	<!-- Fin de columna Derecha -->
+	</nav>
+</div>
+
+
+<!-- Columna izquierda -->
+<div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+	<!-- Banner -->
+	<center>	
+		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso! </b></marquee>
+	</center>
+	<hr>
+
+	<h4 class="my-4">Entendiendo qué es Computer Vision</h4>
+	<p>
+		<b>Objetivo:</b> Reunir información bibliográfica sobre la Visión por computadora (<i>Computer Vision</i> en inglés) con el fin de entender las publicaciones académicas relacionadas a la Agricultura.
+	</p>
+
+
+	<h5 class="my-4" id="intro">Introducción</h5>
+	<p>
+		El crecimiento anual de las computadoras es 
+	</p>
+			
+
+	<h5 class="my-4" id="cv">¿Computer Vision?</h5>
+	<p>
+		De manera concisa, <a href="https://www.ibm.com/topics/computer-vision" class="">IBM</a> menciona lo siguiente acerca de la Visión por Computadora:
+		<blockquote class="blockquote my-4">
+			La visión por computadora es un <b>campo de inteligencia artificial (IA)</b> que <i>permite que las computadoras y los sistemas obtengan información significativa de imágenes digitales, videos y otras entradas visuales, y tomen acciones o hagan recomendaciones basadas en esa información.</i> <br><br>
+			<b>Si la IA permite que las computadoras piensen, la visión por computadora les permite ver, observar y comprender.</b>
+			<br><br>
+			La visión por computadora funciona de manera muy similar a la visión humana, excepto que los humanos tienen una ventaja. La vista humana tiene la ventaja de la vida útil del contexto para entrenar cómo distinguir los objetos, qué tan lejos están, si se mueven y si hay algo mal en una imagen.
+			<br><br>
+			La visión por computadora entrena a las máquinas para realizar estas funciones, pero tiene que hacerlo en mucho menos tiempo con cámaras, datos y algoritmos en lugar de retinas, nervios ópticos y una corteza visual. Debido a que un sistema capacitado para inspeccionar productos o observar un activo de producción puede analizar miles de productos o procesos por minuto, notando defectos o problemas imperceptibles, puede superar rápidamente las capacidades humanas.
+		</blockquote>
+	</p>
+	<p>
+		Sushant Kumar Jha en <a href="https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb" class="">Medium</a>  menciona lo siguiente:
+
+		<blockquote class="blockquote my-4">
+			Los seres humanos usan sus ojos y su cerebro para ver y sentir visualmente el mundo que los rodea. 
+			La visión por computadora es la ciencia que tiene como objetivo brindar una capacidad similar, si no mejor, a una máquina o computadora. 
+			Se ocupa de la extracción, el análisis y la comprensión automática de información útil y significativa de una sola imagen o una secuencia de imágenes. Implica el desarrollo de una base teórica y algorítmica para lograr la comprensión visual automática.
+		</blockquote>
+
+		Dicho esto, ¿es posible la idea de darle una capacidad humana a una computadora?. Actualmente organizaciones en diversas partes del mundo se encuentran desarrollando investigaciones en este tópico ya que son conscientes de los beneficios que ésta brinda. 
+	</p>
+	
+	<h5 class="my-4" id="aplications">Aplicaciones</h5>
+	<p>
+		Plantearse la pregunta: ¿Qué proceso repetitivo que necesite el uso constante de la vista puede ser automatizado? puede ayudarnos a entender las aplicaciones del Computer Vision. Compañías con grandes cadenas de producción son los primeros en implementar estas tecnologías. 
+	</p>
+	<p>
+		Con el uso de nuevas tecnologías es posible la disminución de trabajo manual en el campo mientras se agiliza la eficiencia de monitoreo de cultivos.
+	</p>
+	<img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas"> <!--width="300px" height="300px"-->
+
+	<h5 class="my-4" id="end">Conclusiones</h5>
+	<p>
+		Una conclusión genial aquí.
+	</p>
+
+	<h5 class="my-4" id="links">Referencias</h5>
+	<p> Mayor información:
+	<ol>
+		<li><a href='https://www.ibm.com/topics/computer-vision'>IBM - Computer Vision</a></li>
+		<li><a href='https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb'>Computer Vision In Agriculture</a></li>
+		<li><a href='https://medium.com/@sushantjha8/how-artificial-intelligence-can-help-in-photogrammetry-with-drones-95046a4c8fd4'>How Artificial Intelligence helping into photogrammetry?</a></li>
+	</ol>
+	</p>
+	
+
+</div>	<!-- Fin de columna central -->
+
+
+<!-- Columna Derecha -->
+<div class="col-1"></div>
+<!-- Fin de columna Derecha -->
 
 
 </div><!-- Fin de row -->
 </div><!-- Fin de container -->
 
+
+
+
 <!--Footer-->	
 <footer style="background: #eee;" class="pt-2">
 	<div class="container py-3">
 		<div class="row"> 
-
+		<!-- Lado izquierdo -->
 		<div class="col-lg-8 col-md-6 mb-2">
 			<h5 class="lined lined-dark mb-3">Acerca de la página</h5>
 			<p class="text-muted text-small">
@@ -170,7 +183,7 @@
 			lo puedes hacer mediante los enlaces en la sección contacto.
 			</p>
 		</div>
-
+		<!-- Lado derecho -->
 		<div class="col-lg-4 col-md-6 mb-2">
 			<h5 class="lined lined-dark mb-3">Contacto</h5>
 			<ul>
@@ -185,6 +198,7 @@
 		<!-- Fin de row -->
 	</div>
 
+	<!-- Footer de template -->
 	<div class="bg-dark py-1">    
 		<div class="container">
 		<div class="row">
@@ -209,5 +223,4 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 </body>
-
 </html>

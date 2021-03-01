@@ -1904,8 +1904,8 @@ code {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #2b90d9;
+  color: #2b90d9;
+  background-color: #ffffff;
 }
 
 /*

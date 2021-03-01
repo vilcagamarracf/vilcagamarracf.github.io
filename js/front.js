@@ -2,6 +2,7 @@ $(function () {
     map();
 });
 
+$('body').scrollspy({ target: '#myScrollspy' })
 
 /* =========================================
  *  map
