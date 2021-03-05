@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cesar Vilca: Posts</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="all,follow">
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- Google fonts-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+	<!-- Icon fonts-->
+	<link rel="stylesheet" href="../css/pe-icon-7-stroke.css">
+	<!-- Lightbox CSS-->
+	<link rel="stylesheet" href="../vendor/lightbox2/css/lightbox.min.css">
+	<!-- Leaflet CSS-->
+	<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+	<!-- theme stylesheet-->
+	<link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+	<!-- Custom stylesheet - for your changes-->
+	<link rel="stylesheet" href="../css/custom.css">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<!-- Tweaks for older IEs--><!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	<style>
+	body {
+		position: relative;
+	}
+	ul.nav-pills {
+		top: 125px;
+		position: fixed;
+	}
+	</style>
+</head>
+
+<body>
+
+<!--Header-->
+<header class="header">
+	<nav class="navbar navbar-expand-lg py-lg-0">
+
+	<div class="container">
+		<a href="../index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
+		<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
+
+		<div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+			<li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a></li>
+			<li class="nav-item"><a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a></li>
+			<li class="nav-item"><a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a></li>
+		</ul>
+		</div>
+	</div>
+	</nav>
+</header>
+
+<hr>
+
+<!-- Redacción de post -->
+<div class="container-fluid">
+<div class="row">
+	
+<div class="col-2">
+	<nav class="col-2" id="myScrollspy">
+	<div class="container-fluid">
+	<ul class="navbar-nav nav nav-pills flex-column">
+		<ul class="section-nav ml-auto align-items-lg-center">
+			<a class="nav-link text-small gray" href="#importancia">Importancia</a>
+			<a class="nav-link text-small gray" href="#clasification">Clasificación</a>
+            <!-- <ul>
+                <li><a href="" class="nav-link text-small gray">Estadística</a></li>
+                <li><a href="" class="nav-link text-small gray">Aprendizaje Automático</a></li>
+                <li><a href="" class="nav-link text-small gray">Cultivos Agrícolas</a></li>
+            </ul> -->
+			<!-- <a class="nav-link text-small gray" href="#aplications">Aplicaciones</a> -->
+			<!-- <a class="nav-link text-small gray" href="#end">Conclusiones</a> -->
+			<a class="nav-link text-small gray" href="#links">Lista de Referencias</a>
+		</ul>
+	</ul>
+	</div>
+	</nav>
+</div>
+
+<!-- Columna central -->
+<div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<div class="container-fluid">
+
+	<h4 class="my-4">Clasificación de cultivos agrícolas mediante Teledetección</h4>
+
+	<!-- Imagen -->
+	<div class="py-4">
+		<img class="rounded mx-auto d-block" src="../img/crop_clasification_2.png" alt="" width="75%">
+		<p align='center'>
+			<b>Fuente: </b><a href="https://www.mdpi.com/2072-4292/8/3/166/htm">First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe (2016)</a> 
+		</p>
+	</div>
+
+	<!-- Banner -->
+	<!-- <center>	
+		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso! </b></marquee>
+	</center> -->
+
+	<p>
+		<b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.
+	</p>
+
+	<h5 class="my-4" id="importancia">Importancia</h5>
+	<p>
+		La clasificación de cultivos tiene como fin el presentar un mapa en donde se represente los cultivos clasificados en una zona de estudio determinada.
+	</p>
+	<p>
+		A continuación presentaré una recopilación de "Importancias" según diversos autores: <br>
+		<br>
+		<a class="my-2" href="https://www.sciencedirect.com/science/article/pii/S0034425717304686">(2018) Sentinel-2 cropland mapping using pixel-based and object-based time-weighted dynamic time warping analysis</a>:
+		<ul>
+			<li class="my-2">El <b>aumento de población</b> estimado de 7.3 Billones a 8.7 billones para el 2030, 9.7 billones para el 2050 y 11.2 billones para el 2100 impactará sobre los sistemas de provisión de alimentos a nivel mundial.</li>
+			<li class="my-2">Metodologías eficientes sobre el mapeo de cultivos son esenciales para la implementación de <b>prácticas sostenibles en agricultura</b> y para el monitoreo periódico de cultivos.</li>
+			<li class="my-2">Disponibilidad de metodologías con el propósito de cumplir los objetivos propuestos por las Naciones Unidas de Desarrollo Sostenible: No pobreza y cero hambre.</li>
+		</ul>
+	</p>
+
+	<p>
+		<a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">(2012) Crop type mapping using spectral–temporal profiles and phenological information</a>:
+		<ul>
+			<li class="my-2">Poseer información multianual y espacial es requisito para diversas aplicaciones ambientales, para apoyar el modelado y gestión del sistema agroambiental desde escala regional hasta la nacional.</li>
+			<li class="my-2">Muchas aplicaciones agroambientales, como la estimación de daños por inundaciones agrícolas o el modelado de la calidad del agua, requieren datos de cultivos distribuidos espacialmente.</li>
+		</ul>
+	</p>
+	
+	<p>
+		<a href="https://doi.org/10.1016/j.rse.2019.111624">(2020) Mapping cropping intensity in China using time series Landsat and Sentinel-2 images and Google Earth Engine</a>:
+		<ul>
+			<li class="my-2">La intensidad del cultivo es un factor importante que contribuye a la producción de cultivos y la seguridad alimentaria a escalas local, regional y nacional, y es una variable de datos de entrada crítica para muchos modelos de clima, superficie terrestre y cultivos globales. Por ello se debe generar anualmente mapas de intensidad del cultivo.</li>
+			<li class="my-2">Los datos de intensidad de cultivo pueden mejorar en gran medida las evaluaciones y predicciones de la producción de alimentos.</li>
+		</ul>
+	</p>
+
+	<p>
+		Extracto de la RESOLUCIÓN MINISTERIAL N° 0322-2020-MIDAGRI acerca de la importancia del <a href="https://siea.midagri.gob.pe/portal/normas"><b>Mapa Nacional de Superficie Agrícola del Perú</b></a>:
+		<ul> 
+			<li class="my-2">... actualmente,  se  dispone  de  imágenes  satelitales  gratuitas  y  de  alta  resolución  espacial  cuyo  procesamiento   permite   el   mapeo   y      medición   más   precisa  de  la  superficie  agrícola  en  todo  el  territorio nacional,  resultando  una  fuente  objetiva  de  referencia  y  que permite mejorar significativamente la medición de la superficie agrícola y la información estadística derivada de ella sobre  la actividad agraria, <b>convirtiéndose en una herramienta potente para los procesos de planificación de las  intervenciones,  y  de  las  operaciones  estadísticas  del  Sector.</b></li>
+
+			<li class="my-2">... se señala  que  la  Estrategia  Global  para  el  Mejoramiento de  las  Estadísticas  Agropecuarias  rurales  (FAO  del 2011), declara  la  necesidad  de  vincular  las  dimensiones  económicas, sociales y ambientales en las investigaciones estadísticas   rurales,   recomendando que se utilicen imágenes satelitales  de la superficie terrestre del país que permiten clasificar el uso del suelo , tales como tierras de cultivo, pastizales, etc., <b>a fin de monitorear el uso de la tierra, el cálculo de las áreas de cultivo  y su dinámica, y   proporcione   información   actualizada   que   permita   monitorear los cambios en el uso del suelo, cuantificar siembras y cosechas, planificar infraestructura de riego, estimar pérdidas ante desastres naturales, entre otros.</b></li>
+		</ul>
+		El Mapa de la Superficie Agrícola del Perú, se ha constituido como base fundamental para la ejecución de operaciones estadísticas a nivel nacional, el monitoreo de los cultivos  de importancia nacional, así como la integración de las operaciones estadísticas a partir de un solo marco muestra. De esta manera, se busca  generar información estadística agraria oportuna y confiable, para la focalización de las intervenciones y la toma de decisiones de los productores agrarios.
+	</p>
+	
+
+	<h5 class="my-4" id="clasification">Clasificación</h5>
+	<h6 class="my-4">Clasificación Estadística</h6>
+    <p>
+        Según <a href="https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_estad%C3%ADstica">Wikipedia</a>, la <b>clasificación</b> es el problema de identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de datos de formación que contiene observaciones (o instancias) cuya categoría de miembros es conocida.
+    </p>
+
+    <h6 class="my-4">Clasificación en Aprendizaje Automático</h6>
+    <p>
+        La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.
+    </p>
+    <p>
+        En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.
+    </p>
+    <p>
+        Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.
+    </p>
+
+    <h6 class="my-4">Clasificación de cultivos usando percepción remota</h6>
+    <p>
+        Según <a href="https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf">INEGI</a>, <b>la clasificación de cultivos</b> puede ser abordada como un problema de reconocimiento de patrones que utiliza procesamiento de imágenes y que está formado por varias etapas: 
+        <ol>
+            <li>Selección del método o medio a través del cual se obtiene la imagen,</li>
+            <li>Procesamiento de ésta (imagen) como en la extracción de rasgos </li>
+            <li>Selección  y  aplicación  de  algoritmos  de  clasificación. </li>
+        </ol>
+    </p>
+    
+    
+	<!-- <img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas">  -->
+    <!-- width="300px" height="300px" -->
+
+
+	<h5 class="my-4" id="links">Referencias</h5>
+	<p> Mayor información:
+	<ol>
+		<!-- <li><a href='https://gidahatari.com/ih-es/tutorial-de-determinacin-de-firmas-espectrales-de-cultivos-con-qgis-3-y-scp-6'>Gidahatari - Tutorial de Determinación de Firmas Espectrales de Cultivos con QGIS 3 y SCP 6</a></li> -->
+		<li><a href='https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf'>INEGI - Clasificación de cultivos agrícolas</a></li>
+		<li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li>
+		<li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li>
+	</ol>
+	</p>
+	
+</div> <!-- fin de container -->
+</div> <!-- Fin de columna central -->
+
+
+<!-- Columna Derecha -->
+<div class="col-1"></div>
+<!-- Fin de columna Derecha -->
+
+
+</div><!-- Fin de row -->
+</div><!-- Fin de container -->
+
+
+
+
+<!--Footer-->	
+<footer style="background: #eee;" class="pt-2">
+<div class="container py-2">
+	<div class="mb-2">
+        <ul class="list-inline text-center">
+        <li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
+            <i class="fab fa-facebook-f"></i></a></li>
+        <li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+        <li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
+        <li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Footer de template -->
+<div class="bg-dark py-1">    
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
+			<p class="small text-gray mb-0">2021 - Cesar Vilca</p>
+		</div>
+		<div class="col-lg-6 text-center text-lg-right">
+			<p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
+		</div>
+	</div>
+	</div>
+</div>
+</footer>
+
+<!-- JavaScript files-->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/lightbox2/js/lightbox.min.js"></script>
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../js/front.js"></script>
+<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</body>
+</html>
