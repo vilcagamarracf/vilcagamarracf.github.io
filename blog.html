@@ -19,7 +19,7 @@
 	<!-- Leaflet CSS-->
 	<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
 	<!-- theme stylesheet-->
-	<link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+	<link rel="stylesheet" href="css/style.green.css" id="theme-stylesheet">
 	<!-- Custom stylesheet - for your changes-->
 	<link rel="stylesheet" href="css/custom.css">
 	<!-- Favicon-->
@@ -60,99 +60,137 @@
 	</header>
 
 	<section style="background: url(img/jumbotron1.jpg)" class="py-5 bg-cover bg-center"> 
-		<div class="hero-overlay"></div>
-		<div class="container py-7 text-white text-center">
-			<h1 class="text-shadow hero-heading">Blog</h1>
-			<p class="text-shadow lead my-4 font-weight-bold">Agricultura, Teledetección, Programación y más</p>
+		<div class="container">
+			<div class="hero-overlay"></div>
+		<div class="row d-flex align-items-center flex-wrap">
+		<div class="col-md-7">
+			<h1 class="h2 text-shadow text-white">Blog</h1>
 		</div>
-	</section>
-
-	<section class="py-5 bg-cover bg-gray">
-		<div class="container py-1">
-			<div aria-label="breadcrumb" class="nav">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-					<li aria-current="page" class="breadcrumb-item active">Blog</li>
-					<li class="breadcrumb-item"><a href="contact.html">Contacto</a></li>
-				</ol>
-			</div>
-		<h2 class="lined mb-4">Acerca del blog</h2> <!-- <p class="lead">-->
-		<p class="lead">
-			En la presente página estaré compartiendo información referente a lo anterior mencionado: avances tecnológicos 
-			en el campo de la Agricultura de Precisión, su relación con el Aprendizaje Automático (Machine Learning),
-			Computer Vision y el sensoramiento remoto mediante el uso de lenguajes de programación como Python, R y JavaScript (en Google Earth Engine).
-		</p>
+		<div class="col-md-5">
+		</div>
+		</div>
 	</div>
 	</section>
 
-	<figure>
-	<img src="img/chincha_canny.png" alt="" class="w-100">
-	<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-		Detección de Vegetación: Aplicación del filtro Canny (Detector de bordes) sobre una imagen EVI de Sentinel-2 en Earth Engine, Valle de Chincha, Ica
-	</figcaption>
-	</figure>
+<section class="py-5">
+	<div class="container py-1">
+		<div aria-label="breadcrumb" class="nav">
+			<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+			<li aria-current="page" class="breadcrumb-item active">Blog</li>
+			<li class="breadcrumb-item"><a href="contact.html">Contacto</a></li>
+			</ol>
+		</div>
+	
+		<p class="lead my-4 text-center">
+			Conjunto de posts acerca de la Agricultura en tiempos modernos, tutoriales, bibliografía recomendada y más.
+		</p>
 
-	<!-- Codigo de interés
-	<strong>Pellentesque habitant morbi tristique</strong>
-	<code>commodo vitae,</code>
-	<a href="https://github.com/vilcagamarracf">vilcagamarracf</a>
-
-	<ol> Enumeración
-	<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-	<li>Aliquam tincidunt mauris eu risus.</li>
-	</ol>-->
-
-	<div class="container py-4">
 	<div class="row">
 	<div class="col-1"></div>
 
 	<div class="col-10">
-
-	<section class="py-2">	
-			<center>	
-				<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso de expansión! </b></marquee>
-			</center>
+	<section>	
 		<div class="container py-1">
-			<hr>
-			<h2 class="my-4">Posts</h2>
-			<p>Conjunto de posts acerca de la Agricultura en tiempos modernos y otras cosas más como tutoriales, bibliografía recomendada y más.</p>
 
+			<!-- <center>	
+				<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso de expansión! </b></marquee>
+			</center> -->
+			
 			<div  class="col-lg-14 my-4">
-				<hr>
-				<div class="container py-1">
-					<p><img src="https://miro.medium.com/max/2000/0*D600CcWTqCI_lpa_.jpg" class="blog-img-exception"></p>
-					<h5 class="my-3"><a href='blog/post1_referencias.html'>Agricultura digital: Referencias</a></h5>
-					<p>
-						Recopilación de información relevante con respecto a la Agricultura (Teledetección, Machine Learning y Computer Vision). (en constante ampliación).
-					</p>
+			<hr>
+				<section>
+				<div class="container-fluid py-3">
+					<div class="row">
+					<div class="col-md-3">
+						<div class="blog-img"><img src="https://www.croptracker.com/images/blog/Robots_in_Ag/computervision.png" class="img-fluid rounded mx-auto d-block"></div>
 					</div>
-					
-				<hr>
-				<div class="container py-1">
-					<p><img src="https://www.croptracker.com/images/blog/Robots_in_Ag/computervision.png" class="blog-img"></p>
-					<h5 class="my-3"><a href='blog/post3_cv.html'>Computer Vision en la Agricultura</a></h5>
-					<p>
-						Revisando bibliografía sobre el campo de Computer Vision en la Agricultura (en proceso). <br>
-					</p>
+						<div class="col-md-9">
+						<h5 class="my-3"><a href='blog/post3_cv.html'>Computer Vision en la Agricultura</a></h5>
+						<p>
+							Revisando bibliografía sobre el campo de Computer Vision en la Agricultura (en proceso).
+						</p>
+						<!-- <p class="text-right">
+							<a href='blog/post3_cv.html' class="btn btn-outline-primary">Seguir leyendo »</a></p> -->
+						</div>
 					</div>
-				
-				<hr>
-				<div class="container py-1">
-					<p><img src="img/google-earth-engine.jpg" class="blog-img"></p>
-					<h5 class="my-3"><a href='blog/post4_ee.html'>Google Earth Engine: Aprendiendo practicando</a></h5>
-					<p>
-						Introducción a la plataforma de análisis mundial, referencias recomendadas, ambientes de desarrollo y más.
-					</p>
+				</div>		
+				</section>
+			<hr>
+				<section>
+				<div class="container-fluid py-3">
+					<div class="row">
+					<div class="col-md-3">
+						<div class="blog-img"><img src="img/google-earth-engine.jpg" class="img-fluid rounded mx-auto d-block"></div>
 					</div>
-				
-				<hr>
-					<div class="container py-1">
-					<p><img src="img/Anaconda_Logo.png" class="blog-img"></p>
-					<h5 class="my-3"><a href='blog/post5_conda.html'>Manejo de paquetes de Python usando la terminal Anaconda</a></h5>
-					<p>
-						Breve tutorial sobre el manejo de librerías en local usando la terminal de ANACONDA (Python).
-					</p>
+						<div class="col-md-9">
+						<h5 class="my-3"><a href='blog/post4_ee.html'>Google Earth Engine: Aprendiendo practicando</a></h5>
+						<p>
+							Introducción a la plataforma de análisis mundial, referencias recomendadas, ambientes de desarrollo y más.
+						</p>
+						<!-- <p class="text-right"> -->
+						<!-- <a href="blog/post3_cv.html" class="btn btn-outline-primary">Seguir leyendo »</a></p> -->
+						</div>
 					</div>
+				</div>	
+				</section>
+			<hr>
+				<section>
+				<div class="container-fluid py-3">
+					<div class="row">
+					<div class="col-md-3">
+						<div class="blog-img"><img src="img/Anaconda_Logo.png" class="img-fluid rounded mx-auto d-block"></div>
+					</div>
+						<div class="col-md-9">
+						<h5 class="my-3"><a href='blog/post5_conda.html'>Manejo de paquetes de Python usando la terminal Anaconda</a></h5>
+						<p>
+							Breve tutorial sobre el manejo de librerías en local usando la terminal de ANACONDA (Python).
+						</p>
+						<!-- <p class="text-right"> -->
+							<!-- <a href='' class="btn btn-template-outlined">Seguir leyendo</a> -->
+						<!-- <a href="blog/post5_conda.html" class="btn btn-outline-primary">Seguir leyendo »</a></p> -->
+						</div>
+					</div>
+				</div>	
+				</section>
+			<hr>
+				<section>
+				<div class="container-fluid py-3">
+					<div class="row">
+					<div class="col-md-3">
+						<div class="blog-img"><img src="img/ml_image.jpeg" class="img-fluid rounded mx-auto d-block"></div>
+					</div>
+						<div class="col-md-9">
+						<h5 class="my-3"><a href='blog/post_ML_python.html'>Aprendiendo sobre Aprendizaje Automático<br>(en proceso)</a></h5>
+						<p>
+						Post dedicado a reunir información sobre Aprendizaje Automático, comentando aplicaciones y ejemplos en Python (en proceso). 
+						</p>
+						<!-- <p class="text-right"> -->
+							<!-- <a href='' class="btn btn-template-outlined">Seguir leyendo</a> -->
+						<!-- <a href="blog/post_ML_python.html" class="btn btn-outline-primary">Seguir leyendo »</a></p> -->
+						</div>
+					</div>
+				</div>	
+				</section>
+				<hr>
+				<section>
+				<div class="container-fluid py-3">
+					<div class="row">
+					<div class="col-md-3">
+						<div class="blog-img"><img src="img/crop_clasification.png" class="img-fluid rounded mx-auto d-block"></div>
+					</div>
+						<div class="col-md-9">
+						<h5 class="my-3"><a href='blog/post8_clasificacion.html'>Clasificación de cultivos agrícolas mediante Teledetección <br>(en proceso)</a></h5>
+						<p>
+							Post dedicado a reunir información sobre la clasificación de cultivos agrícolas mediante técnicas de sensoramiento remoto (Teledetección).
+						</p>
+						<!-- <p class="text-right"> -->
+							<!-- <a href='' class="btn btn-template-outlined">Seguir leyendo</a> -->
+						<!-- <a href="blog/post8_clasificacion.html" class="btn btn-outline-primary">Seguir leyendo »</a></p> -->
+						</div>
+					</div>
+				</div>	
+				</section>
 				
 				<!-- <hr>
 					<p><img src="img/blog1.jpg" class="blog-img"></p>
@@ -169,25 +207,6 @@
 						Prueba del terminal de Ubuntu en Windows 10 y comentarios sobre sus utilidades (en proceso).
 					</p>
 					</div> -->
-
-				<hr>
-					<div class="container py-1">
-					<p><img src="img/ml_image.jpeg" class="blog-img-exception"></p>
-					<h5 class="my-3"><a href='blog/post_ML_python.html'>Aprendiendo sobre Aprendizaje Automático</a></h5>
-					<p>
-						Post dedicado a reunir información sobre Aprendizaje Automático, comentando aplicaciones y ejemplos en Python (en proceso).
-					</p>
-					</div>
-
-				<hr>
-					<div class="container py-1">
-					<p><img src="img/crop_clasification.png" class="blog-img"></p>
-					<h5 class="my-3"><a href='blog/post8_clasificacion.html'>Clasificación de cultivos agrícolas mediante Teledetección <br>(en proceso)</a></h5>
-					<p>
-						Post dedicado a reunir información sobre la clasificación de cultivos agrícolas mediante técnicas de sensoramiento remoto (Teledetección).
-					</p>
-					</div>	
-
 			</div>
 		</div>
 	</section>
@@ -197,45 +216,36 @@
 
 	</div>
 	</div>
+</section>
 
-<!-- Footer -->
+
+<!--Footer-->	
 <footer style="background: #eee;" class="pt-2">
-	<div class="container py-3">
+<div class="container py-2">
+	<div class="mb-2">
+        <ul class="list-inline text-center">
+        <li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
+            <i class="fab fa-facebook-f"></i></a></li>
+        <li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+        <li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
+        <li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
+        </ul>
+    </div>
+</div>
 
+<!-- Footer de template -->
+<div class="bg-dark py-1">    
+	<div class="container">
 	<div class="row">
-		<div class="col-lg-8 col-md-6 mb-2">
-			<h5 class="lined lined-dark mb-3">Acerca de la página</h5>
-			<p class="text-muted text-small">
-			El objetivo de ésta página es ir redactando posts con información de interés personal. Para algún contacto 
-			lo puedes hacer mediante los enlaces en la sección contacto.
-			</p>
-		</div>
-
-		<div class="col-lg-4 col-md-6 mb-2">
-			<h5 class="lined lined-dark mb-3">Contacto</h5>
-			<ul>
-			<li><p class="text-muted mb-0 text-small"> Gmail: vilcagamarracf@gmail.com</p></li>
-			<li><p class="text-muted mb-0 text-small"> Github: <a href="https://github.com/vilcagamarracf">vilcagamarracf</a></p></li>
-			<li><p class="text-muted mb-0 text-small"> Twitter: <a href="https://twitter.com/CesarVilca19">@CesarVilca19</a></p></li>
-			<li><p class="text-muted mb-0 text-small"> Linkedin: <a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/">Cesar Vilca</a></p></li>
-			</ul>
-		</div>
-	</div>
-
-	</div>
-
-	<div class="bg-dark py-1">    
-		<div class="container">
-		<div class="row">
-			<div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
+		<div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
 			<p class="small text-gray mb-0">2021 - Cesar Vilca</p>
-			</div>
-			<div class="col-lg-6 text-center text-lg-right">
-			<p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
-			</div>
 		</div>
+		<div class="col-lg-6 text-center text-lg-right">
+			<p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
 		</div>
 	</div>
+	</div>
+</div>
 </footer>
 
 <!-- JavaScript files-->
