@@ -99,7 +99,7 @@
 <div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 
-    <h4 class="my-4" id="inicio">Manejo de Paquetes con Anaconda</h4>
+    <h1 class="h4 my-4" id="inicio">Manejo de Paquetes con Anaconda</h1>
     <p>
         <b>Objetivos:</b> 
         <ul>
@@ -108,7 +108,7 @@
         </ul>
     </p>
 
-    <h5 class="my-4" id="conda">Qué es CONDA</h5>
+    <h2 class="h5 my-4" id="conda">Qué es CONDA</h2>
     <p>
         Según su <a href="https://docs.conda.io/projects/conda/en/latest/index.html">documentación</a>, es un sistema de gestión de paquetes de código abierto y un sistema de gestión del entorno que se ejecuta en Windows, macOS y Linux. Conda instala, ejecuta y actualiza rápidamente paquetes y sus dependencias. Conda crea, guarda, carga y cambia fácilmente entre entornos en su computadora local. Fue creado para programas Python pero puede empaquetar y distribuir software para cualquier lenguaje. 
     </p>
@@ -116,7 +116,7 @@
         Conda como administrador de paquetes le ayuda a encontrar e instalar paquetes. Si necesita un paquete que requiere una versión diferente de Python, no es necesario que cambie a un administrador de entorno diferente porque conda también es un administrador de entorno. Con solo unos pocos comandos, puede configurar un entorno totalmente separado para ejecutar esa versión diferente de Python, mientras continúa ejecutando su versión habitual de Python en su entorno normal.
     </p>
 
-    <h5 class="my-4" id="anaconda">¿y Anaconda?</h5>
+    <h2 class="h5 my-4" id="anaconda">¿y Anaconda?</h2>
     <img class='rounded mx-auto d-block img-fluid my-4' src="../img/Anaconda_Logo.png">
     
     <p>
@@ -131,7 +131,7 @@
         </ul>
     </p>
 
-    <h5 class="my-4" id="tutorial">Tutorial</h5>
+    <h2 class="h5 my-4" id="tutorial">Tutorial</h2>
     <p>
         Antes de comenzar es necesario tener instalado alguna versión de <a href="">Anaconda</a>. Posterior a ello, abrir el <code>Anaconda Prompt</code> (también puede aparecer como <code>Anaconda Prompt (anaconda3)</code>):
         <img class="rounded mx-auto d-block my-4" src="https://docs.conda.io/projects/conda/en/latest/_images/anaconda-prompt.png" width="50%">
@@ -205,7 +205,7 @@
         conda 4.9.2
     </pre>
 
-    <h6 class="my-4" id="packages">Paquetes (o <i>Packages</i>): ¿Qué son y por qué son tan necesarios?</h6>
+    <h3 class="h6 my-4" id="packages">Paquetes (o <i>Packages</i>): ¿Qué son y por qué son tan necesarios?</h3>
     <p>
         Los paquetes de Conda son archivos que contienen un conjunto de recursos: generalmente bibliotecas y ejecutables, pero no siempre. En principio, los paquetes de Conda pueden incluir datos, imágenes, cuadernos u otros activos. La herramienta de línea de comandos conda se utiliza para instalar, eliminar y examinar paquetes; otras herramientas como la GUI Anaconda Navigator también exponen las mismas capacidades. Esta publicación se centra en la herramienta conda en sí (verá casos de uso distintos de la administración de paquetes en unos minutos).
     </p>
@@ -822,18 +822,35 @@
     </p>
     
     <h6 class="my-4">¿Qué es Versionamiento Semántico?</h6>
-    <ul>
-        <li>MAJOR</li>
-        <li>MINOR</li>
-        <li>PATCH</li>
-    </ul>
-        <pre>
-            
-            code here
-        </pre>
-    
     <p>
-        Paquetes y sus respectivas versiones
+        La mayoría de los paquetes de Conda utilizan un sistema llamado control de versiones semántico para <b>identificar distintas versiones de un paquete de software sin ambigüedades.</b>
+        <ul>
+            <li>Las etiquetas de versión generalmente las eligen los autores del proyecto, no necesariamente las mismas personas que empaquetan el proyecto como un paquete Conda. </li>
+            <li>No existe ningún requisito técnico de que la etiqueta de la versión del autor del proyecto coincida con la etiqueta de la versión del paquete Conda, pero casi siempre se sigue la convención de hacerlo. </li>
+            <li>Las etiquetas de la versión semántica se pueden comparar lexicográficamente y facilitan la determinación de cuál de las dos versiones es la versión posterior. </li>
+        </ul>
+    </p>
+    <p>
+        En el control de versiones semántico, el software <b>se etiqueta con un identificador de versión de tres partes de la forma</b> <b>MAJOR.MINOR.PATCH</b>; los componentes de la etiqueta son números enteros no negativos separados por puntos. <br>
+    <ul>
+        <li>Suponiendo que todo el software comienza en la versión 0.0.0, el número de versión PRINCIPAL aumenta cuando se introduce una nueva funcionalidad significativa (a menudo con los cambios de API correspondientes). </li>
+        <li>Los aumentos en el número de versión MINOR generalmente reflejan mejoras (por ejemplo, nuevas funciones) que evitan cambios de API incompatibles con versiones anteriores. Por ejemplo, agregar un argumento opcional a una función API (de una manera que permita que el código antiguo se ejecute sin cambios) es un cambio digno de aumentar el número de versión MINOR. </li>
+        <li>Un incremento en el número de versión de PATCH es apropiado principalmente para correcciones de errores que conservan los mismos números de revisión MAYOR y MENOR. </li>
+        <li>Los parches de software generalmente no introducen nuevas funciones ni cambian las API en absoluto (excepto a veces para abordar problemas de seguridad). </li>
+    </ul>
+    </p>
+        
+    <p>
+        Muchas herramientas de línea de comandos muestran su identificador de versión ejecutando la herramienta --version. Esta información a veces se puede mostrar o documentar de otras formas. Por ejemplo, supongamos que en algún sistema, una determinada versión de Python está instalada y usted pregunta al respecto de esta manera:
+        <pre>
+
+            python -c "import sys; sys.version"
+            '1.0.1 (Mar 26 2014)'
+        </pre>
+        donde significa: La versión MAYOR es 1, el PATCH es 1.
+    </p>
+    <p>
+        <b>Paquetes y sus respectivas versiones</b>
         <pre>
             
             conda list PKGNAME
@@ -846,7 +863,7 @@
         </pre>
     </p>
     <p>
-        Instalación de un paquete específico
+        <b>Instalación de un paquete específico</b>
         <pre>
 
             # Tres opciones (opcional usar el --yes al final para omitir la pregunta)
@@ -870,7 +887,7 @@
         </pre>
     </p> -->
     <p>
-        Actualizar un paquete
+        <b>Actualizar un paquete</b>
         <pre>
             
             conda update PKGNAME                # OJO: para archivos instalables en conda-forge
@@ -879,7 +896,7 @@
         </pre>
     </p>
     <p>
-        Remover un paquete
+        <b>Remover un paquete</b>
         <pre>
             
             conda remove pandas -y              # Ojo: tener cuidado con eliminar paquetes
