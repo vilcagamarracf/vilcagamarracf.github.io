@@ -19,17 +19,17 @@
     border: thin solid #ccc;
 }
 
-.justificado{
-    text-align: justify;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+  /* margin-bottom: auto; */
+  /* width: 50%; */
 }
 
-aside{
-    width: 30%;
-    padding-left: 15px;
-    margin-left: 15px;
-    float: right;
-    font-style: roboto;
-    background-color: lightgray;
+.justificado{
+    text-align: justify;
 }
 
 .galeria {
@@ -45,11 +45,41 @@ aside{
 .section-nav{
     border-right: 2px solid rgb(79, 138, 50);
     text-align: left;
-    padding-right: 10px;
+    padding-right: 15px;
     padding-left: 0px
 }
 
 a.gray {
-  color: #878c8f;
-  text-decoration: none;
+    color: #878c8f;
+    text-decoration: none;
+}
+
+/* Modificando containers */
+/* .container {
+    background: black;
+    color: #ccc;
+} */
+
+.fondo {
+    background: url(../img/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fondo-main {
+    background: url(../img/background1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.fondo-ee {
+    background: url(../img/canny.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

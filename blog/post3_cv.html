@@ -18,7 +18,7 @@
 	<!-- Leaflet CSS-->
 	<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 	<!-- theme stylesheet-->
-	<link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+	<link rel="stylesheet" href="../css/style.green.css" id="theme-stylesheet">
 	<!-- Custom stylesheet - for your changes-->
 	<link rel="stylesheet" href="../css/custom.css">
 	<!-- Favicon-->
@@ -31,7 +31,7 @@
 		position: relative;
 	}
 	ul.nav-pills {
-		top: 125px;
+		top: 100px;
 		position: fixed;
 	}
 	</style>
@@ -58,22 +58,22 @@
 	</nav>
 </header>
 
-<hr>
+<!-- <hr> -->
 
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
 	
-<div class="col-2">
+<div class="col-2 fondo">
 	<nav class="col-2" id="myScrollspy">
 	<div class="container-fluid">
 	<ul class="navbar-nav nav nav-pills flex-column">
 		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small gray" href="#intro">Introducción</a>
-			<a class="nav-link text-small gray" href="#cv">¿Computer Vision?</a>
-			<a class="nav-link text-small gray" href="#aplications">Aplicaciones</a>
-			<a class="nav-link text-small gray" href="#end">Conclusiones</a>
-			<a class="nav-link text-small gray" href="#links">Lista de Referencias</a>
+			<a class="nav-link text-small" href="#intro">Introducción</a>
+			<a class="nav-link text-small" href="#cv">¿Computer Vision?</a>
+			<a class="nav-link text-small" href="#aplications">Aplicaciones</a>
+			<a class="nav-link text-small" href="#end">Conclusiones</a>
+			<a class="nav-link text-small" href="#links">Lista de Referencias</a>
 		</ul>
 	</ul>
 	</div>
@@ -84,12 +84,14 @@
 <div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 
-	<h4 class="my-4">Entendiendo qué es Computer Vision</h4>
+	<h4 class="py-4">Entendiendo qué es Computer Vision</h4>
+
+		<img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas"> <!--width="300px" height="300px"-->
 
 	<!-- Banner -->
-	<center>	
-		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso! </b></marquee>
-	</center>
+	<div class="text-center py-4">	
+		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
+	</div>
 
 	<p>
 		<b>Objetivo:</b> Reunir información bibliográfica sobre la Visión por computadora (<i>Computer Vision</i> en inglés) con el fin de entender las publicaciones académicas relacionadas a la Agricultura.
@@ -100,13 +102,13 @@
 	
 
 
-	<h5 class="my-4" id="intro">Introducción</h5>
+	<h5 class="py-4" id="intro">Introducción</h5>
 	<p>
 		Una introducción genial aquí.
 	</p>
 			
 
-	<h5 class="my-4" id="cv">¿Computer Vision?</h5>
+	<h5 class="py-4" id="cv">¿Computer Vision?</h5>
 	<p>
 		De manera concisa, <a href="https://www.ibm.com/topics/computer-vision" class="">IBM</a> menciona lo siguiente acerca de la Visión por Computadora:
 		<blockquote class="blockquote my-4">
@@ -129,9 +131,8 @@
 
 		Dicho esto, ¿es posible la idea de darle una capacidad humana a una computadora?. Actualmente organizaciones en diversas partes del mundo se encuentran desarrollando investigaciones en este tópico ya que son conscientes de los beneficios que ésta brinda. 
 	</p>
-	<img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas"> <!--width="300px" height="300px"-->
 	
-	<h5 class="my-4" id="aplications">Aplicaciones</h5>
+	<h5 class="py-4" id="aplications">Aplicaciones</h5>
 	<p>
 		Plantearse la pregunta: ¿Qué proceso repetitivo que necesite el uso constante de la vista puede ser automatizado? puede ayudarnos a entender las aplicaciones del Computer Vision. Compañías con grandes cadenas de producción son los primeros en implementar estas tecnologías. 
 	</p>
@@ -140,12 +141,12 @@
 	</p>
 	
 
-	<h5 class="my-4" id="end">Conclusiones</h5>
+	<h5 class="py-4" id="end">Conclusiones</h5>
 	<p>
 		Una conclusión genial aquí.
 	</p>
 
-	<h5 class="my-4" id="links">Referencias</h5>
+	<h5 class="py-4" id="links">Referencias</h5>
 	<p> Mayor información:
 	<ol>
 		<li><a href='https://www.ibm.com/topics/computer-vision'>IBM - Computer Vision</a></li>
@@ -154,12 +155,22 @@
 	</ol>
 	</p>
 	
+
+
+	<div class="container py-4">
+		<ul class="pagination justify-content-center">
+			<li class="page-item"><a class="page-link" href="post1_referencias.html"><== Anterior Post</a></li>
+			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
+			<li class="page-item"><a class="page-link" href="post4_ee.html">Siguiente Post ==></a></li>
+		</ul>
+	</div>
+
 </div> <!-- fin de container -->
 </div> <!-- Fin de columna central -->
 
 
 <!-- Columna Derecha -->
-<div class="col-1"></div>
+<div class="col-2 fondo"></div>
 <!-- Fin de columna Derecha -->
 
 

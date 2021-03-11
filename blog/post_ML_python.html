@@ -19,7 +19,7 @@
 	<!-- Leaflet CSS-->
 	<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 	<!-- theme stylesheet-->
-	<link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+	<link rel="stylesheet" href="../css/style.green.css" id="theme-stylesheet">
 	<!-- Custom stylesheet - for your changes-->
 	<link rel="stylesheet" href="../css/custom.css">
 	<!-- Favicon-->
@@ -29,7 +29,7 @@
         position: relative;
         }
         ul.nav-pills {
-            top: 125px;
+            top: 100px;
             position: fixed;
         }
     </style>
@@ -69,22 +69,22 @@
 	</div>
 </section> -->
 
-<hr>
+<!-- <hr> -->
 
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
 
-<div class="col-2">
+<div class="col-2 fondo">
 	<nav class="col-2" id="myScrollspy">
 	<div class="container-fluid">
 	<ul class="navbar-nav nav nav-pills flex-column">
 		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small gray" href="#introduction">Introducción</a>
-			<a class="nav-link text-small gray" href="#tipos">Tipos</a>
-			<a class="nav-link text-small gray" href="#subtitle">Subtítulo por agregar</a>
-			<a class="nav-link text-small gray" href="#links">Referencias</a>
-			<a class="nav-link text-small gray" href="#ejemplos">Ejemplos con Python</a>	
+			<a class="nav-link text-small" href="#introduction">Introducción</a>
+			<a class="nav-link text-small" href="#tipos">Tipos</a>
+			<a class="nav-link text-small" href="#subtitle">Subtítulo por agregar</a>
+			<a class="nav-link text-small" href="#links">Referencias</a>
+			<a class="nav-link text-small" href="#ejemplos">Ejemplos con Python</a>	
 		</ul>
 	</ul>
 	</div>
@@ -96,7 +96,7 @@
 <div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 		
-		<h4 class="my-4">Hablemos de Aprendizaje Automático</h4>
+		<h4 class="py-4">Hablemos de Aprendizaje Automático</h4>
 		<p>
 			<b>Objetivo:</b> Informar sobre este campo (considerado tecnología emergente actualmente) y explorar sus aplicaciones dándole un enfoque hacia la Agricultura.
 		</p>
@@ -105,18 +105,18 @@
 			<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
 		</center>
 
-		<h5 class="my-4" id="introduction">Introducción</h5>
+		<h5 class="py-4" id="introduction">Introducción</h5>
 		<p>
 			Aquí va una introducción sobre Aprendizaje Automático.
 		</p>
 		
 		
-		<h5 class="my-4" id="tipos">Tipos de Aprendizaje Automático</h5>
+		<h5 class="py-4" id="tipos">Tipos de Aprendizaje Automático</h5>
 		<p>
 			A continuación presentaré las mejores definiciones encontradas en la red.
 		</p>
 
-		<h6 class="my-4" id="a_superv">Aprendizaje Supervisado</h6>
+		<h6 class="py-2" id="a_superv">Aprendizaje Supervisado</h6>
 		<p>
 			Aquí comentaré sobre el Aprendizaje Supervisado.
 		</p>
@@ -126,7 +126,7 @@
 			<li class="my-2"><a href="https://medium.com/remote-sensing-in-agriculture">Medium - Gamaya Blog</a> : Blog de una Startup Suiza en el campo del AgTech. Su principal (y único) editor es Ivanov Igor, el mismo CEO de la startup.</li>
 		</ul> -->
 
-		<h6 class="my-4" id="a_nosuperv">Aprendizaje No Supervisado</h6>
+		<h6 class="py-2" id="a_nosuperv">Aprendizaje No Supervisado</h6>
 		<p>
 			Aquí comentaré sobre el Aprendizaje No Supervisado.
 		</p>
@@ -136,17 +136,17 @@
 			<!-- <li class="my-2"><a href="https://medium.com/nam-r/estimating-vegetated-surfaces-with-computer-vision-how-we-improved-our-model-and-scaled-up-66426b6e9fc6">[Pago] Estimating Vegetated Surfaces with Computer Vision: how we improved our model and scaled up</a></li> -->
 		<!-- </ul> -->
 		
-		<h6 class="my-4" id="a_reforz">Aprendizaje Reforzado</h6>
+		<h6 class="py-2" id="a_reforz">Aprendizaje Reforzado</h6>
 		<p>
 			Aquí comentaré sobre el Aprendizaje Reforzado.
 		</p>
 
-		<h5 class="my-4" id="subtitle">Subtítulo por agregar (pensando)</h5>
+		<h5 class="py-4" id="subtitle">Subtítulo por agregar (pensando)</h5>
 		<p>
 			Texto importante sobre Aprendizaje Automático.
 		</p>
 		
-		<h5 class="my-4" id="links">Referencias recomendadas</h5>
+		<h5 class="py-4" id="links">Referencias recomendadas</h5>
 		<ul>
 			<li class="py-2">Link_1</li>
 			<li class="py-2">Link_2</li>
@@ -155,13 +155,18 @@
 			<li class="py-2">Link_5</li>
 		</ul>
 
-		<h5 class="my-4" id="ejemplos">Ejemplos con Python</h5>
+		<h5 class="py-4" id="ejemplos">Ejemplos con Python</h5>
 		<p>
 			Aquí anexaré las libretas jupyer sobre Aprendizaje Automático en Python usando Colab.
 		</p>
 		
-
-		
+		<div class="container py-4">
+		<ul class="pagination justify-content-center">
+			<li class="page-item"><a class="page-link" href="post5_conda.html"><== Anterior Post</a></li>
+			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
+			<li class="page-item"><a class="page-link" href="post8_clasificacion.html">Siguiente Post ==></a></li>
+		</ul>
+		</div>
 
 	</div>
 </div>
@@ -174,13 +179,7 @@
 
 
 	<!-- Columna Derecha -->
-	<div class="col-lg-1">
-		<div class="container-fluid">
-		<ul class="section-nav">
-			
-		</ul>
-		</div>
-	</div>
+	<div class="col-2 fondo"></div>
 
 </div> <!-- Fin de los rows -->
 </div> <!-- Fin del container -->

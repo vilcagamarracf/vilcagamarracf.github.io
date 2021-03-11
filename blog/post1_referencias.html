@@ -18,7 +18,7 @@
 	<!-- Leaflet CSS-->
 	<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 	<!-- theme stylesheet-->
-	<link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+	<link rel="stylesheet" href="../css/style.green.css" id="theme-stylesheet">
 	<!-- Custom stylesheet - for your changes-->
 	<link rel="stylesheet" href="../css/custom.css">
 	<!-- Favicon-->
@@ -26,13 +26,12 @@
 	<!-- Tweaks for older IEs--><!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif] -->
-
 	<style>
 	body {
 		position: relative;
 	}
 	ul.nav-pills {
-		top: 125px;
+		top: 100px;
 		position: fixed;
 	}
 	</style>
@@ -61,21 +60,21 @@
 </header>
 	
 
-<hr>
+<!-- <hr> -->
 	
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
 	
-<div class="col-2">
+<div class="col-2 fondo">
 	<nav class="col-2" id="myScrollspy">
 	<div class="container-fluid">
 	<ul class="navbar-nav nav nav-pills flex-column">
 		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small gray" href="#intro">Introducción</a>
-			<a class="nav-link text-small gray" href="#medium">¿Qué es Medium?</a>
-			<a class="nav-link text-small gray" href="#blogs">Blogs</a>
-			<a class="nav-link text-small gray" href="#paper">Artículos Científicos</a>
+			<a class="nav-link text-small" href="#intro">Introducción</a>
+			<a class="nav-link text-small" href="#medium">¿Qué es Medium?</a>
+			<a class="nav-link text-small" href="#blogs">Blogs</a>
+			<a class="nav-link text-small" href="#paper">Artículos Científicos</a>
 		</ul>
 	</ul>
 	</div>
@@ -86,67 +85,70 @@
 <div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 
-	<h4 class="my-4">Sección de Referencias - Agricultura</h4>
-	<p>
-		<b>Objetivo:</b> Recopilar información relacionada al campo de la Agricultura, específicamente su interacción con tecnologias emergentes. 
-	</p>
-
-	<h5 class="my-4" id="intro">Introducción</h5>
-	<p>
-		La internet se ha vuelto hoy en día el medio de comunicación que más influye sobre las personas, entendiendo pues que cada año aumenta significativamente la cantidad de información disponible la cual se vuelve a su vez casi imposible de asimilar en el tiempo promedio que poseemos. Por ello, una forma de divulgar información de interés de manera selecta y concisa es mediante los blogs. </p>
-	<p>
-		Durante estos últimos meses de búsqueda bibliográfica, sobre la tesis que ando realizando, me he dado con la sopresa de encontrar buena información de manera concisa (e incluyendo código) sobre algunos temas relacionados al campo de las ciencias de la computación en forma de artículos. El portal que voy a comentar es <strong>Medium</strong>. </p>
-
-	<h5 class="my-4" id="medium">¿Qué es Medium?</h5>
-	<img class='rounded mx-auto d-block img-fluid my-5' src="../img/medium_logo.png">
-	<p>
-		Según <a href="https://es.wikipedia.org/wiki/Medium_(servicio)">Wikipedia</a>, <a href="https://medium.com/">Medium</a> es un servicio de publicación de blogs fundada por los cofundadores de Twitter en 2012 con el objetivo de permitir a usuarios de Twitter escribir posts más largos (más allá de los 280 caracteres por post de la plataforma). La plataforma presenta blogs escritos por profesionales y no profesionales brindando así información enriquecedora sobre distintas áreas.
-	</p>
-
-	<p class="my-4">
-		<blockquote class="blockquote my-4">
-			En Medium, hay dos tipos de blogs: de paga y gratuita. Algunos autores limitan el acceso a sus publicaciones para el público que tenga una cuenta con membresía en la plataforma (podría entenderse que dichos autores publican de forma independiente siendo el pago de una membresía una forma de retribución a su trabajo). Las membresías, al igual que cualquier otro portal de información, se adquieren por plazos de tiempo: mensual, anual, etc. Adquirir una membresía tampoco es muy cara en pocas palabras pero, en caso adquirir una membresía, la plataforma brinda dos accesos gratuitos a cualquier publicación de paga al mes. 
-		</blockquote>					
-	</p>
+	<h4 class="py-4">Sección de Referencias - Agricultura</h4>
 	
-	<h5 class="my-4" id="blogs">Blogs</h5>
-	<p>
-		En esta sección conforme vaya revisando artículos interesantes, los iré anexando por aquí. Una opción para revisar los blogs sin límtes (trampa) es usando un explorador <a href="https://www.torproject.org/">Tor</a>.
-	</p>
+	<p><b>Objetivo:</b> Recopilar información relacionada al campo de la Agricultura, específicamente su interacción con tecnologias emergentes. </p>
+
+	<h5 class="py-4" id="intro">Introducción</h5>
+
+	<p>La internet se ha vuelto hoy en día el medio de comunicación que más influye sobre las personas, entendiendo pues que cada año aumenta significativamente la cantidad de información disponible la cual se vuelve a su vez casi imposible de asimilar en el tiempo promedio que poseemos. Por ello, una forma de divulgar información de interés de manera selecta y concisa es mediante los blogs. </p>
+
+	<p>Durante estos últimos meses de búsqueda bibliográfica, sobre la tesis que ando realizando, me he dado con la sopresa de encontrar buena información de manera concisa (e incluyendo código) sobre algunos temas relacionados al campo de las ciencias de la computación en forma de artículos. El portal que voy a comentar es <strong>Medium</strong>. </p>
+
+	<img class='rounded mx-auto d-block img-fluid py-4' src="../img/medium_logo.png">
+
+	<h5 class="py-4" id="medium">¿Qué es Medium?</h5>
+
+	<p>Según <a href="https://es.wikipedia.org/wiki/Medium_(servicio)" target="blank">Wikipedia</a>, <a href="https://medium.com/" target="blank">Medium</a> es un servicio de publicación de blogs fundada por los cofundadores de Twitter en 2012 con el objetivo de permitir a usuarios de Twitter escribir posts más largos (más allá de los 280 caracteres por post de la plataforma). La plataforma presenta blogs escritos por profesionales y no profesionales brindando así información enriquecedora sobre distintas áreas.</p>
+
+	<p class="my-4"><blockquote class="blockquote my-4">En Medium, hay dos tipos de blogs: de paga y gratuita. Algunos autores limitan el acceso a sus publicaciones para el público que tenga una cuenta con membresía en la plataforma (podría entenderse que dichos autores publican de forma independiente siendo el pago de una membresía una forma de retribución a su trabajo). Las membresías, al igual que cualquier otro portal de información, se adquieren por plazos de tiempo: mensual, anual, etc. Adquirir una membresía tampoco es muy cara en pocas palabras pero, en caso adquirir una membresía, la plataforma brinda dos accesos gratuitos a cualquier publicación de paga al mes. </blockquote></p>
+	
+	<h5 class="py-4" id="blogs">Blogs</h5>
+
+	<p>En esta sección conforme vaya revisando artículos interesantes, los iré anexando por aquí. Una opción para revisar los blogs sin límtes (trampa) es usando un explorador <a href="https://www.torproject.org/" target="blank">Tor</a>.</p>
+	
 	<h6 id="free">De acceso gratuito</h6>
 	<ul>
-		<li class="my-2"><a href="https://www.forbes.com/sites/erikkobayashisolomon/2018/10/31/agtech-a-great-investment-for-the-future/?sh=236d80d11a09">Artículo: AgTech: A Great Investment For The Futureh [Forbes]</a> : Explicación del término AgTech y su impacto en la Agricultura a futuro.</li>
-		<li class="my-2"><a href="https://ivanovigor.medium.com/">Medium - Ivanov Igor</a> : CEO y Co-Fundador de Gamaya, posee una vasta experiencia en el campo de la agricultura de precisión, teledetección y principalmente, manejo de startups.</li>
-		<li class="my-2"><a href="https://medium.com/remote-sensing-in-agriculture">Medium - Gamaya Blog</a> : Blog de una Startup Suiza en el campo del AgTech. Su principal (y único) editor es Ivanov Igor, el mismo CEO de la startup.</li>
+		<li class="my-2"><a href="https://www.forbes.com/sites/erikkobayashisolomon/2018/10/31/agtech-a-great-investment-for-the-future/?sh=236d80d11a09" target="blank">Artículo: AgTech: A Great Investment For The Futureh [Forbes]</a> : Explicación del término AgTech y su impacto en la Agricultura a futuro.</li>
+		<li class="my-2"><a href="https://ivanovigor.medium.com/" target="blank">Medium - Ivanov Igor</a> : CEO y Co-Fundador de Gamaya, posee una vasta experiencia en el campo de la agricultura de precisión, teledetección y principalmente, manejo de startups.</li>
+		<li class="my-2"><a href="https://medium.com/remote-sensing-in-agriculture" target="blank">Medium - Gamaya Blog</a> : Blog de una Startup Suiza en el campo del AgTech. Su principal (y único) editor es Ivanov Igor, el mismo CEO de la startup.</li>
 	</ul>
 
 	<h6 id="nofree">De pago</h6>
 	<ul>
-		<li class="my-2"><a href="https://medium.com/sciforce/machine-learning-in-agriculture-applications-and-techniques-6ab501f4d1b5">[Pago] Sciforce - Machine Learning in Agriculture: Applications and Techniques</a> : Como el aprendizaje automático (<i>Machine Learning</i> en inglés) puede aplicarse en casos variados como: Manejo de especies (plantas), gestión de condiciones de campo (manejo del suelo y agua), manejo del cultivo (predicción de rendimiento, calidad del cultivo, detección de enfermedades y detección de malezas) y manejo del ganado.</li>
-		<li class="my-2"><a href="https://medium.com/@sonals_78445/mapping-crops-with-smartphone-crowdsourcing-satellite-imagery-and-deep-learning-200e8fe8bca">[Pago] Mapping Crops with Smartphone Crowdsourcing, Satellite Imagery, and Deep Learning</a> : Como el uso de smartphones (celulares) permite a agricultores conocer enfermedades de sus cultivos con solo tomar fotos de los mismos.</li>
-		<li class="my-2"><a href="https://medium.com/nam-r/estimating-vegetated-surfaces-with-computer-vision-how-we-improved-our-model-and-scaled-up-66426b6e9fc6">[Pago] Estimating Vegetated Surfaces with Computer Vision: how we improved our model and scaled up</a></li>
+		<li class="my-2"><a href="https://medium.com/sciforce/machine-learning-in-agriculture-applications-and-techniques-6ab501f4d1b5" target="blank">[Pago] Sciforce - Machine Learning in Agriculture: Applications and Techniques</a> : Como el aprendizaje automático (<i>Machine Learning</i> en inglés) puede aplicarse en casos variados como: Manejo de especies (plantas), gestión de condiciones de campo (manejo del suelo y agua), manejo del cultivo (predicción de rendimiento, calidad del cultivo, detección de enfermedades y detección de malezas) y manejo del ganado.</li>
+		<li class="my-2"><a href="https://medium.com/@sonals_78445/mapping-crops-with-smartphone-crowdsourcing-satellite-imagery-and-deep-learning-200e8fe8bca" target="blank">[Pago] Mapping Crops with Smartphone Crowdsourcing, Satellite Imagery, and Deep Learning</a> : Como el uso de smartphones (celulares) permite a agricultores conocer enfermedades de sus cultivos con solo tomar fotos de los mismos.</li>
+		<li class="my-2"><a href="https://medium.com/nam-r/estimating-vegetated-surfaces-with-computer-vision-how-we-improved-our-model-and-scaled-up-66426b6e9fc6" target="blank">[Pago] Estimating Vegetated Surfaces with Computer Vision: how we improved our model and scaled up</a></li>
 	</ul>
 
-	<h5 class="my-4" id="paper">Artículos Científicos</h5>
+	<h5 class="py-4" id="paper">Artículos Científicos</h5>
+	
 	<ul>
-		<li class="my-2"><a href="https://doi.org/10.3390/s18082674">(2018) Machine Learning in Agriculture: A Review</a> : 
+		<li class="my-2"><a href="https://doi.org/10.3390/s18082674" target="blank">(2018) Machine Learning in Agriculture: A Review</a> : 
 			Breves definiciones de Aprendizaje Automático (<i>Machine Learning</i>) 
 		</li>
-		<li  class="my-2"><a href="https://doi.org/10.1016/j.rse.2019.111605">
+		<li  class="my-2"><a href="https://doi.org/10.1016/j.rse.2019.111605" target="blank">
 			(2019) A robust spectral-spatial approach to identifying heterogeneous crops using remote sensing imagery with high spectral and spatial resolutions</a> 
-			: Elaboración de un método robusto de clasificación de cultivos usando información espectral (224 bandas espectrales, 0.4 - 2.5 &mu;m) mediante el <i>Airborne/Visible infrared Imaging Spectrometer <a href="https://aviris.jpl.nasa.gov/">(AVIRIS)</a></i> y la aplicación de métodos del campo de Aprendizaje Automático (<i>Machine Learning</i>) como Random Forest y Support Vector Machines.</li>
+			: Elaboración de un método robusto de clasificación de cultivos usando información espectral (224 bandas espectrales, 0.4 - 2.5 &mu;m) mediante el <i>Airborne/Visible infrared Imaging Spectrometer <a href="https://aviris.jpl.nasa.gov/" target="blank">(AVIRIS)</a></i> y la aplicación de métodos del campo de Aprendizaje Automático (<i>Machine Learning</i>) como Random Forest y Support Vector Machines.</li>
 	</ul>
 
 	<!-- Banner -->
-	<center>	
+	<div class="text-center py-4">	
 		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
-	</center>
+	</div>
 	
+	<div class="container py-4">
+		<ul class="pagination justify-content-center">
+			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
+			<li class="page-item"><a class="page-link" href="post3_cv.html">Siguiente Post ==></a></li>
+		</ul>
+	</div>
+
 </div><!-- Fin de container -->
 </div><!-- Fin de columna izquierda -->
 
 <!-- Columna Derecha -->
-<div class="col-1"></div>
+<div class="col-2 fondo"></div>
 
 </div> <!-- Fin de los rows -->
 </div> <!-- Fin de container -->

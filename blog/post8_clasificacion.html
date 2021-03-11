@@ -18,7 +18,7 @@
 	<!-- Leaflet CSS-->
 	<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 	<!-- theme stylesheet-->
-	<link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+	<link rel="stylesheet" href="../css/style.green.css" id="theme-stylesheet">
 	<!-- Custom stylesheet - for your changes-->
 	<link rel="stylesheet" href="../css/custom.css">
 	<!-- Favicon-->
@@ -31,7 +31,7 @@
 		position: relative;
 	}
 	ul.nav-pills {
-		top: 125px;
+		top: 100px;
 		position: fixed;
 	}
 	</style>
@@ -58,19 +58,17 @@
 	</nav>
 </header>
 
-<hr>
-
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
 	
-<div class="col-2">
+<div class="col-2 fondo-main">
 	<nav class="col-2" id="myScrollspy">
 	<div class="container-fluid">
 	<ul class="navbar-nav nav nav-pills flex-column">
 		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small gray" href="#importancia">Importancia</a>
-			<a class="nav-link text-small gray" href="#clasification">Clasificación</a>
+			<a class="nav-link text-small" href="#importancia">Importancia</a>
+			<a class="nav-link text-small" href="#clasification">Clasificación</a>
             <!-- <ul>
                 <li><a href="" class="nav-link text-small gray">Estadística</a></li>
                 <li><a href="" class="nav-link text-small gray">Aprendizaje Automático</a></li>
@@ -78,7 +76,7 @@
             </ul> -->
 			<!-- <a class="nav-link text-small gray" href="#aplications">Aplicaciones</a> -->
 			<!-- <a class="nav-link text-small gray" href="#end">Conclusiones</a> -->
-			<a class="nav-link text-small gray" href="#links">Lista de Referencias</a>
+			<a class="nav-link text-small" href="#links">Lista de Referencias</a>
 		</ul>
 	</ul>
 	</div>
@@ -89,12 +87,13 @@
 <div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 
-	<h4 class="my-4">Clasificación de cultivos agrícolas mediante Teledetección</h4>
+	<h4 class="py-4">Clasificación de cultivos agrícolas mediante Teledetección</h4>
 
 	<!-- Imagen -->
 	<div class="py-4">
 		<img class="rounded mx-auto d-block" src="../img/crop_clasification_2.png" alt="" width="75%">
-		<p align='center'>
+		
+		<p class='text-center'>
 			<b>Fuente: </b><a href="https://www.mdpi.com/2072-4292/8/3/166/htm">First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe (2016)</a> 
 		</p>
 	</div>
@@ -108,7 +107,7 @@
 		<b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.
 	</p>
 
-	<h5 class="my-4" id="importancia">Importancia</h5>
+	<h5 class="py-4" id="importancia">Importancia</h5>
 	<p>
 		La clasificación de cultivos tiene como fin el presentar un mapa en donde se represente los cultivos clasificados en una zona de estudio determinada.
 	</p>
@@ -150,13 +149,13 @@
 	</p>
 	
 
-	<h5 class="my-4" id="clasification">Clasificación</h5>
-	<h6 class="my-4">Clasificación Estadística</h6>
+	<h5 class="py-4" id="clasification">Clasificación</h5>
+	<h6 class="py-2">Clasificación Estadística</h6>
     <p>
         Según <a href="https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_estad%C3%ADstica">Wikipedia</a>, la <b>clasificación</b> es el problema de identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de datos de formación que contiene observaciones (o instancias) cuya categoría de miembros es conocida.
     </p>
 
-    <h6 class="my-4">Clasificación en Aprendizaje Automático</h6>
+    <h6 class="py-2">Clasificación en Aprendizaje Automático</h6>
     <p>
         La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.
     </p>
@@ -182,7 +181,7 @@
     <!-- width="300px" height="300px" -->
 
 
-	<h5 class="my-4" id="links">Referencias</h5>
+	<h5 class="py-4" id="links">Referencias</h5>
 	<p> Mayor información:
 	<ol>
 		<!-- <li><a href='https://gidahatari.com/ih-es/tutorial-de-determinacin-de-firmas-espectrales-de-cultivos-con-qgis-3-y-scp-6'>Gidahatari - Tutorial de Determinación de Firmas Espectrales de Cultivos con QGIS 3 y SCP 6</a></li> -->
@@ -192,12 +191,19 @@
 	</ol>
 	</p>
 	
+	<div class="container py-4">
+		<ul class="pagination justify-content-center">
+			<li class="page-item"><a class="page-link" href="post_ML_python.html"><== Anterior Post</a></li>
+			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
+			<!-- <li class="page-item"><a class="page-link" href=" ">Siguiente Post ==> (en proceso)</a></li> -->
+		</ul>
+	</div>
 </div> <!-- fin de container -->
 </div> <!-- Fin de columna central -->
 
 
 <!-- Columna Derecha -->
-<div class="col-1"></div>
+<div class="col-2 fondo-main"></div>
 <!-- Fin de columna Derecha -->
 
 
