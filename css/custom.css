@@ -42,17 +42,12 @@
     border: thin solid #ccc;
 }
 
-.section-nav{
+/* .section-nav{
     border-right: 2px solid rgb(79, 138, 50);
-    text-align: left;
-    padding-right: 15px;
+    padding-right: 0px;
     padding-left: 0px
-}
+} */
 
-a.gray {
-    color: #878c8f;
-    text-decoration: none;
-}
 
 /* Modificando containers */
 /* .container {
@@ -82,4 +77,28 @@ a.gray {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+
+
+ul.scroll{
+    list-style: none;
+    padding-left: 1em; 
+    padding-right: 1em;
+}
+
+/* ul.nav-pills {
+    top: 100px;
+    position: fixed;
+} */
+
+ul.contenido{
+    width: 200px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    text-align: left;
+    padding-inline-start: 0px;
+}
+
+a.white{
+    color: rgb(255, 255, 255);
 }

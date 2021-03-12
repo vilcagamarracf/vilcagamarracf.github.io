@@ -26,21 +26,11 @@
     <link rel="shortcut icon" href="../img/favicon.png">
 
     <style>
-        body {
-        position: relative;
-        }
-        ul.nav-pills {
-            top: 100px;
-            position: fixed;
-        }
         pre {
             display: block;
             background: black;
             color: white;
-            /* font-size: small; */
-            /* font-family: Consolas; */
-            /* white-space: pre; */
-            /* margin: 1em 0; */
+
         } 
     </style>
 </head>
@@ -68,35 +58,37 @@
     </nav>
 </header>
 
-<!-- <hr> -->
-
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
 
-<div class="col-2 fondo">
-	<nav class="col-2" id="myScrollspy">
-	<div class="container-fluid">
-	<ul class="navbar-nav nav nav-pills flex-column">
-		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small" href="#inicio">Inicio</a>
-			<a class="nav-link text-small" href="#conda">Qué es CONDA</a>
-			<a class="nav-link text-small" href="#anaconda">¿y Anaconda?</a>
-			<a class="nav-link text-small" href="#tutorial">Tutorial </a>
-            <ul>
-                <li><a class="nav-link text-small" href="#packages">Packages</a></li>
-                <li><a class="nav-link text-small" href="#channels">Channels</a></li>
-                <li><a class="nav-link text-small" href="#envs">Environments</a></li>
+<div class="col-md-2 fondo py-4">
+	<!-- <nav class="col-md-2"> -->
+	<ul class="contenido scroll">
+        <li class='py-2 text-white'><b>Contenido</b></li>
+        <li><a class="white nav-link text-small gray" href="#inicio">Inicio</a></li>
+        <li><a class="white nav-link text-small gray" href="#conda">Qué es CONDA</a></li>
+        <li><a class="white nav-link text-small" href="#anaconda">¿y Anaconda?</a></li>
+        <li><a class="white nav-link text-small" href="#tutorial">Tutorial </a></li>
+        <ul class="scroll">
+            <li><a class="white nav-link text-small" href="#t1">Conociendo la terminal de Anaconda</a></li>
+            <li><a class="white nav-link text-small" href="#packages">Packages</a></li>
+            <ul class="scroll">
+                <li><a class="white nav-link text-small" href="#p1">Ver ayuda</a></li>
+                <li><a class="white nav-link text-small" href="#p2">Visualizar packages</a></li>
+                <li><a class="white nav-link text-small" href="#p3">Instalar packages</a></li>
+                <li><a class="white nav-link text-small" href="#p4">Versionamiento Semántico</a></li>
             </ul>
-			<a class="nav-link text-small" href="#end">Conclusiones</a>
-		</ul>
+            <li><a class="white nav-link text-small" href="#channels">Channels</a></li>
+            <li><a class="white nav-link text-small" href="#envs">Environments</a></li>
+        </ul>
+        <li><a class="white nav-link text-small" href="#end">Conclusiones</a></li>
 	</ul>
-	</div>
-	</nav>
+	<!-- </nav> -->
 </div>
 
 <!-- Columna central -->
-<div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<div class="col-md-8">
 <div class="container-fluid">
 
     <h1 class="h4 py-4" id="inicio">Manejo de Paquetes con Anaconda</h1>
@@ -117,7 +109,7 @@
     </p>
 
     <h2 class="h5 py-4" id="anaconda">¿y Anaconda?</h2>
-    <img class='rounded mx-auto d-block img-fluid my-4' src="../img/Anaconda_Logo.png">
+    <img class='rounded mx-auto d-block my-4' src="../img/Anaconda_Logo.png" width="250px">
     
     <p>
         Anaconda es una distribución de los lenguajes de programación Python y R para computación científica (ciencia de datos, aplicaciones de aprendizaje automático, procesamiento de datos a gran escala, análisis predictivo, etc.), que tiene como objetivo simplificar la administración y la implementación de paquetes.
@@ -132,16 +124,16 @@
     </p>
 
     <h2 class="h5 py-4" id="tutorial">Tutorial</h2>
-    <p>
-        Antes de comenzar es necesario tener instalado alguna versión de <a href="">Anaconda</a>. Posterior a ello, abrir el <code>Anaconda Prompt</code> (también puede aparecer como <code>Anaconda Prompt (anaconda3)</code>):
-        <img class="rounded mx-auto d-block my-4" src="https://docs.conda.io/projects/conda/en/latest/_images/anaconda-prompt.png" width="50%">
-    </p>
-    <p>
-        Nota: El fondo negro "simula" el Anaconda Prompt. <br>
-
-        Ayuda: <code>conda --help</code>
-    </p>
-    <pre class="pre-scrollable">
+    
+    <p>Antes de comenzar es necesario tener instalado alguna versión de <a href="https://www.anaconda.com/products/individual" target="blank">Anaconda</a>. Posterior a ello, abrir el <code>Anaconda Prompt</code> (también puede aparecer como <code>Anaconda Prompt (anaconda3)</code>):
+    <img class="rounded mx-auto d-block my-4" src="https://docs.conda.io/projects/conda/en/latest/_images/anaconda-prompt.png" width="350px">
+    A continuación presentaré los principales comandos usados en el terminal de Anaconda (el fondo negro "simula" el Anaconda Prompt).</p>
+    
+    <!-- Conociendo la terminal de Anaconda -->
+    <section>
+    <h3 class="h6 py-2" id="t1"> Conociendo la terminal de Anaconda</h3>        
+    <p>Ver Ayuda: <code>conda --help</code>
+        <pre class="pre-scrollable">
 
         (base) C:\Users\LENOVO>conda --help
 
@@ -194,46 +186,44 @@
         server
         skeleton
         verify
-    </pre>
-    <p>
-        Versión de conda: <code>conda --version</code>
+        </pre>
     </p>
-    <pre>
+    
+    <p>Versión de conda: <code>conda --version</code>
+        <pre>
 
         (base) C:\Users\LENOVO>conda --version
 
         conda 4.9.2
-    </pre>
+        </pre>
+    </p>
+    </section>
 
+    <!-- Paquetes -->
+    <section>
     <h3 class="h6 py-4" id="packages">Paquetes (o <i>Packages</i>): ¿Qué son y por qué son tan necesarios?</h3>
-    <p>
-        Los paquetes de Conda son archivos que contienen un conjunto de recursos: generalmente bibliotecas y ejecutables, pero no siempre. En principio, los paquetes de Conda pueden incluir datos, imágenes, cuadernos u otros activos. La herramienta de línea de comandos conda se utiliza para instalar, eliminar y examinar paquetes; otras herramientas como la GUI Anaconda Navigator también exponen las mismas capacidades. Esta publicación se centra en la herramienta conda en sí (verá casos de uso distintos de la administración de paquetes en unos minutos).
-    </p>
-    <p>
-        Los paquetes Conda se utilizan más ampliamente con Python, pero eso no es todo. Nada sobre el formato del paquete Conda o la herramienta conda en sí asume ningún lenguaje de programación específico. Los paquetes Conda también se pueden usar para empaquetar bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o simplemente para distribuir ejecutables binarios puros generados a partir de cualquier lenguaje de programación.
-    </p>
+
+    <p>Los paquetes de Conda son archivos que contienen un conjunto de recursos: generalmente bibliotecas y ejecutables, pero no siempre. En principio, los paquetes de Conda pueden incluir datos, imágenes, cuadernos u otros activos. La herramienta de línea de comandos conda se utiliza para instalar, eliminar y examinar paquetes; otras herramientas como la GUI Anaconda Navigator también exponen las mismas capacidades. Esta publicación se centra en la herramienta conda en sí (verá casos de uso distintos de la administración de paquetes en unos minutos).</p>
+
+    <p>Los paquetes Conda se utilizan más ampliamente con Python, pero eso no es todo. Nada sobre el formato del paquete Conda o la herramienta conda en sí asume ningún lenguaje de programación específico. Los paquetes Conda también se pueden usar para empaquetar bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o simplemente para distribuir ejecutables binarios puros generados a partir de cualquier lenguaje de programación.</p>
 
     <p>
         <b>Notas</b><br>
+
         Para <a href="https://packaging.python.org/tutorials/installing-packages/">instalar un paquete</a> en Python, dependiendo del sistema operativo, es necesario conocer que se puede instalar mediante:
         <ul>
             <li><a href="https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing">PIP</a> : instalador recomendado en Python (ya que conecta con PyPi) pero requiere manejar un sistema operativo Linux. <br>
-                <center>
-                    <code>$ pip install rasterio</code>
-                </center>
+                <p class="text-center my-4"><code>$ pip install rasterio</code></p>
             </li>
             <li>Conda: Alternativo a PIP. Permite administrar ambientes virtuales e instalar paquetes fácilmente (mediante código en terminal o por interfaz gráfica en Anaconda). <br>
-                <center>
-                    <code>conda install -c conda-forge rasterio</code>
-                </center>
+                <p class="text-center my-4"><code>conda install -c conda-forge rasterio</code></p>
             </li>
         </ul>
     </p>
     
-    <p>
-        Visualizar ayuda en paquetes
-    </p>
-    <pre class="pre-scrollable">
+    
+    <p id="p1"> Visualizar ayuda en paquetes
+        <pre class="pre-scrollable">
 
         (base) C:\Users\LENOVO>conda list --help
         usage: conda-script.py list [-h] [-n ENVIRONMENT | -p PATH] [--json] [-v] [-q]
@@ -294,10 +284,10 @@
         
             conda create -n myenv --file package-list.txt
     </pre>
-    <p>
-        Visualizar paquetes (instalados en local) y sus versiones: <code>conda list</code>
     </p>
-    <pre class="pre-scrollable">
+    
+    <p id="p2"> Visualizar paquetes (instalados en local) y sus versiones: <code>conda list</code>
+        <pre class="pre-scrollable">
 
         (base) C:\Users\LENOVO>conda list
 
@@ -316,12 +306,12 @@
         zipp                      6.2.0                      py_0
         zlib                      1.2.11               h62dcd97_3
         zstd                      1.3.7                h508b16e_0
-    </pre>
-    Notese la ubicación de los packages: <code># packages in environment at C:\Users\LENOVO\anaconda3</code>. 
-    <p>
-        Instalación de paquetes: <code>conda install --help</code>
+        </pre>
+        Notese la ubicación de los packages: <code># packages in environment at C:\Users\LENOVO\anaconda3</code>. 
     </p>
-    <pre class="pre-scrollable">
+    
+    <p id="p3"> Instalación de paquetes: <code>conda install --help</code>
+        <pre class="pre-scrollable">
 
         (base) C:\Users\LENOVO>conda install --help
         usage: conda-script.py install [-h] [--revision REVISION]
@@ -473,20 +463,18 @@
         Examples:
         
             conda install -n myenv scipy
-    </pre>
-
-    <p>
+        </pre> 
+        
         Instalación de un paquete
         <pre>
 
             conda install PKGNAME
         </pre>
-
     </p>
     
-    <h6 class="py-4">¿Qué es Versionamiento Semántico?</h6>
-    <p>
-        La mayoría de los paquetes de Conda utilizan un sistema llamado control de versiones semántico para <b>identificar distintas versiones de un paquete de software sin ambigüedades.</b>
+    <h3 class="h6 py-3" id="p4">¿Qué es Versionamiento Semántico?</h3>
+    
+    <p>La mayoría de los paquetes de Conda utilizan un sistema llamado control de versiones semántico para <b>identificar distintas versiones de un paquete de software sin ambigüedades.</b>
         <ul>
             <li>Las etiquetas de versión generalmente las eligen los autores del proyecto, no necesariamente las mismas personas que empaquetan el proyecto como un paquete Conda. </li>
             <li>No existe ningún requisito técnico de que la etiqueta de la versión del autor del proyecto coincida con la etiqueta de la versión del paquete Conda, pero casi siempre se sigue la convención de hacerlo. </li>
@@ -495,14 +483,13 @@
     </p>
     <p>
         En el control de versiones semántico, el software <b>se etiqueta con un identificador de versión de tres partes de la forma</b> <b>MAJOR.MINOR.PATCH</b>; los componentes de la etiqueta son números enteros no negativos separados por puntos. <br>
-    <ul>
-        <li>Suponiendo que todo el software comienza en la versión 0.0.0, el número de versión PRINCIPAL aumenta cuando se introduce una nueva funcionalidad significativa (a menudo con los cambios de API correspondientes). </li>
-        <li>Los aumentos en el número de versión MINOR generalmente reflejan mejoras (por ejemplo, nuevas funciones) que evitan cambios de API incompatibles con versiones anteriores. Por ejemplo, agregar un argumento opcional a una función API (de una manera que permita que el código antiguo se ejecute sin cambios) es un cambio digno de aumentar el número de versión MINOR. </li>
-        <li>Un incremento en el número de versión de PATCH es apropiado principalmente para correcciones de errores que conservan los mismos números de revisión MAYOR y MENOR. </li>
-        <li>Los parches de software generalmente no introducen nuevas funciones ni cambian las API en absoluto (excepto a veces para abordar problemas de seguridad). </li>
-    </ul>
+        <ul>
+            <li>Suponiendo que todo el software comienza en la versión 0.0.0, el número de versión PRINCIPAL aumenta cuando se introduce una nueva funcionalidad significativa (a menudo con los cambios de API correspondientes). </li>
+            <li>Los aumentos en el número de versión MINOR generalmente reflejan mejoras (por ejemplo, nuevas funciones) que evitan cambios de API incompatibles con versiones anteriores. Por ejemplo, agregar un argumento opcional a una función API (de una manera que permita que el código antiguo se ejecute sin cambios) es un cambio digno de aumentar el número de versión MINOR. </li>
+            <li>Un incremento en el número de versión de PATCH es apropiado principalmente para correcciones de errores que conservan los mismos números de revisión MAYOR y MENOR. </li>
+            <li>Los parches de software generalmente no introducen nuevas funciones ni cambian las API en absoluto (excepto a veces para abordar problemas de seguridad). </li>
+        </ul>
     </p>
-        
     <p>
         Muchas herramientas de línea de comandos muestran su identificador de versión ejecutando la herramienta --version. Esta información a veces se puede mostrar o documentar de otras formas. Por ejemplo, supongamos que en algún sistema, una determinada versión de Python está instalada y usted pregunta al respecto de esta manera:
         <pre>
@@ -579,6 +566,8 @@
             conda search PKGNAME --info
         </pre>
     </p>
+    </section>
+    
     <h6 class="py-4" id="channels">Canales (<i>Channels</i>) y para qué sirven?</h5>
     <p>
         Todos los paquetes vistos hasta ahora son publicados en el <code>main</code> o <code>default</code> channel de Anaconda Cloud (<a href="https://repo.anaconda.com/pkgs/main/">ver aquí</a>). Un Channel es un identificador de un path (dirección) del cual los paquetes Conda pueden ser obtenidos. Usando la public cloud, instalando sin especificar 
@@ -665,7 +654,7 @@
             code here
         </pre>
     </p> -->
-    <h6 class="py-4" id="envs">Environments and why they are needed?</h3>
+    <h6 class="py-4" id="envs">Ambientes (Environments): ¿Qué son y por qué son necesarios?</h3>
     <p>
         ¿Qué environment estoy usando?: <code>conda env list</code>
         <pre>

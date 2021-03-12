@@ -24,16 +24,6 @@
 	<link rel="stylesheet" href="../css/custom.css">
 	<!-- Favicon-->
 	<link rel="shortcut icon" href="../img/favicon.png">
-
-	<style>
-		body {
-			position: relative;
-		}
-		ul.nav-pills {
-			top: 100px;
-			position: fixed;
-		}
-	</style>
 </head>
 
 <body>
@@ -70,40 +60,35 @@
 <div class="container-fluid">
 <div class="row">
 
-<div class="col-2 fondo-ee">
-	<nav class="col-2" id="myScrollspy">
-	<div class="container-fluid">
-	<ul class="navbar-nav nav nav-pills flex-column">
-		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small " href="#intro">Introducción</a>
-			<a class="nav-link text-small" href="#question">¿Qué es exactamente?</a>
-			<a class="nav-link text-small" href="#acceso">Cómo acceder</a>
-			<a class="nav-link text-small" href="#ambientes">Ambientes de desarrollo</a>
-			<a class="nav-link text-small" href="#aplications">Aplicaciones </a>
-			<a class="nav-link text-small" href="#prueba">Probando EE</a>
-			<a class="nav-link text-small" href="#end">Conclusiones</a>
-			<a class="nav-link text-small" href="#links">Lista de Referencias</a>
-		</ul>
+<div class="col-md-2 fondo-ee py-4">
+	<ul class="contenido scroll">
+		<li class='py-2 text-white'><b>Contenido</b></li>
+		<li><a class="white nav-link text-small " href="#intro">Introducción</a></li>
+		<li><a class="white nav-link text-small" href="#question">¿Qué es exactamente?</a></li>
+		<li><a class="white nav-link text-small" href="#acceso">Cómo acceder</a></li>
+		<li><a class="white nav-link text-small" href="#ambientes">Ambientes de desarrollo</a></li>
+		<li><a class="white nav-link text-small" href="#aplications">Aplicaciones </a></li>
+		<li><a class="white nav-link text-small" href="#prueba">Probando EE</a></li>
+		<li><a class="white nav-link text-small" href="#end">Conclusiones</a></li>
+		<li><a class="white nav-link text-small" href="#links">Lista de Referencias</a></li>
 	</ul>
-	</div>
-	</nav>
 </div>
 
 <!-- Columna central -->
-<div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<div class="col-md-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 
-	<h4 class="py-4">Aprendiendo practicando</h4>
+	<h1 class="h4 py-4">Aprendiendo practicando</h1>
 	<b>Objetivo:</b> Brindar una breve introducción a la plataforma, recopilación de aplicaciones en la Agricultura y links relacionados (al final del post).
 
 	<img class='rounded mx-auto d-block img-fluid my-4' src="../img/GoogleEarthEngine_Grey_108.png">
 
-	<h5 class="py-4" id="intro">Introducción</h5>
+	<h2 class="h5 py-4" id="intro">Introducción</h2>
 	<p>
 		<a href="https://earthengine.google.com/">Google Earth Engine</a> nace a partir de una necesidad: disponer de una base de datos geoespaciales a investigadores con poca o nula experiencia previa en administración de bases de datos.
 	</p>
 
-	<h5 class="py-4" id="question">¿Qué es exactamente?</h5>	
+	<h2 class="h5 py-4" id="question">¿Qué es exactamente?</h2>	
 	<p>
 		En la sección de <a href="https://earthengine.google.com/faq/">Preguntas más frecuentes (FAQ)</a> se menciona lo siguiente: 
 		<blockquote class="blockquote my-4">
@@ -126,7 +111,7 @@
 		</ul>	
 	</p>
 
-	<h5 class="py-4" id="acceso">Cómo acceder</h5>
+	<h2 class="h5 py-4" id="acceso">Cómo acceder</h2>
 	<p>
 		Earth Engine al ser un proyecto (o aplicación) de Google, permite la conexión con otras aplicaciones tales como Google Cloud, Google Drive (entre las principales). Por ello, requiere una cuenta de gmail activa <a href="https://earthengine.google.com/signup/">(Registrate aquí)</a>. 
 	</p>
@@ -139,7 +124,7 @@
 		</ul>
 	</p>
 
-	<h5 class="py-4" id="ambientes">Ambientes de Desarrollo</h5>
+	<h2 class="h5 py-4" id="ambientes">Ambientes de Desarrollo</h2>
 	<p>
 		Hay dos formas de usar Earth Engine:
 		<ul>
@@ -154,7 +139,7 @@
 		También existe la integración de Earth Engine en <b>QGIS</b> mediante un plugin. 
 	</p>
 
-	<h5 class="py-4" id="aplications">Aplicaciones</h5>
+	<h2 class="h5 py-4" id="aplications">Aplicaciones</h2>
 	<p> 
 		Al disponerse de una base de datos geoespaciales de manera gratuita y disponibilidad de hacer análisis en la nube (servidores de Google), las principales aplicaciones serían:
 		<ul>
@@ -166,7 +151,7 @@
 	</p>
 
 	
-	<h5 class="py-4" id="prueba">Probando EE</h5>
+	<h2 class="h5 py-4" id="prueba">Probando EE</h2>
 	<p>
 		A continuación presentaré algunos ejemplos sobre los resultados que he podido generar usando la plataforma de Earth Engine (en <code>Python</code> y <code>JavaScript</code>). Cabe destacar que gracias a su base de datos bien estructurada y el procesamiento en la nube es posible conseguir visualizaciones en cuestión de segundos.
 	</p> 
@@ -204,13 +189,13 @@
 		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡Próximamente los códigos en mi repositorio de Github!</b></marquee>
 	</div>
 
-	<h5 class="py-4" id="end">Conclusiones</h5>
+	<h2 class="h5 py-4" id="end">Conclusiones</h2>
 	<p>
 		La plataforma se encuentra operando desde el año 2011 y ha ido ganando popularidad con el paso de los años debido a la potencia computacional que ofrece de manera gratuita a los investigadores, lo cual ha permitido el aumento de publicaciones académicas en gran cantidad.
 
 	</p>
 	
-	<h5 class="py-4" id="links">Lista de Referencias</h5>
+	<h2 class="h5 py-4" id="links">Lista de Referencias</h2>
 	<p>
 		Con el objetivo de no perderse con la documentación de Earth Engine (y agilizar el proceso de aprendizaje), he recopilado los links más importantes.
 		<ul> 

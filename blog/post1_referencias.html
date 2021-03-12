@@ -26,15 +26,6 @@
 	<!-- Tweaks for older IEs--><!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif] -->
-	<style>
-	body {
-		position: relative;
-	}
-	ul.nav-pills {
-		top: 100px;
-		position: fixed;
-	}
-	</style>
 </head>
 
 <body>
@@ -59,37 +50,33 @@
 	</nav>
 </header>
 	
-
-<!-- <hr> -->
-	
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
 	
-<div class="col-2 fondo">
-	<nav class="col-2" id="myScrollspy">
-	<div class="container-fluid">
-	<ul class="navbar-nav nav nav-pills flex-column">
-		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small" href="#intro">Introducción</a>
-			<a class="nav-link text-small" href="#medium">¿Qué es Medium?</a>
-			<a class="nav-link text-small" href="#blogs">Blogs</a>
-			<a class="nav-link text-small" href="#paper">Artículos Científicos</a>
+<div class="col-md-2 fondo py-4">
+	<ul class="contenido scroll">
+		<li class='py-2 text-white'><b>Contenido</b></li>
+		<li><a class="white nav-link text-small" href="#intro">Introducción</a></li>
+		<li><a class="white nav-link text-small" href="#medium">¿Qué es Medium?</a></li>
+		<li><a class="white nav-link text-small" href="#blogs">Blogs</a></li>
+		<ul class="scroll">
+			<li><a class="white nav-link text-small" href="#free">Gratuitos</a></li>
+			<li><a class="white nav-link text-small" href="#nofree">De pago</a></li>
 		</ul>
+		<li><a class="white nav-link text-small" href="#paper">Artículos Científicos</a></li>
 	</ul>
-	</div>
-	</nav>
 </div>
 
 <!-- Columna izquierda -->
-<div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<div class="col-md-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 
-	<h4 class="py-4">Sección de Referencias - Agricultura</h4>
+	<h1 class="h4 py-4">Sección de Referencias - Agricultura</h1>
 	
 	<p><b>Objetivo:</b> Recopilar información relacionada al campo de la Agricultura, específicamente su interacción con tecnologias emergentes. </p>
 
-	<h5 class="py-4" id="intro">Introducción</h5>
+	<h2 class="h5 py-4" id="intro">Introducción</h2>
 
 	<p>La internet se ha vuelto hoy en día el medio de comunicación que más influye sobre las personas, entendiendo pues que cada año aumenta significativamente la cantidad de información disponible la cual se vuelve a su vez casi imposible de asimilar en el tiempo promedio que poseemos. Por ello, una forma de divulgar información de interés de manera selecta y concisa es mediante los blogs. </p>
 
@@ -97,31 +84,31 @@
 
 	<img class='rounded mx-auto d-block img-fluid py-4' src="../img/medium_logo.png">
 
-	<h5 class="py-4" id="medium">¿Qué es Medium?</h5>
+	<h2 class="h5 py-4" id="medium">¿Qué es Medium?</h2>
 
 	<p>Según <a href="https://es.wikipedia.org/wiki/Medium_(servicio)" target="blank">Wikipedia</a>, <a href="https://medium.com/" target="blank">Medium</a> es un servicio de publicación de blogs fundada por los cofundadores de Twitter en 2012 con el objetivo de permitir a usuarios de Twitter escribir posts más largos (más allá de los 280 caracteres por post de la plataforma). La plataforma presenta blogs escritos por profesionales y no profesionales brindando así información enriquecedora sobre distintas áreas.</p>
 
 	<p class="my-4"><blockquote class="blockquote my-4">En Medium, hay dos tipos de blogs: de paga y gratuita. Algunos autores limitan el acceso a sus publicaciones para el público que tenga una cuenta con membresía en la plataforma (podría entenderse que dichos autores publican de forma independiente siendo el pago de una membresía una forma de retribución a su trabajo). Las membresías, al igual que cualquier otro portal de información, se adquieren por plazos de tiempo: mensual, anual, etc. Adquirir una membresía tampoco es muy cara en pocas palabras pero, en caso adquirir una membresía, la plataforma brinda dos accesos gratuitos a cualquier publicación de paga al mes. </blockquote></p>
 	
-	<h5 class="py-4" id="blogs">Blogs</h5>
+	<h2 class="h5 py-4" id="blogs">Blogs</h2>
 
 	<p>En esta sección conforme vaya revisando artículos interesantes, los iré anexando por aquí. Una opción para revisar los blogs sin límtes (trampa) es usando un explorador <a href="https://www.torproject.org/" target="blank">Tor</a>.</p>
 	
-	<h6 id="free">De acceso gratuito</h6>
+	<h3 class="h6" id="free">De acceso gratuito</h3>
 	<ul>
 		<li class="my-2"><a href="https://www.forbes.com/sites/erikkobayashisolomon/2018/10/31/agtech-a-great-investment-for-the-future/?sh=236d80d11a09" target="blank">Artículo: AgTech: A Great Investment For The Futureh [Forbes]</a> : Explicación del término AgTech y su impacto en la Agricultura a futuro.</li>
 		<li class="my-2"><a href="https://ivanovigor.medium.com/" target="blank">Medium - Ivanov Igor</a> : CEO y Co-Fundador de Gamaya, posee una vasta experiencia en el campo de la agricultura de precisión, teledetección y principalmente, manejo de startups.</li>
 		<li class="my-2"><a href="https://medium.com/remote-sensing-in-agriculture" target="blank">Medium - Gamaya Blog</a> : Blog de una Startup Suiza en el campo del AgTech. Su principal (y único) editor es Ivanov Igor, el mismo CEO de la startup.</li>
 	</ul>
 
-	<h6 id="nofree">De pago</h6>
+	<h3 class="h6" id="nofree">De pago</h3>
 	<ul>
 		<li class="my-2"><a href="https://medium.com/sciforce/machine-learning-in-agriculture-applications-and-techniques-6ab501f4d1b5" target="blank">[Pago] Sciforce - Machine Learning in Agriculture: Applications and Techniques</a> : Como el aprendizaje automático (<i>Machine Learning</i> en inglés) puede aplicarse en casos variados como: Manejo de especies (plantas), gestión de condiciones de campo (manejo del suelo y agua), manejo del cultivo (predicción de rendimiento, calidad del cultivo, detección de enfermedades y detección de malezas) y manejo del ganado.</li>
 		<li class="my-2"><a href="https://medium.com/@sonals_78445/mapping-crops-with-smartphone-crowdsourcing-satellite-imagery-and-deep-learning-200e8fe8bca" target="blank">[Pago] Mapping Crops with Smartphone Crowdsourcing, Satellite Imagery, and Deep Learning</a> : Como el uso de smartphones (celulares) permite a agricultores conocer enfermedades de sus cultivos con solo tomar fotos de los mismos.</li>
 		<li class="my-2"><a href="https://medium.com/nam-r/estimating-vegetated-surfaces-with-computer-vision-how-we-improved-our-model-and-scaled-up-66426b6e9fc6" target="blank">[Pago] Estimating Vegetated Surfaces with Computer Vision: how we improved our model and scaled up</a></li>
 	</ul>
 
-	<h5 class="py-4" id="paper">Artículos Científicos</h5>
+	<h2 class="h5 py-4" id="paper">Artículos Científicos</h2>
 	
 	<ul>
 		<li class="my-2"><a href="https://doi.org/10.3390/s18082674" target="blank">(2018) Machine Learning in Agriculture: A Review</a> : 

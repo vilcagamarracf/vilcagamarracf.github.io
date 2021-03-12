@@ -26,15 +26,6 @@
 	<!-- Tweaks for older IEs--><!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-	<style>
-	body {
-		position: relative;
-	}
-	ul.nav-pills {
-		top: 100px;
-		position: fixed;
-	}
-	</style>
 </head>
 
 <body>
@@ -62,32 +53,27 @@
 <div class="container-fluid">
 <div class="row">
 	
-<div class="col-2 fondo-main">
-	<nav class="col-2" id="myScrollspy">
-	<div class="container-fluid">
-	<ul class="navbar-nav nav nav-pills flex-column">
-		<ul class="section-nav ml-auto align-items-lg-center">
-			<a class="nav-link text-small" href="#importancia">Importancia</a>
-			<a class="nav-link text-small" href="#clasification">Clasificación</a>
-            <!-- <ul>
-                <li><a href="" class="nav-link text-small gray">Estadística</a></li>
-                <li><a href="" class="nav-link text-small gray">Aprendizaje Automático</a></li>
-                <li><a href="" class="nav-link text-small gray">Cultivos Agrícolas</a></li>
-            </ul> -->
-			<!-- <a class="nav-link text-small gray" href="#aplications">Aplicaciones</a> -->
-			<!-- <a class="nav-link text-small gray" href="#end">Conclusiones</a> -->
-			<a class="nav-link text-small" href="#links">Lista de Referencias</a>
+<div class="col-md-2 fondo-main py-4">
+	<ul class="contenido scroll">
+		<li><a class="text-white nav-link" href="#inicio"><b>Contenido</b></a></li>
+		<li><a class="white nav-link text-small" href="#importancia">Importancia</a></li>
+		<li><a class="white nav-link text-small" href="#clasification">Clasificación</a></li>
+		<ul class="scroll">
+			<li><a href="" class="white nav-link text-small gray">Estadística</a></li>
+			<li><a href="" class="white nav-link text-small gray">Aprendizaje Automático</a></li>
+			<li><a href="" class="white nav-link text-small gray">Cultivos Agrícolas</a></li>
 		</ul>
+		<li><a class="white nav-link text-small gray" href="#aplications">Aplicaciones</a></li>
+		<li><a class="white nav-link text-small gray" href="#end">Conclusiones</a></li>
+		<li><a class="white nav-link text-small" href="#links">Lista de Referencias</a></li>
 	</ul>
-	</div>
-	</nav>
 </div>
 
 <!-- Columna central -->
-<div class="col-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<div class="col-md-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <div class="container-fluid">
 
-	<h4 class="py-4">Clasificación de cultivos agrícolas mediante Teledetección</h4>
+	<h1 class="h4 py-4" id="inicio">Clasificación de cultivos agrícolas mediante Teledetección</h1>
 
 	<!-- Imagen -->
 	<div class="py-4">
@@ -98,21 +84,13 @@
 		</p>
 	</div>
 
-	<!-- Banner -->
-	<!-- <center>	
-		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso! </b></marquee>
-	</center> -->
+	<p><b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.</p>
 
-	<p>
-		<b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.
-	</p>
+	<h2 class="h5 py-4" id="importancia">Importancia</h2>
 
-	<h5 class="py-4" id="importancia">Importancia</h5>
-	<p>
-		La clasificación de cultivos tiene como fin el presentar un mapa en donde se represente los cultivos clasificados en una zona de estudio determinada.
-	</p>
-	<p>
-		A continuación presentaré una recopilación de "Importancias" según diversos autores: <br>
+	<p>La clasificación de cultivos tiene como fin el presentar un mapa en donde se represente los cultivos clasificados en una zona de estudio determinada.</p>
+
+	<p>A continuación presentaré una recopilación de "Importancias" según diversos autores: <br>
 		<br>
 		<a class="my-2" href="https://www.sciencedirect.com/science/article/pii/S0034425717304686">(2018) Sentinel-2 cropland mapping using pixel-based and object-based time-weighted dynamic time warping analysis</a>:
 		<ul>
@@ -149,26 +127,23 @@
 	</p>
 	
 
-	<h5 class="py-4" id="clasification">Clasificación</h5>
-	<h6 class="py-2">Clasificación Estadística</h6>
+	<h2 class="h5 py-4" id="clasification">Clasificación</h2>
+	<h3 class="h6 py-2">Clasificación Estadística</h3>
     <p>
         Según <a href="https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_estad%C3%ADstica">Wikipedia</a>, la <b>clasificación</b> es el problema de identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de datos de formación que contiene observaciones (o instancias) cuya categoría de miembros es conocida.
     </p>
 
-    <h6 class="py-2">Clasificación en Aprendizaje Automático</h6>
-    <p>
-        La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.
-    </p>
-    <p>
-        En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.
-    </p>
-    <p>
-        Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.
+    <h3 class="h6 py-2">Clasificación en Aprendizaje Automático</h3>
+
+    <p>La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.</p>
+
+    <p>En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.</p>
+
+    <p>Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.
     </p>
 
-    <h6 class="my-4">Clasificación de cultivos usando percepción remota</h6>
-    <p>
-        Según <a href="https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf">INEGI</a>, <b>la clasificación de cultivos</b> puede ser abordada como un problema de reconocimiento de patrones que utiliza procesamiento de imágenes y que está formado por varias etapas: 
+    <h3 class="h6 my-4">Clasificación de cultivos usando percepción remota</h3>
+    <p>Según <a href="https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf">INEGI</a>, <b>la clasificación de cultivos</b> puede ser abordada como un problema de reconocimiento de patrones que utiliza procesamiento de imágenes y que está formado por varias etapas: 
         <ol>
             <li>Selección del método o medio a través del cual se obtiene la imagen,</li>
             <li>Procesamiento de ésta (imagen) como en la extracción de rasgos </li>
@@ -181,7 +156,7 @@
     <!-- width="300px" height="300px" -->
 
 
-	<h5 class="py-4" id="links">Referencias</h5>
+	<h2 class="h5 py-4" id="links">Referencias</h2>
 	<p> Mayor información:
 	<ol>
 		<!-- <li><a href='https://gidahatari.com/ih-es/tutorial-de-determinacin-de-firmas-espectrales-de-cultivos-con-qgis-3-y-scp-6'>Gidahatari - Tutorial de Determinación de Firmas Espectrales de Cultivos con QGIS 3 y SCP 6</a></li> -->
