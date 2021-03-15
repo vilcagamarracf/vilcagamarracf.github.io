@@ -56,16 +56,16 @@
 <div class="col-md-2 fondo-main py-4">
 	<ul class="contenido scroll">
 		<li><a class="text-white nav-link" href="#inicio"><b>Contenido</b></a></li>
-		<li><a class="white nav-link text-small" href="#importancia">Importancia</a></li>
-		<li><a class="white nav-link text-small" href="#clasification">Clasificación</a></li>
+		<li><a class="white nav-link text-small" href="#importancia">1. Importancia</a></li>
+		<li><a class="white nav-link text-small" href="#clasification">2. Clasificación</a></li>
 		<ul class="scroll">
 			<li><a href="" class="white nav-link text-small gray">Estadística</a></li>
+			<li><a href="" class="white nav-link text-small gray">Percepción Remota</a></li>
 			<li><a href="" class="white nav-link text-small gray">Aprendizaje Automático</a></li>
-			<li><a href="" class="white nav-link text-small gray">Cultivos Agrícolas</a></li>
 		</ul>
-		<li><a class="white nav-link text-small gray" href="#aplications">Aplicaciones</a></li>
-		<li><a class="white nav-link text-small gray" href="#end">Conclusiones</a></li>
-		<li><a class="white nav-link text-small" href="#links">Lista de Referencias</a></li>
+		<li><a class="white nav-link text-small gray" href="#links">3. Referencias</a></li>
+		<!-- <li><a class="white nav-link text-small gray" href="#end">Conclusiones</a></li> -->
+		<!-- <li><a class="white nav-link text-small" href="#links">Lista de Referencias</a></li> -->
 	</ul>
 </div>
 
@@ -79,44 +79,54 @@
 	<div class="py-4">
 		<img class="rounded mx-auto d-block" src="../img/crop_clasification_2.png" alt="" width="75%">
 		
-		<p class='text-center'>
+		<p class='text-center text-small'>
 			<b>Fuente: </b><a href="https://www.mdpi.com/2072-4292/8/3/166/htm">First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe (2016)</a> 
 		</p>
 	</div>
 
 	<p><b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.</p>
 
-	<h2 class="h5 py-4" id="importancia">Importancia</h2>
-
+	<h2 class="h5 py-4" id="importancia">1. Importancia</h2>
+	
 	<p>La clasificación de cultivos tiene como fin el presentar un mapa en donde se represente los cultivos clasificados en una zona de estudio determinada.</p>
 
-	<p>A continuación presentaré una recopilación de "Importancias" según diversos autores: <br>
-		<br>
+	<p>A continuación presentaré una recopilación de "Importancias" según diversos autores:</p>
+
+	<div id="accordion">
+	<div class="card">
+	<div class="card-header">
+		<a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
+		Importancias de realizar un mapa de cultivos (click aquí)
+		</a>
+	</div>
+	<div id="collapseOne" class="collapse" data-parent="#accordion">
+		<div class="card-body">
+		<blockquote class="blockquote">
 		<a class="my-2" href="https://www.sciencedirect.com/science/article/pii/S0034425717304686">(2018) Sentinel-2 cropland mapping using pixel-based and object-based time-weighted dynamic time warping analysis</a>:
 		<ul>
 			<li class="my-2">El <b>aumento de población</b> estimado de 7.3 Billones a 8.7 billones para el 2030, 9.7 billones para el 2050 y 11.2 billones para el 2100 impactará sobre los sistemas de provisión de alimentos a nivel mundial.</li>
 			<li class="my-2">Metodologías eficientes sobre el mapeo de cultivos son esenciales para la implementación de <b>prácticas sostenibles en agricultura</b> y para el monitoreo periódico de cultivos.</li>
 			<li class="my-2">Disponibilidad de metodologías con el propósito de cumplir los objetivos propuestos por las Naciones Unidas de Desarrollo Sostenible: No pobreza y cero hambre.</li>
 		</ul>
-	</p>
+		</blockquote>
 
-	<p>
+		<blockquote class="blockquote">
 		<a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">(2012) Crop type mapping using spectral–temporal profiles and phenological information</a>:
 		<ul>
 			<li class="my-2">Poseer información multianual y espacial es requisito para diversas aplicaciones ambientales, para apoyar el modelado y gestión del sistema agroambiental desde escala regional hasta la nacional.</li>
 			<li class="my-2">Muchas aplicaciones agroambientales, como la estimación de daños por inundaciones agrícolas o el modelado de la calidad del agua, requieren datos de cultivos distribuidos espacialmente.</li>
 		</ul>
-	</p>
-	
-	<p>
+		</blockquote>	
+		
+		<blockquote class="blockquote">
 		<a href="https://doi.org/10.1016/j.rse.2019.111624">(2020) Mapping cropping intensity in China using time series Landsat and Sentinel-2 images and Google Earth Engine</a>:
 		<ul>
 			<li class="my-2">La intensidad del cultivo es un factor importante que contribuye a la producción de cultivos y la seguridad alimentaria a escalas local, regional y nacional, y es una variable de datos de entrada crítica para muchos modelos de clima, superficie terrestre y cultivos globales. Por ello se debe generar anualmente mapas de intensidad del cultivo.</li>
 			<li class="my-2">Los datos de intensidad de cultivo pueden mejorar en gran medida las evaluaciones y predicciones de la producción de alimentos.</li>
 		</ul>
-	</p>
+		</blockquote>
 
-	<p>
+		<blockquote class="blockquote">
 		Extracto de la RESOLUCIÓN MINISTERIAL N° 0322-2020-MIDAGRI acerca de la importancia del <a href="https://siea.midagri.gob.pe/portal/normas"><b>Mapa Nacional de Superficie Agrícola del Perú</b></a>:
 		<ul> 
 			<li class="my-2">... actualmente,  se  dispone  de  imágenes  satelitales  gratuitas  y  de  alta  resolución  espacial  cuyo  procesamiento   permite   el   mapeo   y      medición   más   precisa  de  la  superficie  agrícola  en  todo  el  territorio nacional,  resultando  una  fuente  objetiva  de  referencia  y  que permite mejorar significativamente la medición de la superficie agrícola y la información estadística derivada de ella sobre  la actividad agraria, <b>convirtiéndose en una herramienta potente para los procesos de planificación de las  intervenciones,  y  de  las  operaciones  estadísticas  del  Sector.</b></li>
@@ -124,25 +134,25 @@
 			<li class="my-2">... se señala  que  la  Estrategia  Global  para  el  Mejoramiento de  las  Estadísticas  Agropecuarias  rurales  (FAO  del 2011), declara  la  necesidad  de  vincular  las  dimensiones  económicas, sociales y ambientales en las investigaciones estadísticas   rurales,   recomendando que se utilicen imágenes satelitales  de la superficie terrestre del país que permiten clasificar el uso del suelo , tales como tierras de cultivo, pastizales, etc., <b>a fin de monitorear el uso de la tierra, el cálculo de las áreas de cultivo  y su dinámica, y   proporcione   información   actualizada   que   permita   monitorear los cambios en el uso del suelo, cuantificar siembras y cosechas, planificar infraestructura de riego, estimar pérdidas ante desastres naturales, entre otros.</b></li>
 		</ul>
 		El Mapa de la Superficie Agrícola del Perú, se ha constituido como base fundamental para la ejecución de operaciones estadísticas a nivel nacional, el monitoreo de los cultivos  de importancia nacional, así como la integración de las operaciones estadísticas a partir de un solo marco muestra. De esta manera, se busca  generar información estadística agraria oportuna y confiable, para la focalización de las intervenciones y la toma de decisiones de los productores agrarios.
-	</p>
-	
+		</blockquote>		
+		</div>
+	</div>
+	</div>
+	</div>
 
-	<h2 class="h5 py-4" id="clasification">Clasificación</h2>
-	<h3 class="h6 py-2">Clasificación Estadística</h3>
+
+	<h2 class="h5 py-4" id="clasification">2. Clasificación</h2>
+
+	<p>
+		Comenzaremos definiendo los tipos de clasificaciones que existen relacionados con el tema, siendo los principales la Clasificación estadística y la Clasificación en Aprendizaje Automático <i>(Machine Learning)</i>.
+	</p>
+
+	<h3 class="h6 py-2">2.1. Clasificación Estadística</h3>
     <p>
         Según <a href="https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_estad%C3%ADstica">Wikipedia</a>, la <b>clasificación</b> es el problema de identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de datos de formación que contiene observaciones (o instancias) cuya categoría de miembros es conocida.
     </p>
 
-    <h3 class="h6 py-2">Clasificación en Aprendizaje Automático</h3>
-
-    <p>La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.</p>
-
-    <p>En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.</p>
-
-    <p>Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.
-    </p>
-
-    <h3 class="h6 my-4">Clasificación de cultivos usando percepción remota</h3>
+    <h3 class="h6 my-4">2.3. Clasificación en Percepción Remota</h3>
     <p>Según <a href="https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf">INEGI</a>, <b>la clasificación de cultivos</b> puede ser abordada como un problema de reconocimiento de patrones que utiliza procesamiento de imágenes y que está formado por varias etapas: 
         <ol>
             <li>Selección del método o medio a través del cual se obtiene la imagen,</li>
@@ -151,12 +161,19 @@
         </ol>
     </p>
     
-    
+    <h3 class="h6 py-2">2.2. Clasificación en Aprendizaje Automático</h3>
+
+    <p>La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.</p>
+
+    <p>En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.</p>
+
+    <p>Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.</p>
+
 	<!-- <img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas">  -->
     <!-- width="300px" height="300px" -->
 
 
-	<h2 class="h5 py-4" id="links">Referencias</h2>
+	<h2 class="h5 py-4" id="links">3. Referencias</h2>
 	<p> Mayor información:
 	<ol>
 		<!-- <li><a href='https://gidahatari.com/ih-es/tutorial-de-determinacin-de-firmas-espectrales-de-cultivos-con-qgis-3-y-scp-6'>Gidahatari - Tutorial de Determinación de Firmas Espectrales de Cultivos con QGIS 3 y SCP 6</a></li> -->
