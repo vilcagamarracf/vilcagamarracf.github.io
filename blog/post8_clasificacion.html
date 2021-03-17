@@ -63,7 +63,8 @@
 			<li><a href="" class="white nav-link text-small gray">Percepción Remota</a></li>
 			<li><a href="" class="white nav-link text-small gray">Aprendizaje Automático</a></li>
 		</ul>
-		<li><a class="white nav-link text-small gray" href="#links">3. Referencias</a></li>
+		<li><a class="white nav-link text-small gray" href="#apuntes">3. Apuntes</a></li>
+		<li><a class="white nav-link text-small gray" href="#links">4. Referencias</a></li>
 		<!-- <li><a class="white nav-link text-small gray" href="#end">Conclusiones</a></li> -->
 		<!-- <li><a class="white nav-link text-small" href="#links">Lista de Referencias</a></li> -->
 	</ul>
@@ -171,9 +172,104 @@
 
 	<!-- <img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas">  -->
     <!-- width="300px" height="300px" -->
+	
+	<h2 class="h5 py-2" id="apuntes">3. Apuntes</h2>	
+
+	<div id="accordion">
+
+	<div class="card">
+	<div class="card-header">
+		<a class="collapsed card-link" data-toggle="collapse" href="#apunte1">
+		Sensoramiento Remoto, Percepción Remota o Teledetección 
+		</a>
+	</div>
+	<div id="apunte1" class="collapse" data-parent="#accordion">
+		<div class="card-body">
+			<a href="#1" id="1">[1]</a> Jensen, J. R. (2013). Remote Sensing of the Environment: Pearson New International Edition: An Earth Resource Perspective (2nd edition). Pearson Education Limited.
+		<ul>
+			<li class="py-2">Medición in situ <br>
+				Los datos recolectados en campo <i>(in situ)</i> son comúnmente conocidos como datos verdaderos del terreno <i>(ground truth data)</i>. Éste procedimiento de recolección no está libre de errores por lo que es preferible referirse a los datos como datos de referencia in situ <i>(in situ ground reference data)</i>, ya que contiene errores.</li>
+
+			<li class="py-2">Definición de Teledetección <i>(Remote Sensing)</i><br>
+				La Teledetección es el registro sin contacto de información de las regiones del espectro electromagnético ultravioleta, visible, infrarojo y microondas mediante instrumentos tales como cámaras, escáneres, láseres, matrices lineales y/o matrices de áreas ubicadas en plataformas como aeronaves o naves espacialesm y el análisis de la información adquirida mediante el procesamiento de imágenes visuales y digitales.</li>
+
+			<li class="py-2"> Las mediciones de energía electromagnética deben convertirse en información usando técnicas de procesamiento de imágenes digitales o visuales. </li>
+
+			<li class="py-2"> La Teledetección se lleva a cabo mediante un instrumento comúnmente referido como <i>sensor</i>. La mayoría de los instrumentos registran la radiación de energía electromagnética (EMR) que viaja a la velocidad de la luz (3 x 10^8 m s^-1) desde su fuente o indirectamente reflejada hacia el sensor. Los cambios en el EMR se convierten en una fuente valiosa de datos para interpretar importantes propiedades de un fenómeno (temperatura, color, etc). También se usa otros campos de fuerza tales como el ondas acústicas (sonar). Sin embargo, la mayoría de datos remotamente recolectados son resultantes de sensores que registran energía electromagnética.</li>
+
+			<li class="py-2">¿A qué distancia se considera Teledetección?<br>
+				No hay una clara distinción acerca de que tanta distancia debe ser para considerarse Teledetección. 
+				La distancia entre el objeto y el instrumento puede ser de 1 cm, 1 m, 100 m o hasta más de 1 millón de metros.
+				Se menciona que la Teledetección y técnicas de procesamiento de imágenes pueden ser utilizados para analizar el "espacio interior" mediante microscopios e instrumentos de rayos-x. </li>
+
+			<li class="py-2">Ventajas<br>
+				El sensor al solo registrar pasivamente la energía electromagnética, no perturba el objeto o área de interés. 
+				Los sensores están programados para recolectar datos sistemáticamente lo cual reduce el error por sampleo in situ en investigaciones. <br>
+				La Teledetección provee de información biofísica fundamental; incluyendo localizaciones x,y; elevaciones y profundidades; biomasa; temperatura; contenido de humedad, etc. <br>
+				En general, provee de información a otras ciencias para que conduzcan investigaciones científicas mediante uso de softwares GIS.</li>
+
+			<li class="py-2">Limitaciones <br>
+				No provee toda la información requerida para una investigación científica en Física, Biología o Ciencias Sociales. 
+				La Teledetección solo brinda información espacial, espectral y temporal de manera que es eficiente y económico.
+
+				A la hora de elaborar el sistema adecuado para recolectar datos, el mismo ser humano puede inducir errores al instrumento  y parámetros especificados a la misión (satélites); también pueden descalibrarse. 
+			</li>	
+
+			<li class="py-2">Proceso de recolección de datos con Teledetección <br>
+				1. La hipótesis a ser probada es definida usando un tipo específico de lógica (inductivo, deductivo, etc) y un apropiado modelo de procesamiento (determinístico, estocástico, etc). <br>
+				2. Es necesario la colecta de datos in situ para calibrar el sensor o para juzgar las características recolectadas por el mismo: geometría, radiometría y temática. <br>
+				3. Los datos recolectados remotamente son procesados usando: <br>
+					- procesamiento de imágenes analógicas <br>
+					- procesamiento de imágenes digitales <br>	
+					- modelado y  <br>
+					- visualización en n-dimensiones <br>
+				4. Metadatos, línea de procesamiento y precisión de la información se proporcionan y los resultados se comunican mediante imágenes, gráficos, tablas estadísticas, bases de datos SIG, Sistemas de soport de decisiones espaciales (SDSS), etc.</li>
+		</ul>
+		</div>
+	</div>
+	</div>
 
 
-	<h2 class="h5 py-4" id="links">3. Referencias</h2>
+	<div class="card">
+	<div class="card-header">
+		<a class="collapsed card-link" data-toggle="collapse" href="#apunte2">
+		Clasificación mediante análisis de imágenes satelitales 
+		</a>
+	</div>
+	<div id="apunte2" class="collapse" data-parent="#accordion">
+		<div class="card-body">
+		<p><a href="#2">[2]</a> Borra, S., Thanki, R., & Dey, N. (2019b). Satellite Image Clustering. Satellite Image Analysis: Clustering and Classification, 31-52. https://doi.org/10.1007/978-981-13-6424-2_3</p>
+		<p>
+			Una vez adquirida las imágenes satelitales y preprocesadas (correcciónes radiométricas y geométricas, remoción de ruido), es posible interpretar y analizar la abstracción de los datos, clasificación de datos para la extracción de información relacionada con el mapeo de cobertura o uso de la tierra y detección de cambios.
+		</p>
+		<p>
+			Diferenciar los tipos de datos en las imágenes:
+			Datos continuos: La información de clases espectrales son grupos de pixeles cercanos unos a otros con su respectivos valores de brillo (valores de reflectancia) en diferentes bandas espectrales.
+			Datos categóricos: Información de clases tales como tipo residencial, tipo de cultivo, tipo de roca, tipo forestal, etc.
+		</p>
+		<p>
+			Asumiendo valores espectrales de diferentes usos de tierra como de clases de cobertura consistentes durante el tiempo, las técnicas de clasificación de imágenes satelitales en diferentes tipos se muestra a continuación: <br>
+			<img class="rounded mx-auto d-block" src="imgs/01-clasification.PNG" alt=""> <br>
+			La selección del enfoque de clasificación depende del tipo de aplicación, tipo de recursos y datos disponibles. <br>
+			Los seres humanos poseen una fuerte habilidad de reconocimiento de patrones y pueden diferenciar facilmente objetos más allá de la discriminación espacial y espectral (colores/formas/tamaños/variaciones de intensidad) basados en el contexto y experiencia. <br>
+			Limitanción: La interpretación manual consume mucho tiempo, es cara y requiere de la experiencia del analista. Además, los humanos no pueden diferenciar más allá de tres bandas espectrales (espectro visible) y en proyectos a mayor escala se hace inviable este proceso. <br>
+			<img class="rounded mx-auto d-block" src="imgs/01-visible-limations.PNG" alt=""> <br>
+			Clasificación apoyada de las computadoras: <b>Categorizar todos los pixeles de una imagen en cobertura de suelo/ uso de suelo y generar un mapa temático para varias aplicaciones.</b> <br>
+			Los sistemas de clasificación automatizados pueden clasificar gran cantidades de imágenes multiespectrales/hiperespectrales automáticamente con mejor consistencia, sin requerir mucho conocimiento y experiencia humana. Están basados en técnicas de reconocimiento de patrones (espectrales/espaciales/temporales/direccionales/híbridas). <br>
+			Ejemplo: Identificación de cultivos <br>
+			- Espacial: basado en texturas espaciales <br>
+			- Temporal: basado en las variaciones de tiempo (sembrado, desarrollo) <br>
+			- Direccional: identifica superficies con diferentes estructuras basado en sus variaciones de reflectancia en vista y ángulos de iluminación. <br>
+			- Espectral: Identifica las diferencias de reflectancias de las clases de cobertura de suelo en imágenes multiple o hiperespectrales. 
+		</p>
+		
+		</div>
+	</div>
+	</div>
+
+	</div>
+
+		<h2 class="h5 py-4" id="links">4. Referencias</h2>
 	<p> Mayor información:
 	<ol>
 		<!-- <li><a href='https://gidahatari.com/ih-es/tutorial-de-determinacin-de-firmas-espectrales-de-cultivos-con-qgis-3-y-scp-6'>Gidahatari - Tutorial de Determinación de Firmas Espectrales de Cultivos con QGIS 3 y SCP 6</a></li> -->
@@ -181,8 +277,22 @@
 		<li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li>
 		<li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li>
 	</ol>
+	<p>Por revisar:</p>
+	<ul>
+		<li><a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">[2012] Crop type mapping using spectral–temporal profiles and phenological information</a></li>
+		<li><a href="https://doi.org/10.1016/j.rse.2017.08.027">[2017] Detection of cropland field parcels from Landsat imagery</a></li>
+		<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2">[2019] Satellite Image Analysis: Clustering and Classification</a></li>
+		<li><a href="https://doi.org/10.1016/j.rse.2018.10.031">[2019] Intra-annual reflectance composites from Sentinel-2 and Landsat for national-scale crop and land cover mapping</a></li>
+
+		<hr>
+
+		<li><a href="https://www.amazon.com/Remote-Sensing-Environment-International-Perspective/dp/1292021705" id="1">[1]</a> Jensen, J. R. (2013). Remote Sensing of the Environment: Pearson New International Edition: An Earth Resource Perspective (2nd edition). Pearson Education Limited.</li>
+		<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2" id="2">[2]</a> Borra, S., Thanki, R., & Dey, N. (2019). Satellite Image Analysis: Clustering and Classification. SpringerBriefs in Applied Sciences and Technology, 5-7. https://doi.org/10.1007/978-981-13-6424-2</li>
+	</ul>
 	</p>
-	
+
+
+
 	<div class="container py-4">
 		<ul class="pagination justify-content-center">
 			<li class="page-item"><a class="page-link" href="post_ML_python.html">Anterior</a></li>
@@ -190,6 +300,7 @@
 			<!-- <li class="page-item"><a class="page-link" href=" ">Siguiente Post ==> (en proceso)</a></li> -->
 		</ul>
 	</div>
+
 </div> <!-- fin de container -->
 </div> <!-- Fin de columna central -->
 
