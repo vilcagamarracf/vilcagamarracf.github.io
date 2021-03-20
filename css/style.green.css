@@ -16,7 +16,7 @@
 
 body {
   overflow-x: hidden;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .text-small {
