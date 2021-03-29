@@ -64,22 +64,43 @@
 <div class="col-md-2 fondo py-4">
 	<!-- <nav class="col-md-2"> -->
 	<ul class="contenido scroll">
-        <li class='py-2 text-white'><b>Contenido</b></li>
+        <li class='py-2 text-white text-center'><b>Contenido</b></li>
         <li><a class="white nav-link text-small gray" href="#inicio">Inicio</a></li>
         <li><a class="white nav-link text-small gray" href="#conda">Qué es CONDA</a></li>
         <li><a class="white nav-link text-small" href="#anaconda">¿y Anaconda?</a></li>
         <li><a class="white nav-link text-small" href="#tutorial">Tutorial </a></li>
         <ul class="scroll">
             <li><a class="white nav-link text-small" href="#t1">Conociendo la terminal de Anaconda</a></li>
+            <ul class="scroll">
+                <li><a class="white nav-link text-small" href="#t01">Ver ayuda</a></li>
+                <li><a class="white nav-link text-small" href="#t02">Versión de conda instalada</a></li>
+            </ul>
             <li><a class="white nav-link text-small" href="#packages">Packages</a></li>
             <ul class="scroll">
-                <li><a class="white nav-link text-small" href="#p1">Ver ayuda</a></li>
-                <li><a class="white nav-link text-small" href="#p2">Visualizar packages</a></li>
-                <li><a class="white nav-link text-small" href="#p3">Instalar packages</a></li>
-                <li><a class="white nav-link text-small" href="#p4">Versionamiento Semántico</a></li>
+                <li><a class="white nav-link text-small" href="#p1">Ayuda en paquetes</a></li>
+                <li><a class="white nav-link text-small" href="#p2">Versionamiento Semántico</a></li>
+                <li><a class="white nav-link text-small" href="#p3">Listar paquetes instalados</a></li>
+                <li><a class="white nav-link text-small" href="#p4">Instalar paquetes</a></li>
+                <li><a class="white nav-link text-small" href="#p5">Instalar versión específica de un paquete</a></li>
+                <li><a class="white nav-link text-small" href="#p6">Búsqueda de paquetes instalados</a></li>
+                <li><a class="white nav-link text-small" href="#p7">Actualizar un paquete</a></li>
+                <li><a class="white nav-link text-small" href="#p8">Remover un paquete</a></li>
+                <li><a class="white nav-link text-small" href="#p9">Búsqueda de paquetes no instalados</a></li>
+                <li><a class="white nav-link text-small" href="#p10">Encontrar dependencias para un paquete</a></li>
             </ul>
             <li><a class="white nav-link text-small" href="#channels">Channels</a></li>
+            <ul class="scroll">
+                <li><a class="white nav-link text-small" href="#channel1">Búsqueda de canales</a></li>
+            </ul>
             <li><a class="white nav-link text-small" href="#envs">Environments</a></li>
+            <ul class="scroll">
+                <li><a class="white nav-link text-small" href="#env1">Listar ambientes</a></li>
+                <li><a class="white nav-link text-small" href="#env2">Listar paquetes en un ambiente</a></li>
+                <li><a class="white nav-link text-small" href="#env3">Listar paquetes en otro ambiente</a></li>
+                <li><a class="white nav-link text-small" href="#env4">Cambiar a otro ambiente</a></li>
+                <li><a class="white nav-link text-small" href="#env5">Crear nuevo ambiente</a></li>
+                <li><a class="white nav-link text-small" href="#env6">Remover ambientes</a></li>
+            </ul>
         </ul>
         <li><a class="white nav-link text-small" href="#end">Conclusiones</a></li>
 	</ul>
@@ -90,9 +111,9 @@
 <div class="col-md-8">
 <div class="container-fluid">
 
-    <h1 class="h4 py-4" id="inicio">Manejo de Paquetes de Python con Conda</h1>
+    <h1 class="h4 py-4" id="inicio">Manejo de paquetes de Python usando la línea de comandos de ANACONDA</h1>
 
-    <p><b>¡Saludos!</b>, escribo este post con la intención de informar sobre el manejo de paquetes de Python usando la herramienta Conda.</p>
+    <p><b>¡Saludos!</b>, escribo este post con la intención de informar sobre el manejo de paquetes de Python usando la línea de comandos de ANACONDA.</p>
     <p>
         Antes de empezar cabe mencionar que hay dos formas trabajar con Python:
         <ul>
@@ -150,9 +171,6 @@
         </ul>
     </p>
     
-    
-    
-    <!-- Conociendo la terminal de Anaconda -->
     <section>
     <h3 class="h6 py-2" id="t1">1. Conociendo la terminal de Anaconda <i>(Anaconda prompt)</i></h3>       
     
@@ -164,7 +182,7 @@
         A continuación veremos los principales comandos usados en el terminal de Anaconda (los recuadros con fondo negro "simulan" el Anaconda Prompt).
     </p>
 
-    <p class="py-2"><b>1.1. Ver ayuda</b> <br>
+    <p class="py-2" id="t01"><b>1.1. Ver ayuda</b> <br>
         <br>
         Al manejar una herramienta nueva como Conda es entendible perderse ni saber como empezar. Al trabajar con Conda, todos los comandos deben iniciar con la palabra <code>conda</code> y posterior a ello, los argumentos específicos. <br>
         Cuando se escriba <code>--help</code> para argumentos específicos, al final de cada resultado se mostrarán ejemplos.<br>
@@ -237,7 +255,7 @@
         </pre>
     </p>
     
-    <p class="py-2"><b>1.2. Versión de conda</b>  <br>
+    <p class="py-2" id="t02"><b>1.2. Versión de conda</b>  <br>
         <br>
         Qué versión de conda tengo instalado con <code>conda --version</code> .
         <pre>
@@ -251,7 +269,7 @@
 
     <!-- Paquetes -->
     <section>
-    <h3 class="h6 py-4" id="packages">2. Paquetes (o <i>Packages</i>): ¿Qué son y por qué son tan necesarios?</h3>
+    <h3 class="h6 py-4" id="packages">2. Paquetes <i>(Packages)</i></h3>
 
     <p>Los paquetes de Conda son archivos que contienen un conjunto de recursos: generalmente bibliotecas y ejecutables, pero no siempre.  
     <ul>
@@ -275,7 +293,7 @@
     </p>
     </blockquote>
     
-    <h3 class="h6 py-2" id="p1">2.1. Visualizar ayuda en paquetes</h3>
+    <h3 class="h6 py-3" id="p1">2.1. Ayuda en paquetes</h3>
     <p>
         El comando relacionado con los paquetes es <code>list</code> y para ver sus argumentos disponibles se usa <code>conda list --help</code> .
         <pre class="pre-scrollable">
@@ -345,7 +363,35 @@
     </pre>
     </p>
     
-    <h3 class="h6 py-2" id="p2">2.2. Visualizar paquetes instalados y sus versiones</h3>
+    <h3 class="h6 py-3" id="p2">2.2. Versionamiento Semántico</h3>
+    
+    <p>La mayoría de los paquetes de Conda utilizan un sistema llamado control de versiones semántico para <b>identificar distintas versiones de un paquete de software sin ambigüedades.</b>
+        <ul>
+            <li>Las etiquetas de versión generalmente las eligen los autores del proyecto, no necesariamente las mismas personas que empaquetan el proyecto como un paquete Conda. </li>
+            <li>No existe ningún requisito técnico de que la etiqueta de la versión del autor del proyecto coincida con la etiqueta de la versión del paquete Conda, pero casi siempre se sigue la convención de hacerlo. </li>
+            <li>Las etiquetas de la versión semántica se pueden comparar lexicográficamente y facilitan la determinación de cuál de las dos versiones es la versión posterior. </li>
+        </ul>
+    </p>
+    <p>
+        En el control de versiones semántico, el software <b>se etiqueta con un identificador de versión de tres partes de la forma</b> <b>MAJOR.MINOR.PATCH</b>; los componentes de la etiqueta son números enteros no negativos separados por puntos. <br>
+        <ul>
+            <li>Suponiendo que todo el software comienza en la versión 0.0.0, el número de versión PRINCIPAL aumenta cuando se introduce una nueva funcionalidad significativa (a menudo con los cambios de API correspondientes). </li>
+            <li>Los aumentos en el número de versión MINOR generalmente reflejan mejoras (por ejemplo, nuevas funciones) que evitan cambios de API incompatibles con versiones anteriores. Por ejemplo, agregar un argumento opcional a una función API (de una manera que permita que el código antiguo se ejecute sin cambios) es un cambio digno de aumentar el número de versión MINOR. </li>
+            <li>Un incremento en el número de versión de PATCH es apropiado principalmente para correcciones de errores que conservan los mismos números de revisión MAYOR y MENOR. </li>
+            <li>Los parches de software generalmente no introducen nuevas funciones ni cambian las API en absoluto (excepto a veces para abordar problemas de seguridad). </li>
+        </ul>
+    </p>
+    <p>
+        Muchas herramientas de línea de comandos muestran su identificador de versión ejecutando la herramienta --version. Esta información a veces se puede mostrar o documentar de otras formas. Por ejemplo, supongamos que en algún sistema, una determinada versión de Python está instalada y usted pregunta al respecto de esta manera:
+        <pre>
+
+            python -c "import sys; sys.version"
+            '1.0.1 (Mar 26 2014)'
+        </pre>
+        donde significa: La versión MAYOR es 1, el PATCH es 1.
+    </p>
+
+    <h3 class="h6 py-2" id="p3">2.3. Listar paquetes instalados</h3>
     <p>
         <pre class="pre-scrollable">
 
@@ -375,7 +421,7 @@
         Notese la ubicación de los packages: 
         <p class="text-center"><code># packages in environment at C:\Users\LENOVO\anaconda3</code></p> 
     </p>
-    <h3 class="h6 py-2" id="p3">2.3. Instalación de paquetes</h3>
+    <h3 class="h6 py-2" id="p4">2.4. Instalar paquetes</h3>
     
     <p> Generalmente para instalar algo con Conda se usa <code>conda install</code>. Veremos los argumentos disponibles con:
 
@@ -547,35 +593,23 @@
         donde PKGNAME es el nombre del paquete.
     </p>
     
-    <h3 class="h6 py-3" id="p4">2.4. Versionamiento Semántico</h3>
-    
-    <p>La mayoría de los paquetes de Conda utilizan un sistema llamado control de versiones semántico para <b>identificar distintas versiones de un paquete de software sin ambigüedades.</b>
-        <ul>
-            <li>Las etiquetas de versión generalmente las eligen los autores del proyecto, no necesariamente las mismas personas que empaquetan el proyecto como un paquete Conda. </li>
-            <li>No existe ningún requisito técnico de que la etiqueta de la versión del autor del proyecto coincida con la etiqueta de la versión del paquete Conda, pero casi siempre se sigue la convención de hacerlo. </li>
-            <li>Las etiquetas de la versión semántica se pueden comparar lexicográficamente y facilitan la determinación de cuál de las dos versiones es la versión posterior. </li>
-        </ul>
-    </p>
+    <h3 class="h6 py-3" id="p5">2.5. Instalar versión específica de un paquete</h3>
     <p>
-        En el control de versiones semántico, el software <b>se etiqueta con un identificador de versión de tres partes de la forma</b> <b>MAJOR.MINOR.PATCH</b>; los componentes de la etiqueta son números enteros no negativos separados por puntos. <br>
-        <ul>
-            <li>Suponiendo que todo el software comienza en la versión 0.0.0, el número de versión PRINCIPAL aumenta cuando se introduce una nueva funcionalidad significativa (a menudo con los cambios de API correspondientes). </li>
-            <li>Los aumentos en el número de versión MINOR generalmente reflejan mejoras (por ejemplo, nuevas funciones) que evitan cambios de API incompatibles con versiones anteriores. Por ejemplo, agregar un argumento opcional a una función API (de una manera que permita que el código antiguo se ejecute sin cambios) es un cambio digno de aumentar el número de versión MINOR. </li>
-            <li>Un incremento en el número de versión de PATCH es apropiado principalmente para correcciones de errores que conservan los mismos números de revisión MAYOR y MENOR. </li>
-            <li>Los parches de software generalmente no introducen nuevas funciones ni cambian las API en absoluto (excepto a veces para abordar problemas de seguridad). </li>
-        </ul>
-    </p>
-    <p>
-        Muchas herramientas de línea de comandos muestran su identificador de versión ejecutando la herramienta --version. Esta información a veces se puede mostrar o documentar de otras formas. Por ejemplo, supongamos que en algún sistema, una determinada versión de Python está instalada y usted pregunta al respecto de esta manera:
+        Tres formas de instalar paquetes con versiones específicas. Es opcional usar <code>--yes</code> al final para omitir la pregunta de <code>[y]/[n]</code> .
         <pre>
 
-            python -c "import sys; sys.version"
-            '1.0.1 (Mar 26 2014)'
+            conda install PACKAGE=12.3          # ultima version dentro de una serie
+
+            conda install PACKAGE=13
+
+            conda install PACKAGE=14.3.2        # versión exacta
         </pre>
-        donde significa: La versión MAYOR es 1, el PATCH es 1.
+
+        También es posible usar condicionales para la instalación pero generalmente se usan solo los nombres ya que ésto permite la que se instale la última versión del mismo.
     </p>
 
-    <h3 class="h6 py-3" id="p5">2.5. Búsqueda de paquetes instalados</h3>
+
+    <h3 class="h6 py-3" id="p6">2.6. Búsqueda de paquetes instalados</h3>
     <p>
         <pre>
 
@@ -594,20 +628,7 @@
         </pre>
     </p>
 
-    <h3 class="h6 py-3" id="p6">2.6. Instalación de un paquete específico</h3>
-    <p>
-        Tres formas de instalar paquetes con versiones específicas. Es opcional usar <code>--yes</code> al final para omitir la pregunta de <code>[y]/[n]</code> .
-        <pre>
-
-            conda install PACKAGE=12.3          # ultima version dentro de una serie
-
-            conda install PACKAGE=13
-
-            conda install PACKAGE=14.3.2        # versión exacta
-        </pre>
-
-        También es posible usar condicionales para la instalación pero generalmente se usan solo los nombres ya que ésto permite la que se instale la última versión del mismo.
-    </p>
+    
 
     <h3 class="h6 py-3" id="p7">2.7. Actualizar un paquete</h3>
     <p>
@@ -625,7 +646,7 @@
         </pre>
     </p>
 
-    <h3 class="h6 py-3" id="p9">2.9. Búsqueda de paquetes</h3>
+    <h3 class="h6 py-3" id="p9">2.9. Búsqueda de paquetes no instalados</h3>
     <p>
         <pre>
             
@@ -647,7 +668,7 @@
         Todos los paquetes vistos hasta ahora son publicados en el <code>main</code> o <code>default</code> channel de Anaconda Cloud (<a href="https://repo.anaconda.com/pkgs/main/">ver aquí</a>). Un Channel es un identificador de un path (dirección) del cual los paquetes Conda pueden ser obtenidos. Usando la public cloud, instalando sin especificar.
     
     </p>
-    <h6 class="py-4" id="channels">3.1. Buscando entre canales</h5>
+    <h6 class="py-4" id="channel1">3.1. Búsqueda de canales</h5>
     <p>
         <pre>
 
@@ -730,7 +751,7 @@
         </pre>
     </p> -->
     <h6 class="py-4" id="envs">4. Ambientes <i>(Environments)</i></h3>
-    <h6 class="py-3" id="envs">4.1. ¿Qué environment estoy usando?</h3>
+    <h6 class="py-3" id="env1">4.1. Listar ambientes</h3>
     <p>
         <pre>
 
@@ -749,7 +770,7 @@
         Estoy usando el environment <code>base</code> según el <code>*</code> ubicado a la izquierda de la dirección.
     </p>
 
-    <h6 class="py-3" id="envs">4.2. ¿Qué packages están instalados en un environment?</h3>
+    <h6 class="py-3" id="env2">4.2. Listar paquetes en un ambiente</h3>
     <p>
         <pre>
 
@@ -770,7 +791,7 @@
         </pre>
     </p>
 
-    <h6 class="py-3" id="envs">4.3. ¿Qué packages están instalados en otro environment?</h3>
+    <h6 class="py-3" id="env3">4.3. Listar paquetes en otro ambiente</h3>
     <p>
         Para ver los packages instalados en otro environment: <code>conda env --name ENVNAME</code> <br>
         A continuación tres ejemplos:
@@ -800,7 +821,7 @@
         <li>En el tercer caso busqué las iniciales del paquete <code>earthengine-api</code> en el environment <code>gee</code>: Sí está.</li>
     </p>
 
-    <h6 class="py-3" id="envs">4.4. Cambiando entre environments</h3>
+    <h6 class="py-3" id="env4">4.4. Cambiar a otro ambiente</h3>
     <p>
         <pre>
 
@@ -836,32 +857,7 @@
         </pre>
     </p>
 
-    <h6 class="py-3" id="envs">4.5. Removiendo environments</h3>
-    <p>
-        <code>conda env remove --name ENVNAME</code> (es posible usar <code>--name</code> o <code>-n</code> )
-        <p>Ejemplo: Removiendo el environment <code>gee</code></p>
-        <pre>
-
-            (base) C:\Users\LENOVO>conda env remove -n gee
-
-            Remove all packages in environment C:\Users\LENOVO\anaconda3\envs\gee:
-        </pre>
-        <p>Resultado:</p>
-        <pre>
-
-            (base) C:\Users\LENOVO>conda env list
-            # conda environments:
-            #
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
-            base                  *  C:\Users\LENOVO\anaconda3
-            python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
-
-            (base) C:\Users\LENOVO>
-        </pre>
-    </p>
-
-    <h6 class="py-3" id="envs">4.6. Creando environments</h3>
+    <h6 class="py-3" id="env5">4.5. Crear nuevo ambiente</h3>
     <p>
         <code>conda create -n ENVNAME</code>
         <pre class="pre-scrollable">
@@ -910,49 +906,31 @@
         </pre>
     </p>
 
-    <h6 class="py-3" id="envs">4.6. Exportar environments</h3>
+    <h6 class="py-3" id="env6">4.6. Remover ambientes</h3>
     <p>
+        <code>conda env remove --name ENVNAME</code> (es posible usar <code>--name</code> o <code>-n</code> )
+        <p>Ejemplo: Removiendo el environment <code>gee</code></p>
         <pre>
-            
-            # Si no se indica una extensión al archivo a exportar, producirá el siguiente resultado:
 
-            (base) C:\Users\LENOVO>conda env export -n python-foundation
-            name: python-foundation
-            channels:
-            - conda-forge
-            - defaults
-            prefix: C:\Users\LENOVO\anaconda3\envs\python-foundation
+            (base) C:\Users\LENOVO>conda env remove -n gee
+
+            Remove all packages in environment C:\Users\LENOVO\anaconda3\envs\gee:
         </pre>
-
+        <p>Resultado:</p>
         <pre>
 
-            # Ahora especificando la extensión: <code>--file ENVNAME.yml</code>
+            (base) C:\Users\LENOVO>conda env list
+            # conda environments:
+            #
+                                    C:\Users\LENOVO\AppData\Local\R-MINI~1
+                                    C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
+            base                  *  C:\Users\LENOVO\anaconda3
+            python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
 
-            (base) C:\Users\LENOVO>conda env export -n python-foundation --file python-foundation.yml
             (base) C:\Users\LENOVO>
         </pre>
     </p>
-    <p>
-        Crear environments a partir de una especificación compartida: Puedes recrear un environment a partir de un YAML (Yet Another Markup Language) format file producido por <code>conda env export</code>
-        <pre>
 
-            conda env create --file file-name.yml
-        </pre>
-    </p>
-    <!-- <p>
-        Compatibilidad con diferentes versiones
-        <pre>
-            
-            code here
-        </pre>
-    </p>
-    <p>
-        Actualizando scripts
-        <pre>
-            
-            code here
-        </pre>
-    </p> -->
     <hr>
     <p>
         Link alternativo: <a href="https://alimanfoo.github.io/2017/05/18/installing-python.html">Alistair Miles - Installing Python for data analysis</a>

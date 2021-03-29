@@ -79,12 +79,20 @@
     background-size: cover;
 }
 
+.fondo-elegible {
+    /* background: url(../img/background.jpg) no-repeat center center fixed;  */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 
 ul.scroll{
     list-style: none;
     padding-left: 1em; 
-    padding-right: 1em;
+    padding-right: -1em;
 }
 
 /* ul.nav-pills {
