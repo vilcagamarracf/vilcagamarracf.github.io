@@ -24,6 +24,11 @@
 	<link rel="stylesheet" href="../css/custom.css">
 	<!-- Favicon-->
 	<link rel="shortcut icon" href="../img/favicon.png">
+
+	<!-- Our Custom CSS -->
+	<link rel="stylesheet" href="../css/style2.css">
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 </head>
 
 <body>
@@ -51,25 +56,70 @@
 
 <!-- Redacción de post -->
 <div class="container-fluid">
+
 <div class="row">
 
 <!-- Columna izquierda -->
-<div class="col-md-2 fondo-elegible py-4" style="background: url(../img/ml_image.jpeg) no-repeat center center fixed; opacity: 0.8;">
-	<ul class="contenido scroll">
+<div class="col-md-2 fondo-elegible py-4 fondo">
+	<div class="wrapper">
+    <nav id="sidebar">
+        <!-- <div class="sidebar-header">
+            <h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
+        </div> -->
+
+        <ul class="list-unstyled components">
+            <p><b>Contenido</b></p>
+            
+			<li><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					Introducción</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#">Home 1</a></li>
+                    <li><a href="#">Home 2</a></li>
+                    <li><a href="#">Home 3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					Tipos de Aprendizaje Automático con todos</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+	</nav>
+	</div>
+
+	<!-- <ul class="contenido scroll">
 		<li class='py-2 text-white text-center'><b>Contenido</b></li>
 		<li><a class="white nav-link text-small" href="#introduction">Introducción</a></li>
 		<li><a class="white nav-link text-small" href="#tipos">Tipos</a></li>
 		<li><a class="white nav-link text-small" href="#subtitle">Subtítulo por agregar</a></li>
 		<li><a class="white nav-link text-small" href="#links">Referencias</a></li>
 		<li><a class="white nav-link text-small" href="#ejemplos">Ejemplos con Python</a></li>
-	</ul>
+	</ul> -->
 </div>
 
 <!-- Columna central -->
 <div class="col-md-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 	
 <div class="container-fluid">
-		
+
+	<center>
+	<div class="py-4">
+		<button type="button" id="sidebarCollapse" class="btn btn-info">
+			<i class="fas fa-align-left"></i>
+			<span>Ver contenido</span>
+		</button>
+	</div>
+	</center>
+	
+
 	<h1 class="h4 py-4">Hablemos de Aprendizaje Automático</h1>
 	<p>
 		<b>Objetivo:</b> Informar sobre este campo (considerado tecnología emergente actualmente) y explorar sus aplicaciones dándole un enfoque hacia la Agricultura.
@@ -142,28 +192,33 @@
 	</ul>
 	</div>
 
-	</div>
-</div>
-
-<!-- Columna Derecha -->
-<div class="col-2 fondo-elegible" style="background: url(../img/ml_image.jpeg) no-repeat center center fixed; opacity: 0.8;"></div>
-
-</div> <!-- Fin de los rows -->
-</div> <!-- Fin del container -->
-
-<!--Footer-->
-<footer style="background: #eee;" class="pt-2">
-<div class="container py-2">
-	<div class="mb-2">
-		<ul class="list-inline text-center">
+	<!--Footer-->
+	<hr>
+	<div class="py-2" style="background: #eee, ;">
+	<ul class="list-inline text-center">
 		<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
 			<i class="fab fa-facebook-f"></i></a></li>
 		<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
 		<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
 		<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
-		</ul>
+	</ul>
+	</div>
+	
 	</div>
 </div>
+
+<!-- Columna Derecha -->
+<div class="col-md-2 fondo"></div>
+
+</div> <!-- Fin de los rows -->
+</div> <!-- Fin del container -->
+
+<!-- <footer >
+<div class="container py-2">
+	<div class="mb-2">
+		
+	</div>
+</div> -->
 
 <!-- Footer de template -->
 <div class="bg-dark py-1">    
@@ -186,8 +241,15 @@
 <script src="../vendor/lightbox2/js/lightbox.min.js"></script>
 <script src="../vendor/leaflet/leaflet.js"></script>
 <script src="../js/front.js"></script>
+
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 </body>
 </html>
