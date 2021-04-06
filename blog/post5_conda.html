@@ -25,6 +25,11 @@
     <!-- Favicon-->
     <link rel="shortcut icon" href="../img/favicon.png">
 
+    <!-- Our Custom CSS -->
+	<link rel="stylesheet" href="../css/style2.css">
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
+
     <style>
         pre {
             display: block;
@@ -35,81 +40,96 @@
 </head>
 
 <body>
-    
-<!--Header-->
-<header class="header">
-    <nav class="navbar navbar-expand-lg py-lg-0">
-
-        <div class="container">
-        <a href="../index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
-
-        <!-- Div responsive -->
-        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
-        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-                <li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a></li>
-                <li class="nav-item"><a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a></li>
-                <li class="nav-item"><a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a></li>
-            </ul>
-        </div>
-
-        </div> <!-- del container -->
-    </nav>
-</header>
 
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
 
-<div class="col-md-2 fondo py-4">
-	<!-- <nav class="col-md-2"> -->
-	<ul class="contenido scroll">
-        <li class='py-2 text-white text-center'><b>Contenido</b></li>
-        <li><a class="white nav-link text-small gray" href="#inicio">Inicio</a></li>
-        <li><a class="white nav-link text-small gray" href="#conda">Qué es CONDA</a></li>
-        <li><a class="white nav-link text-small" href="#anaconda">¿y Anaconda?</a></li>
-        <li><a class="white nav-link text-small" href="#tutorial">Tutorial </a></li>
-        <ul class="scroll">
-            <li><a class="white nav-link text-small" href="#t1">Conociendo la terminal de Anaconda</a></li>
-            <ul class="scroll">
-                <li><a class="white nav-link text-small" href="#t01">Ver ayuda</a></li>
-                <li><a class="white nav-link text-small" href="#t02">Versión de conda instalada</a></li>
-            </ul>
-            <li><a class="white nav-link text-small" href="#packages">Packages</a></li>
-            <ul class="scroll">
-                <li><a class="white nav-link text-small" href="#p1">Ayuda en paquetes</a></li>
-                <li><a class="white nav-link text-small" href="#p2">Versionamiento Semántico</a></li>
-                <li><a class="white nav-link text-small" href="#p3">Listar paquetes instalados</a></li>
-                <li><a class="white nav-link text-small" href="#p4">Instalar paquetes</a></li>
-                <li><a class="white nav-link text-small" href="#p5">Instalar versión específica de un paquete</a></li>
-                <li><a class="white nav-link text-small" href="#p6">Búsqueda de paquetes instalados</a></li>
-                <li><a class="white nav-link text-small" href="#p7">Actualizar un paquete</a></li>
-                <li><a class="white nav-link text-small" href="#p8">Remover un paquete</a></li>
-                <li><a class="white nav-link text-small" href="#p9">Búsqueda de paquetes no instalados</a></li>
-                <li><a class="white nav-link text-small" href="#p10">Encontrar dependencias para un paquete</a></li>
-            </ul>
-            <li><a class="white nav-link text-small" href="#channels">Channels</a></li>
-            <ul class="scroll">
-                <li><a class="white nav-link text-small" href="#channel1">Búsqueda de canales</a></li>
-            </ul>
-            <li><a class="white nav-link text-small" href="#envs">Environments</a></li>
-            <ul class="scroll">
-                <li><a class="white nav-link text-small" href="#env1">Listar ambientes</a></li>
-                <li><a class="white nav-link text-small" href="#env2">Listar paquetes en un ambiente</a></li>
-                <li><a class="white nav-link text-small" href="#env3">Listar paquetes en otro ambiente</a></li>
-                <li><a class="white nav-link text-small" href="#env4">Cambiar a otro ambiente</a></li>
-                <li><a class="white nav-link text-small" href="#env5">Crear nuevo ambiente</a></li>
-                <li><a class="white nav-link text-small" href="#env6">Remover ambientes</a></li>
-            </ul>
+<div class="col-lg-2 fondo py-4">
+
+    <div class="wrapper">
+    <nav id="sidebar">
+
+        <ul class="list-unstyled components">
+            <p class="text-center text-center"><b>Contenido</b></p>
+            
+			<li><a href="#intro">Inicio</a></li>
+			<li><a href="#question">Qué es Conda</a></li>
+			<li><a href="#acceso">¿y Anaconda?</a></li>
+			<li><a href="#tutorial">Tutorial</a></li>
+			<li><a href="#primeros" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					1. Primeros pasos</a>
+                <ul class="collapse list-unstyled" id="primeros">
+                    <li><a href="#t01" class="padd">Ver ayuda</a></li>
+                    <li><a href="#t02" class="padd">Versión de conda instalada</a></li>
+                </ul>
+            </li>
+			<li><a href="#paquetes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					2. Paquetes</a>
+                <ul class="collapse list-unstyled" id="paquetes">
+                    <li><a href="#p1" class="padd">Ayuda en paquetes</a></li>
+                    <li><a href="#p2" class="padd">Versionamiento semántico</a></li>
+                    <li><a href="#p3" class="padd">Listar paquetes instalados</a></li>
+                    <li><a href="#p4" class="padd">Instalar paquetes</a></li>
+                    <li><a href="#p5" class="padd">Instalar versión específica de un paquete</a></li>
+                    <li><a href="#p6" class="padd">Búsqueda de paquetes instalados</a></li>
+                    <li><a href="#p7" class="padd">Actualizar un paquete</a></li>
+                    <li><a href="#p8" class="padd">Remover un paquete</a></li>
+                    <li><a href="#p9" class="padd">Búsqueda de paquetes no instalados</a></li>
+                    <li><a href="#p10" class="padd">Búsqueda de dependencias para paquetes</a></li>
+                </ul>
+            </li>
+
+			<li><a href="#channels" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					3. Canales</a>
+                    <ul class="collapse list-unstyled" id="channels">
+                    <li><a href="#channel1" class="padd">Búsqueda de canales</a></li>
+                </ul>
+            </li>
+			<li><a href="#envs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					4. Ambientes</a>
+                    <ul class="collapse list-unstyled" id="envs">
+                    <li><a href="#env1" class="padd">Listar ambientes</a></li>
+                    <li><a href="#env2" class="padd">Listar paquetes en un ambiente</a></li>
+                    <li><a href="#env3" class="padd">Listar paquetes en otro ambiente</a></li>
+                    <li><a href="#env4" class="padd">Cambiar a otro ambiente</a></li>
+                    <li><a href="#env5" class="padd">Crear nuevo ambiente</a></li>
+                    <li><a href="#env6" class="padd">Remover ambientes</a></li>
+                </ul>
+            </li>
+			<li><a href="#end">Conclusiones</a></li>
+            
         </ul>
-        <li><a class="white nav-link text-small" href="#end">Conclusiones</a></li>
-	</ul>
-	<!-- </nav> -->
+
+	</nav>
+	</div>
+
 </div>
 
 <!-- Columna central -->
-<div class="col-md-8">
+<div class="col-lg-8 container-fluid">
 <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg py-lg-2">
+
+        <div class="container">
+        <a href="../index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+			<i class="fas fa-align-left"></i>
+			<span></span>
+		</button>
+
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
+        
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+			<li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3">Inicio</a></li>
+			<li class="nav-item"><a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 active">Blog</a></li>
+			<li class="nav-item"><a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3">Contacto</a></li>
+		</ul>
+        </div>
+	</div>
+    </nav>
 
     <h1 class="h4 py-4" id="inicio">Manejo de paquetes de Python usando la línea de comandos de ANACONDA</h1>
 
@@ -172,7 +192,7 @@
     </p>
     
     <section>
-    <h3 class="h6 py-2" id="t1">1. Conociendo la terminal de Anaconda <i>(Anaconda prompt)</i></h3>       
+    <h3 class="h6 py-2" id="t1">1. Primeros pasos</h3>       
     
     <p>Para empezar, es necesario tener instalada alguna versión de <a href="https://www.anaconda.com/products/individual" target="blank">Anaconda</a>. Posterior a ello, abrir el <code>Anaconda Prompt</code> como se muestra a continuación:</p>
     <img class="rounded mx-auto d-block my-4" src="https://docs.conda.io/projects/conda/en/latest/_images/anaconda-prompt.png" width="350px">
@@ -948,44 +968,38 @@
 			<li class="page-item"><a class="page-link" href="post_ML_python.html">Siguiente</a></li>
 		</ul>
 	</div>
-</div> <!-- Fin de container -->
-</div> <!-- Fin de columna izquierda -->
-
-<!-- Columna derecha -->
-<div class="col-2 fondo"></div>
-
-</div> <!-- Fin de row -->
-</div> <!-- Fin de container del post -->
-
-<!--Footer-->
-<footer style="background: #eee;" class="pt-2">
-<div class="container py-2">
-    <div class="mb-2">
-        <ul class="list-inline text-center">
-        <li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
-            <i class="fab fa-facebook-f"></i></a></li>
-        <li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-        <li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
-        <li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
-        </ul>
-    </div>
+	<!--Footer-->
+	<hr>
+	<div class="py-2" style="background: #eee, ;">
+	<ul class="list-inline text-center">
+		<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
+			<i class="fab fa-facebook-f"></i></a></li>
+		<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+		<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
+		<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
+	</ul>
+	</div>
+	
+	</div>
 </div>
+
+<!-- Columna Derecha -->
+<div class="col-lg-2 fondo"></div>
+
+</div> <!-- Fin de los rows -->
+</div> <!-- Fin del container -->
+
 
 <!-- Footer de template -->
-<div class="bg-dark py-1">    
-    <div class="container">
-    <div class="row">
-        <div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
-            <p class="small text-gray mb-0">2021 - Cesar Vilca</p>
-        </div>
-        <div class="col-lg-6 text-center text-lg-right">
-            <p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
-        </div>
-    </div>
-    </div>
+<div class="py-1" style="background: rgba(0, 0, 0, 1); ">    
+	<div class="container">
+		<div class="text-center">
+			<p class="small text-gray mb-0">2021 - Cesar Vilca --- Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
+		</div>
+	</div>
 </div>
-</footer>
 
+	
 <!-- JavaScript files-->
 <script src="../vendor/jquery/jquery.min.js"></script>
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -994,6 +1008,12 @@
 <script src="../js/front.js"></script>
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
 </body>
 </html>
