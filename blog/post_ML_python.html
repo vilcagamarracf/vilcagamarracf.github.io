@@ -39,9 +39,20 @@
 
 		<div class="container">
 			<a href="../index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
+			<button type="button" id="sidebarCollapse" class="btn btn-info">
+				<i class="fas fa-align-left"></i>
+				<span></span>
+			</button>
 
 		<!--Div Responsive-->
-        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
+        <button type="button" data-toggle="collapse" 
+		data-target="#navbarSupportedContent" 
+		aria-controls="navbarSupportedContent" 
+		aria-expanded="false" 
+		aria-label="Toggle navigation" 
+		class="navbar-toggler navbar-toggler-right small">
+			<span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i>
+		</button>
 		<div id="navbarSupportedContent" class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
 				<li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a></li>
@@ -60,7 +71,8 @@
 <div class="row">
 
 <!-- Columna izquierda -->
-<div class="col-md-2 fondo-elegible py-4 fondo">
+<div class="col-lg-2 col-md-0 fondo-elegible py-4 fondo">
+	
 	<div class="wrapper">
     <nav id="sidebar">
         <!-- <div class="sidebar-header">
@@ -70,26 +82,19 @@
         <ul class="list-unstyled components">
             <p><b>Contenido</b></p>
             
-			<li><a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-					Introducción</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li><a href="#">Home 1</a></li>
-                    <li><a href="#">Home 2</a></li>
-                    <li><a href="#">Home 3</a></li>
-                </ul>
-            </li>
+			<li><a href="#introduction">Introducción</a></li>
 
             <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
 					Tipos de Aprendizaje Automático con todos</a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="#">Page 1</a></li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
+                    <li><a href="#tipo1">Aprendizaje Supervisado</a></li>
+                    <li><a href="#tipo2">Aprendizaje No Supervisado</a></li>
+                    <li><a href="#tipo3">Aprendizaje Reforzado</a></li>
                 </ul>
             </li>
 
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#links">Referencias recomendadas</a></li>
+            <li><a href="#ejemplos">Ejemplos con Python</a></li>
         </ul>
 
 	</nav>
@@ -106,32 +111,18 @@
 </div>
 
 <!-- Columna central -->
-<div class="col-md-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<div class="col-lg-8" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 	
 <div class="container-fluid">
-
-	<center>
-	<div class="py-4">
-		<button type="button" id="sidebarCollapse" class="btn btn-info">
-			<i class="fas fa-align-left"></i>
-			<span>Ver contenido</span>
-		</button>
-	</div>
-	</center>
-	
 
 	<h1 class="h4 py-4">Hablemos de Aprendizaje Automático</h1>
 	<p>
 		<b>Objetivo:</b> Informar sobre este campo (considerado tecnología emergente actualmente) y explorar sus aplicaciones dándole un enfoque hacia la Agricultura.
 	</p>
 
-	<div class="text-center py-4">	
-		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
-	</div>
-
 	<h2 class="h5 py-4" id="introduction">Introducción</h2>
 	<p>
-		Aquí va una introducción sobre Aprendizaje Automático.
+		En el presente post voy a mencionar los casos útiles donde se puede utilizar el Aprendizaje Automático, relacionado con la Agricultura.
 	</p>
 	
 	
@@ -140,7 +131,7 @@
 		A continuación presentaré las mejores definiciones encontradas en la red.
 	</p>
 
-	<h3 class="h6 py-2" id="a_superv">Aprendizaje Supervisado</h3>
+	<h3 class="h6 py-2" id="tipo1">Aprendizaje Supervisado</h3>
 	<p>
 		Aquí comentaré sobre el Aprendizaje Supervisado.
 	</p>
@@ -150,7 +141,7 @@
 		<li class="my-2"><a href="https://medium.com/remote-sensing-in-agriculture">Medium - Gamaya Blog</a> : Blog de una Startup Suiza en el campo del AgTech. Su principal (y único) editor es Ivanov Igor, el mismo CEO de la startup.</li>
 	</ul> -->
 
-	<h3 class="h6 py-2" id="a_nosuperv">Aprendizaje No Supervisado</h3>
+	<h3 class="h6 py-2" id="tipo2">Aprendizaje No Supervisado</h3>
 	<p>
 		Aquí comentaré sobre el Aprendizaje No Supervisado.
 	</p>
@@ -160,12 +151,12 @@
 		<!-- <li class="my-2"><a href="https://medium.com/nam-r/estimating-vegetated-surfaces-with-computer-vision-how-we-improved-our-model-and-scaled-up-66426b6e9fc6">[Pago] Estimating Vegetated Surfaces with Computer Vision: how we improved our model and scaled up</a></li> -->
 	<!-- </ul> -->
 	
-	<h3 class="h6 py-2" id="a_reforz">Aprendizaje Reforzado</h3>
+	<h3 class="h6 py-2" id="tipo3">Aprendizaje Reforzado</h3>
 	<p>
 		Aquí comentaré sobre el Aprendizaje Reforzado.
 	</p>
 
-	<h2 class="h5 py-4" id="subtitle">Subtítulo por agregar (pensando)</h2>
+	<h2 class="h5 py-4" id="sub">Subtítulo por agregar (pensando)</h2>
 	<p>
 		Texto importante sobre Aprendizaje Automático.
 	</p>
@@ -208,7 +199,17 @@
 </div>
 
 <!-- Columna Derecha -->
-<div class="col-md-2 fondo"></div>
+<div class="col-lg-2 fondo">
+
+	<!-- <div class="wrapper">
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
+        </div>
+	</nav>
+	</div> -->
+
+</div>
 
 </div> <!-- Fin de los rows -->
 </div> <!-- Fin del container -->

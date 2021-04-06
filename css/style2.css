@@ -16,6 +16,25 @@
     color: #999;
 } */
 
+/* sidebar */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
 a,
 a:hover,
 a:focus {
@@ -56,12 +75,13 @@ a:focus {
 }
 
 #sidebar {
-    width: 16.7%;
+    /* width: 16.7%; */
+    width: 230px;
     position: fixed;
     top: 11vh;
     /* left: 7px; */
     /* height: 60vh; */
-    height: 82%;
+    height: 60vh;
     z-index: 999;
     /* background: url(../img/background1.jpg) no-repeat center center fixed;  */
     background: rgba(0, 0, 0, 0.7); 
