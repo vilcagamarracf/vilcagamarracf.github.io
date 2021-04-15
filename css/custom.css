@@ -1,4 +1,4 @@
-/* your styles go here */
+/* ----- Imágenes ----- */
 
 .blog-img {
     /* float: left; */
@@ -32,28 +32,8 @@
     text-align: justify;
 }
 
-.galeria {
-    float: left;
-    height: 10em;
-    width: 20em;
-    max-width: 100%;
-    border-radius: 5px;
-    margin: 0 1.5em 1.5em 0;
-    border: thin solid #ccc;
-}
 
-/* .section-nav{
-    border-right: 2px solid rgb(79, 138, 50);
-    padding-right: 0px;
-    padding-left: 0px
-} */
-
-
-/* Modificando containers */
-/* .container {
-    background: black;
-    color: #ccc;
-} */
+/* ----- FONDOS ----- */
 
 .fondo {
     background: url(../img/background.jpg) no-repeat center center fixed; 
@@ -79,33 +59,9 @@
     background-size: cover;
 }
 
-.fondo-elegible {
-    background: no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
 
-
-ul.scroll{
-    list-style: none;
-    padding-left: 1em; 
-    padding-right: -1em;
-}
-
-/* ul.nav-pills {
-    top: 100px;
-    position: fixed;
-} */
-
-ul.contenido{
-    width: 200px; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    text-align: left;
-    padding-inline-start: 0px;
-}
+/* ----- Texto blanco ----- */
 
 a.white{
     color: rgb(255, 255, 255);
