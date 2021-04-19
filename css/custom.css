@@ -3,6 +3,7 @@
 .blog-img {
     /* float: left; */
     width: 14em;
+	/* width: 200px; */
     max-width: 100%;
     border-radius: 5px;
     /* margin: 0 1.5em 1.5em 0; */
@@ -67,3 +68,140 @@ a.white{
     color: rgb(255, 255, 255);
 }
 
+
+/* ----- Prueba ----- */
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+
+/* Manejando los containers en el blog */
+.blogContainer {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	gap: 20px;
+	align-items: flex-start;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.blogContainer img {
+	width: 225px;
+	height: 120px;
+	border-radius: 5px;
+	border: thin solid #ccc;
+}
+
+.flex-container {
+	display: flex;
+	align-items: stretch;
+	margin: 0 50px;
+}
+
+.flex-container > div {
+	margin: 15px 10px;
+}
+
+.flex-container > div h3 {
+	font-size: 16pt;
+	color: #429244;
+	/* margin-top: px; */
+}
+
+.flex-container > div a {
+	margin-right: 100px;
+	text-decoration: none;
+}
+
+
+
+@media (max-width: 700px) {
+
+	.blogContainer {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	gap: 0px;
+	align-items: flex-start;
+	justify-content: center;
+	}
+
+	.flex-container {
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* margin-top: 50px; */
+	}
+    
+	.flex-container > div {
+	margin-top: 15px;
+	}
+}
