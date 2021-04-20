@@ -1,20 +1,18 @@
-/*
-    DEMO STYLE
-*/
+/* Enganchar el navbar y footer a la ventana */
 
-/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"; */
-/* body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-} */
+.stickyNav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 
-/* p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-} */
+.stickyFooter {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+}
 
 /* sidebar */
 
@@ -23,24 +21,11 @@
     width: 100%;
 }
 
-#sidebar {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    z-index: 999;
-    background: #7386D5;
-    color: #fff;
-    transition: all 0.3s;
-}
-
 .navbar {
     padding: 15px 10px;
     background: #fff;
     border: none;
     border-radius: 0.1em;
-    /* margin-bottom: 40px; */
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -67,20 +52,21 @@
 }
 
 #sidebar {
-    width: 16.7%;
+    width: 16.666667%;
+    top: 70px;
+    height: 90.7%;
+    left: 0;
     position: fixed;
-    /* top: 75px; */
-    /* height: fit-content; */
-    /* top: 14.9%; */
-    /* height:70% ; */
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.7); 
-    /* background: url(../img/background1.jpg) no-repeat center center fixed;  */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    transition: all 0.2s;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.85); 
+    transition: all 0.3s;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+	#sidebar {
+    width: 200px;
+}
 }
 
 a.padd {
@@ -92,13 +78,8 @@ a.padd {
     margin-left: -250px;
 }
 
-/* #sidebar .sidebar-header {
-    padding: 20px;
-    background: rgba(75, 78, 92, 0.9);
-} */
-
 #sidebar ul.components {
-    padding: 10px 0;
+    padding: 0px 0;
     /* border-bottom: 0.5px solid #47748b; */
 }
 
@@ -178,9 +159,17 @@ ul.CTAs a {
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+
     #sidebar {
-        margin-left: -250px;
+    /* width: 150px;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.7); 
+    transition: all 0.2s;
+     */
+    margin-left: -250px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }

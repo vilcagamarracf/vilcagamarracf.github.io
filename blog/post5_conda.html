@@ -23,9 +23,9 @@
     <link rel="stylesheet" href="../vendor/leaflet/leaflet.css" />
     <!-- theme stylesheet-->
     <link
-      rel="stylesheet"
-      href="../css/style.green.css"
-      id="theme-stylesheet"
+        rel="stylesheet"
+        href="../css/style.green.css"
+        id="theme-stylesheet"
     />
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="../css/custom.css" />
@@ -36,43 +36,79 @@
     <link rel="stylesheet" href="../css/style2.css" />
     <!-- Scrollbar Custom CSS -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"  />
 
     <style>
-      pre {
-        display: block;
-        background: black;
-        color: white;
-      }
-    </style>
-  </head>
+        pre {
+            display: block;
+            background: black;
+            color: white;
+        }
 
-  <body>
+    </style>
+</head>
+
+<body>
+
+    <!--Header-->
+    <div class="stickyNav">
+    <header class="header">
+        <nav class="navbar navbar-expand-sm py-lg-0">
+
+        <div class="container">
+        <a href="../index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
+
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+            <li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a></li>
+            <li class="nav-item"><a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a></li>
+            <li class="nav-item"><a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a></li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+    </header>
+    </div>
+
     <!-- Redacción de post -->
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2 fondo py-4">
-          <div class="wrapper">
-            <nav id="sidebar">
-              <ul class="list-unstyled components">
-                <li class="text-center text-center"><b>Contenido</b></li>
+        <div class="row">
 
+        <!-- BOTONES -->
+
+        <button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+        <i class="fas fa-align-left"></i>
+        </button>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+        <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- FIN DE BOTONES -->
+        
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="col-md-2 fondo py-4">
+            <div class="wrapper">
+            <nav id="sidebar">
+
+                <ul class="list-unstyled components">
+                <li><a class="text-center"><b>Contenido</b></a></li>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#conda">Qué es Conda</a></li>
                 <li><a href="#anaconda">¿y Anaconda?</a></li>
                 <li><a href="#tutorial">Tutorial</a></li>
 
                 <li><a href="#primeros" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">1. Primeros pasos</a>
-                  <ul class="collapse list-unstyled" id="primeros">
+                    <ul class="collapse list-unstyled" id="primeros">
                     <li><a href="#t01" class="padd">Ver ayuda</a></li>
                     <li><a href="#t02" class="padd">Versión de conda instalada</a></li>
-                  </ul>
+                    </ul>
                 </li>
 
                 <li><a href="#paquetes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2. Paquetes</a>
-                  <ul class="collapse list-unstyled" id="paquetes">
+                    <ul class="collapse list-unstyled" id="paquetes">
                     <li><a href="#p1" class="padd">Ayuda en paquetes</a></li>
                     <li><a href="#p2" class="padd">Versionamiento semántico</a></li>
                     <li><a href="#p3" class="padd">Listar paquetes instalados</a></li>
@@ -83,75 +119,47 @@
                     <li><a href="#p8" class="padd">Remover un paquete</a></li>
                     <li><a href="#p9" class="padd">Búsqueda de paquetes no instalados</a></li>
                     <li><a href="#p10" class="padd">Búsqueda de dependencias para paquetes</a></li>
-                  </ul>
+                    </ul>
                 </li>
 
                 <li><a href="#channels" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">3. Canales</a>
-                  <ul class="collapse list-unstyled" id="channels">
+                    <ul class="collapse list-unstyled" id="channels">
                     <li><a href="#channel1" class="padd">Búsqueda de canales</a></li>
-                  </ul>
+                    </ul>
                 </li>
 
                 <li><a href="#envs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">4. Ambientes</a>
-                  <ul class="collapse list-unstyled" id="envs">
+                    <ul class="collapse list-unstyled" id="envs">
                     <li><a href="#env1" class="padd">Listar ambientes</a></li>
                     <li><a href="#env2" class="padd">Listar paquetes en un ambiente</a></li>
                     <li><a href="#env3" class="padd">Listar paquetes en otro ambiente</a></li>
                     <li><a href="#env4" class="padd">Cambiar a otro ambiente</a></li>
                     <li><a href="#env5" class="padd">Crear nuevo ambiente</a></li>
                     <li><a href="#env6" class="padd">Remover ambientes</a></li>
-                  </ul>
+                    </ul>
                 </li>
 
                 <li><a href="#end">Conclusiones</a></li>
-              </ul>
+                </ul>
             </nav>
-          </div>
+            </div>
         </div>
 
         <!-- Columna central -->
-        <div class="col-lg-8 container-fluid">
-          <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg py-lg-2">
-              <div class="container">
-                <a
-                  href="../index.html"
-                  class="navbar-brand text-uppercase font-weight-bold"
-                  >Cesar Vilca</a
-                >
-                <button type="button" id="sidebarCollapse" class="btn btn-info">
-                  <i class="fas fa-align-left"></i>
-                  <span></span>
-                </button>
-
-                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                  aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small">
-                  <span class="text-uppercase mr-2">Menu</span>
-                  <i class="fas fa-bars"></i>
-                </button>
-
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                  <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-                    <li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3">Inicio</a></li>
-                    <li class="nav-item"><a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 active">Blog</a></li>
-                    <li class="nav-item"><a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3">Contacto</a></li>
-                  </ul>
-                </div>
-
-              </div>
-            </nav>
+        <div class="col-md-8 container-fluid">
+            <div class="container-fluid">
 
             <h1 class="h4 py-4" id="inicio">Manejo de paquetes de Python usando la línea de comandos de ANACONDA</h1>
 
             <p>
-              <b>¡Saludos!</b>, escribo este post con la intención de informar sobre el manejo de paquetes de Python usando la línea de comandos
-              de ANACONDA.
+                <b>¡Saludos!</b>, escribo este post con la intención de informar sobre el manejo de paquetes de Python usando la línea de comandos
+                de ANACONDA.
             </p>
             <p>
-              Antes de empezar cabe mencionar que hay dos formas trabajar con Python:
+                Antes de empezar cabe mencionar que hay dos formas trabajar con Python:
             </p>
             <ul>
-              <li class="py-2">
+                <li class="py-2">
                 <b>En Local:</b> si descargas Python y lo instalas en tu
                 computador, estarías trabajando en local. El principal beneficio
                 es que una vez instalado un paquete, ya no es necesario volver a
@@ -159,168 +167,167 @@
                 sobre la instalación de ciertos paquetes para su uso. <br />
                 Entre los programas más conocidos tenemos
                 <b>Anaconda</b> (integra Jupyter y Spyder) y <b>Pycharm</b>.
-              </li>
-              <div align="center">
+                </li>
+                <div align="center">
                 <img
-                  class="rounded mx-auto my-4"
-                  src="../img/Anaconda_Logo.png"
-                  alt="Anaconda logo"
-                  width="200px"
-                  height="100px"
+                    class="rounded mx-auto my-4"
+                    src="../img/Anaconda_Logo.png"
+                    alt="Anaconda logo"
+                    width="200px"
+                    height="100px"
                 />
                 <img
-                  class="rounded mx-auto my-4"
-                  src="https://insmac.org/uploads/posts/2017-08/1503175868_pycharm.png"
-                  alt="Pycharm logo"
-                  width="125px"
-                  height="100px"
-                  style="padding-left: 25px"
+                    class="rounded mx-auto my-4"
+                    src="https://insmac.org/uploads/posts/2017-08/1503175868_pycharm.png"
+                    alt="Pycharm logo"
+                    width="125px"
+                    height="100px"
+                    style="padding-left: 25px"
                 />
-              </div>
+                </div>
 
-              <li class="py-2">
+                <li class="py-2">
                 <b>En la "nube":</b> Se refiere principalmente a usar Python en
                 un computador ajeno, alojado en la web (generalmente en
                 servidores). Su principal ventaja es que brinda a los usuarios
                 la rápida y fácil instalación de paquetes para que el mismo más
                 se preocupe en realizar su labor que en cosas previas. <br />
                 El servicio más conocido en la web es <b>Colab</b> (de Google).
-              </li>
-              <img
+                </li>
+                <img
                 class="rounded mx-auto d-block"
                 src="https://colab.research.google.com/img/colab_favicon_256px.png"
                 alt="Colab logo"
                 width="100px"
-              />
+                />
             </ul>
             <p>
-              Ahora sí podemos empezar. Comenzando por el título del post...
+                Ahora sí podemos empezar. Comenzando por el título del post...
             </p>
 
             <h2 class="h5 py-4" id="conda">Qué es CONDA</h2>
 
             <img
-              class="rounded mx-auto d-block my-4"
-              src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg"
-              alt="Conda logo"
-              width="250px"
+                class="rounded mx-auto d-block my-4"
+                src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg"
+                alt="Conda logo"
+                width="250px"
             />
             <p>
-              Según su
-              <a
+                Según su
+                <a
                 href="https://docs.conda.io/projects/conda/en/latest/index.html"
                 >documentación</a
-              >, es un sistema de gestión de paquetes de código abierto y un
-              sistema de gestión del entorno que se ejecuta en Windows, macOS y
-              Linux.
+                >, es un sistema de gestión de paquetes de código abierto y un
+                sistema de gestión del entorno que se ejecuta en Windows, macOS y
+                Linux.
             </p>
             <ul>
-              <li>
+                <li>
                 Conda instala, ejecuta y actualiza rápidamente paquetes y sus
                 dependencias.
-              </li>
-              <li>
+                </li>
+                <li>
                 Conda crea, guarda, carga y cambia fácilmente entre entornos en
                 su computadora local.
-              </li>
-              <li>
+                </li>
+                <li>
                 Fue creado para programas Python pero puede empaquetar y
                 distribuir software para cualquier lenguaje.
-              </li>
+                </li>
             </ul>
 
             <p>
-              Conda como administrador de paquetes le ayuda a encontrar e
-              instalar paquetes. Si necesita un paquete que requiere una versión
-              diferente de Python, no es necesario que cambie a un administrador
-              de entorno diferente porque conda también es un administrador de
-              entorno. Con solo unos pocos comandos, puede configurar un entorno
-              totalmente separado para ejecutar esa versión diferente de Python,
-              mientras continúa ejecutando su versión habitual de Python en su
-              entorno normal.
+                Conda como administrador de paquetes le ayuda a encontrar e
+                instalar paquetes. Si necesita un paquete que requiere una versión
+                diferente de Python, no es necesario que cambie a un administrador
+                de entorno diferente porque conda también es un administrador de
+                entorno. Con solo unos pocos comandos, puede configurar un entorno
+                totalmente separado para ejecutar esa versión diferente de Python,
+                mientras continúa ejecutando su versión habitual de Python en su
+                entorno normal.
             </p>
 
             <h2 class="h5 py-4" id="anaconda">¿y Anaconda?</h2>
             <img
-              class="rounded mx-auto d-block my-4"
-              src="../img/Anaconda_Logo.png"
-              alt="Anaconda logo"
-              width="250px"
+                class="rounded mx-auto d-block my-4"
+                src="../img/Anaconda_Logo.png"
+                alt="Anaconda logo"
+                width="250px"
             />
 
             <p>
-              Anaconda es una distribución de los lenguajes de programación
-              Python y R para computación científica (ciencia de datos,
-              aplicaciones de aprendizaje automático, procesamiento de datos a
-              gran escala, análisis predictivo, etc.), que tiene como objetivo
-              simplificar la administración y la implementación de paquetes.
+                Anaconda es una distribución de los lenguajes de programación
+                Python y R para computación científica (ciencia de datos,
+                aplicaciones de aprendizaje automático, procesamiento de datos a
+                gran escala, análisis predictivo, etc.), que tiene como objetivo
+                simplificar la administración y la implementación de paquetes.
             </p>
 
             <p>Entonces:</p>
             <ul>
-              <li>
+                <li>
                 <b>Conda:</b> administrador de paquetes (en la documentación se
                 menciona que es también un paquete). La herramienta de línea de
                 comandos conda
                 <b>se utiliza para instalar, eliminar y examinar paquetes</b>.
-              </li>
-              <li>
+                </li>
+                <li>
                 <b>Anaconda:</b> conjunto de paquetes y softwares para el
                 desarrollo con Python, R y otros lenguajes de programación.
-              </li>
-              <li>
+                </li>
+                <li>
                 <b>Miniconda:</b> alternativa más pequeña a Anaconda ya que solo
                 contiene a conda y sus dependencias, no las listadas
                 anteriormente. Una vez que se tiene Miniconda, es posible
                 instalar Anaconda fácilmente con
                 <code>conda install anaconda</code>.
-              </li>
+                </li>
             </ul>
 
             <h2 class="h5 py-4" id="tutorial">Tutorial</h2>
 
             <p>El tutorial consta de 4 partes:</p>
             <ul>
-              <li>
+                <li>
                 <a href="#t1"
-                  >Conociendo la terminal de Anaconda (Anaconda prompt)</a
+                    >Conociendo la terminal de Anaconda (Anaconda prompt)</a
                 >
-              </li>
-              <li><a href="#packages">Paquetes (Packages)</a></li>
-              <li><a href="#channels">Canales (Channels)</a></li>
-              <li><a href="#envs">Ambientes (Environments)</a></li>
+                </li>
+                <li><a href="#packages">Paquetes (Packages)</a></li>
+                <li><a href="#channels">Canales (Channels)</a></li>
+                <li><a href="#envs">Ambientes (Environments)</a></li>
             </ul>
 
-            <section>
-              <h3 class="h6 py-2" id="t1">1. Primeros pasos</h3>
+                <h3 class="h6 py-2" id="t1">1. Primeros pasos</h3>
 
-              <p>
+                <p>
                 Para empezar, es necesario tener instalada alguna versión de
                 <a
-                  href="https://www.anaconda.com/products/individual"
-                  target="blank"
-                  >Anaconda</a
+                    href="https://www.anaconda.com/products/individual"
+                    target="blank"
+                    >Anaconda</a
                 >. Posterior a ello, abrir el <code>Anaconda Prompt</code> como
                 se muestra a continuación:
-              </p>
-              <img
+                </p>
+                <img
                 class="rounded mx-auto d-block my-4"
                 src="https://docs.conda.io/projects/conda/en/latest/_images/anaconda-prompt.png"
                 width="350px"
-              />
-              <p class="text-center">
+                />
+                <p class="text-center">
                 También puede aparecer como
                 <code>Anaconda Prompt (anaconda3)</code>
-              </p>
-              <p>
+                </p>
+                <p>
                 Se visualizará el terminal de Anaconda como una ventana oscura
                 en la cual podemos escribir comandos de Conda. A continuación
                 veremos los principales comandos usados en el terminal de
                 Anaconda (los recuadros con fondo negro "simulan" el Anaconda
                 Prompt).
-              </p>
+                </p>
 
-              <p class="py-2" id="t01">
+                <p class="py-2" id="t01">
                 <b>1.1. Ver ayuda</b> <br />
                 <br />
                 Al manejar una herramienta nueva como Conda es entendible
@@ -333,9 +340,9 @@
                 <br />
                 Para ver la lista de comandos disponibles se usa
                 <code>conda --help</code> como se muestra a continuación:
-              </p>
+                </p>
 
-              <pre class="pre-scrollable">
+                <pre class="pre-scrollable">
 
         (base) C:\Users\LENOVO>conda --help
 
@@ -343,13 +350,13 @@
 
         (base) C:\Users\LENOVO>conda -h
         </pre
-              >
+                >
 
-              <p>
+                <p>
                 Y debajo se mostrará el resultado de haber ingresado tal
                 comando:
-              </p>
-              <pre class="pre-scrollable">
+                </p>
+                <pre class="pre-scrollable">
 
         usage: conda-script.py [-h] [-V] command ...
 
@@ -401,101 +408,99 @@
         skeleton
         verify
         </pre
-              >
+                >
 
-              <p class="py-2" id="t02">
+                <p class="py-2" id="t02">
                 <b>1.2. Versión de conda</b> <br />
                 <br />
                 Qué versión de conda tengo instalado con
                 <code>conda --version</code> .
-              </p>
-              <pre>
+                </p>
+                <pre>
 
         (base) C:\Users\LENOVO>conda --version
 
         conda 4.9.2
         </pre
-              >
-            </section>
+                >
 
             <!-- Paquetes -->
-            <section>
-              <h3 class="h6 py-4" id="packages">
+                <h3 class="h6 py-4" id="packages">
                 2. Paquetes <i>(Packages)</i>
-              </h3>
+                </h3>
 
-              <p>
+                <p>
                 Los paquetes de Conda son archivos que contienen un conjunto de
                 recursos: generalmente bibliotecas y ejecutables, pero no
                 siempre.
-              </p>
-              <ul>
-                <li>
-                  Otras herramientas como la GUI Anaconda Navigator también
-                  exponen las mismas capacidades.
-                </li>
-                <li>
-                  Los paquetes Conda también se pueden usar para empaquetar
-                  bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o
-                  simplemente para distribuir ejecutables binarios puros
-                  generados a partir de cualquier lenguaje de programación.
-                </li>
-              </ul>
-
-              <blockquote class="blockquote">
-                <p>
-                  <b>Notas</b>: Para
-                  <a
-                    href="https://packaging.python.org/tutorials/installing-packages/"
-                    >instalar un paquete</a
-                  >
-                  en Python, dependiendo del sistema operativo, es necesario
-                  conocer que se puede instalar mediante:
                 </p>
                 <ul>
-                  <li>
+                <li>
+                    Otras herramientas como la GUI Anaconda Navigator también
+                    exponen las mismas capacidades.
+                </li>
+                <li>
+                    Los paquetes Conda también se pueden usar para empaquetar
+                    bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o
+                    simplemente para distribuir ejecutables binarios puros
+                    generados a partir de cualquier lenguaje de programación.
+                </li>
+                </ul>
+
+                <blockquote class="blockquote">
+                <p>
+                    <b>Notas</b>: Para
                     <a
-                      href="https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing"
-                      >PIP</a
+                    href="https://packaging.python.org/tutorials/installing-packages/"
+                    >instalar un paquete</a
+                    >
+                    en Python, dependiendo del sistema operativo, es necesario
+                    conocer que se puede instalar mediante:
+                </p>
+                <ul>
+                    <li>
+                    <a
+                        href="https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing"
+                        >PIP</a
                     >
                     : instalador recomendado en Python (ya que conecta con PyPi)
                     pero requiere manejar un sistema operativo Linux. <br />
                     <p class="text-center my-4">
-                      <code>$pip install rasterio</code>
+                        <code>$pip install rasterio</code>
                     </p>
-                  </li>
-                  <li>
+                    </li>
+                    <li>
                     Conda: Alternativo a PIP. Permite administrar ambientes
                     virtuales e instalar paquetes fácilmente (mediante código en
                     terminal o por interfaz gráfica en Anaconda). <br />
                     <p class="text-center my-4">
-                      <code>conda install -c conda-forge rasterio</code>
+                        <code>conda install -c conda-forge rasterio</code>
                     </p>
-                  </li>
+                    </li>
                 </ul>
                 <p>
-                  <b>Recomendación:</b> Si se usa Anaconda en local, usar
-                  <code>conda</code> para instalar los paquetes necesarios, no
-                  PIP en la línea de comandos debido a que Anaconda prepara sus
-                  repositorios para ser descargados de manera eficiente con
-                  Conda.
+                    <b>Recomendación:</b> Si se usa Anaconda en local, usar
+                    <code>conda</code> para instalar los paquetes necesarios, no
+                    PIP en la línea de comandos debido a que Anaconda prepara sus
+                    repositorios para ser descargados de manera eficiente con
+                    Conda.
                 </p>
-              </blockquote>
+                </blockquote>
 
-              <h3 class="h6 py-3" id="p1">2.1. Ayuda en paquetes</h3>
-              <p>
+                <h3 class="h6 py-3" id="p1">2.1. Ayuda en paquetes</h3>
+                <p>
                 El comando relacionado con los paquetes es <code>list</code> y
                 para ver sus argumentos disponibles se usa
                 <code>conda list --help</code> .
-              </p>
+                </p>
 
-              <pre class="pre-scrollable">
+                <pre class="pre-scrollable">
         
         (base) C:\Users\LENOVO>conda list --help
         </pre
-              >
+                >
 
-              <pre class="pre-scrollable">
+                <pre class="pre-scrollable">
 
         usage: conda-script.py list [-h] [-n ENVIRONMENT | -p PATH] [--json] [-v] [-q]
                                     [--show-channel-urls] [-c] [-f] [--explicit]
@@ -555,102 +560,102 @@
         
             conda create -n myenv --file package-list.txt
         </pre
-              >
+                >
 
-              <h3 class="h6 py-3" id="p2">2.2. Versionamiento Semántico</h3>
+                <h3 class="h6 py-3" id="p2">2.2. Versionamiento Semántico</h3>
 
-              <p>
+                <p>
                 La mayoría de los paquetes de Conda utilizan un sistema llamado
                 control de versiones semántico para
                 <b
-                  >identificar distintas versiones de un paquete de software sin
-                  ambigüedades.</b
+                    >identificar distintas versiones de un paquete de software sin
+                    ambigüedades.</b
                 >
-              </p>
+                </p>
 
-              <ul>
+                <ul>
                 <li>
-                  Las etiquetas de versión generalmente las eligen los autores
-                  del proyecto, no necesariamente las mismas personas que
-                  empaquetan el proyecto como un paquete Conda.
+                    Las etiquetas de versión generalmente las eligen los autores
+                    del proyecto, no necesariamente las mismas personas que
+                    empaquetan el proyecto como un paquete Conda.
                 </li>
                 <li>
-                  No existe ningún requisito técnico de que la etiqueta de la
-                  versión del autor del proyecto coincida con la etiqueta de la
-                  versión del paquete Conda, pero casi siempre se sigue la
-                  convención de hacerlo.
+                    No existe ningún requisito técnico de que la etiqueta de la
+                    versión del autor del proyecto coincida con la etiqueta de la
+                    versión del paquete Conda, pero casi siempre se sigue la
+                    convención de hacerlo.
                 </li>
                 <li>
-                  Las etiquetas de la versión semántica se pueden comparar
-                  lexicográficamente y facilitan la determinación de cuál de las
-                  dos versiones es la versión posterior.
+                    Las etiquetas de la versión semántica se pueden comparar
+                    lexicográficamente y facilitan la determinación de cuál de las
+                    dos versiones es la versión posterior.
                 </li>
-              </ul>
-              <p>
+                </ul>
+                <p>
                 En el control de versiones semántico, el software
                 <b
-                  >se etiqueta con un identificador de versión de tres partes de
-                  la forma</b
+                    >se etiqueta con un identificador de versión de tres partes de
+                    la forma</b
                 >
                 <b>MAJOR.MINOR.PATCH</b>; los componentes de la etiqueta son
                 números enteros no negativos separados por puntos. <br />
-              </p>
-              <ul>
+                </p>
+                <ul>
                 <li>
-                  Suponiendo que todo el software comienza en la versión 0.0.0,
-                  el número de versión PRINCIPAL aumenta cuando se introduce una
-                  nueva funcionalidad significativa (a menudo con los cambios de
-                  API correspondientes).
+                    Suponiendo que todo el software comienza en la versión 0.0.0,
+                    el número de versión PRINCIPAL aumenta cuando se introduce una
+                    nueva funcionalidad significativa (a menudo con los cambios de
+                    API correspondientes).
                 </li>
                 <li>
-                  Los aumentos en el número de versión MINOR generalmente
-                  reflejan mejoras (por ejemplo, nuevas funciones) que evitan
-                  cambios de API incompatibles con versiones anteriores. Por
-                  ejemplo, agregar un argumento opcional a una función API (de
-                  una manera que permita que el código antiguo se ejecute sin
-                  cambios) es un cambio digno de aumentar el número de versión
-                  MINOR.
+                    Los aumentos en el número de versión MINOR generalmente
+                    reflejan mejoras (por ejemplo, nuevas funciones) que evitan
+                    cambios de API incompatibles con versiones anteriores. Por
+                    ejemplo, agregar un argumento opcional a una función API (de
+                    una manera que permita que el código antiguo se ejecute sin
+                    cambios) es un cambio digno de aumentar el número de versión
+                    MINOR.
                 </li>
                 <li>
-                  Un incremento en el número de versión de PATCH es apropiado
-                  principalmente para correcciones de errores que conservan los
-                  mismos números de revisión MAYOR y MENOR.
+                    Un incremento en el número de versión de PATCH es apropiado
+                    principalmente para correcciones de errores que conservan los
+                    mismos números de revisión MAYOR y MENOR.
                 </li>
                 <li>
-                  Los parches de software generalmente no introducen nuevas
-                  funciones ni cambian las API en absoluto (excepto a veces para
-                  abordar problemas de seguridad).
+                    Los parches de software generalmente no introducen nuevas
+                    funciones ni cambian las API en absoluto (excepto a veces para
+                    abordar problemas de seguridad).
                 </li>
-              </ul>
-              <p>
+                </ul>
+                <p>
                 Muchas herramientas de línea de comandos muestran su
                 identificador de versión ejecutando la herramienta --version.
                 Esta información a veces se puede mostrar o documentar de otras
                 formas. Por ejemplo, supongamos que en algún sistema, una
                 determinada versión de Python está instalada y usted pregunta al
                 respecto de esta manera:
-              </p>
-              <pre>
+                </p>
+                <pre>
 
             python -c "import sys; sys.version"
             '1.0.1 (Mar 26 2014)'
         </pre
-              >
-              <p>donde significa: La versión MAYOR es 1, el PATCH es 1.</p>
-              <h3 class="h6 py-2" id="p3">2.3. Listar paquetes instalados</h3>
+                >
+                <p>donde significa: La versión MAYOR es 1, el PATCH es 1.</p>
+                <h3 class="h6 py-2" id="p3">2.3. Listar paquetes instalados</h3>
 
-              <pre class="pre-scrollable">
+                <pre class="pre-scrollable">
 
         (base) C:\Users\LENOVO>conda list    
         </pre
-              >
+                >
 
-              <p>
+                <p>
                 Listará todos los paquetes instalados en local junto con sus
                 respectivas versiones.
-              </p>
+                </p>
 
-              <pre class="pre-scrollable">
+                <pre class="pre-scrollable">
 
         # packages in environment at C:\Users\LENOVO\anaconda3:
         #
@@ -668,29 +673,29 @@
         zlib                      1.2.11               h62dcd97_3
         zstd                      1.3.7                h508b16e_0
         </pre
-              >
-              Notese la ubicación de los packages:
-              <p class="text-center">
-                <code
-                  ># packages in environment at C:\Users\LENOVO\anaconda3</code
                 >
-              </p>
+                Notese la ubicación de los packages:
+                <p class="text-center">
+                <code
+                    ># packages in environment at C:\Users\LENOVO\anaconda3</code
+                >
+                </p>
 
-              <h3 class="h6 py-2" id="p4">2.4. Instalar paquetes</h3>
+                <h3 class="h6 py-2" id="p4">2.4. Instalar paquetes</h3>
 
-              <p>
+                <p>
                 Generalmente para instalar algo con Conda se usa
                 <code>conda install</code>. Veremos los argumentos disponibles
                 con:
-              </p>
+                </p>
 
-              <pre class="pre-scrollable">
+                <pre class="pre-scrollable">
 
         (base) C:\Users\LENOVO>conda install --help    
         </pre
-              >
+                >
 
-              <pre class="pre-scrollable">
+                <pre class="pre-scrollable">
         
         usage: conda-script.py install [-h] [--revision REVISION]
                                     [-n ENVIRONMENT | -p PATH] [-c CHANNEL]
@@ -842,24 +847,24 @@
         
             conda install -n myenv scipy
         </pre
-              >
+                >
 
-              <p>Y para instalar un paquete específico usaremos:</p>
-              <pre>
+                <p>Y para instalar un paquete específico usaremos:</p>
+                <pre>
 
             conda install PKGNAME
         </pre
-              >
-              <p>donde PKGNAME es el nombre del paquete.</p>
-              <h3 class="h6 py-3" id="p5">
+                >
+                <p>donde PKGNAME es el nombre del paquete.</p>
+                <h3 class="h6 py-3" id="p5">
                 2.5. Instalar versión específica de un paquete
-              </h3>
-              <p>
+                </h3>
+                <p>
                 Tres formas de instalar paquetes con versiones específicas. Es
                 opcional usar <code>--yes</code> al final para omitir la
                 pregunta de <code>[y]/[n]</code> .
-              </p>
-              <pre>
+                </p>
+                <pre>
 
             conda install PACKAGE=12.3          # ultima version dentro de una serie
 
@@ -867,30 +872,30 @@
 
             conda install PACKAGE=14.3.2        # versión exacta
         </pre
-              >
+                >
 
-              <p>
+                <p>
                 También es posible usar condicionales para la instalación pero
                 generalmente se usan solo los nombres ya que ésto permite la que
                 se instale la última versión del mismo.
-              </p>
+                </p>
 
-              <h3 class="h6 py-3" id="p6">
+                <h3 class="h6 py-3" id="p6">
                 2.6. Búsqueda de paquetes instalados
-              </h3>
+                </h3>
 
-              <pre>
+                <pre>
 
             (base) C:\Users\LENOVO>conda list PKGNAME
         </pre
-              >
+                >
 
-              <p>
+                <p>
                 Podemos escribir el nombre del paquete completo o parte del
                 nombre. En el siguiente ejemplo buscaré el paquete
                 <code>earthengine-api</code> solamente como <code>earth</code>:
-              </p>
-              <pre>
+                </p>
+                <pre>
 
             (base) C:\Users\LENOVO>conda list earth
 
@@ -899,49 +904,48 @@
             # Name                    Version                   Build  Channel
             earthengine-api           0.1.251                  pypi_0    pypi
         </pre
-              >
+                >
 
-              <h3 class="h6 py-3" id="p7">2.7. Actualizar un paquete</h3>
-              <pre>
+                <h3 class="h6 py-3" id="p7">2.7. Actualizar un paquete</h3>
+                <pre>
             
             conda update PKGNAME                
         </pre
-              >
+                >
 
-              <h3 class="h6 py-3" id="p8">2.8. Remover un paquete</h3>
-              <pre>
+                <h3 class="h6 py-3" id="p8">2.8. Remover un paquete</h3>
+                <pre>
             
             conda remove pandas -y              # Ojo: tener cuidado con eliminar paquetes
         </pre
-              >
+                >
 
-              <h3 class="h6 py-3" id="p9">
+                <h3 class="h6 py-3" id="p9">
                 2.9. Búsqueda de paquetes no instalados
-              </h3>
-              <pre>
+                </h3>
+                <pre>
             
             conda search PKGNAME 
         </pre
-              >
+                >
 
-              <h3 class="h6 py-3" id="p10">
+                <h3 class="h6 py-3" id="p10">
                 2.10. Encontrar dependencias para un paquete
-              </h3>
-              <pre>
+                </h3>
+                <pre>
             
             conda search PKGNAME --info
         </pre
-              >
-            </section>
+                >
 
             <h6 class="py-4" id="channels">3. Canales <i>(Channels)</i></h6>
             <p>
-              Todos los paquetes vistos hasta ahora son publicados en el
-              <code>main</code> o <code>default</code> channel de Anaconda Cloud
-              (<a href="https://repo.anaconda.com/pkgs/main/">ver aquí</a>). Un
-              Channel es un identificador de un path (dirección) del cual los
-              paquetes Conda pueden ser obtenidos. Usando la public cloud,
-              instalando sin especificar.
+                Todos los paquetes vistos hasta ahora son publicados en el
+                <code>main</code> o <code>default</code> channel de Anaconda Cloud
+                (<a href="https://repo.anaconda.com/pkgs/main/">ver aquí</a>). Un
+                Channel es un identificador de un path (dirección) del cual los
+                paquetes Conda pueden ser obtenidos. Usando la public cloud,
+                instalando sin especificar.
             </p>
             <h6 class="py-4" id="channel1">3.1. Búsqueda de canales</h6>
 
@@ -957,7 +961,7 @@
 
             <p><b>Ejemplo</b>: busqueda de rasterio</p>
             <pre class="pre-scrollable">
- 
+
 
             (base) C:\Users\LENOVO>anaconda search rasterio
 
@@ -965,39 +969,39 @@
             Packages:
                 Name                      |  Version | Package Types   | Platforms       | Builds
                 ------------------------- |   ------ | --------------- | --------------- | ----------
-                DigitalGlobe/rasterio     |    1.0a9 | conda           | linux-64, win-32, osx-64, win-64 | py27_2, py27_0, py36_0, np113py27_0, py35_2, py35_0
+                DigitalGlobe/rasterio     |    1.0a9 | conda           | linux-64, win-32, osx-64, win-64 | 
                                                     : Rasterio reads and writes geospatial raster datasets.
-                IOOS/rasterio             |    1.0a2 | conda           | linux-64, win-32, osx-64, win-64 | np111py27_0, np111py35_0, np111py34_0
+                IOOS/rasterio             |    1.0a2 | conda           | linux-64, win-32, osx-64, win-64 | 
                 Terradue/rasterio         |   0.32.0 | conda           | linux-64        | py27_0
-                                                    : Fast and direct raster I/O for use with Numpy and SciPy
-                anaconda/rasterio         |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, osx-64, linux-32, win-64 | py35h94a1d1c_1, py35hfa10f2d_2, py27h7ad00ff_1, py36hfa10f2d_2, py27h2222c05_0, py36h3f37509_2, py35hc8ecf7b_1, py27h9a122fd_0, py27hc38cc03_0, py27heeaa653_0, py36h01fd17b_1, py27h453aca2_1, py36h6bd7d87_0, py35h6c478fe_1, py27h0dff353_2, py37h9a122fd_0, py37heeaa653_0, py37h3f37509_2, py36heeaa653_0, py37h6bd7d87_0, py35he0d65b2_0, py27h3f37509_2, py35h49e1f75_1, py36h31a5142_1, py36hb8ea33a_1, py27h1e0aa59_1, py37hc38cc03_0, py36hc38cc03_0, py36h039b02d_0, py37h0dff353_2, py37h039b02d_0, py27hf7b2737_1, py27h43d01bd_1, py27h41e4f33_0, py36hd48bfa8_0, py27hd53170f_2, py35h0e81d30_1, py36h41e4f33_0, py36h9a122fd_0, py37hfa10f2d_2, py37h41e4f33_0, py36h0dff353_2, py36hd410cfe_1, py36h9a9e2c4_1
+                                                    : Fast and direct raster I/O for use with Numpy and Sc
+                anaconda/rasterio         |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, os
                                                     : Rasterio reads and writes geospatial raster datasets
                 bucricket/rasterio        |   0.32.0 | conda           | osx-64          | py27_0
-                conda-forge/rasterio      |    1.2.0 | conda           | linux-64, win-32, win-64, osx-64 | py37h163c445_0, py37h163c445_1, py38h676c6b2_1, py38h676c6b2_0, py36h163c445_1, py36h163c445_0, py37h2617b1b_0, py36h54a03ab_1, py36h54a03ab_0, py37h2617b1b_2, py37h9c7205d_0, py27h238e834_0, py27h238e834_1, py36h9956732_0, py36h9956732_1, py27h3683dd5_0, py27h3683dd5_1, py37h5d8da4a_1, py37h5d8da4a_0, py37h5d8da4a_2, py37h02db82b_1, py38hcfd527e_0, py38hdff7cfa_0, py27h286bbcc_1, py27h286bbcc_0, py36hbf02ebe_1, py36hbf02ebe_0, py37h5b3f9e8_0, py37h5b3f9e8_1, py36h235859b_0, py37hce843d0_1, py37h54a03ab_0, py37h54a03ab_1, py27h1b5fcde_1, py27h1b5fcde_0, py38h9c25ea0_0, py36h2617b1b_2, py38hc9271d6_0, py37h8cd0b58_0, py39hb73aa6c_0, py37h1b5fcde_0, py37hce843d0_0, np110py35_3, np110py35_2, np110py35_1, np110py35_0, py36h5d8da4a_0, py37h238e834_1, py36h437083a_1, py36h437083a_0, py36he71f6a4_0, py27hd53170f_1, py27hd53170f_0, py36h11049c8_0, py36h3683dd5_0, py36h3683dd5_1, py36h5d8da4a_1, py39h11aa1b2_1, py27h9c25ea0_0, py36h5d8da4a_2, py37ha3d844c_1, py27h86efe34_1, py35hfa10f2d_0, py35hfa10f2d_1, py36_1, py36_0, py36_3, py36_2, py36h86efe34_1, py36ha22ed69_0, py38h2617b1b_0, np110py27_2, np110py27_3, np110py27_0, np110py27_1, py37hfd922e9_1, py37hb3f55d8_1, py36h763486b_0, py38he7c8a5b_0, py38hcfd527e_1, py37hf4c872c_0, py37h9c25ea0_0, np111py27_3, np111py27_2, np111py27_1, np111py27_0, py36ha22ed69_1, py37hdff7cfa_1, py37hdff7cfa_0, py37hc4b0cd6_0, np19py34_0, py37h299afd1_0, py37h299afd1_1, py39ha961d3b_0, np110py34_2, np110py34_3, np110py34_0, np110py34_1, py36h238e834_0, py36h238e834_1, py38h163c445_0, np111py34_3, np111py34_2, np111py34_1, np111py34_0, py37h437083a_0, py37h437083a_1, py27h900e953_0, py27h900e953_1, py27h900e953_2, py36h2409764_0, py37hfa10f2d_0, py38hf2e4ed7_1, py37ha3d844c_0, py38hf2e4ed7_0, py36hc1acebe_0, py37h99a4963_0, py37ha549118_0, py36hb7d66d3_1, py36h1b5fcde_1, py36h2617b1b_0, py37h900e953_2, py37h900e953_1, py37h900e953_0, py35h763486b_0, py36ha699f10_0, py36hc1acebe_1, py38hbb9790e_0, py37h02db82b_0, py36hd875ef1_0, py38h151dc71_1, py38h151dc71_0, py37h527b4ca_0, py38h900e953_0, py27he71f6a4_0, py37h86efe34_1, py27h437083a_1, py27h437083a_0, py39h71044db_1, py36h299afd1_1, py36h299afd1_0, py36hb3f55d8_1, py38h287b4b6_0, py36h4e9806c_0, py27hdff7cfa_1, py38he71f6a4_0, py36h900e953_2, py37h8c4be29_0, py36h286bbcc_1, py36h286bbcc_0, np19py35_0, py39h2b252dd_0, py37h246217b_0, np111py35_2, np111py35_3, np111py35_0, np111py35_1, py39h645c05b_1, py38h033aa8a_0, py36h948dc9f_0, py37h91b820b_0, py36h9c25ea0_0, py37h8cd0b58_1, py37h3683dd5_1, py37h3683dd5_0, py38hef609b1_0, py39h3573629_0, py38h5653988_0, py35_2, py35_3, py35_0, py35_1, py36hfa10f2d_1, py36hfa10f2d_0, py37h763486b_0, py36h1b5fcde_0, py36hdff7cfa_1, py36hdff7cfa_0, py37h0492a4a_1, py37h0492a4a_0, py39hfec4536_0, py27hdff7cfa_0, np19py27_0, py27hb3f55d8_1, py35h1b5fcde_0, py35h1b5fcde_1, py27_1, py27_0, py37hbf02ebe_0, py37hbf02ebe_1, py38h033e0f6_0, py38h033e0f6_1, py36hb7d66d3_0, py27h5d8da4a_2, py37h238e834_0, py27h5d8da4a_0, py27h5d8da4a_1, py36h5b3f9e8_1, py36h5b3f9e8_0, py37he350917_1, py38h7c93fde_0, py38hac06332_1, py37he71f6a4_0, py27h5b3f9e8_1, py27h5b3f9e8_0, py27_3, py36h70cb5cc_0, py36h70cb5cc_1, py27_2, py27h54a03ab_1, py27h54a03ab_0, py36h07c0db7_1, py38h37fbd03_0, py36h900e953_0, py36h900e953_1, py36h8ddf442_0, py37h286bbcc_0, py37h286bbcc_1
+                conda-forge/rasterio      |    1.2.0 | conda           | linux-64, win-32, win-64, osx-64 | 
                                                     : Rasterio reads and writes geospatial raster datasets
                 dharhas/rasterio          |   0.23.0 | conda           | win-64          | py27_0
                                                     : Rasterio reads and writes geospatial raster datasets.
                 erdc/rasterio             |   0.23.0 | conda           | win-64          | py27_0
                                                     : Rasterio reads and writes geospatial raster datasets.
-                free/rasterio             |   0.36.0 | conda           | linux-64, win-32, win-64, linux-32, osx-64 | np111py27_0, np111py35_0, np19py26_0, np110py35_0, np112py36_0, np111py34_0, np19py33_0, np112py35_0, np19py27_0, np110py34_0, np19py35_0, np112py27_0, np19py34_0, np110py27_0
+                free/rasterio             |   0.36.0 | conda           | linux-64, win-32, win-64, linux-32,
                                                     : Read and write geospatial raster datasets
-                jesserobertson/rasterio   |   0.23.0 | conda           | linux-64, linux-32, osx-64 | py27_0, py33_0, py34_0
+                jesserobertson/rasterio   |   0.23.0 | conda           | linux-64, linux-32, osx-64 | py27_0
                 jhamman/rasterio_to_xarray | 2016.03.16-1558 | ipynb           | []              |
                                                     : IPython notebook
-                kitware-danesfield-cf/rasterio |    1.0.9 | conda           | linux-64        | py36h1b5fcde_0
+                kitware-danesfield-cf/rasterio |    1.0.9 | conda           | linux-64        | py36h1b5fcde
                                                     : Rasterio reads and writes geospatial raster datasets
                 krisvanneste/rasterio     |   0.26.0 | conda           | win-64          | py27_0
-                main/rasterio             |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, osx-64, linux-32, win-64 | py35h94a1d1c_1, py35hfa10f2d_2, py27h7ad00ff_1, py36hfa10f2d_2, py27h2222c05_0, py36h3f37509_2, py35hc8ecf7b_1, py27h9a122fd_0, py27hc38cc03_0, py27heeaa653_0, py36h01fd17b_1, py27h453aca2_1, py36h6bd7d87_0, py35h6c478fe_1, py27h0dff353_2, py37h9a122fd_0, py37heeaa653_0, py37h3f37509_2, py36heeaa653_0, py37h6bd7d87_0, py35he0d65b2_0, py27h3f37509_2, py35h49e1f75_1, py36h31a5142_1, py36hb8ea33a_1, py27h1e0aa59_1, py37hc38cc03_0, py36hc38cc03_0, py36h039b02d_0, py37h0dff353_2, py37h039b02d_0, py27hf7b2737_1, py27h43d01bd_1, py27h41e4f33_0, py36hd48bfa8_0, py27hd53170f_2, py35h0e81d30_1, py36h41e4f33_0, py36h9a122fd_0, py37hfa10f2d_2, py37h41e4f33_0, py36h0dff353_2, py36hd410cfe_1, py36h9a9e2c4_1
+                main/rasterio             |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, os
                                                     : Rasterio reads and writes geospatial raster datasets
                 nricklin/rasterio         |    1.0a9 | conda           | osx-64          | np113py27_0
                                                     : Rasterio reads and writes geospatial raster datasets.
                 omgarcia/rasterio         |   0.25.0 | conda           | linux-64        | np110py27_0
                 robintw/rasterio          |   0.35.1 | conda           | osx-64          | py35_1
                                                     : Rasterio reads and writes geospatial raster datasets
-                sage-group/rasterio       |    1.1.8 | conda           | linux-ppc64le   | py36h5ca1d4c_0, py36h04863e7_0
+                sage-group/rasterio       |    1.1.8 | conda           | linux-ppc64le   | py36h5ca1d4c_0, p
                                                     : Rasterio reads and writes geospatial raster datasets
                 sgillies/rasterio         |     0.15 | conda           | osx-64          | py27_0
-                test_org_002/rasterio     |   0.36.0 | conda           | []              | np111py27_0, np111py35_0, np19py26_0, np110py35_0, np111py34_0, np19py33_0, np19py34_0, np110py27_0, np19py35_0, np19py27_0, np110py34_0
+                test_org_002/rasterio     |   0.36.0 | conda           | []              | np111py27_0, np11
                 x_xxj/rasterio            |    1.1.4 | pypi            | []              |
                 ztessler/rasterio         |   0.31.0 | conda           | osx-64          | py35_0, py27_0
                                                     : Fast and direct raster I/O for use with Numpy and SciPy
@@ -1047,8 +1051,8 @@
         </pre
             >
             <p>
-              Estoy usando el environment <code>base</code> según el
-              <code>*</code> ubicado a la izquierda de la dirección.
+                Estoy usando el environment <code>base</code> según el
+                <code>*</code> ubicado a la izquierda de la dirección.
             </p>
             <h6 class="py-3" id="env2">4.2. Listar paquetes en un ambiente</h6>
             <pre>
@@ -1071,12 +1075,12 @@
             >
 
             <h6 class="py-3" id="env3">
-              4.3. Listar paquetes en otro ambiente
+                4.3. Listar paquetes en otro ambiente
             </h6>
             <p>
-              Para ver los packages instalados en otro environment:
-              <code>conda env --name ENVNAME</code> <br />
-              A continuación tres ejemplos:
+                Para ver los packages instalados en otro environment:
+                <code>conda env --name ENVNAME</code> <br />
+                A continuación tres ejemplos:
             </p>
             <pre>
 
@@ -1101,17 +1105,17 @@
         </pre
             >
             <li>
-              En el primer caso busqué rasterio en el environment
-              <code>python_foundation</code>: Sí está.
+                En el primer caso busqué rasterio en el environment
+                <code>python_foundation</code>: Sí está.
             </li>
             <li>
-              En el segundo caso busqué rasterio en el environment
-              <code>gee</code>: No está.
+                En el segundo caso busqué rasterio en el environment
+                <code>gee</code>: No está.
             </li>
             <li>
-              En el tercer caso busqué las iniciales del paquete
-              <code>earthengine-api</code> en el environment <code>gee</code>:
-              Sí está.
+                En el tercer caso busqué las iniciales del paquete
+                <code>earthengine-api</code> en el environment <code>gee</code>:
+                Sí está.
             </li>
 
             <h6 class="py-3" id="env4">4.4. Cambiar a otro ambiente</h6>
@@ -1141,8 +1145,8 @@
         </pre
             >
             <p>
-              En caso de querer volver al environment base:
-              <code>conda deactivate</code>
+                En caso de querer volver al environment base:
+                <code>conda deactivate</code>
             </p>
             <pre>
 
@@ -1153,7 +1157,7 @@
 
             <h6 class="py-3" id="env5">4.5. Crear nuevo ambiente</h6>
             <p>
-              <code>conda create -n ENVNAME</code>
+                <code>conda create -n ENVNAME</code>
             </p>
             <pre class="pre-scrollable">
 
@@ -1204,8 +1208,8 @@
 
             <h6 class="py-3" id="env6">4.6. Remover ambientes</h6>
             <p>
-              <code>conda env remove --name ENVNAME</code> (es posible usar
-              <code>--name</code> o <code>-n</code> )
+                <code>conda env remove --name ENVNAME</code> (es posible usar
+                <code>--name</code> o <code>-n</code> )
             </p>
             <p>Ejemplo: Removiendo el environment <code>gee</code></p>
             <pre>
@@ -1232,89 +1236,87 @@
 
             <hr />
             <p>
-              Link alternativo:
-              <a
+                Link alternativo:
+                <a
                 href="https://alimanfoo.github.io/2017/05/18/installing-python.html"
                 >Alistair Miles - Installing Python for data analysis</a
-              >
+                >
             </p>
             <h5 class="py-4" id="end">Conclusiones</h5>
             <p>
-              El manejo de datos en local como en la nube (Colab) tiene sus
-              ventajas y desventajas: Colab permite la instalación rápida de
-              paquetes mediante <code>pip install</code> o
-              <code>sudo apt</code> al usar máquinas virtuales (en los
-              servidores de google) pero la información se pierde al pasar 12
-              horas. En cambio trabajar en local demanda conocer los métodos de
-              instalación y manejo de paquetes pero permite aprovechar el rápido
-              procesamiento de una máquina personal (puede variar dependiendo de
-              su hardware y demás). <br /><br />
-              Gracias por leer :)
+                El manejo de datos en local como en la nube (Colab) tiene sus
+                ventajas y desventajas: Colab permite la instalación rápida de
+                paquetes mediante <code>pip install</code> o
+                <code>sudo apt</code> al usar máquinas virtuales (en los
+                servidores de google) pero la información se pierde al pasar 12
+                horas. En cambio trabajar en local demanda conocer los métodos de
+                instalación y manejo de paquetes pero permite aprovechar el rápido
+                procesamiento de una máquina personal (puede variar dependiendo de
+                su hardware y demás). <br /><br />
+                Gracias por leer :)
             </p>
 
             <div class="container py-4">
-              <ul class="pagination justify-content-center">
+                <ul class="pagination justify-content-center">
                 <li class="page-item">
-                  <a class="page-link" href="post4_ee.html">Anterior</a>
+                    <a class="page-link" href="post4_ee.html">Anterior</a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link" href="../blog.html">Blog</a>
+                    <a class="page-link" href="../blog.html">Blog</a>
                 </li>
                 <li class="page-item">
-                  <a class="page-link" href="post_ML_python.html">Siguiente</a>
+                    <a class="page-link" href="post_ML_python.html">Siguiente</a>
                 </li>
-              </ul>
+                </ul>
             </div>
             <!--Footer-->
             <hr />
             <div class="py-2">
-              <ul class="list-inline text-center">
+                <ul class="list-inline text-center">
                 <li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
                     <i class="fab fa-facebook-f"></i></a>
                 </li>
                 <li class="list-inline-item">
-                  <a
+                    <a
                     href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/"
                     class="social-link"
                     ><i class="fab fa-linkedin-in"></i
-                  ></a>
+                    ></a>
                 </li>
                 <li class="list-inline-item">
-                  <a href="https://twitter.com/CesarVilca19" class="social-link"
+                    <a href="https://twitter.com/CesarVilca19" class="social-link"
                     ><i class="fab fa-twitter"></i
-                  ></a>
+                    ></a>
                 </li>
                 <li class="list-inline-item">
-                  <a
+                    <a
                     href="https://github.com/vilcagamarracf"
                     class="social-link"
                     ><i class="fab fa-github"></i
-                  ></a>
+                    ></a>
                 </li>
-              </ul>
+                </ul>
             </div>
-          </div>
+            </div>
         </div>
 
         <!-- Columna Derecha -->
-        <div class="col-lg-2 fondo"></div>
-      </div>
-      <!-- Fin de los rows -->
+        <div class="col-md-2 fondo"></div>
+        </div>
+        <!-- Fin de los rows -->
     </div>
     <!-- Fin del container -->
 
     <!-- Footer de template -->
-    <div class="py-1" style="background: rgba(0, 0, 0, 1)">
-      <div class="container">
+    <div class="py-1 stickyFooter" style="background: rgba(0, 0, 0, 1)">
+        <div class="container">
         <div class="text-center">
-          <p class="small text-gray mb-0">
+            <p class="small text-gray mb-0">
             2021 - Cesar Vilca --- Template by
-            <a href="https://bootstrapious.com" class="text-gray"
-              >Bootstrapious.com</a
-            >
-          </p>
+            <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a>
+            </p>
         </div>
-      </div>
+        </div>
     </div>
 
     <!-- JavaScript files-->

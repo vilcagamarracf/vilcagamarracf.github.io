@@ -190,13 +190,13 @@ section {
   color: #429244;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 750px) {
   .navbar .nav-link:hover, .navbar .nav-link:focus, .navbar .nav-link.active {
     border-color: #429244;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 750px) {
   .navbar .dropdown-menu {
     border: none;
   }
@@ -547,13 +547,13 @@ STYLE SWITCHER FOR DEMO
 
 .btn-info {
   color: #fff;
-  background-color: #17a2b8;
-  border-color: #17a2b8;
+  background-color: #429244;
+  border-color: #429244;
 }
 
 .btn-info:hover {
   color: #fff;
-  background-color: #138496;
+  background-color: #000;
   border-color: #117a8b;
 }
 

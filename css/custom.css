@@ -1,38 +1,11 @@
 /* ----- Imágenes ----- */
 
 .blog-img {
-    /* float: left; */
     width: 14em;
-	/* width: 200px; */
     max-width: 100%;
     border-radius: 5px;
-    /* margin: 0 1.5em 1.5em 0; */
     border: thin solid #ccc;
 }
-
-.blog-img-exception {
-    float: left;
-    width: 14em;
-    height: 7em;
-    max-width: 100%;
-    border-radius: 5px;
-    margin: 0 1.5em 1.5em 0;
-    border: thin solid #ccc;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15%;
-  /* margin-bottom: auto; */
-  /* width: 50%; */
-}
-
-.justificado{
-    text-align: justify;
-}
-
 
 /* ----- FONDOS ----- */
 
@@ -68,82 +41,12 @@ a.white{
     color: rgb(255, 255, 255);
 }
 
-
-/* ----- Prueba ----- */
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
+p.whiteBold{
+	color: rgb(255, 255, 255);
 }
 
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
+/* --- Manejando los containers en el blog ------------ */
 
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-
-/* Manejando los containers en el blog */
 .blogContainer {
 	display: grid;
 	grid-template-rows: repeat(6, 1fr);
@@ -182,8 +85,104 @@ img.icon {
 }
 
 
+/* ------ REFACTORING ------ */
 
-@media (max-width: 700px) {
+/* NAV LEFT */
+/* .nav-main ul {
+    display: flex;
+} */
+
+/* Espaciado interno de 10px */
+.nav-main ul li {
+    padding: 10px;
+	list-style-type: none;
+}
+
+.nav-main ul li a {
+    padding: 3px;
+}
+
+/* Darle formato de subrayado a cada opción al pasar el mouse */
+.nav-main ul li a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+
+/* Ubicar al lado izquierdo el sidebar */
+.nav-main ul.nav-menu {
+    /* flex: 1; */
+    margin-left: 20px;
+}
+
+
+
+
+
+
+/* BOTON DEL SIDEBAR */
+.menu-btn {
+    position: fixed;
+    cursor: pointer;
+	bottom: 75.76px; /* 50 + 25.76 de footer*/
+    right: 50px;
+    z-index: 1;
+
+    /* display: none; */
+}
+
+.menu-btn-up {
+    position: fixed;
+    cursor: pointer;
+	bottom: 125.76px; /* 50 + 25.76 de footer*/
+    right: 50px;
+    z-index: 1;
+
+    /* display: none; */
+}
+
+
+
+
+
+.nav-main ul.nav-menu {
+	display: block;
+	position: fixed;
+	top: 80px;
+	left: 0;
+	width: 200px;
+	/* max-height: 80%; */
+	/* bottom: 10%; */
+	background: rgba(0, 0, 0, 0.9);
+	padding: 30px 10px;
+	border-radius: 0 10px 10px 0 ;
+	/* border: rgb(67, 61, 61) 1px solid; */
+
+	transform: translateX(-20px);
+	transition: transform .5s ease-in-out;
+	z-index: 1;
+    }
+
+.nav-main ul.nav-menu li {
+	text-decoration: none;
+	padding: 10px;
+	font-size: 14px;
+	}
+
+.nav-main ul.nav-menu a {
+	color: rgb(255, 255, 255);
+}
+
+.nav-main ul.nav-menu.show {
+	transform: translateX(-400px);
+    }	
+
+.menu-btn {
+	display: block;
+    }
+
+
+
+@media (max-width: 767.98px) {
 
 	.blogContainer {
 	display: grid;
@@ -198,10 +197,43 @@ img.icon {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* margin-top: 50px; */
 	}
     
 	.flex-container > div {
 	margin-top: 15px;
 	}
+
 }
+
+/* <div class="menu-btn">
+	<i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="wrapper">
+<nav class="nav-main">
+	<ul class="nav-menu list-unstyled components">
+
+		<p class="text-center whiteBold">
+			CONTENIDO
+		</p>
+		
+		<li><a href="#pageSubmenu" 
+			data-toggle="collapse" 
+			aria-expanded="false" 
+			class="dropdown-toggle"">Introducción</a></li>
+			<ul class="collapse list-unstyled" id="pageSubmenu">
+				<li><a class='padd' href="#free">Gratuitos</a></li>
+				<li><a class='padd' href="#nofree">De pago</a></li>
+			</ul>
+		<li><a href="#intro">Introducción</a></li>
+		<li><a href="#medium">¿Qué es Medium?</a></li>
+		<li><a href="#medium">¿Qué es Medium?</a></li>
+		<li><a href="#medium">¿Qué es Medium?</a></li>
+		<li><a href="#medium">¿Qué es Medium?</a></li>
+		<li><a href="#medium">¿Qué es Medium?</a></li>
+		
+	</ul>
+
+	<ul class="nav-menu-right"></ul>
+</nav>
+</div>  */

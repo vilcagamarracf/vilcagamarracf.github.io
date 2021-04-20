@@ -36,11 +36,48 @@
 
 <body>
 
+
+<!--Header-->
+<div class="stickyNav">
+<header class="header">
+<nav class="navbar navbar-expand-sm py-lg-0">
+
+	<div class="container">
+	<a href="../index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
+
+	<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
+	<div id="navbarSupportedContent" class="collapse navbar-collapse">
+		<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+		<li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a></li>
+		<li class="nav-item"><a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a></li>
+		<li class="nav-item"><a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a></li>
+		</ul>
+	</div>
+	</div>
+</nav>
+</header>
+</div>	
+
+
 <!-- Redacción de post -->
 <div class="container-fluid">
 <div class="row">
-	
-<div class="col-lg-2 fondo-main py-4">
+
+
+<!-- BOTONES -->
+
+<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+<i class="fas fa-align-left"></i>
+</button>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- FIN DE BOTONES -->
+
+
+<div class="col-md-2 fondo-main py-4">
 
 	<div class="wrapper">
     <nav id="sidebar">
@@ -72,29 +109,8 @@
 </div>
 
 <!-- Columna central -->
-<div class="col-lg-8">
+<div class="col-md-8">
 <div class="container-fluid">
-
-	<nav class="navbar navbar-expand-lg py-lg-2">
-
-        <div class="container">
-        <a href="../index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
-			<i class="fas fa-align-left"></i>
-			<span></span>
-		</button>
-
-        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
-        
-        <div id="navbarSupportedContent" class="collapse navbar-collapse">
-		<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-			<li class="nav-item"><a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3">Inicio</a></li>
-			<li class="nav-item"><a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 active">Blog</a></li>
-			<li class="nav-item"><a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3">Contacto</a></li>
-		</ul>
-        </div>
-	</div>
-    </nav>
 
 	<h1 class="h4 py-4" id="inicio">Clasificación de cultivos agrícolas mediante Teledetección</h1>
 
@@ -339,14 +355,14 @@
 </div>
 
 <!-- Columna Derecha -->
-<div class="col-lg-2 fondo-main"></div>
+<div class="col-md-2 fondo-main"></div>
 
 </div> <!-- Fin de los rows -->
 </div> <!-- Fin del container -->
 
 
 <!-- Footer de template -->
-<div class="py-1" style="background: rgba(0, 0, 0, 1); ">    
+<div class="py-1 stickyFooter" style="background: rgba(0, 0, 0, 1); ">    
 	<div class="container">
 		<div class="text-center">
 			<p class="small text-gray mb-0">2021 - Cesar Vilca --- Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
