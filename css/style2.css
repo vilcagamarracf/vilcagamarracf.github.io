@@ -1,6 +1,6 @@
 /* Enganchar el navbar y footer a la ventana */
 
-.stickyNav {
+/* .stickyNav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -12,7 +12,7 @@
     position: sticky;
     bottom: 0;
     z-index: 1;
-}
+} */
 
 /* sidebar */
 
@@ -53,8 +53,8 @@
 
 #sidebar {
     width: 16.666667%;
-    top: 70px;
-    height: 90.7%;
+    top: 0;
+    height: 100%;
     left: 0;
     position: fixed;
     z-index: 1;
@@ -182,4 +182,9 @@ ul.CTAs a {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+.absolute {
+    position:relative;
+    z-index: 2;
 }
