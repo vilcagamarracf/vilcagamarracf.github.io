@@ -28,63 +28,100 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
+	<!-- Our Custom CSS -->
+	<link rel="stylesheet" href="../css/style2.css">
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 </head>
 
 <body>
 	<!-- navbar-->
-	<header class="header">
-	<nav class="navbar navbar-expand-sm py-lg-0">
-		<div class="container">
-			<a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
-			<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
-			class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
-		<div id="navbarSupportedContent" class="collapse navbar-collapse">
-			<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-			<li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
-			</li>
-			<li class="nav-item"><a href="blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a>
-			</li>
-			<!--
-			<li class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Temas de interés</a>
-				<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0"><a href="#" class="dropdown-item small text-uppercase">Agricultura de Precisión</a><a href="#" class="dropdown-item small text-uppercase">Información de utilidad</a><a href="#" class="dropdown-item small text-uppercase">Algo de programación</a><a href="#" class="dropdown-item small text-uppercase">Otros</a></div>
-			</li>
-			-->
-			<li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
-			</li>
-			<!--
-			<li class="nav-item mt-4 mt-lg-0">
-				<button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-outline-primary nav-btn btn-sm"> <i class="fas fa-sign-out-alt mr-2"></i>Login </button>
-			</li>
-			-->
-			</ul>
-		</div>
-		</div>
-	</nav>
-	</header>
-
-	<section class="py-5 bg-cover bg-center fondo-main"> 
-		<div class="container">
-		<div class="row d-flex align-items-center flex-wrap">
-		<div class="col-sm-12">
-			<!-- <h1 class="h2 text-shadow text-white text-center">Blog</h1> -->
-		</div>
-		<div class="col-md-5">
-		</div>
-		</div>
+	<div class="stickyNav">
+		<header class="header">
+		<nav class="navbar navbar-expand-sm py-lg-0">
+			<div class="container">
+				<a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
+				<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
+				class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
+			<div id="navbarSupportedContent" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+				<li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
+				</li>
+				<li class="nav-item"><a href="blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a>
+				</li>
+				<!--
+				<li class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 dropdown-toggle">Temas de interés</a>
+					<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu mt-0"><a href="#" class="dropdown-item small text-uppercase">Agricultura de Precisión</a><a href="#" class="dropdown-item small text-uppercase">Información de utilidad</a><a href="#" class="dropdown-item small text-uppercase">Algo de programación</a><a href="#" class="dropdown-item small text-uppercase">Otros</a></div>
+				</li>
+				-->
+				<li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
+				</li>
+				<!--
+				<li class="nav-item mt-4 mt-lg-0">
+					<button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-outline-primary nav-btn btn-sm"> <i class="fas fa-sign-out-alt mr-2"></i>Login </button>
+				</li>
+				-->
+				</ul>
+			</div>
+			</div>
+		</nav>
+		</header>
 	</div>
-	</section>
 
-	
+<!-- BOTONES -->
+
+<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+<i class="fas fa-align-left"></i>
+</button>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+<i class="fas fa-arrow-up"></i>
+</button>
 
 <div class="container-fluid">
 	<div class="row">
 
 		<!-- Columna izquierda -->
-		<div class="col-sm-2 fondo-main"></div>
+		<div class="col-sm-2 fondo">
+			<div class="wrapper">
+			<nav id="sidebar">
+
+				<ul class="list-unstyled components">
+					<!-- <li><a href="#pageSubmenu" 
+						data-toggle="collapse" 
+						aria-expanded="false" 
+						class="dropdown-toggle">Blogs</a>
+
+						<ul class="collapse list-unstyled" id="pageSubmenu">
+							<li><a class='padd' href="#free">Gratuitos</a></li>
+							<li><a class='padd' href="#nofree">De pago</a></li>
+						</ul>
+
+					</li> -->
+					<li><a class="text-center"><b>Cesar Vilca</b>
+						<img src="img/foto_perfil.jpg" alt="" class="imgCenter" > <br>
+						<p style="font-size: 10pt; margin-left: auto; margin-right: auto;">
+							Bachiller de Ing. Agrícola, UNALM, Perú. <br>
+							Aficionado con los SIG, procesamiento de imágenes satelitales y programación. <br>	
+							Aprendiendo Machine Learning para proyectos de Agricultura.</p>
+						</a>
+					</li>
+					<li><a>Temas en este Blog</a></li>
+					<ul>
+						<li><a>Agricultura de Precisión</a></li>
+						<li><a>Google Earth Engine</a></li>
+						<li><a>Aprendizaje Automático</a></li>
+						<li><a>Python, JavaScript y R</a></li>
+					</ul>
+				</ul>
+
+			</nav>
+			</div>	
+		</div>
 
 		<!-- Columna central -->
-		<div class="col-sm-8">
+		<div class="col-lg-8">
 
 			<div class="container">
 				<p class="lead my-4 text-center">
@@ -170,26 +207,23 @@
 	</div>
 
 <!-- Columna Derecha -->
-<div class="col-sm-2 fondo-main"></div>
+<div class="col-lg-2 fondo"></div>
 
 </div> <!-- Fin de los rows -->
 </div> <!-- Fin del container -->
 
 
 <!-- Footer de template -->
-<div class="bg-dark py-1">    
-	<div class="container">
-	<div class="row">
-		<div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
-			<p class="small text-gray mb-0">2021 - Cesar Vilca</p>
-		</div>
-		<div class="col-lg-6 text-center text-lg-right">
-			<p class="small text-gray mb-0">Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
-		</div>
-	</div>
-	</div>
-</div>
-</footer>
+<!-- Footer de template -->
+    <div class="py-1 stickyFooter" style="background: rgba(0, 0, 0, 1)">
+        <div class="container">
+        <div class="text-center">
+            <p class="small text-gray mb-0">Cesar Vilca, 2021 --- Template by
+            <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a>
+            </p>
+        </div>
+        </div>
+    </div>
 	
 <!-- JavaScript files-->
 <script src="../vendor/jquery/jquery.min.js"></script>
