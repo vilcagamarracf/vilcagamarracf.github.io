@@ -53,12 +53,6 @@
 
 // FIN DE SIDEBAR --------------------------------
 
-ScrollReveal().reveal('.header');
-ScrollReveal().reveal('.container', {delay: 350});
-ScrollReveal().reveal('.cards-banner-one', {delay: 350});
-ScrollReveal().reveal('.py-2', {delay: 350});
-ScrollReveal().reveal('.social', {delay: 350});
-
 /* =========================================
  *  map
  *  =======================================*/
@@ -127,3 +121,9 @@ ScrollReveal().reveal('.social', {delay: 350});
         }
 
     }
+
+ScrollReveal().reveal('.showcase');
+ScrollReveal().reveal('.container', {delay: 100});
+ScrollReveal().reveal('.cards-banner-one', {delay: 100});
+ScrollReveal().reveal('.py-0', {delay: 100});
+ScrollReveal().reveal('.social', {delay: 100});

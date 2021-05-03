@@ -32,30 +32,43 @@
 	<link rel="stylesheet" href="../css/style2.css">
 	<!-- Scrollbar Custom CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+	<style>
+            body {
+                background: url(../img/fondo.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+
+                /* color: white; */
+            }
+	</style>
 </head>
 
 <body>
-	<!-- navbar-->
-		<header class="header">
-		<nav class="navbar navbar-expand-sm py-lg-0">
-			<div class="container">
-				<a href="index.html" class="navbar-brand text-uppercase font-weight-bold">Cesar Vilca</a>
-				<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
-				class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
-			<div id="navbarSupportedContent" class="collapse navbar-collapse">
-				<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-				<li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
-				</li>
-				<li class="nav-item"><a href="blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a>
-				</li>
-				<li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
-				</li>
-				</ul>
-			</div>
-			</div>
-		</nav>
-		</header>
+	
+<!-- navbar-->
+<header class="header">
+	<nav class="navbar navbar-expand-sm py-lg-0">
+		<div class="container">
+			<img src="img/favicon.png" alt="Cesar Vilca logo" style="width:75px;">
+			<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
+			class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
+		<div id="navbarSupportedContent" class="collapse navbar-collapse">
+			<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+			<li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
+			</li>
+			<li class="nav-item"><a href="blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a>
+			</li>
+			<li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
+			</li>
+			</ul>
+		</div>
+		</div>
+	</nav>
+</header>
 
 <!-- BOTONES -->
 
@@ -67,11 +80,11 @@
 <i class="fas fa-arrow-up"></i>
 </button>
 
-<div class="container-fluid">
+<div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
 	<div class="row">
 
 		<!-- Columna izquierda -->
-		<div class="col-2 fondo">
+		<div class="col-2">
 			<div class="wrapper">
 			<nav id="sidebar">
 
@@ -103,7 +116,7 @@
 		</div>
 
 		<!-- Columna central -->
-		<div class="col-lg-8">
+		<div class="col-lg-8" style="background: #fff;">
 
 			<div class="container">
 				<p class="lead my-4 text-center">
@@ -191,7 +204,7 @@
 	</div>
 
 <!-- Columna Derecha -->
-<div class="col-lg-2 fondo"></div>
+<div class="col-lg-2"></div>
 
 </div> <!-- Fin de los rows -->
 </div> <!-- Fin del container -->
