@@ -4,6 +4,11 @@
 //     document.querySelector('.nav-menu').classList.toggle('show');
 // })
 
+ScrollReveal().reveal('.header');
+ScrollReveal().reveal('.container', {delay: 350});
+ScrollReveal().reveal('.cards-banner-one', {delay: 350});
+ScrollReveal().reveal('.py-4', {delay: 350});
+ScrollReveal().reveal('.social', {delay: 350});
 
 // BOTON -----------------------------------
 

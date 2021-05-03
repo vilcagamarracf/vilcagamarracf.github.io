@@ -10,7 +10,7 @@
 /* ----- FONDOS ----- */
 
 .fondo {
-    background: url(../img/background.jpg) no-repeat center center fixed; 
+    background: url(../img/fondo.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -32,8 +32,6 @@
     -o-background-size: cover;
     background-size: cover;
 }
-
-
 
 /* ----- Texto blanco ----- */
 
@@ -87,10 +85,6 @@ p.whiteBold{
 
 /* ------ REFACTORING ------ */
 
-/* NAV LEFT */
-/* .nav-main ul {
-    display: flex;
-} */
 
 /* Espaciado interno de 10px */
 .nav-main ul li {
@@ -114,11 +108,6 @@ p.whiteBold{
     margin-left: 20px;
 }
 
-
-
-
-
-
 /* BOTON DEL SIDEBAR */
 .menu-btn {
     position: fixed;
@@ -139,10 +128,6 @@ p.whiteBold{
 
     /* display: none; */
 }
-
-
-
-
 
 .nav-main ul.nav-menu {
 	display: block;
@@ -182,7 +167,187 @@ p.whiteBold{
 
 
 
-@media (max-width: 767.98px) {
+/* REFACTORING */
+
+.containerNew {
+    width: 75%;
+    margin: auto;
+}
+
+.showcase {
+    width: 100%;
+    height: 400px;
+    /* background: url(img/showcase2.jpg);  */
+    /* Es necesario corregir la imagen */
+    background: url(../img/foto_portada.jpg)no-repeat center center/cover; 
+    padding: 50px;
+    /* Mandar el texto al lado de abajo */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+	color: #fff;
+    /* Separar de las columnas siguientes */
+    margin-bottom: 20px;
+
+	border-radius: 7.5px;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #fff;
+    margin: 10px 0;
+}
+
+.btn:hover {
+    opacity: .7;
+	background: #429244;
+	color: #fff;
+}
+
+
+/* CARDS BANNER ONE */
+.cards-banner-one {
+    width: 100%;
+    height: 300px;
+
+    background: url(../img/canny.png) no-repeat center;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	border-radius: 7.5px;
+
+	margin-bottom: 20px;
+}
+
+.cards-banner-one .content {
+	/* font-weight: bold; */
+    
+	max-width: 250px;
+	height: 300px;
+	padding: 25px;
+    color: rgb(255, 255, 255);
+	background: rgb(0, 0, 0, 0.3);
+}
+
+/* CARDS BANNER TWO */
+.cards-banner-two {
+    width: 100%;
+    height: 400px;
+	
+	background: rgb(0, 0, 0);
+
+	margin-left: auto;
+	margin-right: auto;	
+
+	border-radius: 7.5px;
+
+	margin-bottom: 20px;
+}
+
+.cards-banner-two .content {
+	height: 400px;
+	padding: 75px 25px 0 25px;
+    color: rgb(255, 255, 255);
+	background: rgb(0, 0, 0, 0.3);
+}
+
+.cards-banner-one p,
+.cards-banner-one h2 {
+    margin: 10px 0 20px 0;
+}
+
+.imgCenter {
+	display: block;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+}
+
+.imgCenter2 {
+	display: block;
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+
+/* SOCIAL */
+.social {
+    margin: 25px;
+}
+
+.social p{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+	color: #fff;
+}
+
+/* Ahora toca el flexbox para los iconos*/
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Separarlos  */
+.links a {
+    margin: 0 30px
+}
+
+/* Agrandadn olos iconos */
+.links a i {
+    font-size: 2rem;
+}
+
+/* FOOTER LINKS */
+.footer-links {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+/* 4 columnas */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Centrado */
+.footer-container ul {
+    margin: 0 auto;
+}
+
+/* Separado entre li espaciados */
+.footer-container ul li {
+    line-height: 2.8;
+}
+
+.footer {
+    background-color: #2f3540;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+@media (max-width: 750 px) {
 
 	.blogContainer {
 	display: grid;
@@ -202,6 +367,47 @@ p.whiteBold{
 	.flex-container > div {
 	margin-top: 15px;
 	}
+
+	.news-cards {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 100%;
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+		gap: 25px;
+    }
+
+    .news-cards img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 100%;
+		width: 100%;
+    }
+    .news-cards > div {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 50%;
+		width: 80%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+    }
+
+    .cards-banner-one .content,
+    .cards-banner-two .content {
+        width: 100%;
+        padding: 20px 20px;
+    }
 
 }
 
@@ -237,50 +443,3 @@ p.whiteBold{
 	<ul class="nav-menu-right"></ul>
 </nav>
 </div>  */
-
-
-/* Tweets */
-
-blockquote.twitter-tweet {
-display: inline-block;
-font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-font-size: 12px;
-font-weight: bold;
-line-height: 16px;
-border-color: #eee #ddd #bbb;
-border-radius: 5px;
-border-style: solid;
-border-width: 1px;
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-margin: 10px 5px;
-padding: 0 16px 16px 16px;
-max-width: 468px;
-}
-
-blockquote.twitter-tweet p {
-font-size: 16px;
-font-weight: normal;
-line-height: 20px;
-}
-
-blockquote.twitter-tweet a {
-color: inherit;
-font-weight: normal;
-text-decoration: none;
-outline: 0 none;
-}
-
-blockquote.twitter-tweet a:hover,
-blockquote.twitter-tweet a:focus {
-text-decoration: underline;
-}
-
-/* Centrar una imágen */
-/* https://www.w3schools.com/howto/howto_css_image_center.asp */
-.imgCenter {
-	display: block;
-	margin-top: 15px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-}

@@ -1,320 +1,198 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Cesar Vilca: Personal Website</title>
-    <meta name="description" content="Cesar Vilca Website" />
-    <meta name="author" content="Cesar Vilca" />
-    <meta name="keywords" content="Agricultura, Programación, Python, Machine Learning, Agricultura de Precisión" />
+        <title>Cesar Vilca: Personal Website</title>
+        <meta name="description" content="Cesar Vilca Website" />
+        <meta name="author" content="Cesar Vilca" />
+        <meta name="keywords" content="Agricultura, Programación, Python, Machine Learning, Agricultura de Precisión" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="all,follow" />
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
-    <!-- Google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" />
-    <!-- Icon fonts-->
-    <link rel="stylesheet" href="css/pe-icon-7-stroke.css" />
-    <!-- Lightbox CSS-->
-    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css" />
-    <!-- Leaflet CSS-->
-    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="css/style.green.css" id="theme-stylesheet" />
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="css/custom.css" />
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/favicon.png" />
-  </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="all,follow" />
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+        <!-- Google fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" />
+        <!-- Icon fonts-->
+        <link rel="stylesheet" href="css/pe-icon-7-stroke.css" />
+        <!-- Lightbox CSS-->
+        <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css" />
+        <!-- Leaflet CSS-->
+        <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+        <!-- theme stylesheet-->
+        <link rel="stylesheet" href="css/style.green.css" id="theme-stylesheet" />
+        
+        <!-- Custom stylesheet - for your changes-->
+        <link rel="stylesheet" href="css/custom.css"/>
 
-  <body>
-    <!-- navbar-->
-    <header class="header">
-      <nav class="navbar navbar-expand-sm py-lg-0">
-        <div class="container">
-          <a
-            href="index.html"
-            class="navbar-brand text-uppercase font-weight-bold"
-            >Cesar Vilca</a
-          >
-          <button
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            class="navbar-toggler navbar-toggler-right small"
-          >
-            <span class="text-uppercase mr-2">Menu</span
-            ><i class="fas fa-bars"></i>
-          </button>
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-              <li class="nav-item">
-                <a
-                  href="index.html"
-                  class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active"
-                  >Inicio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="blog.html"
-                  class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4"
-                  >Blog</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="contact.html"
-                  class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4"
-                  >Contacto</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/favicon.png" /> 
 
-    <!-- Jumbotron -->
-    <section
-      style="background: url(img/jumbotron1.png)"
-      class="py-5 bg-cover bg-center"
-    >
-      <div class="hero-overlay"></div>
-      <div class="container py-7 text-white text-center">
-        <h1 class="text-shadow hero-heading">Bienvenido</h1>
-        <p class="text-shadow lead my-4 font-weight-bold">
-          Agricultura de Precisión, Teledetección, Programación y más
-        </p>
-      </div>
-    </section>
+        <!-- Our Custom CSS -->
+        <link rel="stylesheet" href="../css/style2.css">
 
-    <section class="py-5">
-      <div class="container py-1">
-        <div aria-label="breadcrumb" class="nav justify-content-center">
-          <ol class="breadcrumb">
-            <li aria-current="page" class="breadcrumb-item active">Inicio</li>
-            <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
-            <li class="breadcrumb-item"><a href="contact.html">Contacto</a></li>
-          </ol>
-        </div>
-        <section>
-          <div class="container-fluid py-3">
-            <div class="row">
-              <div class="col-md-3">
-                <div>
-                  <img
-                    src="img/foto_perfil.jpg"
-                    class="img-fluid rounded mx-auto d-block center"
-                    width="200" style="margin-top: 20px;"
-                  />
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <style>
+            body {
+                background: url(../img/fondo.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="background: rgb(0, 0, 0, 0.6);">
+
+        <header class="header">
+            <nav class="navbar navbar-expand-sm py-lg-0">
+                <div class="container">
+                    <img src="img/favicon.png" alt="Cesar Vilca logo" style="width:75px;">
+                    <button 
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        class="navbar-toggler navbar-toggler-right small">
+                        <span class="text-uppercase mr-2">Menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-              <div class="col-md-9">
-                <h5>Bienvenido a mi página web</h5>
-                <p class="lead">
-                  Soy Cesar Vilca, bachiller de la carrera de Ingeniería
-                  Agrícola de la UNALM, Lima, Perú. <br />
-                  Aficionado con los SIG, procesamiento de imágenes satelitales
-                  y la programación.
+            </nav>
+        </header>
+
+        <div class="containerNew" style="margin-top: 50px">
+
+            <header class="showcase">
+                <h2>Bienvenido</h2>
+                <p style="font-weight: bold; text-align: center;">
+                    Agricultura de Precisión, Teledetección, Programación y más
                 </p>
-                <p class="lead text-justify">
-                  Actualmente me encuentro investigando la relación de la
-                  Agricultura con el Aprendizaje Automático (Machine Learning en
-                  inglés) ya que me interesa conocer y entender la cantidad de
-                  aplicaciones que están saliendo estos últimos años con el fin
-                  de luego desarrollar proyectos futuros de investigación.
+            </header>
+
+            <div class="container" style="margin-bottom: 75px; margin-top: 50px">
+                <img style="float: right; padding: 0 0 0 15px;" src="img/foto_cesar_vilca.jpg" alt="Cesar Vilca" width="180px" height="230px"/>
+                <h2 class="lined mb-4">Acerca de mí</h2>
+                <p>
+                    Soy Cesar Vilca, bachiller de la carrera de Ingeniería Agrícola. <br>
+                    Agrícola de la UNALM, Lima, Perú. Aficionado con los SIG, procesamiento de imágenes satelitales
+                    y la programación.
                 </p>
-                <!-- <p class="text-right">
-                        <a href='blog/post3_cv.html' class="btn btn-outline-primary">Seguir leyendo »</a></p> -->
-              </div>
+                <p>
+                    Actualmente me encuentro investigando la relación de la
+                    Agricultura con el Aprendizaje Automático (Machine Learning en
+                    inglés) ya que me interesa conocer y entender la cantidad de
+                    aplicaciones que están saliendo estos últimos años con el fin
+                    de luego desarrollar proyectos futuros de investigación.
+                </p>
+            </div>            
+
+            <section class="cards-banner-one">
+                <div class="content">
+                <h2>Explora mi Blog</h2>
+                <p>
+                    Detección de Vegetación <br> 
+                    Google Earth Engine <br>
+                    Valle de Chincha, Ica
+                </p>
+                <a href="blog.html" class="btn">Ir al Blog <i class="fas fa-angle-double-right"></i></a>
+                </div>
+            </section>
+
+            <div class="py-4" style="margin-top: 50px">
+                <h2 class="lined mb-4">Acerca de esta página</h2>
+                <p>
+                El objetivo de esta página es plasmar el conocimiento adquirido en
+                sensoramiento remoto aplicado a la Agricultura de Precisión y reforzar
+                lo aprendido.
+                <figure>
+                    <img src="img/realidad.jpg" alt="" class="img-fluid rounded mx-auto d-block" style="width: 400px; height: 420px;"/>
+                    <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+                    Hay mucho por aprender y compartir ya que tenemos mucho por vivir
+                    y por experimentar.
+                    </figcaption>
+                </figure>
+                </p>
             </div>
-            <p class="text-center">
-              <a href="contact.html" class="btn btn-outline-primary btn-sm my-4"
-                >Contacto</a
-              >
-            </p>
-          </div>
-        </section>
-      </div>
-    </section>
 
-    <section class="bg-gray py-5">
-      <div class="container py-3">
-        <h2 class="lined mb-4">Blog</h2>
-        <p class="lead mb-4">
-          Artículos relacionados con los avances tecnológicos en el campo de la
-          Agricultura de Precisión, su relación con el Aprendizaje Automático
-          (Machine Learning), Computer Vision, entre otros temas más.
-        </p>
-        <p class="lead mb-4">Últimas entradas:</p>
+            <section class="social">
+                <p>¡Comunícate conmigo!</p>
+                <div class="links">
+                    <a href="https://www.facebook.com/vilcagamarra/">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/CesarVilca19">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cesarvilca/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/vilcagamarracf">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </section>
 
-        <div class="row">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <img
-              class="rounded mx-auto d-block"
-              src="img/ee_foto4_l7_peru.JPG"
-              width="300px"
-              height="200px"
-            />
-            <h4 class="h5 mb-1 my-2 text-center">
-              <a href="blog/post4_ee.html" class="text-center"
-                >Earth Engine: Aprendiendo practicando</a
-              >
-            </h4>
-            <p class="text-justify">
-              Accede de forma rápida a bases de datos geoespaciales con la
-              plataforma Google Earth Engine usando Python o JavaScript.
-            </p>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <img
-              class="rounded mx-auto d-block"
-              src="img/blog2.jpg"
-              width="300px"
-              height="200px"
-            />
-            <h4 class="h5 mb-4 my-2 text-center">
-              <a href="blog/post1_referencias.html" class="text-center"
-                >Agricultura Digital: Referencias</a
-              >
-            </h4>
-            <p class="text-justify">
-              Recopilación de información relevante en Agricultura:
-              Teledetección, Machine Learning, Computer Vision.
-            </p>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <img
-              class="rounded mx-auto d-block"
-              src="img/blog3.jpg"
-              width="300px"
-              height="200px"
-            />
-            <h4 class="h5 mb-4 my-2 text-center">
-              <a href="blog/post3_cv.html" class=""
-                >Computer Vision en la Agricultura</a
-              >
-            </h4>
-            <p class="text-justify">
-              Conoce los avances en el campo de la Agricultura gracias al
-              Computer Vision en esta última década.
-            </p>
-          </div>
         </div>
-      </div>
-      <p class="text-center py-4">
-        <a href="blog.html" class="btn btn-primary">Ir al Blog</a>
-      </p>
-      <figure class="my-1">
-        <img src="img/chincha_canny.png" alt="" class="w-100" />
-        <figcaption
-          class="text-muted text-center py-3 text-uppercase font-weight-bold small"
-        >
-          Detección de Vegetación: Aplicación del filtro Canny (Detector de
-          bordes) sobre una imagen EVI de Sentinel-2 en Earth Engine, Valle de
-          Chincha, Ica
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="py-3">
-      <div class="container py-1">
-        <h2 class="lined mb-4">Acerca de esta página</h2>
-        <p class="lead text-justify">
-          El objetivo de esta página es plasmar el conocimiento adquirido en
-          sensoramiento remoto aplicado a la Agricultura de Precisión y reforzar
-          lo aprendido.
-          <figure>
-            <img
-              src="img/realidad.jpg"
-              alt=""
-              class="img-fluid rounded mx-auto d-block"
-            />
-            <figcaption
-              class="text-muted text-center py-3 text-uppercase font-weight-bold small"
-            >
-              Hay mucho por aprender y compartir ya que tenemos mucho por vivir
-              y por experimentar.
-            </figcaption>
-          </figure>
-        </p>
-      </div>
-    </section>
-
-    <!--Footer-->
-    <footer style="background: #eee" class="pt-2">
-      <div class="container py-2">
-        <div class="mb-2">
-          <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a
-                href="https://www.facebook.com/vilcagamarra/"
-                class="social-link"
-              >
-                <i class="fab fa-facebook-f"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/"
-                class="social-link"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://twitter.com/CesarVilca19" class="social-link"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://github.com/vilcagamarracf" class="social-link"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-          </ul>
+        
         </div>
-      </div>
 
-      <!-- Footer de template -->
-      <div class="bg-dark py-1">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
-              <p class="small text-gray mb-0">2021 - Cesar Vilca</p>
+        <footer style="background: rgb(0, 0, 0)">
+        <div class="py-1">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-left mb-1 mb-lg-0">
+                <p class="small text-gray mb-0">2021 - Cesar Vilca</p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                <p class="small text-gray mb-0">
+                    Template by
+                    <a href="https://bootstrapious.com" class="text-gray"
+                    >Bootstrapious.com</a
+                    >
+                </p>
+                </div>
             </div>
-            <div class="col-lg-6 text-center text-lg-right">
-              <p class="small text-gray mb-0">
-                Template by
-                <a href="https://bootstrapious.com" class="text-gray"
-                  >Bootstrapious.com</a
-                >
-              </p>
             </div>
-          </div>
         </div>
-      </div>
-    </footer>
+        </footer>
 
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
-    <script src="vendor/leaflet/leaflet.js"></script>
-    <script src="js/front.js"></script>
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-  </body>
+        <!-- JavaScript files-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+        <script src="vendor/leaflet/leaflet.js"></script>
+        <script src="js/front.js"></script>
+        <!-- SCROLL REVEAL -->
+        <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+        <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous"
+        />
+    </body>
 </html>
