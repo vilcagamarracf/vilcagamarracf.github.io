@@ -4,12 +4,6 @@
 //     document.querySelector('.nav-menu').classList.toggle('show');
 // })
 
-ScrollReveal().reveal('.header');
-ScrollReveal().reveal('.container', {delay: 350});
-ScrollReveal().reveal('.cards-banner-one', {delay: 350});
-ScrollReveal().reveal('.py-4', {delay: 350});
-ScrollReveal().reveal('.social', {delay: 350});
-
 // BOTON -----------------------------------
 
     // https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
@@ -59,6 +53,11 @@ ScrollReveal().reveal('.social', {delay: 350});
 
 // FIN DE SIDEBAR --------------------------------
 
+ScrollReveal().reveal('.header');
+ScrollReveal().reveal('.container', {delay: 350});
+ScrollReveal().reveal('.cards-banner-one', {delay: 350});
+ScrollReveal().reveal('.py-4', {delay: 350});
+ScrollReveal().reveal('.social', {delay: 350});
 
 /* =========================================
  *  map
