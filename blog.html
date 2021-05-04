@@ -33,6 +33,8 @@
 	<!-- Scrollbar Custom CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
+	<script src="https://unpkg.com/scrollreveal"></script>
+
 	<style>
             body {
                 background: url(../img/fondo.jpg) no-repeat center center fixed; 
@@ -49,23 +51,35 @@
 <body>
 	
 <!-- navbar-->
+<!-- Header -->
 <header class="header">
 	<nav class="navbar navbar-expand-sm py-lg-0">
 		<div class="container">
 			<img src="img/favicon.png" alt="Cesar Vilca logo" style="width:75px;">
-			<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
-			class="navbar-toggler navbar-toggler-right small"><span class="text-uppercase mr-2">Menu</span><i class="fas fa-bars"></i></button>
-		<div id="navbarSupportedContent" class="collapse navbar-collapse">
-			<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
-			<li class="nav-item"><a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
-			</li>
-			<li class="nav-item"><a href="blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a>
-			</li>
-			<li class="nav-item"><a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
-			</li>
-			</ul>
-		</div>
+			<button 
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				class="navbar-toggler navbar-toggler-right small">
+				<span class="text-uppercase mr-2">Menu</span>
+				<i class="fas fa-bars"></i>
+			</button>
+			<div id="navbarSupportedContent" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a href="blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a href="contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</nav>
 </header>
@@ -118,7 +132,7 @@
 		<!-- Columna central -->
 		<div class="col-lg-8" style="background: #fff;">
 
-			<div class="container">
+			<div class="container" id='inicio'>
 				<p class="lead my-4 text-center">
 				Conjunto de posts acerca de la Agricultura en tiempos modernos, tutoriales, bibliografía recomendada y más.</p>
 			</div>
@@ -126,64 +140,64 @@
 			<hr>
 
 			<div class="blogContainer">
-				<div class="flex-container">
-					<div><img src="img/blog2.jpg" alt="news1"></div>
+				<div class="flex-container" id="post1">
+					<div><img src="img/blog2.jpg" alt="blog_referencias"></div>
 					<div>
 						<h3>Agricultura Digital: Referencias</h3>
 						<p>
 							Recopilación de información acerca de los avances tecnológicos en relación con la Agricultura de Precisión.
 						</p>	
-						<a href="blog/post1_referencias.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
+						<a href="blog/blog_referencias.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
 					</div>
 				</div>
-				<div class="flex-container">
-					<div><img src="https://www.croptracker.com/images/blog/Robots_in_Ag/computervision.png" alt="news1"></div>
+				<div class="flex-container" id="post2">
+					<div><img src="https://www.croptracker.com/images/blog/Robots_in_Ag/computervision.png" alt="blog_cv"></div>
 					<div>
 						<h3>Computer Vision en la Agricultura</h3>
 						<p>
 							Revisando bibliografía sobre Computer Vision (Campo de la Inteligencia Artificial) en la Agricultura.
 						</p>	
-						<a href="blog/post3_cv.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
+						<a href="blog/blog_cv.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
 					</div>
 				</div>
-				<div class="flex-container">
-					<div><img src="img/google-earth-engine.jpg" alt="news1"></div>
+				<div class="flex-container" id="post3">
+					<div><img src="img/google-earth-engine.jpg" alt="blog_ee"></div>
 					<div>
 						<h3>Google Earth Engine: Breve Introducción</h3>
 						<p>
 							Presento una breve introducción a la plataforma de análisis geoespacial de escala mundial además de links de importancia.
 						</p>
-						<a href="blog/post4_ee.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
+						<a href="blog/blog_earthengine.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
 					</div>
 				</div>
-				<div class="flex-container">
-					<div><img src="https://png.pngitem.com/pimgs/s/241-2413548_logo-anaconda-python-hd-png-download.png" alt="news1"></div>
+				<div class="flex-container" id="post4">
+					<div><img src="https://png.pngitem.com/pimgs/s/241-2413548_logo-anaconda-python-hd-png-download.png" alt="blog_conda"></div>
 					<div>
 						<h3>Manejo de paquetes de Python con ANACONDA</h3>
 						<p>
 							Breve tutorial sobre el manejo de librerías de Python en local usando la línea de comandos de ANACONDA.
 						</p>	
-						<a href="blog/post5_conda.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
+						<a href="blog/blog_conda.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
 					</div>
 				</div>
-				<div class="flex-container">
-					<div><img src="img/ml_image.jpeg" alt="news1"></div>
+				<div class="flex-container" id="post5">
+					<div><img src="img/ml_image.jpeg" alt="blog_pythonML"></div>
 					<div>
 						<h3>Aprendizaje Automático: Primeros pasos</h3>
 						<p>
 							En este post reúno información sobre el tema. (Me comprometo a presentar ejemplos con lenguaje Python más adelante)
 						</p>	
-						<a href="blog/post_ML_python.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
+						<a href="blog/blog_pythonML.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
 					</div>
 				</div>
-				<div class="flex-container">
-					<div><img src="img/crop_clasification.png" alt="news1"></div>
+				<div class="flex-container" id="post6">
+					<div><img src="img/crop_clasification.png" alt="blog_clasificacion"></div>
 					<div>
 						<h3>Clasificación de cultivos agrícolas con Teledetección</h3>
 						<p>
 							Post dedicado a reunir información sobre la clasificación de cultivos agrícolas mediante técnicas de sensoramiento remoto (Teledetección).
 						</p>	
-						<a href="blog/post8_clasificacion.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
+						<a href="blog/blog_clasificacion.html">Seguir leyendo <i class="fas fa-angle-double-right"></i></a>
 					</div>
 				</div>
 			</div>
@@ -227,7 +241,16 @@
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../vendor/lightbox2/js/lightbox.min.js"></script>
 <script src="../vendor/leaflet/leaflet.js"></script>
-<script src="../js/front.js"></script>
+<script src="../js/custom.js"></script>
+
+<script>
+	ScrollReveal().reveal('#inicio');
+	ScrollReveal().reveal('#post1', {delay: 100});
+	ScrollReveal().reveal('#post2', {delay: 100});
+	ScrollReveal().reveal('#post3', {delay: 100});
+	ScrollReveal().reveal('#post4', {delay: 100});
+	ScrollReveal().reveal('#post5', {delay: 100});
+</script>
 
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">

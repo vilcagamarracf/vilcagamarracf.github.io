@@ -32,6 +32,11 @@
 	<!-- Scrollbar Custom CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
 
+	<style>
+		body {
+			text-align: justify;
+		}
+	</style>
 </head>
 
 <body>
@@ -74,7 +79,6 @@
 <div class="container-fluid">
 <div class="row">
 
-
 <!-- BOTONES -->
 
 <button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
@@ -101,7 +105,7 @@
             <p class="text-center text-center"><b>Contenido</b></p>
             
 			<li><a href="#importancia">1. Importancia</a></li>
-			<li><a href="#class" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+			<li><a href="#class" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
 					2. Clasificación</a>
                 <ul class="collapse list-unstyled" id="class">
                     <li><a class='padd' href="#cl1">2.1. Estadística</a></li>
@@ -128,11 +132,12 @@
 
 	<!-- Imagen -->
 	<div class="py-4">
-		<img class="rounded mx-auto d-block" src="../img/crop_clasification_2.png" alt="" width="75%">
-		
-		<p class='text-center text-small'>
-			<b>Fuente: </b><a href="https://www.mdpi.com/2072-4292/8/3/166/htm">First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe (2016)</a> 
-		</p>
+		<figure>
+			<img class="rounded mx-auto d-block" src="../img/crop_clasification_2.png" alt="" width="75%">
+			<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+				<a href="https://www.mdpi.com/2072-4292/8/3/166/htm">First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe (2016)</a>
+			</figcaption>
+		</figure>
 	</div>
 
 	<p><b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.</p>
@@ -345,7 +350,7 @@
 
 	<div class="container py-4">
 		<ul class="pagination justify-content-center">
-			<li class="page-item"><a class="page-link" href="post_ML_python.html">Anterior</a></li>
+			<li class="page-item"><a class="page-link" href="blog_pythonML.html">Anterior</a></li>
 			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
 			<!-- <li class="page-item"><a class="page-link" href=" ">Siguiente Post ==> (en proceso)</a></li> -->
 		</ul>
@@ -387,7 +392,7 @@
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../vendor/lightbox2/js/lightbox.min.js"></script>
 <script src="../vendor/leaflet/leaflet.js"></script>
-<script src="../js/front.js"></script>
+<script src="../js/custom.js"></script>
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
