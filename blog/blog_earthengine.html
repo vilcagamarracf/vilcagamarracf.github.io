@@ -28,17 +28,11 @@
 	<link rel="stylesheet" href="../css/style2.css">
 	<!-- Scrollbar Custom CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
-	<style>
-		body {
-			text-align: justify;
-		}
-	</style>
 </head>
 
 <body>
 
 <!--Header-->
-
 <header class="header">
 	<nav class="navbar navbar-expand-sm py-lg-0">
 		<div class="container">
@@ -72,257 +66,254 @@
 </header>
 
 <!-- Redacción de post -->
-<div class="container-fluid">
+<div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
 <div class="row">
 
-<!-- BOTONES -->
+	<!-- BOTONES -->
+	<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+	<i class="fas fa-align-left"></i>
+	</button>
 
-<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
-<i class="fas fa-align-left"></i>
-</button>
+	<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+	<i class="fas fa-arrow-up"></i>
+	</button>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
-<i class="fas fa-arrow-up"></i>
-</button>
+	<!-- Columna de la izquierda -->
+	<div class="col-md-2">
 
-<!-- FIN DE BOTONES -->
+		<div class="wrapper">
+		<nav id="sidebar">
+			<!-- <div class="sidebar-header">
+				<h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
+			</div> -->
 
-<!-- Columna de la izquierda -->
-<div class="col-md-2 fondo py-4">
-
-	<div class="wrapper">
-    <nav id="sidebar">
-        <!-- <div class="sidebar-header">
-            <h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
-        </div> -->
-
-        <ul class="list-unstyled components">
-			<li><a class="text-center" style="font-size: 16px;"><b>Google Earth Engine: Breve Introducción</b></a> <br></li>
-            <p class="text-center text-center"><b>Contenido</b></p>
-            
-			<li><a href="#intro">Introducción</a></li>
-			<li><a href="#question">¿Qué es exactamente?</a></li>
-			<li><a href="#acceso">Acceso</a></li>
-			<li><a href="#ambientes">Ambientes de desarrollo</a></li>
-			<li><a href="#aplications">Aplicaciones</a></li>
-			<li><a href="#prueba">Probando EE</a></li>
-			<li><a href="#end">Conclusiones</a></li>
-			<li><a href="#links">Referencias</a></li>
-            <!-- <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-					Blogs</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="#free">Gratuitos</a></li>
-                    <li><a href="#nofree">De pago</a></li>
-                </ul>
-            </li>-->
-        </ul>
-
-	</nav>
-	</div>
-</div>
-
-<!-- Columna central -->
-<div class="col-md-8">
-<div class="container-fluid">
-
-	<h1 class="h4 py-4">Google Earth Engine: Breve Introducción</h1>
-	<b>Objetivo:</b> Brindar una breve introducción a la plataforma, recopilación de aplicaciones en la Agricultura y links relacionados (al final del post).
-
-	<img class='rounded mx-auto d-block img-fluid' src="../img/google-earth-engine.jpg" alt="Earth Engine Logo">
-
-	<h2 class="h5 py-4" id="intro">Introducción</h2>
-	<p>
-		<a href="https://earthengine.google.com/">Google Earth Engine</a> nace a partir de una necesidad: disponer de una base de datos geoespaciales a investigadores con poca o nula experiencia previa en administración de bases de datos.
-	</p>
-
-
-	<h2 class="h5 py-4" id="question">¿Qué es exactamente?</h2>	
-	<p>
-		En la sección de <a href="https://earthengine.google.com/faq/">Preguntas más frecuentes (FAQ)</a> se menciona lo siguiente: 
-		<blockquote class="blockquote my-4">
-			<p>Earth Engine es una plataforma para el análisis científico y la visualización de conjuntos de datos geoespaciales, para usuarios académicos, sin fines de lucro, comerciales y gubernamentales.</p>
-
-			<p>Earth Engine aloja imágenes de satélite y las almacena en un archivo de datos público que incluye imágenes históricas de la Tierra que se remontan a más de cuarenta años. Las imágenes, que se ingieren a diario, se ponen a disposición para la minería de datos a escala global.</p>
-
-			<p>Earth Engine también proporciona API y otras herramientas para permitir el análisis de grandes conjuntos de datos.</p>
-		</blockquote>
-	</p>
-	<p>
-		Además, responde a ciertas inquietudes tales como:
-		<ul>
-			<li>Comparación con Google Earth</li> 
-			<li>Por qué Google trabaja en este proyecto</li>
-			<li>Cómo Acceder</li>
-			<li>Bases de datos disponibles</li>
-			<li>Limitaciones de uso</li>
-			<li>y más</li>
-		</ul>	
-	</p>
-
-
-	<h2 class="h5 py-4" id="acceso">Cómo acceder</h2>
-	<p>
-		Earth Engine al ser un proyecto (o aplicación) de Google, permite la conexión con otras aplicaciones tales como Google Cloud, Google Drive (entre las principales). Por ello, requiere una cuenta de gmail activa <a href="https://earthengine.google.com/signup/">(Registrate aquí)</a>. 
-	</p>
-	<p>
-		Nota:
-		<ul>
-			<li>Es preferible usar cuentas de tipo institucional (universitaria) ya que no presentan limitaciones con el almacenamiento en el Drive. En caso de usar una cuenta corriente de gmail, abstenerse de exportar resultados a su Drive ya que ocuparía el almacenamiento disponible rápidamente al manejar datos geoespaciales (comúnmente archivos pesados). </li>
-			<li>Registrar la cuenta en modo no comercial.</li>
-			<li>El tiempo de respuesta de activación de cuenta es relativo: puede demorar minutos o hasta horas.</li>
-		</ul>
-	</p>
-
-
-	<h2 class="h5 py-4" id="ambientes">Ambientes de Desarrollo</h2>
-	<p>
-		Hay dos formas de usar Earth Engine:
-		<ul>
-			<li class="my-1">De forma interactiva en la web: <a href="https://explorer.earthengine.google.com/#workspace">Explorer</a></li>
-			<li class="my-1">Usando lenguajes de Programación para acceder a la Interfaz de Programación de Aplicaciones (API) de Earth Engine:</li>
-			<ul style="padding-left: 1.5rem;">
-				<li class="my-1"><b>JavaScript:</b> El <a href="https://code.earthengine.google.com/">Code Editor</a> es un IDE desarrollado en la web. Viene con una ventana de visualización ya integrada y otros widgets para edición de figuras geométricas.</li>
-				<li class="my-1"><b>Python: </b> Mediante el paquete <code>earthengine-api</code> es posible acceder a la API de Earth Engine. Permite trabajar mediante el uso de scripts (.py) o con las libretas jupyter notebooks (.ipynb).</li>
-				<li class="my-1"><b>R:</b> Mediante la librería <code>rgee</code> (es posible acceder a lenguaje Python en un ambiente de R con la librería <code>reticulate</code>, lo cual ha permitido el acceso a la API de Python).</li>
+			<ul class="list-unstyled components">
+				<li><a class="text-center" style="font-size: 16px;"><b>Google Earth Engine: Breve Introducción</b></a> <br></li>
+				<p class="text-center text-center"><b>Contenido</b></p>
+				
+				<li><a href="#intro">Introducción</a></li>
+				<li><a href="#question">¿Qué es exactamente?</a></li>
+				<li><a href="#acceso">Acceso</a></li>
+				<li><a href="#ambientes">Ambientes de desarrollo</a></li>
+				<li><a href="#aplications">Aplicaciones</a></li>
+				<li><a href="#prueba">Probando EE</a></li>
+				<li><a href="#end">Conclusiones</a></li>
+				<li><a href="#links">Referencias</a></li>
+				<!-- <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						Blogs</a>
+					<ul class="collapse list-unstyled" id="pageSubmenu">
+						<li><a href="#free">Gratuitos</a></li>
+						<li><a href="#nofree">De pago</a></li>
+					</ul>
+				</li>-->
 			</ul>
-		</ul>  
-		También existe la integración de Earth Engine en <b>QGIS</b> mediante un plugin. 
-	</p>
 
-	
-	<h2 class="h5 py-4" id="aplications">Earth Engine Apps</h2>
-	<p> 
-		Con Earth Engine Apps es posible construir y diseñar interfaces gráficas dinámicas que realicen análisis específicos y poder compartirlas con otros usuarios de manera privada o pública. 
-	</p>
-	<p>Una clara aplicación a nivel nacional es la del MIDAGRI: <a href="https://minagri-geoespacial.users.earthengine.app/view/dinamicaagricolav3">Monitoreo de la Dinámica Agrícola</a>. Dicha aplicación permite clasificar cultivos según tipo transitorio, permanente o de descanso a nivel departamental (imagen a continuación).</p>
-
-	<a href="../img/earthengineapp.PNG" data-lightbox="gallery" data-title="MIDAGRI: Monitoreo de la Dinámica Agrícola" class="mx-auto d-block col-lg-8 img-fluid m-4">
-			<img src="../img/earthengineapp.PNG" alt="" class="img-fluid"></a>
-	
-	<p>
-		Además, Philipp Gärtner presenta en su blog una recopilación de aplicaciones realizadas por usuarios de Earth Engine:
-		<ul>
-			<li><a href="https://philippgaertner.github.io/2020/12/ee-apps-table-searchable/">Google Earth Engine Apps - Updated 23th December 2020</a> - Lista actualizada</li>
-			<li><a href="https://philippgaertner.github.io/2020/03/ee-apps/">Google Earth Engine Apps (March 27, 2020)</a> - Adjunta visualizaciones</li>
-		</ul> 
-		Para más información puedes visitar en la documentación, la sección <a href="https://developers.google.com/earth-engine/guides/apps">Apps and User Interfaces - Earth Engine Apps</a> donde explica cómo elaborar paso a paso una interfaz gráfica con Earth Engine. 
-	</p>
-
-	
-	<h2 class="h5 py-4" id="prueba">Probando EE</h2>
-	<p>
-		A continuación presentaré algunos ejemplos sobre los resultados que he podido generar usando la plataforma de Earth Engine (en <code>Python</code> y <code>JavaScript</code>). Cabe destacar que gracias a su base de datos bien estructurada y el procesamiento en la nube es posible conseguir visualizaciones en cuestión de segundos.
-	</p> 
-
-	<!-- Galería de fotos -->
-	<div class="row container-fluid py-1">
-		<a href="../img/ee_foto1_s2_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_foto1_s2_chincha.JPG" alt="" class="img-fluid"></a>
-		<a href="../img/ee_foto2_l7_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Landsat 7 (Nótese el error del escáner a bordo del sátelite lo cual produjo la pérdida del 22% de data en imágenes)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_foto2_l7_chincha.JPG" alt="" class="img-fluid"></a>
-		<a href="../img/ee_foto3_nevado_yerupaja.JPG" data-lightbox="gallery" data-title="Nevado Yerupajá, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_foto3_nevado_yerupaja.JPG" alt="" class="img-fluid"></a>
-		<a href="../img/ee_foto4_l7_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 7" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_foto4_l7_peru.JPG" alt="" class="img-fluid"></a>
-		<a href="../img/ee_foto5_l8_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 8" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_foto5_l8_peru.JPG" alt="" class="img-fluid"></a>
-		<a href="../img/ee_foto6_l8_peru.JPG" data-lightbox="gallery" data-title="Valle de Chincha - NDVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_foto6_l8_peru.JPG" alt="" class="img-fluid"></a>
-		<a href="../img/ee_foto7_s2_evi.JPG" data-lightbox="gallery" data-title="Valle de Chincha - EVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_foto7_s2_evi.JPG" alt="" class="img-fluid"></a>
-		<a href="../img/ee_canny_detector.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_canny_detector.png" alt="" class="img-fluid"></a>
-		<a href="../img/canny.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/canny.png" alt="" class="img-fluid"></a>
-		<a href="../img/ee_sample.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_sample.png" alt="" class="img-fluid"></a>
-		<a href="../img/ee_sampleo.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_sampleo.png" alt="" class="img-fluid"></a>
-		<a href="../img/ee_split_panel.png" data-lightbox="gallery" data-title="Split Panel: Landsat 8 (lado izquierdo) y Sentinel-2A (lado derecho)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-			<img src="../img/ee_split_panel.png" alt="" class="img-fluid"></a>
+		</nav>
+		</div>
 	</div>
 
-	<!-- Mensaje de Proceso de Expansión -->
-	<div class="text-center py-4">	
-		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡Próximamente los códigos en mi repositorio de Github!</b></marquee>
-	</div>
+	<!-- Columna central -->
+	<div class="col-md-8" style="background: white">
+	<div class="container-fluid">
 
-	<h2 class="h5 py-4" id="end">Conclusiones</h2>
-	<p>
-		La plataforma se encuentra operando desde el año 2011 y ha ido ganando popularidad con el paso de los años debido a la potencia computacional que ofrece de manera gratuita a los investigadores, lo cual ha permitido el aumento de publicaciones académicas en gran cantidad.
+		<h1 class="h4 py-4">Google Earth Engine: Breve Introducción</h1>
+		<b>Objetivo:</b> Brindar una breve introducción a la plataforma, recopilación de aplicaciones en la Agricultura y links relacionados (al final del post).
 
-	</p>
-	
-	<h2 class="h5 py-4" id="links">Referencias</h2>
-	<p>
-		Con el objetivo de no perderse con la documentación de Earth Engine (y agilizar el proceso de aprendizaje), he recopilado los links más importantes.
-		<ul> 
-			<li><a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">
-				Google Earth Engine: Planetary-scale geospatial analysis for everyone</a> - Artículo científico elaborado por el grupo de desarrollo de Earth Engine.</li>
-			<li><a href="https://earthengine.google.com/">
-				Google Earth Engine - Portal</a></li>
-			<li><a href="https://earthengine.google.com/signup/">
-				Google Earth Engine - Creación de cuenta</a></li>
-			<li><a href="https://earthengine.google.com/faq/">
-				Google Earth Engine - Preguntas frecuentes (FAQ)</a></li>
-			<li><a href="https://developers.google.com/earth-engine/">
-				Google Earth Engine - Documentación</a></li>
-			<li>Ambientes de Desarrollo e Integraciones disponibles:
-				<ul style="padding-left: 1.5rem;"> 
-					<li><a href="https://developers.google.com/earth-engine/guides/getstarted">
-						 JavaScript: Get Started with Earth Engine</a></li>
-					<li><a href="https://developers.google.com/earth-engine/guides/python_install">
-						Python:  Instalación de la API de Python</a></li>
-					<li><a href="https://r-spatial.github.io/rgee/">
-						R:  Google Earth Engine for R</a></li>
-					<li><a href="https://gee-community.github.io/qgis-earthengine-plugin/">
-						QGIS: Integrates Google Earth Engine and QGIS using Python API</a></li>
+		<img class='rounded mx-auto d-block img-fluid' src="../img/google-earth-engine.jpg" alt="Earth Engine Logo">
+
+		<h2 class="h5 py-4" id="intro">Introducción</h2>
+		<p>
+			<a href="https://earthengine.google.com/">Google Earth Engine</a> nace a partir de una necesidad: disponer de una base de datos geoespaciales a investigadores con poca o nula experiencia previa en administración de bases de datos.
+		</p>
+
+
+		<h2 class="h5 py-4" id="question">¿Qué es exactamente?</h2>	
+		<p>
+			En la sección de <a href="https://earthengine.google.com/faq/">Preguntas más frecuentes (FAQ)</a> se menciona lo siguiente: 
+			<blockquote class="blockquote my-4">
+				<p>Earth Engine es una plataforma para el análisis científico y la visualización de conjuntos de datos geoespaciales, para usuarios académicos, sin fines de lucro, comerciales y gubernamentales.</p>
+
+				<p>Earth Engine aloja imágenes de satélite y las almacena en un archivo de datos público que incluye imágenes históricas de la Tierra que se remontan a más de cuarenta años. Las imágenes, que se ingieren a diario, se ponen a disposición para la minería de datos a escala global.</p>
+
+				<p>Earth Engine también proporciona API y otras herramientas para permitir el análisis de grandes conjuntos de datos.</p>
+			</blockquote>
+		</p>
+		<p>
+			Además, responde a ciertas inquietudes tales como:
+			<ul>
+				<li>Comparación con Google Earth</li> 
+				<li>Por qué Google trabaja en este proyecto</li>
+				<li>Cómo Acceder</li>
+				<li>Bases de datos disponibles</li>
+				<li>Limitaciones de uso</li>
+				<li>y más</li>
+			</ul>	
+		</p>
+
+
+		<h2 class="h5 py-4" id="acceso">Cómo acceder</h2>
+		<p>
+			Earth Engine al ser un proyecto (o aplicación) de Google, permite la conexión con otras aplicaciones tales como Google Cloud, Google Drive (entre las principales). Por ello, requiere una cuenta de gmail activa <a href="https://earthengine.google.com/signup/">(Registrate aquí)</a>. 
+		</p>
+		<p>
+			Nota:
+			<ul>
+				<li>Es preferible usar cuentas de tipo institucional (universitaria) ya que no presentan limitaciones con el almacenamiento en el Drive. En caso de usar una cuenta corriente de gmail, abstenerse de exportar resultados a su Drive ya que ocuparía el almacenamiento disponible rápidamente al manejar datos geoespaciales (comúnmente archivos pesados). </li>
+				<li>Registrar la cuenta en modo no comercial.</li>
+				<li>El tiempo de respuesta de activación de cuenta es relativo: puede demorar minutos o hasta horas.</li>
+			</ul>
+		</p>
+
+
+		<h2 class="h5 py-4" id="ambientes">Ambientes de Desarrollo</h2>
+		<p>
+			Hay dos formas de usar Earth Engine:
+			<ul>
+				<li class="my-1">De forma interactiva en la web: <a href="https://explorer.earthengine.google.com/#workspace">Explorer</a></li>
+				<li class="my-1">Usando lenguajes de Programación para acceder a la Interfaz de Programación de Aplicaciones (API) de Earth Engine:</li>
+				<ul style="padding-left: 1.5rem;">
+					<li class="my-1"><b>JavaScript:</b> El <a href="https://code.earthengine.google.com/">Code Editor</a> es un IDE desarrollado en la web. Viene con una ventana de visualización ya integrada y otros widgets para edición de figuras geométricas.</li>
+					<li class="my-1"><b>Python: </b> Mediante el paquete <code>earthengine-api</code> es posible acceder a la API de Earth Engine. Permite trabajar mediante el uso de scripts (.py) o con las libretas jupyter notebooks (.ipynb).</li>
+					<li class="my-1"><b>R:</b> Mediante la librería <code>rgee</code> (es posible acceder a lenguaje Python en un ambiente de R con la librería <code>reticulate</code>, lo cual ha permitido el acceso a la API de Python).</li>
 				</ul>
-			</li>
-			<li><a href="https://github.com/google/earthengine-api">Google Earth Engine API - Repositorio en Github</a></li>
-			<li><a href="https://developers.google.com/earth-engine/apidocs">
-				Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
-			<li><a href="https://developers.google.com/earth-engine/guides">
-				Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
-			<li><a href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">
-				Google Earth Engine - Tutoriales</a></li>
-		</ul>
-		Muchas gracias por leer :)
-	</p>
+			</ul>  
+			También existe la integración de Earth Engine en <b>QGIS</b> mediante un plugin. 
+		</p>
 
-	<!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Remember when <a href="https://twitter.com/Microsoft?ref_src=twsrc%5Etfw">@Microsoft</a> said it was going to build a Planetary Computer? We&#39;ve been busy! Nowhere near done, but getting closer every day. Check out the progress!<a href="https://t.co/9sk8F2srDo">https://t.co/9sk8F2srDo</a></p>&mdash; lucasjoppa (@lucasjoppa) <a href="https://twitter.com/lucasjoppa/status/1383178042286116866?ref_src=twsrc%5Etfw">April 16, 2021</a>
-	</blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
-	
-	<div class="container py-4">
-		<ul class="pagination justify-content-center">
-			<li class="page-item"><a class="page-link" href="blog_cv.html">Anterior</a></li>
-			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
-			<li class="page-item"><a class="page-link" href="blog_conda.html">Siguiente</a></li>
+		
+		<h2 class="h5 py-4" id="aplications">Earth Engine Apps</h2>
+		<p> 
+			Con Earth Engine Apps es posible construir y diseñar interfaces gráficas dinámicas que realicen análisis específicos y poder compartirlas con otros usuarios de manera privada o pública. 
+		</p>
+		<p>Una clara aplicación a nivel nacional es la del MIDAGRI: <a href="https://minagri-geoespacial.users.earthengine.app/view/dinamicaagricolav3">Monitoreo de la Dinámica Agrícola</a>. Dicha aplicación permite clasificar cultivos según tipo transitorio, permanente o de descanso a nivel departamental (imagen a continuación).</p>
+
+		<a href="../img/earthengineapp.PNG" data-lightbox="gallery" data-title="MIDAGRI: Monitoreo de la Dinámica Agrícola" class="mx-auto d-block col-lg-8 img-fluid m-4">
+				<img src="../img/earthengineapp.PNG" alt="" class="img-fluid"></a>
+		
+		<p>
+			Además, Philipp Gärtner presenta en su blog una recopilación de aplicaciones realizadas por usuarios de Earth Engine:
+			<ul>
+				<li><a href="https://philippgaertner.github.io/2020/12/ee-apps-table-searchable/">Google Earth Engine Apps - Updated 23th December 2020</a> - Lista actualizada</li>
+				<li><a href="https://philippgaertner.github.io/2020/03/ee-apps/">Google Earth Engine Apps (March 27, 2020)</a> - Adjunta visualizaciones</li>
+			</ul> 
+			Para más información puedes visitar en la documentación, la sección <a href="https://developers.google.com/earth-engine/guides/apps">Apps and User Interfaces - Earth Engine Apps</a> donde explica cómo elaborar paso a paso una interfaz gráfica con Earth Engine. 
+		</p>
+
+		
+		<h2 class="h5 py-4" id="prueba">Probando EE</h2>
+		<p>
+			A continuación presentaré algunos ejemplos sobre los resultados que he podido generar usando la plataforma de Earth Engine (en <code>Python</code> y <code>JavaScript</code>). Cabe destacar que gracias a su base de datos bien estructurada y el procesamiento en la nube es posible conseguir visualizaciones en cuestión de segundos.
+		</p> 
+
+		<!-- Galería de fotos -->
+		<div class="row container-fluid py-1">
+			<a href="../img/ee_foto1_s2_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_foto1_s2_chincha.JPG" alt="" class="img-fluid"></a>
+			<a href="../img/ee_foto2_l7_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Landsat 7 (Nótese el error del escáner a bordo del sátelite lo cual produjo la pérdida del 22% de data en imágenes)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_foto2_l7_chincha.JPG" alt="" class="img-fluid"></a>
+			<a href="../img/ee_foto3_nevado_yerupaja.JPG" data-lightbox="gallery" data-title="Nevado Yerupajá, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_foto3_nevado_yerupaja.JPG" alt="" class="img-fluid"></a>
+			<a href="../img/ee_foto4_l7_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 7" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_foto4_l7_peru.JPG" alt="" class="img-fluid"></a>
+			<a href="../img/ee_foto5_l8_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 8" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_foto5_l8_peru.JPG" alt="" class="img-fluid"></a>
+			<a href="../img/ee_foto6_l8_peru.JPG" data-lightbox="gallery" data-title="Valle de Chincha - NDVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_foto6_l8_peru.JPG" alt="" class="img-fluid"></a>
+			<a href="../img/ee_foto7_s2_evi.JPG" data-lightbox="gallery" data-title="Valle de Chincha - EVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_foto7_s2_evi.JPG" alt="" class="img-fluid"></a>
+			<a href="../img/ee_canny_detector.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_canny_detector.png" alt="" class="img-fluid"></a>
+			<a href="../img/canny.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/canny.png" alt="" class="img-fluid"></a>
+			<a href="../img/ee_sample.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_sample.png" alt="" class="img-fluid"></a>
+			<a href="../img/ee_sampleo.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_sampleo.png" alt="" class="img-fluid"></a>
+			<a href="../img/ee_split_panel.png" data-lightbox="gallery" data-title="Split Panel: Landsat 8 (lado izquierdo) y Sentinel-2A (lado derecho)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
+				<img loading='lazy' src="../img/ee_split_panel.png" alt="" class="img-fluid"></a>
+		</div>
+
+		<!-- Mensaje de Proceso de Expansión -->
+		<div class="text-center py-4">	
+			<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡Próximamente los códigos en mi repositorio de Github!</b></marquee>
+		</div>
+
+		<h2 class="h5 py-4" id="end">Conclusiones</h2>
+		<p>
+			La plataforma se encuentra operando desde el año 2011 y ha ido ganando popularidad con el paso de los años debido a la potencia computacional que ofrece de manera gratuita a los investigadores, lo cual ha permitido el aumento de publicaciones académicas en gran cantidad.
+
+		</p>
+		
+		<h2 class="h5 py-4" id="links">Referencias</h2>
+		<p>
+			Con el objetivo de no perderse con la documentación de Earth Engine (y agilizar el proceso de aprendizaje), he recopilado los links más importantes.
+			<ul> 
+				<li><a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">
+					Google Earth Engine: Planetary-scale geospatial analysis for everyone</a> - Artículo científico elaborado por el grupo de desarrollo de Earth Engine.</li>
+				<li><a href="https://earthengine.google.com/">
+					Google Earth Engine - Portal</a></li>
+				<li><a href="https://earthengine.google.com/signup/">
+					Google Earth Engine - Creación de cuenta</a></li>
+				<li><a href="https://earthengine.google.com/faq/">
+					Google Earth Engine - Preguntas frecuentes (FAQ)</a></li>
+				<li><a href="https://developers.google.com/earth-engine/">
+					Google Earth Engine - Documentación</a></li>
+				<li>Ambientes de Desarrollo e Integraciones disponibles:
+					<ul style="padding-left: 1.5rem;"> 
+						<li><a href="https://developers.google.com/earth-engine/guides/getstarted">
+							JavaScript: Get Started with Earth Engine</a></li>
+						<li><a href="https://developers.google.com/earth-engine/guides/python_install">
+							Python:  Instalación de la API de Python</a></li>
+						<li><a href="https://r-spatial.github.io/rgee/">
+							R:  Google Earth Engine for R</a></li>
+						<li><a href="https://gee-community.github.io/qgis-earthengine-plugin/">
+							QGIS: Integrates Google Earth Engine and QGIS using Python API</a></li>
+					</ul>
+				</li>
+				<li><a href="https://github.com/google/earthengine-api">Google Earth Engine API - Repositorio en Github</a></li>
+				<li><a href="https://developers.google.com/earth-engine/apidocs">
+					Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
+				<li><a href="https://developers.google.com/earth-engine/guides">
+					Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
+				<li><a href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">
+					Google Earth Engine - Tutoriales</a></li>
+			</ul>
+			Muchas gracias por leer :)
+		</p>
+
+		<!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Remember when <a href="https://twitter.com/Microsoft?ref_src=twsrc%5Etfw">@Microsoft</a> said it was going to build a Planetary Computer? We&#39;ve been busy! Nowhere near done, but getting closer every day. Check out the progress!<a href="https://t.co/9sk8F2srDo">https://t.co/9sk8F2srDo</a></p>&mdash; lucasjoppa (@lucasjoppa) <a href="https://twitter.com/lucasjoppa/status/1383178042286116866?ref_src=twsrc%5Etfw">April 16, 2021</a>
+		</blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+		
+		<div class="container py-4">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="blog_cv.html">Anterior</a></li>
+				<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
+				<li class="page-item"><a class="page-link" href="blog_conda.html">Siguiente</a></li>
+			</ul>
+		</div>
+
+		
+		<!--Footer-->
+		<hr>
+		<div class="py-2" style="background: #eee, ;">
+		<ul class="list-inline text-center">
+			<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
+				<i class="fab fa-facebook-f"></i></a></li>
+			<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+			<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
+			<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
 		</ul>
+		</div>
+		
+		</div>
 	</div>
 
-	
-	<!--Footer-->
-	<hr>
-	<div class="py-2" style="background: #eee, ;">
-	<ul class="list-inline text-center">
-		<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
-			<i class="fab fa-facebook-f"></i></a></li>
-		<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-		<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
-		<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
-	</ul>
+	<!-- Columna Derecha -->
+	<div class="col-md-2">
 	</div>
-	
-	</div>
+
 </div>
-
-<!-- Columna Derecha -->
-<div class="col-md-2 fondo"></div>
-
-</div> <!-- Fin de los rows -->
-</div> <!-- Fin del container -->
-
+</div>
 
 <!-- Footer de template -->
 <div class="py-1 stickyFooter" style="background: rgba(0, 0, 0, 1); ">    
@@ -333,7 +324,6 @@
 	</div>
 </div>
 
-	
 <!-- JavaScript files-->
 <script src="../vendor/jquery/jquery.min.js"></script>
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

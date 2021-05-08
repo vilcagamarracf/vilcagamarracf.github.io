@@ -547,18 +547,18 @@ STYLE SWITCHER FOR DEMO
 
 .btn-info {
   color: #fff;
-  background-color: #429244;
-  border-color: #429244;
+  background-color: rgb(0, 0, 0);
+  border-color: #000000;
 }
 
 .btn-info:hover {
   color: #fff;
   background-color: #000;
-  border-color: #117a8b;
+  border-color: #000000;
 }
 
 .btn-info:focus, .btn-info.focus {
-  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .btn-info.disabled, .btn-info:disabled {

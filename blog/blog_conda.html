@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Cesar Vilca: Posts</title>
@@ -45,11 +45,6 @@
             background: black;
             color: white;
         }
-
-        body {
-            text-align: justify;
-        }
-
     </style>
 </head>
 
@@ -88,11 +83,10 @@
     </header>
 
     <!-- Redacción de post -->
-    <div class="container-fluid">
+    <div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
         <div class="row">
 
         <!-- BOTONES -->
-
         <button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
         <i class="fas fa-align-left"></i>
         </button>
@@ -100,11 +94,9 @@
         <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
         <i class="fas fa-arrow-up"></i>
         </button>
-
-        <!-- FIN DE BOTONES -->
         
         <!-- COLUMNA IZQUIERDA -->
-        <div class="col-md-2 fondo py-4">
+        <div class="col-md-2">
             <div class="wrapper">
             <nav id="sidebar">
 
@@ -162,7 +154,7 @@
         </div>
 
         <!-- Columna central -->
-        <div class="col-md-8 container-fluid">
+        <div class="col-md-8" style="background: white">
             <div class="container-fluid">
 
             <h1 class="h4 py-4" id="inicio">Manejo de paquetes de Python con ANACONDA</h1>
@@ -187,10 +179,9 @@
                 <div align="center">
                 <img
                     class="rounded mx-auto my-4"
-                    src="../img/Anaconda_Logo.png"
+                    src="../img/Anaconda_Logo1.jpg"
                     alt="Anaconda logo"
-                    width="200px"
-                    height="100px"
+                    width="250px"
                 />
                 <img
                     class="rounded mx-auto my-4"
@@ -221,22 +212,12 @@
                 Ahora sí podemos empezar. Comenzando por el título del post...
             </p>
 
-            <h2 class="h5 py-4" id="conda">Qué es CONDA</h2>
+            <h2 class="h5" id="conda"  style="padding-top: 20px">Qué es CONDA</h2>
 
-            <img
-                class="rounded mx-auto d-block my-4"
-                src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg"
-                alt="Conda logo"
-                width="250px"
-            />
+            <img class="rounded mx-auto d-block" src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg" alt="Conda logo" width="250px"  style="padding-top: 20px; padding-bottom: 20px"/>
             <p>
                 Según su
-                <a
-                href="https://docs.conda.io/projects/conda/en/latest/index.html"
-                >documentación</a
-                >, es un sistema de gestión de paquetes de código abierto y un
-                sistema de gestión del entorno que se ejecuta en Windows, macOS y
-                Linux.
+                <a href="https://docs.conda.io/projects/conda/en/latest/index.html">documentación</a>, es un sistema de gestión de paquetes de código abierto y un sistema de gestión del entorno que se ejecuta en Windows, macOS y Linux.
             </p>
             <ul>
                 <li>
@@ -264,14 +245,8 @@
                 entorno normal.
             </p>
 
-            <h2 class="h5 py-4" id="anaconda">¿y Anaconda?</h2>
-            <img
-                class="rounded mx-auto d-block my-4"
-                src="../img/Anaconda_Logo.png"
-                alt="Anaconda logo"
-                width="250px"
-            />
-
+            <h2 class="h5" id="anaconda" style="padding-top: 20px">¿y Anaconda?</h2>
+            <img class="rounded mx-auto d-block" src="../img/Anaconda_Logo1.jpg" alt="Anaconda logo" width="250px" style="padding-top: 20px; padding-bottom: 20px"/>
             <p>
                 Anaconda es una distribución de los lenguajes de programación
                 Python y R para computación científica (ciencia de datos,
@@ -279,7 +254,6 @@
                 gran escala, análisis predictivo, etc.), que tiene como objetivo
                 simplificar la administración y la implementación de paquetes.
             </p>
-
             <p>Entonces:</p>
             <ul>
                 <li>
@@ -1317,11 +1291,11 @@
         </div>
 
         <!-- Columna Derecha -->
-        <div class="col-md-2 fondo"></div>
+        <div class="col-md-2">
         </div>
-        <!-- Fin de los rows -->
+
+        </div>
     </div>
-    <!-- Fin del container -->
 
     <!-- Footer de template -->
     <div class="py-1 stickyFooter" style="background: rgba(0, 0, 0, 1)">

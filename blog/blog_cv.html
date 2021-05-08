@@ -31,11 +31,6 @@
 	<link rel="stylesheet" href="../css/style2.css">
 	<!-- Scrollbar Custom CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
-	<style>
-		body {
-			text-align: justify;
-		}
-	</style>
 </head>
 
 <body>
@@ -74,145 +69,142 @@
 </header>
 
 <!-- Redacción de post -->
-<div class="container-fluid">
+<div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
 <div class="row">
 
+	<!-- BOTONES -->
+	<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+	<i class="fas fa-align-left"></i>
+	</button>
 
-<!-- BOTONES -->
+	<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+	<i class="fas fa-arrow-up"></i>
+	</button>
+	<!-- FIN DE BOTONES -->
 
-<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
-<i class="fas fa-align-left"></i>
-</button>
+	<!-- Columna Izquierda -->
+	<div class="col-md-2">
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
-<i class="fas fa-arrow-up"></i>
-</button>
+		<div class="wrapper">
+		<nav id="sidebar">
 
-<!-- FIN DE BOTONES -->
+			<ul class="list-unstyled components">
+				<li><a class="text-center" style="font-size: 16px;"><b>Entendiendo qué es Computer Vision</b></a> <br></li>
+				<p class="text-center"><b>Contenido</b></p>
+				
+				<li><a href="#intro">Introducción</a></li>
+				<li><a href="#cv">¿Computer Vision?</a></li>
+				<li><a href="#aplications">Aplicaciones</a></li>
+				<li><a href="#end">Conclusiones</a></li>
+				<li><a href="#links">Referencias</a></li>
+				<!-- <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						Blogs</a>
+					<ul class="collapse list-unstyled" id="pageSubmenu">
+						<li><a href="#free">Gratuitos</a></li>
+						<li><a href="#nofree">De pago</a></li>
+					</ul>
+				</li>-->
+			</ul>
 
-
-<div class="col-md-2 py-4 fondo">
-
-	<div class="wrapper">
-    <nav id="sidebar">
-
-        <ul class="list-unstyled components">
-			<li><a class="text-center" style="font-size: 16px;"><b>Entendiendo qué es Computer Vision</b></a> <br></li>
-            <p class="text-center"><b>Contenido</b></p>
-            
-			<li><a href="#intro">Introducción</a></li>
-			<li><a href="#cv">¿Computer Vision?</a></li>
-			<li><a href="#aplications">Aplicaciones</a></li>
-			<li><a href="#end">Conclusiones</a></li>
-			<li><a href="#links">Referencias</a></li>
-            <!-- <li><a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-					Blogs</a>
-                <ul class="collapse list-unstyled" id="pageSubmenu">
-                    <li><a href="#free">Gratuitos</a></li>
-                    <li><a href="#nofree">De pago</a></li>
-                </ul>
-            </li>-->
-        </ul>
-
-	</nav>
-	</div>
-</div>
-
-<!-- Columna central -->
-<div class="col-md-8">
-<div class="container-fluid">
-
-	<h1 class="h4 py-4">Entendiendo qué es Computer Vision</h1>
-
-	<img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas"> <!--width="300px" height="300px"-->
-
-	<!-- Banner -->
-	<div class="text-center py-4">	
-		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
+		</nav>
+		</div>
 	</div>
 
-	<p>
-		<b>Objetivo:</b> Reunir información bibliográfica sobre la Visión por computadora (<i>Computer Vision</i> en inglés) con el fin de entender las publicaciones académicas relacionadas a la Agricultura.
-	</p>
+	<!-- Columna Central -->
+	<div class="col-md-8" style="background: white">
+	<div class="container-fluid">
 
-	<h2 class="h5 py-4" id="intro">Introducción</h2>
-	<p>
-		Una introducción genial aquí.
-	</p>
-			
+		<h1 class="h4 py-4">Entendiendo qué es Computer Vision</h1>
 
-	<h2 class="h5 py-4" id="cv">¿Computer Vision?</h2>
-	<p>
-		De manera concisa, <a href="https://www.ibm.com/topics/computer-vision" class="">IBM</a> menciona lo siguiente acerca de la Visión por Computadora:
-		<blockquote class="blockquote my-4">
-			La visión por computadora es un <b>campo de inteligencia artificial (IA)</b> que <i>permite que las computadoras y los sistemas obtengan información significativa de imágenes digitales, videos y otras entradas visuales, y tomen acciones o hagan recomendaciones basadas en esa información.</i> <br><br>
-			<b>Si la IA permite que las computadoras piensen, la visión por computadora les permite ver, observar y comprender.</b>
-			<br><br>
-			La visión por computadora funciona de manera muy similar a la visión humana, excepto que los humanos tienen una ventaja. La vista humana tiene la ventaja de la vida útil del contexto para entrenar cómo distinguir los objetos, qué tan lejos están, si se mueven y si hay algo mal en una imagen.
-			<br><br>
-			La visión por computadora entrena a las máquinas para realizar estas funciones, pero tiene que hacerlo en mucho menos tiempo con cámaras, datos y algoritmos en lugar de retinas, nervios ópticos y una corteza visual. Debido a que un sistema capacitado para inspeccionar productos o observar un activo de producción puede analizar miles de productos o procesos por minuto, notando defectos o problemas imperceptibles, puede superar rápidamente las capacidades humanas.
-		</blockquote>
-	</p>
-	<p>
-		Sushant Kumar Jha en <a href="https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb" class="">Medium</a>  menciona lo siguiente:
+		<img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas"> <!--width="300px" height="300px"-->
 
-		<blockquote class="blockquote my-4">
-			Los seres humanos usan sus ojos y su cerebro para ver y sentir visualmente el mundo que los rodea. 
-			La visión por computadora es la ciencia que tiene como objetivo brindar una capacidad similar, si no mejor, a una máquina o computadora. 
-			Se ocupa de la extracción, el análisis y la comprensión automática de información útil y significativa de una sola imagen o una secuencia de imágenes. Implica el desarrollo de una base teórica y algorítmica para lograr la comprensión visual automática.
-		</blockquote>
+		<!-- Banner -->
+		<div class="text-center py-4">	
+			<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
+		</div>
 
-		Dicho esto, ¿es posible la idea de darle una capacidad humana a una computadora?. Actualmente organizaciones en diversas partes del mundo se encuentran desarrollando investigaciones en este tópico ya que son conscientes de los beneficios que ésta brinda. 
-	</p>
-	
-	<h2 class="h5 py-4" id="aplications">Aplicaciones</h2>
-	<p>
-		Plantearse la pregunta: ¿Qué proceso repetitivo que necesite el uso constante de la vista puede ser automatizado? puede ayudarnos a entender las aplicaciones del Computer Vision. Compañías con grandes cadenas de producción son los primeros en implementar estas tecnologías. 
-	</p>
-	<p>
-		Con el uso de nuevas tecnologías es posible la disminución de trabajo manual en el campo mientras se agiliza la eficiencia de monitoreo de cultivos.
-	</p>
-	
+		<p>
+			<b>Objetivo:</b> Reunir información bibliográfica sobre la Visión por computadora (<i>Computer Vision</i> en inglés) con el fin de entender las publicaciones académicas relacionadas a la Agricultura.
+		</p>
 
-	<h2 class="h5 py-4" id="end">Conclusiones</h2>
-	<p>
-		Una conclusión genial aquí.
-	</p>
+		<h2 class="h5 py-4" id="intro">Introducción</h2>
+		<p>
+			Una introducción genial aquí.
+		</p>
+				
 
-	<h2 class="h5 py-4" id="links">Referencias</h2>
-	<p> Mayor información:
-	<ol>
-		<li><a href='https://www.ibm.com/topics/computer-vision'>IBM - Computer Vision</a></li>
-		<li><a href='https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb'>Computer Vision In Agriculture</a></li>
-		<li><a href='https://medium.com/@sushantjha8/how-artificial-intelligence-can-help-in-photogrammetry-with-drones-95046a4c8fd4'>How Artificial Intelligence helping into photogrammetry?</a></li>
-	</ol>
-	</p>
-	
-	<div class="container py-4">
-		<ul class="pagination justify-content-center">
-			<li class="page-item"><a class="page-link" href="blog_referencias.html">Anterior</a></li>
-			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
-			<li class="page-item"><a class="page-link" href="blog_earthengine.html">Siguiente</a></li>
+		<h2 class="h5 py-4" id="cv">¿Computer Vision?</h2>
+		<p>
+			De manera concisa, <a href="https://www.ibm.com/topics/computer-vision" class="">IBM</a> menciona lo siguiente acerca de la Visión por Computadora:
+			<blockquote class="blockquote my-4">
+				La visión por computadora es un <b>campo de inteligencia artificial (IA)</b> que <i>permite que las computadoras y los sistemas obtengan información significativa de imágenes digitales, videos y otras entradas visuales, y tomen acciones o hagan recomendaciones basadas en esa información.</i> <br><br>
+				<b>Si la IA permite que las computadoras piensen, la visión por computadora les permite ver, observar y comprender.</b>
+				<br><br>
+				La visión por computadora funciona de manera muy similar a la visión humana, excepto que los humanos tienen una ventaja. La vista humana tiene la ventaja de la vida útil del contexto para entrenar cómo distinguir los objetos, qué tan lejos están, si se mueven y si hay algo mal en una imagen.
+				<br><br>
+				La visión por computadora entrena a las máquinas para realizar estas funciones, pero tiene que hacerlo en mucho menos tiempo con cámaras, datos y algoritmos en lugar de retinas, nervios ópticos y una corteza visual. Debido a que un sistema capacitado para inspeccionar productos o observar un activo de producción puede analizar miles de productos o procesos por minuto, notando defectos o problemas imperceptibles, puede superar rápidamente las capacidades humanas.
+			</blockquote>
+		</p>
+		<p>
+			Sushant Kumar Jha en <a href="https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb" class="">Medium</a>  menciona lo siguiente:
+
+			<blockquote class="blockquote my-4">
+				Los seres humanos usan sus ojos y su cerebro para ver y sentir visualmente el mundo que los rodea. 
+				La visión por computadora es la ciencia que tiene como objetivo brindar una capacidad similar, si no mejor, a una máquina o computadora. 
+				Se ocupa de la extracción, el análisis y la comprensión automática de información útil y significativa de una sola imagen o una secuencia de imágenes. Implica el desarrollo de una base teórica y algorítmica para lograr la comprensión visual automática.
+			</blockquote>
+
+			Dicho esto, ¿es posible la idea de darle una capacidad humana a una computadora?. Actualmente organizaciones en diversas partes del mundo se encuentran desarrollando investigaciones en este tópico ya que son conscientes de los beneficios que ésta brinda. 
+		</p>
+		
+		<h2 class="h5 py-4" id="aplications">Aplicaciones</h2>
+		<p>
+			Plantearse la pregunta: ¿Qué proceso repetitivo que necesite el uso constante de la vista puede ser automatizado? puede ayudarnos a entender las aplicaciones del Computer Vision. Compañías con grandes cadenas de producción son los primeros en implementar estas tecnologías. 
+		</p>
+		<p>
+			Con el uso de nuevas tecnologías es posible la disminución de trabajo manual en el campo mientras se agiliza la eficiencia de monitoreo de cultivos.
+		</p>
+		
+
+		<h2 class="h5 py-4" id="end">Conclusiones</h2>
+		<p>
+			Una conclusión genial aquí.
+		</p>
+
+		<h2 class="h5 py-4" id="links">Referencias</h2>
+		<p> Mayor información:
+		<ol>
+			<li><a href='https://www.ibm.com/topics/computer-vision'>IBM - Computer Vision</a></li>
+			<li><a href='https://medium.com/@sushantjha8/computer-vision-in-agriculture-4cc7b021fefb'>Computer Vision In Agriculture</a></li>
+			<li><a href='https://medium.com/@sushantjha8/how-artificial-intelligence-can-help-in-photogrammetry-with-drones-95046a4c8fd4'>How Artificial Intelligence helping into photogrammetry?</a></li>
+		</ol>
+		</p>
+		
+		<div class="container py-4">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="blog_referencias.html">Anterior</a></li>
+				<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
+				<li class="page-item"><a class="page-link" href="blog_earthengine.html">Siguiente</a></li>
+			</ul>
+		</div>
+
+		<!--Footer-->
+		<hr>
+		<div class="py-2" style="background: #eee, ;">
+		<ul class="list-inline text-center">
+			<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
+				<i class="fab fa-facebook-f"></i></a></li>
+			<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+			<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
+			<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
 		</ul>
+		</div>
+		
+		</div>
 	</div>
 
-	<!--Footer-->
-	<hr>
-	<div class="py-2" style="background: #eee, ;">
-	<ul class="list-inline text-center">
-		<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
-			<i class="fab fa-facebook-f"></i></a></li>
-		<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-		<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
-		<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
-	</ul>
-	</div>
-	
-	</div>
-</div>
-
-<!-- Columna Derecha -->
-<div class="col-md-2 fondo"></div>
+	<!-- Columna Derecha -->
+	<div class="col-md-2"></div>
 
 </div> <!-- Fin de los rows -->
 </div> <!-- Fin del container -->

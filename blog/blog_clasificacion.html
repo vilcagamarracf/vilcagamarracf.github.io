@@ -31,12 +31,6 @@
 	<link rel="stylesheet" href="../css/style2.css">
 	<!-- Scrollbar Custom CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
-
-	<style>
-		body {
-			text-align: justify;
-		}
-	</style>
 </head>
 
 <body>
@@ -76,306 +70,304 @@
 </header>
 
 <!-- Redacción de post -->
-<div class="container-fluid">
+<div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
 <div class="row">
 
-<!-- BOTONES -->
+	<!-- BOTONES -->
+	<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+	<i class="fas fa-align-left"></i>
+	</button>
 
-<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
-<i class="fas fa-align-left"></i>
-</button>
+	<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+	<i class="fas fa-arrow-up"></i>
+	</button>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
-<i class="fas fa-arrow-up"></i>
-</button>
+	<!-- Columna Izquierda -->
+	<div class="col-md-2">
 
-<!-- FIN DE BOTONES -->
+		<div class="wrapper">
+		<nav id="sidebar">
+			<!-- <div class="sidebar-header">
+				<h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
+			</div> -->
 
+			<ul class="list-unstyled components">
+				<li><a class="text-center" style="font-size: 16px;"><b>Clasificación de cultivos agrícolas - Teledetección</b></a> <br></li>
+				<p class="text-center text-center"><b>Contenido</b></p>
+				
+				<li><a href="#importancia">1. Importancia</a></li>
+				<li><a href="#class" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						2. Clasificación</a>
+					<ul class="collapse list-unstyled" id="class">
+						<li><a class='padd' href="#cl1">2.1. Estadística</a></li>
+						<li><a class='padd' href="#cl2">2.2. Percepción Remota</a></li>
+						<li><a class='padd' href="#cl3">2.3. Aprendizaje Automático</a></li>
+					</ul>
+				</li>
+				<li><a href="#apuntes">3. Apuntes</a></li>
+				<li><a href="#links">4. Referencias</a></li>
 
-<div class="col-md-2 fondo py-4">
+				
+			</ul>
 
-	<div class="wrapper">
-    <nav id="sidebar">
-        <!-- <div class="sidebar-header">
-            <h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
-        </div> -->
+		</nav>
+		</div>
 
-        <ul class="list-unstyled components">
-			<li><a class="text-center" style="font-size: 16px;"><b>Clasificación de cultivos agrícolas - Teledetección</b></a> <br></li>
-            <p class="text-center text-center"><b>Contenido</b></p>
-            
-			<li><a href="#importancia">1. Importancia</a></li>
-			<li><a href="#class" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-					2. Clasificación</a>
-                <ul class="collapse list-unstyled" id="class">
-                    <li><a class='padd' href="#cl1">2.1. Estadística</a></li>
-                    <li><a class='padd' href="#cl2">2.2. Percepción Remota</a></li>
-                    <li><a class='padd' href="#cl3">2.3. Aprendizaje Automático</a></li>
-                </ul>
-            </li>
-			<li><a href="#apuntes">3. Apuntes</a></li>
-			<li><a href="#links">4. Referencias</a></li>
-
-            
-        </ul>
-
-	</nav>
 	</div>
 
-</div>
+	<!-- Columna Central -->
+	<div class="col-md-8" style="background: white">
+	<div class="container-fluid">
 
-<!-- Columna central -->
-<div class="col-md-8">
-<div class="container-fluid">
+		<h1 class="h4 py-4" id="inicio">Clasificación de cultivos agrícolas mediante Teledetección</h1>
 
-	<h1 class="h4 py-4" id="inicio">Clasificación de cultivos agrícolas mediante Teledetección</h1>
+		<!-- Imagen -->
+		<div class="py-4">
+			<figure>
+				<img class="rounded mx-auto d-block" src="../img/crop_clasification_2.png" alt="" width="75%">
+				<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+					<a href="https://www.mdpi.com/2072-4292/8/3/166/htm">First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe (2016)</a>
+				</figcaption>
+			</figure>
+		</div>
 
-	<!-- Imagen -->
-	<div class="py-4">
-		<figure>
-			<img class="rounded mx-auto d-block" src="../img/crop_clasification_2.png" alt="" width="75%">
-			<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-				<a href="https://www.mdpi.com/2072-4292/8/3/166/htm">First Experience with Sentinel-2 Data for Crop and Tree Species Classifications in Central Europe (2016)</a>
-			</figcaption>
-		</figure>
-	</div>
+		<p><b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.</p>
 
-	<p><b>Objetivo:</b> Recopilar información acerca de Clasificación de cultivos agrícolas.</p>
-
-	<h2 class="h5 py-4" id="importancia">1. Importancia</h2>
-	
-	<p>La clasificación de cultivos tiene como fin el presentar un mapa en donde se represente los cultivos clasificados en una zona de estudio determinada.</p>
-
-	<p>A continuación presentaré una recopilación de "Importancias" según diversos autores:</p>
-
-	<div id="accordion">
-	<div class="card">
-	<div class="card-header">
-		<a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
-		Importancias de realizar un mapa de cultivos (click aquí)
-		</a>
-	</div>
-	<div id="collapseOne" class="collapse" data-parent="#accordion">
-		<div class="card-body">
-		<blockquote class="blockquote">
-		<a class="my-2" href="https://www.sciencedirect.com/science/article/pii/S0034425717304686">(2018) Sentinel-2 cropland mapping using pixel-based and object-based time-weighted dynamic time warping analysis</a>:
-		<ul>
-			<li class="my-2">El <b>aumento de población</b> estimado de 7.3 Billones a 8.7 billones para el 2030, 9.7 billones para el 2050 y 11.2 billones para el 2100 impactará sobre los sistemas de provisión de alimentos a nivel mundial.</li>
-			<li class="my-2">Metodologías eficientes sobre el mapeo de cultivos son esenciales para la implementación de <b>prácticas sostenibles en agricultura</b> y para el monitoreo periódico de cultivos.</li>
-			<li class="my-2">Disponibilidad de metodologías con el propósito de cumplir los objetivos propuestos por las Naciones Unidas de Desarrollo Sostenible: No pobreza y cero hambre.</li>
-		</ul>
-		</blockquote>
-
-		<blockquote class="blockquote">
-		<a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">(2012) Crop type mapping using spectral–temporal profiles and phenological information</a>:
-		<ul>
-			<li class="my-2">Poseer información multianual y espacial es requisito para diversas aplicaciones ambientales, para apoyar el modelado y gestión del sistema agroambiental desde escala regional hasta la nacional.</li>
-			<li class="my-2">Muchas aplicaciones agroambientales, como la estimación de daños por inundaciones agrícolas o el modelado de la calidad del agua, requieren datos de cultivos distribuidos espacialmente.</li>
-		</ul>
-		</blockquote>	
+		<h2 class="h5 py-4" id="importancia">1. Importancia</h2>
 		
-		<blockquote class="blockquote">
-		<a href="https://doi.org/10.1016/j.rse.2019.111624">(2020) Mapping cropping intensity in China using time series Landsat and Sentinel-2 images and Google Earth Engine</a>:
-		<ul>
-			<li class="my-2">La intensidad del cultivo es un factor importante que contribuye a la producción de cultivos y la seguridad alimentaria a escalas local, regional y nacional, y es una variable de datos de entrada crítica para muchos modelos de clima, superficie terrestre y cultivos globales. Por ello se debe generar anualmente mapas de intensidad del cultivo.</li>
-			<li class="my-2">Los datos de intensidad de cultivo pueden mejorar en gran medida las evaluaciones y predicciones de la producción de alimentos.</li>
-		</ul>
-		</blockquote>
+		<p>La clasificación de cultivos tiene como fin el presentar un mapa en donde se represente los cultivos clasificados en una zona de estudio determinada.</p>
 
-		<blockquote class="blockquote">
-		Extracto de la RESOLUCIÓN MINISTERIAL N° 0322-2020-MIDAGRI acerca de la importancia del <a href="https://siea.midagri.gob.pe/portal/normas"><b>Mapa Nacional de Superficie Agrícola del Perú</b></a>:
-		<ul> 
-			<li class="my-2">... actualmente,  se  dispone  de  imágenes  satelitales  gratuitas  y  de  alta  resolución  espacial  cuyo  procesamiento   permite   el   mapeo   y      medición   más   precisa  de  la  superficie  agrícola  en  todo  el  territorio nacional,  resultando  una  fuente  objetiva  de  referencia  y  que permite mejorar significativamente la medición de la superficie agrícola y la información estadística derivada de ella sobre  la actividad agraria, <b>convirtiéndose en una herramienta potente para los procesos de planificación de las  intervenciones,  y  de  las  operaciones  estadísticas  del  Sector.</b></li>
+		<p>A continuación presentaré una recopilación de "Importancias" según diversos autores:</p>
 
-			<li class="my-2">... se señala  que  la  Estrategia  Global  para  el  Mejoramiento de  las  Estadísticas  Agropecuarias  rurales  (FAO  del 2011), declara  la  necesidad  de  vincular  las  dimensiones  económicas, sociales y ambientales en las investigaciones estadísticas   rurales,   recomendando que se utilicen imágenes satelitales  de la superficie terrestre del país que permiten clasificar el uso del suelo , tales como tierras de cultivo, pastizales, etc., <b>a fin de monitorear el uso de la tierra, el cálculo de las áreas de cultivo  y su dinámica, y   proporcione   información   actualizada   que   permita   monitorear los cambios en el uso del suelo, cuantificar siembras y cosechas, planificar infraestructura de riego, estimar pérdidas ante desastres naturales, entre otros.</b></li>
-		</ul>
-		El Mapa de la Superficie Agrícola del Perú, se ha constituido como base fundamental para la ejecución de operaciones estadísticas a nivel nacional, el monitoreo de los cultivos  de importancia nacional, así como la integración de las operaciones estadísticas a partir de un solo marco muestra. De esta manera, se busca  generar información estadística agraria oportuna y confiable, para la focalización de las intervenciones y la toma de decisiones de los productores agrarios.
-		</blockquote>		
+		<div id="accordion">
+		<div class="card">
+		<div class="card-header">
+			<a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
+			Importancias de realizar un mapa de cultivos (click aquí)
+			</a>
 		</div>
-	</div>
-	</div>
-	</div>
+		<div id="collapseOne" class="collapse" data-parent="#accordion">
+			<div class="card-body">
+			<blockquote class="blockquote">
+			<a class="my-2" href="https://www.sciencedirect.com/science/article/pii/S0034425717304686">(2018) Sentinel-2 cropland mapping using pixel-based and object-based time-weighted dynamic time warping analysis</a>:
+			<ul>
+				<li class="my-2">El <b>aumento de población</b> estimado de 7.3 Billones a 8.7 billones para el 2030, 9.7 billones para el 2050 y 11.2 billones para el 2100 impactará sobre los sistemas de provisión de alimentos a nivel mundial.</li>
+				<li class="my-2">Metodologías eficientes sobre el mapeo de cultivos son esenciales para la implementación de <b>prácticas sostenibles en agricultura</b> y para el monitoreo periódico de cultivos.</li>
+				<li class="my-2">Disponibilidad de metodologías con el propósito de cumplir los objetivos propuestos por las Naciones Unidas de Desarrollo Sostenible: No pobreza y cero hambre.</li>
+			</ul>
+			</blockquote>
 
+			<blockquote class="blockquote">
+			<a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">(2012) Crop type mapping using spectral–temporal profiles and phenological information</a>:
+			<ul>
+				<li class="my-2">Poseer información multianual y espacial es requisito para diversas aplicaciones ambientales, para apoyar el modelado y gestión del sistema agroambiental desde escala regional hasta la nacional.</li>
+				<li class="my-2">Muchas aplicaciones agroambientales, como la estimación de daños por inundaciones agrícolas o el modelado de la calidad del agua, requieren datos de cultivos distribuidos espacialmente.</li>
+			</ul>
+			</blockquote>	
+			
+			<blockquote class="blockquote">
+			<a href="https://doi.org/10.1016/j.rse.2019.111624">(2020) Mapping cropping intensity in China using time series Landsat and Sentinel-2 images and Google Earth Engine</a>:
+			<ul>
+				<li class="my-2">La intensidad del cultivo es un factor importante que contribuye a la producción de cultivos y la seguridad alimentaria a escalas local, regional y nacional, y es una variable de datos de entrada crítica para muchos modelos de clima, superficie terrestre y cultivos globales. Por ello se debe generar anualmente mapas de intensidad del cultivo.</li>
+				<li class="my-2">Los datos de intensidad de cultivo pueden mejorar en gran medida las evaluaciones y predicciones de la producción de alimentos.</li>
+			</ul>
+			</blockquote>
 
-	<h2 class="h5 py-4" id="clasification">2. Clasificación</h2>
+			<blockquote class="blockquote">
+			Extracto de la RESOLUCIÓN MINISTERIAL N° 0322-2020-MIDAGRI acerca de la importancia del <a href="https://siea.midagri.gob.pe/portal/normas"><b>Mapa Nacional de Superficie Agrícola del Perú</b></a>:
+			<ul> 
+				<li class="my-2">... actualmente,  se  dispone  de  imágenes  satelitales  gratuitas  y  de  alta  resolución  espacial  cuyo  procesamiento   permite   el   mapeo   y      medición   más   precisa  de  la  superficie  agrícola  en  todo  el  territorio nacional,  resultando  una  fuente  objetiva  de  referencia  y  que permite mejorar significativamente la medición de la superficie agrícola y la información estadística derivada de ella sobre  la actividad agraria, <b>convirtiéndose en una herramienta potente para los procesos de planificación de las  intervenciones,  y  de  las  operaciones  estadísticas  del  Sector.</b></li>
 
-	<p>
-		Comenzaremos definiendo los tipos de clasificaciones que existen relacionados con el tema, siendo los principales la Clasificación estadística y la Clasificación en Aprendizaje Automático <i>(Machine Learning)</i>.
-	</p>
-
-	<h3 class="h6 py-2" id="cl1">2.1. Clasificación Estadística</h3>
-    <p>
-        Según <a href="https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_estad%C3%ADstica">Wikipedia</a>, la <b>clasificación</b> es el problema de identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de datos de formación que contiene observaciones (o instancias) cuya categoría de miembros es conocida.
-    </p>
-
-    <h3 class="h6 my-4" id="cl2">2.3. Clasificación en Percepción Remota</h3>
-    <p>Según <a href="https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf">INEGI</a>, <b>la clasificación de cultivos</b> puede ser abordada como un problema de reconocimiento de patrones que utiliza procesamiento de imágenes y que está formado por varias etapas: 
-        <ol>
-            <li>Selección del método o medio a través del cual se obtiene la imagen,</li>
-            <li>Procesamiento de ésta (imagen) como en la extracción de rasgos </li>
-            <li>Selección  y  aplicación  de  algoritmos  de  clasificación. </li>
-        </ol>
-    </p>
-    
-    <h3 class="h6 py-2" id="cl3">2.2. Clasificación en Aprendizaje Automático</h3>
-
-    <p>La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.</p>
-
-    <p>En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.</p>
-
-    <p>Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.</p>
-
-	<!-- <img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas">  -->
-    <!-- width="300px" height="300px" -->
-	
-	<h2 class="h5 py-2" id="apuntes">3. Apuntes</h2>	
-
-	<div id="accordion">
-
-	<div class="card">
-	<div class="card-header">
-		<a class="collapsed card-link" data-toggle="collapse" href="#apunte1">
-		Sensoramiento Remoto, Percepción Remota o Teledetección 
-		</a>
-	</div>
-	<div id="apunte1" class="collapse" data-parent="#accordion">
-		<div class="card-body">
-			<a href="#1" id="1">[1]</a> Jensen, J. R. (2013). Remote Sensing of the Environment: Pearson New International Edition: An Earth Resource Perspective (2nd edition). Pearson Education Limited.
-		<ul>
-			<li class="py-2">Medición in situ <br>
-				Los datos recolectados en campo <i>(in situ)</i> son comúnmente conocidos como datos verdaderos del terreno <i>(ground truth data)</i>. Éste procedimiento de recolección no está libre de errores por lo que es preferible referirse a los datos como datos de referencia in situ <i>(in situ ground reference data)</i>, ya que contiene errores.</li>
-
-			<li class="py-2">Definición de Teledetección <i>(Remote Sensing)</i><br>
-				La Teledetección es el registro sin contacto de información de las regiones del espectro electromagnético ultravioleta, visible, infrarojo y microondas mediante instrumentos tales como cámaras, escáneres, láseres, matrices lineales y/o matrices de áreas ubicadas en plataformas como aeronaves o naves espacialesm y el análisis de la información adquirida mediante el procesamiento de imágenes visuales y digitales.</li>
-
-			<li class="py-2"> Las mediciones de energía electromagnética deben convertirse en información usando técnicas de procesamiento de imágenes digitales o visuales. </li>
-
-			<li class="py-2"> La Teledetección se lleva a cabo mediante un instrumento comúnmente referido como <i>sensor</i>. La mayoría de los instrumentos registran la radiación de energía electromagnética (EMR) que viaja a la velocidad de la luz (3 x 10^8 m s^-1) desde su fuente o indirectamente reflejada hacia el sensor. Los cambios en el EMR se convierten en una fuente valiosa de datos para interpretar importantes propiedades de un fenómeno (temperatura, color, etc). También se usa otros campos de fuerza tales como el ondas acústicas (sonar). Sin embargo, la mayoría de datos remotamente recolectados son resultantes de sensores que registran energía electromagnética.</li>
-
-			<li class="py-2">¿A qué distancia se considera Teledetección?<br>
-				No hay una clara distinción acerca de que tanta distancia debe ser para considerarse Teledetección. 
-				La distancia entre el objeto y el instrumento puede ser de 1 cm, 1 m, 100 m o hasta más de 1 millón de metros.
-				Se menciona que la Teledetección y técnicas de procesamiento de imágenes pueden ser utilizados para analizar el "espacio interior" mediante microscopios e instrumentos de rayos-x. </li>
-
-			<li class="py-2">Ventajas<br>
-				El sensor al solo registrar pasivamente la energía electromagnética, no perturba el objeto o área de interés. 
-				Los sensores están programados para recolectar datos sistemáticamente lo cual reduce el error por sampleo in situ en investigaciones. <br>
-				La Teledetección provee de información biofísica fundamental; incluyendo localizaciones x,y; elevaciones y profundidades; biomasa; temperatura; contenido de humedad, etc. <br>
-				En general, provee de información a otras ciencias para que conduzcan investigaciones científicas mediante uso de softwares GIS.</li>
-
-			<li class="py-2">Limitaciones <br>
-				No provee toda la información requerida para una investigación científica en Física, Biología o Ciencias Sociales. 
-				La Teledetección solo brinda información espacial, espectral y temporal de manera que es eficiente y económico.
-
-				A la hora de elaborar el sistema adecuado para recolectar datos, el mismo ser humano puede inducir errores al instrumento  y parámetros especificados a la misión (satélites); también pueden descalibrarse. 
-			</li>	
-
-			<li class="py-2">Proceso de recolección de datos con Teledetección <br>
-				1. La hipótesis a ser probada es definida usando un tipo específico de lógica (inductivo, deductivo, etc) y un apropiado modelo de procesamiento (determinístico, estocástico, etc). <br>
-				2. Es necesario la colecta de datos in situ para calibrar el sensor o para juzgar las características recolectadas por el mismo: geometría, radiometría y temática. <br>
-				3. Los datos recolectados remotamente son procesados usando: <br>
-					- procesamiento de imágenes analógicas <br>
-					- procesamiento de imágenes digitales <br>	
-					- modelado y  <br>
-					- visualización en n-dimensiones <br>
-				4. Metadatos, línea de procesamiento y precisión de la información se proporcionan y los resultados se comunican mediante imágenes, gráficos, tablas estadísticas, bases de datos SIG, Sistemas de soport de decisiones espaciales (SDSS), etc.</li>
-		</ul>
+				<li class="my-2">... se señala  que  la  Estrategia  Global  para  el  Mejoramiento de  las  Estadísticas  Agropecuarias  rurales  (FAO  del 2011), declara  la  necesidad  de  vincular  las  dimensiones  económicas, sociales y ambientales en las investigaciones estadísticas   rurales,   recomendando que se utilicen imágenes satelitales  de la superficie terrestre del país que permiten clasificar el uso del suelo , tales como tierras de cultivo, pastizales, etc., <b>a fin de monitorear el uso de la tierra, el cálculo de las áreas de cultivo  y su dinámica, y   proporcione   información   actualizada   que   permita   monitorear los cambios en el uso del suelo, cuantificar siembras y cosechas, planificar infraestructura de riego, estimar pérdidas ante desastres naturales, entre otros.</b></li>
+			</ul>
+			El Mapa de la Superficie Agrícola del Perú, se ha constituido como base fundamental para la ejecución de operaciones estadísticas a nivel nacional, el monitoreo de los cultivos  de importancia nacional, así como la integración de las operaciones estadísticas a partir de un solo marco muestra. De esta manera, se busca  generar información estadística agraria oportuna y confiable, para la focalización de las intervenciones y la toma de decisiones de los productores agrarios.
+			</blockquote>		
+			</div>
 		</div>
-	</div>
-	</div>
+		</div>
+		</div>
 
 
-	<div class="card">
-	<div class="card-header">
-		<a class="collapsed card-link" data-toggle="collapse" href="#apunte2">
-		Clasificación mediante análisis de imágenes satelitales 
-		</a>
-	</div>
-	<div id="apunte2" class="collapse" data-parent="#accordion">
-		<div class="card-body">
-		<p><a href="#2">[2]</a> Borra, S., Thanki, R., & Dey, N. (2019b). Satellite Image Clustering. Satellite Image Analysis: Clustering and Classification, 31-52. https://doi.org/10.1007/978-981-13-6424-2_3</p>
+		<h2 class="h5 py-4" id="clasification">2. Clasificación</h2>
+
 		<p>
-			Una vez adquirida las imágenes satelitales y preprocesadas (correcciónes radiométricas y geométricas, remoción de ruido), es posible interpretar y analizar la abstracción de los datos, clasificación de datos para la extracción de información relacionada con el mapeo de cobertura o uso de la tierra y detección de cambios.
+			Comenzaremos definiendo los tipos de clasificaciones que existen relacionados con el tema, siendo los principales la Clasificación estadística y la Clasificación en Aprendizaje Automático <i>(Machine Learning)</i>.
 		</p>
+
+		<h3 class="h6 py-2" id="cl1">2.1. Clasificación Estadística</h3>
 		<p>
-			Diferenciar los tipos de datos en las imágenes:
-			Datos continuos: La información de clases espectrales son grupos de pixeles cercanos unos a otros con su respectivos valores de brillo (valores de reflectancia) en diferentes bandas espectrales.
-			Datos categóricos: Información de clases tales como tipo residencial, tipo de cultivo, tipo de roca, tipo forestal, etc.
+			Según <a href="https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_estad%C3%ADstica">Wikipedia</a>, la <b>clasificación</b> es el problema de identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de datos de formación que contiene observaciones (o instancias) cuya categoría de miembros es conocida.
 		</p>
-		<p>
-			Asumiendo valores espectrales de diferentes usos de tierra como de clases de cobertura consistentes durante el tiempo, las técnicas de clasificación de imágenes satelitales en diferentes tipos se muestra a continuación: <br>
-			<img class="rounded mx-auto d-block" src="imgs/01-clasification.PNG" alt=""> <br>
-			La selección del enfoque de clasificación depende del tipo de aplicación, tipo de recursos y datos disponibles. <br>
-			Los seres humanos poseen una fuerte habilidad de reconocimiento de patrones y pueden diferenciar facilmente objetos más allá de la discriminación espacial y espectral (colores/formas/tamaños/variaciones de intensidad) basados en el contexto y experiencia. <br>
-			Limitanción: La interpretación manual consume mucho tiempo, es cara y requiere de la experiencia del analista. Además, los humanos no pueden diferenciar más allá de tres bandas espectrales (espectro visible) y en proyectos a mayor escala se hace inviable este proceso. <br>
-			<img class="rounded mx-auto d-block" src="imgs/01-visible-limations.PNG" alt=""> <br>
-			Clasificación apoyada de las computadoras: <b>Categorizar todos los pixeles de una imagen en cobertura de suelo/ uso de suelo y generar un mapa temático para varias aplicaciones.</b> <br>
-			Los sistemas de clasificación automatizados pueden clasificar gran cantidades de imágenes multiespectrales/hiperespectrales automáticamente con mejor consistencia, sin requerir mucho conocimiento y experiencia humana. Están basados en técnicas de reconocimiento de patrones (espectrales/espaciales/temporales/direccionales/híbridas). <br>
-			Ejemplo: Identificación de cultivos <br>
-			- Espacial: basado en texturas espaciales <br>
-			- Temporal: basado en las variaciones de tiempo (sembrado, desarrollo) <br>
-			- Direccional: identifica superficies con diferentes estructuras basado en sus variaciones de reflectancia en vista y ángulos de iluminación. <br>
-			- Espectral: Identifica las diferencias de reflectancias de las clases de cobertura de suelo en imágenes multiple o hiperespectrales. 
+
+		<h3 class="h6 my-4" id="cl2">2.3. Clasificación en Percepción Remota</h3>
+		<p>Según <a href="https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf">INEGI</a>, <b>la clasificación de cultivos</b> puede ser abordada como un problema de reconocimiento de patrones que utiliza procesamiento de imágenes y que está formado por varias etapas: 
+			<ol>
+				<li>Selección del método o medio a través del cual se obtiene la imagen,</li>
+				<li>Procesamiento de ésta (imagen) como en la extracción de rasgos </li>
+				<li>Selección  y  aplicación  de  algoritmos  de  clasificación. </li>
+			</ol>
 		</p>
 		
+		<h3 class="h6 py-2" id="cl3">2.2. Clasificación en Aprendizaje Automático</h3>
+
+		<p>La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.</p>
+
+		<p>En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.</p>
+
+		<p>Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.</p>
+
+		<!-- <img class='rounded mx-auto d-block' src="https://miro.medium.com/max/576/1*Efn1luRvRSjq9myrvGvRsQ.jpeg" width="50%" alt="Detección de plagas">  -->
+		<!-- width="300px" height="300px" -->
+		
+		<h2 class="h5 py-2" id="apuntes">3. Apuntes</h2>	
+
+		<div id="accordion">
+
+		<div class="card">
+		<div class="card-header">
+			<a class="collapsed card-link" data-toggle="collapse" href="#apunte1">
+			Sensoramiento Remoto, Percepción Remota o Teledetección 
+			</a>
 		</div>
-	</div>
-	</div>
+		<div id="apunte1" class="collapse" data-parent="#accordion">
+			<div class="card-body">
+				<a href="#1" id="1">[1]</a> Jensen, J. R. (2013). Remote Sensing of the Environment: Pearson New International Edition: An Earth Resource Perspective (2nd edition). Pearson Education Limited.
+			<ul>
+				<li class="py-2">Medición in situ <br>
+					Los datos recolectados en campo <i>(in situ)</i> son comúnmente conocidos como datos verdaderos del terreno <i>(ground truth data)</i>. Éste procedimiento de recolección no está libre de errores por lo que es preferible referirse a los datos como datos de referencia in situ <i>(in situ ground reference data)</i>, ya que contiene errores.</li>
 
-	</div>
+				<li class="py-2">Definición de Teledetección <i>(Remote Sensing)</i><br>
+					La Teledetección es el registro sin contacto de información de las regiones del espectro electromagnético ultravioleta, visible, infrarojo y microondas mediante instrumentos tales como cámaras, escáneres, láseres, matrices lineales y/o matrices de áreas ubicadas en plataformas como aeronaves o naves espacialesm y el análisis de la información adquirida mediante el procesamiento de imágenes visuales y digitales.</li>
 
-		<h2 class="h5 py-4" id="links">4. Referencias</h2>
-	<p> Mayor información:
-	<ol>
-		<!-- <li><a href='https://gidahatari.com/ih-es/tutorial-de-determinacin-de-firmas-espectrales-de-cultivos-con-qgis-3-y-scp-6'>Gidahatari - Tutorial de Determinación de Firmas Espectrales de Cultivos con QGIS 3 y SCP 6</a></li> -->
-		<li><a href='https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf'>INEGI - Clasificación de cultivos agrícolas</a></li>
-		<li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li>
-		<li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li>
-	</ol>
-	<p>Por revisar:</p>
-	<ul>
-		<li><a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">[2012] Crop type mapping using spectral–temporal profiles and phenological information</a></li>
-		<li><a href="https://doi.org/10.1016/j.rse.2017.08.027">[2017] Detection of cropland field parcels from Landsat imagery</a></li>
-		<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2">[2019] Satellite Image Analysis: Clustering and Classification</a></li>
-		<li><a href="https://doi.org/10.1016/j.rse.2018.10.031">[2019] Intra-annual reflectance composites from Sentinel-2 and Landsat for national-scale crop and land cover mapping</a></li>
+				<li class="py-2"> Las mediciones de energía electromagnética deben convertirse en información usando técnicas de procesamiento de imágenes digitales o visuales. </li>
 
+				<li class="py-2"> La Teledetección se lleva a cabo mediante un instrumento comúnmente referido como <i>sensor</i>. La mayoría de los instrumentos registran la radiación de energía electromagnética (EMR) que viaja a la velocidad de la luz (3 x 10^8 m s^-1) desde su fuente o indirectamente reflejada hacia el sensor. Los cambios en el EMR se convierten en una fuente valiosa de datos para interpretar importantes propiedades de un fenómeno (temperatura, color, etc). También se usa otros campos de fuerza tales como el ondas acústicas (sonar). Sin embargo, la mayoría de datos remotamente recolectados son resultantes de sensores que registran energía electromagnética.</li>
+
+				<li class="py-2">¿A qué distancia se considera Teledetección?<br>
+					No hay una clara distinción acerca de que tanta distancia debe ser para considerarse Teledetección. 
+					La distancia entre el objeto y el instrumento puede ser de 1 cm, 1 m, 100 m o hasta más de 1 millón de metros.
+					Se menciona que la Teledetección y técnicas de procesamiento de imágenes pueden ser utilizados para analizar el "espacio interior" mediante microscopios e instrumentos de rayos-x. </li>
+
+				<li class="py-2">Ventajas<br>
+					El sensor al solo registrar pasivamente la energía electromagnética, no perturba el objeto o área de interés. 
+					Los sensores están programados para recolectar datos sistemáticamente lo cual reduce el error por sampleo in situ en investigaciones. <br>
+					La Teledetección provee de información biofísica fundamental; incluyendo localizaciones x,y; elevaciones y profundidades; biomasa; temperatura; contenido de humedad, etc. <br>
+					En general, provee de información a otras ciencias para que conduzcan investigaciones científicas mediante uso de softwares GIS.</li>
+
+				<li class="py-2">Limitaciones <br>
+					No provee toda la información requerida para una investigación científica en Física, Biología o Ciencias Sociales. 
+					La Teledetección solo brinda información espacial, espectral y temporal de manera que es eficiente y económico.
+
+					A la hora de elaborar el sistema adecuado para recolectar datos, el mismo ser humano puede inducir errores al instrumento  y parámetros especificados a la misión (satélites); también pueden descalibrarse. 
+				</li>	
+
+				<li class="py-2">Proceso de recolección de datos con Teledetección <br>
+					1. La hipótesis a ser probada es definida usando un tipo específico de lógica (inductivo, deductivo, etc) y un apropiado modelo de procesamiento (determinístico, estocástico, etc). <br>
+					2. Es necesario la colecta de datos in situ para calibrar el sensor o para juzgar las características recolectadas por el mismo: geometría, radiometría y temática. <br>
+					3. Los datos recolectados remotamente son procesados usando: <br>
+						- procesamiento de imágenes analógicas <br>
+						- procesamiento de imágenes digitales <br>	
+						- modelado y  <br>
+						- visualización en n-dimensiones <br>
+					4. Metadatos, línea de procesamiento y precisión de la información se proporcionan y los resultados se comunican mediante imágenes, gráficos, tablas estadísticas, bases de datos SIG, Sistemas de soport de decisiones espaciales (SDSS), etc.</li>
+			</ul>
+			</div>
+		</div>
+		</div>
+
+
+		<div class="card">
+		<div class="card-header">
+			<a class="collapsed card-link" data-toggle="collapse" href="#apunte2">
+			Clasificación mediante análisis de imágenes satelitales 
+			</a>
+		</div>
+		<div id="apunte2" class="collapse" data-parent="#accordion">
+			<div class="card-body">
+			<p><a href="#2">[2]</a> Borra, S., Thanki, R., & Dey, N. (2019b). Satellite Image Clustering. Satellite Image Analysis: Clustering and Classification, 31-52. https://doi.org/10.1007/978-981-13-6424-2_3</p>
+			<p>
+				Una vez adquirida las imágenes satelitales y preprocesadas (correcciónes radiométricas y geométricas, remoción de ruido), es posible interpretar y analizar la abstracción de los datos, clasificación de datos para la extracción de información relacionada con el mapeo de cobertura o uso de la tierra y detección de cambios.
+			</p>
+			<p>
+				Diferenciar los tipos de datos en las imágenes:
+				Datos continuos: La información de clases espectrales son grupos de pixeles cercanos unos a otros con su respectivos valores de brillo (valores de reflectancia) en diferentes bandas espectrales.
+				Datos categóricos: Información de clases tales como tipo residencial, tipo de cultivo, tipo de roca, tipo forestal, etc.
+			</p>
+			<p>
+				Asumiendo valores espectrales de diferentes usos de tierra como de clases de cobertura consistentes durante el tiempo, las técnicas de clasificación de imágenes satelitales en diferentes tipos se muestra a continuación: <br>
+				<img class="rounded mx-auto d-block" src="imgs/01-clasification.PNG" alt=""> <br>
+				La selección del enfoque de clasificación depende del tipo de aplicación, tipo de recursos y datos disponibles. <br>
+				Los seres humanos poseen una fuerte habilidad de reconocimiento de patrones y pueden diferenciar facilmente objetos más allá de la discriminación espacial y espectral (colores/formas/tamaños/variaciones de intensidad) basados en el contexto y experiencia. <br>
+				Limitanción: La interpretación manual consume mucho tiempo, es cara y requiere de la experiencia del analista. Además, los humanos no pueden diferenciar más allá de tres bandas espectrales (espectro visible) y en proyectos a mayor escala se hace inviable este proceso. <br>
+				<img class="rounded mx-auto d-block" src="imgs/01-visible-limations.PNG" alt=""> <br>
+				Clasificación apoyada de las computadoras: <b>Categorizar todos los pixeles de una imagen en cobertura de suelo/ uso de suelo y generar un mapa temático para varias aplicaciones.</b> <br>
+				Los sistemas de clasificación automatizados pueden clasificar gran cantidades de imágenes multiespectrales/hiperespectrales automáticamente con mejor consistencia, sin requerir mucho conocimiento y experiencia humana. Están basados en técnicas de reconocimiento de patrones (espectrales/espaciales/temporales/direccionales/híbridas). <br>
+				Ejemplo: Identificación de cultivos <br>
+				- Espacial: basado en texturas espaciales <br>
+				- Temporal: basado en las variaciones de tiempo (sembrado, desarrollo) <br>
+				- Direccional: identifica superficies con diferentes estructuras basado en sus variaciones de reflectancia en vista y ángulos de iluminación. <br>
+				- Espectral: Identifica las diferencias de reflectancias de las clases de cobertura de suelo en imágenes multiple o hiperespectrales. 
+			</p>
+			
+			</div>
+		</div>
+		</div>
+
+		</div>
+
+			<h2 class="h5 py-4" id="links">4. Referencias</h2>
+		<p> Mayor información:
+		<ol>
+			<!-- <li><a href='https://gidahatari.com/ih-es/tutorial-de-determinacin-de-firmas-espectrales-de-cultivos-con-qgis-3-y-scp-6'>Gidahatari - Tutorial de Determinación de Firmas Espectrales de Cultivos con QGIS 3 y SCP 6</a></li> -->
+			<li><a href='https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf'>INEGI - Clasificación de cultivos agrícolas</a></li>
+			<li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li>
+			<li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li>
+		</ol>
+		<p>Por revisar:</p>
+		<ul>
+			<li><a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">[2012] Crop type mapping using spectral–temporal profiles and phenological information</a></li>
+			<li><a href="https://doi.org/10.1016/j.rse.2017.08.027">[2017] Detection of cropland field parcels from Landsat imagery</a></li>
+			<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2">[2019] Satellite Image Analysis: Clustering and Classification</a></li>
+			<li><a href="https://doi.org/10.1016/j.rse.2018.10.031">[2019] Intra-annual reflectance composites from Sentinel-2 and Landsat for national-scale crop and land cover mapping</a></li>
+
+			<hr>
+
+			<li><a href="https://www.amazon.com/Remote-Sensing-Environment-International-Perspective/dp/1292021705" id="1">[1]</a> Jensen, J. R. (2013). Remote Sensing of the Environment: Pearson New International Edition: An Earth Resource Perspective (2nd edition). Pearson Education Limited.</li>
+			<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2" id="2">[2]</a> Borra, S., Thanki, R., & Dey, N. (2019). Satellite Image Analysis: Clustering and Classification. SpringerBriefs in Applied Sciences and Technology, 5-7. https://doi.org/10.1007/978-981-13-6424-2</li>
+		</ul>
+		</p>
+
+
+
+		<div class="container py-4">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="blog_pythonML.html">Anterior</a></li>
+				<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
+				<!-- <li class="page-item"><a class="page-link" href=" ">Siguiente Post ==> (en proceso)</a></li> -->
+			</ul>
+		</div>
+
+		<!--Footer-->
 		<hr>
-
-		<li><a href="https://www.amazon.com/Remote-Sensing-Environment-International-Perspective/dp/1292021705" id="1">[1]</a> Jensen, J. R. (2013). Remote Sensing of the Environment: Pearson New International Edition: An Earth Resource Perspective (2nd edition). Pearson Education Limited.</li>
-		<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2" id="2">[2]</a> Borra, S., Thanki, R., & Dey, N. (2019). Satellite Image Analysis: Clustering and Classification. SpringerBriefs in Applied Sciences and Technology, 5-7. https://doi.org/10.1007/978-981-13-6424-2</li>
-	</ul>
-	</p>
-
-
-
-	<div class="container py-4">
-		<ul class="pagination justify-content-center">
-			<li class="page-item"><a class="page-link" href="blog_pythonML.html">Anterior</a></li>
-			<li class="page-item"><a class="page-link" href="../blog.html">Blog</a></li>
-			<!-- <li class="page-item"><a class="page-link" href=" ">Siguiente Post ==> (en proceso)</a></li> -->
+		<div class="py-2" style="background: #eee, ;">
+		<ul class="list-inline text-center">
+			<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
+				<i class="fab fa-facebook-f"></i></a></li>
+			<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+			<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
+			<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
 		</ul>
+		</div>
+		
+		</div>
 	</div>
 
-	<!--Footer-->
-	<hr>
-	<div class="py-2" style="background: #eee, ;">
-	<ul class="list-inline text-center">
-		<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
-			<i class="fab fa-facebook-f"></i></a></li>
-		<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-		<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
-		<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
-	</ul>
+	<!-- Columna Derecha -->
+	<div class="col-md-2">
 	</div>
-	
-	</div>
+
 </div>
-
-<!-- Columna Derecha -->
-<div class="col-md-2 fondo"></div>
-
-</div> <!-- Fin de los rows -->
-</div> <!-- Fin del container -->
+</div>
 
 
 <!-- Footer de template -->

@@ -28,22 +28,12 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../css/style2.css" />
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
-    />
-
-    <style>
-        body {
-            text-align: justify;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"/>
 </head>
 
 <body>
 
 <!--Header-->
-<div class="stickyNav">
-
 <header class="header">
 	<nav class="navbar navbar-expand-sm py-lg-0">
 		<div class="container">
@@ -76,27 +66,22 @@
 	</nav>
 </header>
 
-
 <!-- Redacción de post -->
-<div class="container-fluid">
+<div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
 <div class="row">
 
+    <!-- BOTONES -->
+    <button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+    <i class="fas fa-align-left"></i>
+    </button>
 
-<!-- BOTONES -->
-
-<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
-<i class="fas fa-align-left"></i>
-</button>
-
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
-<i class="fas fa-arrow-up"></i>
-</button>
-
-<!-- FIN DE BOTONES -->
-
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+    <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- FIN DE BOTONES -->
 
     <!-- Columna izquierda -->
-    <div class="col-md-2 col-md-0 py-4 fondo">
+    <div class="col-md-2 col-md-0 py-4">
         <div class="wrapper">
         <nav id="sidebar">
             <ul class="list-unstyled components">
@@ -122,7 +107,7 @@
     </div>
 
     <!-- Columna central -->
-    <div class="col-md-8 container-fluid">
+    <div class="col-md-8 container-fluid" style="background: white;">
         <div class="container-fluid">
 
         <!-- Banner -->
@@ -136,7 +121,7 @@
 
         <div class="imgCenter2">
         <figure class="my-2">
-            <img src="../img/ml-twitter-image.jfif" alt="" class="w-100" />
+            <img src="../img/ml-twitter-image.jpg" alt="" class="w-100" />
             <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
             Cómico: Ahora las computadoras están empezando a aprender
             mientras que las demás personas...
@@ -199,7 +184,6 @@
         </p>
 
         <ul>
-            <ul>
             <li>Data Scientist</li>
             <ul>
                 <li>Machine Learning</li>
@@ -209,29 +193,17 @@
             <ul>
                 <li>y Big Data Engineer</li>
             </ul>
-            </ul>
         </ul>
 
         <p>
-            A continuación verás el tramo de Machine Learning, parte de la
-            ruta de aprendizaje que se presenta en
-            <a href="https://i.am.ai/">i.am.ai AI Expert Roadmap</a>:
+            A continuación verás el tramo de Machine Learning, parte de la ruta de aprendizaje que se presenta en <a href="https://i.am.ai/">i.am.ai AI Expert Roadmap</a>:
         </p>
-        <a
-            href="https://i.am.ai/roadmap/#machine-learning-roadmap"
-            alt="ML Roadmap"
-        >
+        <a href="https://i.am.ai/roadmap/#machine-learning-roadmap" alt="ML Roadmap">
             <figure class="my-2">
-            <img
-                src="https://github.com/AMAI-GmbH/AI-Expert-Roadmap/raw/main/images/machine_learning.svg"
-                alt="ML Roadmap"
-                class="w-100"
-            />
-            <figcaption
-                class="text-muted text-center py-3 text-uppercase font-weight-bold small"
-            >
-                Visitar la página ya que tiene buena info
-            </figcaption>
+                <img loading='lazy' src="https://github.com/AMAI-GmbH/AI-Expert-Roadmap/raw/main/images/machine_learning.svg" alt="ML Roadmap" class="w-100"/>
+                <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+                    Visitar la página ya que tiene buena info
+                </figcaption>
             </figure>
         </a>
         <p></p>
@@ -317,11 +289,11 @@
     </div>
 
     <!-- Columna Derecha -->
-    <div class="col-md-2 fondo"></div>
-    </div>
-    <!-- Fin de los rows -->
-    </div>
-    <!-- Fin del container -->
+    <div class="col-md-2"></div>
+</div>
+<!-- Fin de los rows -->
+</div>
+<!-- Fin del container -->
 
     <!-- Footer de template -->
     <div class="py-1 stickyFooter" style="background: rgba(0, 0, 0, 1)">

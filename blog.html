@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cesar Vilca: Blog</title>
+	<title>Cesar Vilca | Blog</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="all,follow">
@@ -34,24 +34,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
 	<script src="https://unpkg.com/scrollreveal"></script>
-
-	<style>
-            body {
-                background: url(../img/fondo.jpg) no-repeat center center fixed; 
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-
-                /* color: white; */
-            }
-	</style>
 </head>
 
 <body>
 	
-<!-- navbar-->
-<!-- Header -->
 <header class="header">
 	<nav class="navbar navbar-expand-sm py-lg-0">
 		<div class="container">
@@ -86,11 +72,11 @@
 
 <!-- BOTONES -->
 
-<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+<button type="button" id="sidebarCollapse" title="Barra Lateral" class="btn btn-info menu-btn">
 <i class="fas fa-align-left"></i>
 </button>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+<button onclick="topFunction()" id="myBtn" title="Subir" class="btn btn-info menu-btn-up">
 <i class="fas fa-arrow-up"></i>
 </button>
 
@@ -141,7 +127,7 @@
 
 			<div class="blogContainer">
 				<div class="flex-container" id="post1">
-					<div><img src="img/blog2.jpg" alt="blog_referencias"></div>
+					<div><img loading='lazy' src="img/blog2.jpg" alt="blog_referencias"></div>
 					<div>
 						<h3>Agricultura Digital: Referencias</h3>
 						<p>
@@ -151,7 +137,7 @@
 					</div>
 				</div>
 				<div class="flex-container" id="post2">
-					<div><img src="https://www.croptracker.com/images/blog/Robots_in_Ag/computervision.png" alt="blog_cv"></div>
+					<div><img loading='lazy' src="https://www.croptracker.com/images/blog/Robots_in_Ag/computervision.png" alt="blog_cv"></div>
 					<div>
 						<h3>Computer Vision en la Agricultura</h3>
 						<p>
@@ -161,7 +147,7 @@
 					</div>
 				</div>
 				<div class="flex-container" id="post3">
-					<div><img src="img/google-earth-engine.jpg" alt="blog_ee"></div>
+					<div><img loading='lazy' src="img/google-earth-engine.jpg" alt="blog_ee"></div>
 					<div>
 						<h3>Google Earth Engine: Breve Introducción</h3>
 						<p>
@@ -171,7 +157,7 @@
 					</div>
 				</div>
 				<div class="flex-container" id="post4">
-					<div><img src="https://png.pngitem.com/pimgs/s/241-2413548_logo-anaconda-python-hd-png-download.png" alt="blog_conda"></div>
+					<div><img loading='lazy' src="img/Anaconda_Logo.jpg" alt="blog_conda"></div>
 					<div>
 						<h3>Manejo de paquetes de Python con ANACONDA</h3>
 						<p>
@@ -181,7 +167,7 @@
 					</div>
 				</div>
 				<div class="flex-container" id="post5">
-					<div><img src="img/ml_image.jpeg" alt="blog_pythonML"></div>
+					<div><img loading='lazy' src="img/ml_image.jpeg" alt="blog_pythonML"></div>
 					<div>
 						<h3>Aprendizaje Automático: Primeros pasos</h3>
 						<p>
@@ -191,7 +177,7 @@
 					</div>
 				</div>
 				<div class="flex-container" id="post6">
-					<div><img src="img/crop_clasification.png" alt="blog_clasificacion"></div>
+					<div><img loading='lazy' src="img/crop_clasification.png" alt="blog_clasificacion"></div>
 					<div>
 						<h3>Clasificación de cultivos agrícolas con Teledetección</h3>
 						<p>
@@ -215,26 +201,27 @@
 		</ul>
 	</div>
 
+	
+	
+		</div>
+
+		<!-- Columna Derecha -->
+		<div class="col-2">
+		</div>
+
 	</div>
-
-<!-- Columna Derecha -->
-<div class="col-lg-2"></div>
-
-</div> <!-- Fin de los rows -->
-</div> <!-- Fin del container -->
-
+</div>
 
 <!-- Footer de template -->
-<!-- Footer de template -->
-    <div class="py-1" style="background: rgba(0, 0, 0, 1)">
-        <div class="container">
-        <div class="text-center">
-            <p class="small text-gray mb-0">Cesar Vilca, 2021 --- Template by
-            <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a>
-            </p>
-        </div>
-        </div>
-    </div>
+<div class="py-1" style="background: rgba(0, 0, 0, 1)">
+	<div class="container">
+	<div class="text-center">
+		<p class="small text-gray mb-0">Cesar Vilca, 2021 --- Template by
+		<a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a>
+		</p>
+	</div>
+	</div>
+</div>
 	
 <!-- JavaScript files-->
 <script src="../vendor/jquery/jquery.min.js"></script>
@@ -255,10 +242,8 @@
 
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
 <!-- jQuery Custom Scroller CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
