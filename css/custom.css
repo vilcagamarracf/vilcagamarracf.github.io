@@ -174,20 +174,20 @@ p.whiteBold{
 
 .showcase {
     width: 100%;
-    height: 600px;
+    /* height: 600px; */
     /* background: url(img/showcase2.jpg);  */
     /* Es necesario corregir la imagen */
     background: url(../img/foto_portada.jpg)no-repeat center center/cover; 
-    padding: 50px;
-    /* Mandar el texto al lado de abajo */
+    padding: 25px;
+    /* Mandar el texto en la parte superior */
     display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    /* align-items: center; */
+    justify-content: flex-start;
 	color: #fff;
-    /* Separar de las columnas siguientes */
-    margin-bottom: 20px;
 
+    /* Separar de las columnas siguientes */
+    /* margin-bottom: 20px; */
 	/* border-radius: 7.5px; */
 }
 
@@ -223,17 +223,19 @@ p.whiteBold{
 
 	border-radius: 7.5px;
 
-	margin-bottom: 20px;
+
+	/* margin-bottom: 0px;
+	margin-top: 25px; */
 }
 
 .cards-banner-one .content {
 	/* font-weight: bold; */
     
-	max-width: 250px;
 	height: 300px;
-	padding: 15px;
+	padding: 40px 0 0 0px;
+	text-align: center;
+	background: rgb(0, 0, 0, 0.5);
     color: rgb(255, 255, 255);
-	background: rgb(0, 0, 0, 0.3);
 }
 
 /* CARDS BANNER TWO */
@@ -287,7 +289,7 @@ p.whiteBold{
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 /* Ahora toca el flexbox para los iconos*/
@@ -344,6 +346,36 @@ p.whiteBold{
 
 }
 
+
+
+
+
+
+/* Index blogs containers */
+.indexContainer {
+	display: flex;
+	grid-template-columns: repeat(3, 1fr);
+	/* Para agregar un post: cambiar aquí el número*/
+	/* align-items: center; */
+	justify-content: center;
+	gap: 75px;
+	/* margin-top: 10px; */
+}
+
+.flex-container1 {
+	/* Separación vertical superior e inferior */
+	margin: 20px 0 20px 0;
+	text-align: center;
+}
+
+.flex-container1 > a {
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+}
+
+
 @media (max-width: 750 px) {
 
 	.news-cards {
@@ -353,6 +385,7 @@ p.whiteBold{
 
     .cards-banner-one .content,
     .cards-banner-two .content {
+		/* max-width: 250px; */
         width: 100%;
         padding: 20px 20px;
     }
@@ -360,6 +393,19 @@ p.whiteBold{
 
 @media (max-width: 600px) {
 
+	/* Index */
+	.indexContainer {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+
+	.flex-container1 {
+		margin: 15px 0 15px 0;
+		align-items: center;
+	}
+
+	/* Blog */
 	.blogContainer {
 		display: grid;
 		grid-template-rows: repeat(6, 1fr);
@@ -369,15 +415,15 @@ p.whiteBold{
 		/* margin-top: 10px; */
 	}
 
+	.flex-container > div {
+		margin: 10px;
+		text-align: center;
+	}
+
 	.flex-container {
 		display: grid;
 		align-items: center;
 		width: 80%;
-	}
-
-	.flex-container > div {
-		margin: 10px;
-		text-align: center;
 	}
 
 	.menu-btn-up {
@@ -424,6 +470,7 @@ p.whiteBold{
 
     .cards-banner-one .content,
     .cards-banner-two .content {
+		/* max-width: 250px; */
         width: 100%;
         padding: 20px 20px;
     }
