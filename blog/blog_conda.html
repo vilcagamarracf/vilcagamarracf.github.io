@@ -46,7 +46,8 @@
     <header class="header">
         <nav class="navbar navbar-expand-sm py-lg-0">
             <div class="container">
-                <img src="../img/favicon.png" alt="Cesar Vilca logo" style="width:75px;">
+                <p class="font-weight-bold text-uppercase mb-0"><img src="../img/favicon.png" alt="Cesar Vilca logo" style="width:75px;"> Cesar Vilca</p>
+
                 <button 
                     type="button"
                     data-toggle="collapse"
@@ -79,7 +80,7 @@
     <div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
         <div class="row">
 
-        <!-- BOTONES -->
+        <!-- BOTONES al lado derecho-->
         <button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
         <i class="fas fa-align-left"></i>
         </button>
@@ -109,7 +110,7 @@
                 </li>
 
                 <li><a href="#paquetes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2. Paquetes</a>
-                    <ul class="collapse list-unstyled" id="paquetes">
+                    <ul class="collapse list-unstyled text-left" id="paquetes">
                     <li><a href="#p1" class="padd">Ayuda en paquetes</a></li>
                     <li><a href="#p2" class="padd">Versionamiento semántico</a></li>
                     <li><a href="#p3" class="padd">Listar paquetes instalados</a></li>
@@ -153,53 +154,29 @@
             <h1 class="h4 py-4" id="inicio">Manejo de paquetes de Python con ANACONDA</h1>
 
             <p>
-                <b>¡Saludos!</b>, escribo este post con la intención de informar sobre el manejo de paquetes de Python usando la línea de comandos
-                de ANACONDA.
+                <b>¡Saludos!</b>, el presente post tiene la intención de informar sobre el manejo de 
+                paquetes de Python usando la línea de comandos de ANACONDA.
             </p>
             <p>
                 Antes de empezar cabe mencionar que hay dos formas trabajar con Python:
             </p>
             <ul>
                 <li class="py-2">
-                <b>En Local:</b> si descargas Python y lo instalas en tu
-                computador, estarías trabajando en local. El principal beneficio
-                es que una vez instalado un paquete, ya no es necesario volver a
-                instalarlo en cada sesión, aunque requiere de cierta comprensión
-                sobre la instalación de ciertos paquetes para su uso. <br />
-                Entre los programas más conocidos tenemos
-                <b>Anaconda</b> (integra Jupyter y Spyder) y <b>Pycharm</b>.
+                    <b>En Local:</b> si descargas Python y lo instalas en tu computador, estarías trabajando en local. 
+                    El principal beneficio es que una vez instalado un paquete, ya no es necesario volver a instalarlo
+                    en cada sesión, aunque requiere de cierta comprensión sobre la instalación de ciertos paquetes para su uso. <br />
+                    Entre los programas más conocidos tenemos <b>Anaconda</b> (integra Jupyter y Spyder) y <b>Pycharm</b>.
                 </li>
-                <div align="center">
-                <img
-                    class="rounded mx-auto my-4"
-                    src="../img/Anaconda_Logo1.jpg"
-                    alt="Anaconda logo"
-                    width="250px"
-                />
-                <img
-                    class="rounded mx-auto my-4"
-                    src="https://insmac.org/uploads/posts/2017-08/1503175868_pycharm.png"
-                    alt="Pycharm logo"
-                    width="125px"
-                    height="100px"
-                    style="padding-left: 25px"
-                />
+                <div style="text-align: center;">
+                    <img class="rounded mx-auto my-4" src="../img/Anaconda_Logo1.jpg" alt="Anaconda logo" width="250px"/>
+                    <img class="rounded mx-auto my-4" src="https://insmac.org/uploads/posts/2017-08/1503175868_pycharm.png" alt="Pycharm logo" width="125px" height="100px" style="padding-left: 25px"/>
                 </div>
 
                 <li class="py-2">
-                <b>En la "nube":</b> Se refiere principalmente a usar Python en
-                un computador ajeno, alojado en la web (generalmente en
-                servidores). Su principal ventaja es que brinda a los usuarios
-                la rápida y fácil instalación de paquetes para que el mismo más
-                se preocupe en realizar su labor que en cosas previas. <br />
-                El servicio más conocido en la web es <b>Colab</b> (de Google).
+                    <b>En la "nube":</b> Se refiere principalmente a usar Python en un computador ajeno, alojado en la web (generalmente en servidores). Su principal ventaja es brindar a los usuarios la rápida y fácil instalación de paquetes para que el mismo usuario se preocupe más en realizar su labor que en cosas previas. <br /> 
+                    El servicio más conocido en la web es <b>Colab</b> (de Google).
                 </li>
-                <img
-                class="rounded mx-auto d-block"
-                src="https://colab.research.google.com/img/colab_favicon_256px.png"
-                alt="Colab logo"
-                width="100px"
-                />
+                <img class="rounded mx-auto d-block" src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Colab logo" width="100px"/>
             </ul>
             <p>
                 Ahora sí podemos empezar. Comenzando por el título del post...
@@ -207,28 +184,19 @@
 
             <h2 class="h5" id="conda"  style="padding-top: 20px">Qué es CONDA</h2>
 
-            <img class="rounded mx-auto d-block" src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg" alt="Conda logo" width="250px"  style="padding-top: 20px; padding-bottom: 20px"/>
+            <img class="rounded mx-auto d-block" src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg" alt="Conda logo" width="250px"  style="padding-top: 20px; padding-bottom: 30px"/>
             <p>
                 Según su
                 <a href="https://docs.conda.io/projects/conda/en/latest/index.html">documentación</a>, es un sistema de gestión de paquetes de código abierto y un sistema de gestión del entorno que se ejecuta en Windows, macOS y Linux.
             </p>
             <ul>
-                <li>
-                Conda instala, ejecuta y actualiza rápidamente paquetes y sus
-                dependencias.
-                </li>
-                <li>
-                Conda crea, guarda, carga y cambia fácilmente entre entornos en
-                su computadora local.
-                </li>
-                <li>
-                Fue creado para programas Python pero puede empaquetar y
-                distribuir software para cualquier lenguaje.
-                </li>
+                <li>Conda instala, ejecuta y actualiza rápidamente paquetes y sus dependencias.</li>
+                <li>Conda crea, guarda, carga y cambia fácilmente entre entornos en su computadora local.</li>
+                <li>Fue creado para programas Python pero puede empaquetar y distribuir software para cualquier lenguaje.</li>
             </ul>
 
             <p>
-                Conda como administrador de paquetes le ayuda a encontrar e
+                Conda como administrador de paquetes le ayuda a encontrar e 
                 instalar paquetes. Si necesita un paquete que requiere una versión
                 diferente de Python, no es necesario que cambie a un administrador
                 de entorno diferente porque conda también es un administrador de
@@ -239,7 +207,8 @@
             </p>
 
             <h2 class="h5" id="anaconda" style="padding-top: 20px">¿y Anaconda?</h2>
-            <img class="rounded mx-auto d-block" src="../img/Anaconda_Logo1.jpg" alt="Anaconda logo" width="250px" style="padding-top: 20px; padding-bottom: 20px"/>
+            <img class="rounded mx-auto d-block" src="../img/Anaconda_Logo1.jpg" alt="Anaconda logo" 
+            width="250px" style="padding-top: 20px; padding-bottom: 20px"/>
             <p>
                 Anaconda es una distribución de los lenguajes de programación
                 Python y R para computación científica (ciencia de datos,
@@ -250,21 +219,10 @@
             <p>Entonces:</p>
             <ul>
                 <li>
-                <b>Conda:</b> administrador de paquetes (en la documentación se
-                menciona que es también un paquete). La herramienta de línea de
-                comandos conda
-                <b>se utiliza para instalar, eliminar y examinar paquetes</b>.
-                </li>
+                    <b>Conda:</b> administrador de paquetes (en la documentación se menciona que es también un paquete). La herramienta de línea de comandos conda <b>se utiliza para instalar, eliminar y examinar paquetes</b>.                </li>
+                <li><b>Anaconda:</b> conjunto de paquetes y softwares para el desarrollo con Python, R y otros lenguajes de programación.</li>
                 <li>
-                <b>Anaconda:</b> conjunto de paquetes y softwares para el
-                desarrollo con Python, R y otros lenguajes de programación.
-                </li>
-                <li>
-                <b>Miniconda:</b> alternativa más pequeña a Anaconda ya que solo
-                contiene a conda y sus dependencias, no las listadas
-                anteriormente. Una vez que se tiene Miniconda, es posible
-                instalar Anaconda fácilmente con
-                <code>conda install anaconda</code>.
+                    <b>Miniconda:</b> alternativa más pequeña a Anaconda ya que solo contiene a conda y sus dependencias, no las listadas anteriormente. Una vez que se tiene Miniconda, es posible instalar Anaconda fácilmente con <code>conda install anaconda</code>.
                 </li>
             </ul>
 
@@ -272,11 +230,7 @@
 
             <p>El tutorial consta de 4 partes:</p>
             <ul>
-                <li>
-                <a href="#t1"
-                    >Conociendo la terminal de Anaconda (Anaconda prompt)</a
-                >
-                </li>
+                <li><a href="#t1">Conociendo la terminal de Anaconda (Anaconda prompt)</a></li>
                 <li><a href="#packages">Paquetes (Packages)</a></li>
                 <li><a href="#channels">Canales (Channels)</a></li>
                 <li><a href="#envs">Ambientes (Environments)</a></li>
@@ -332,14 +286,12 @@
         o 
 
         (base) C:\Users\LENOVO>conda -h
-        </pre
-                >
+        </pre>
 
-                <p>
-                Y debajo se mostrará el resultado de haber ingresado tal
-                comando:
-                </p>
-                <pre class="pre-scrollable">
+        <p>
+            Y debajo se mostrará el resultado de haber ingresado tal comando:
+        </p>
+        <pre class="pre-scrollable">
 
         usage: conda-script.py [-h] [-V] command ...
 
@@ -390,8 +342,7 @@
         server
         skeleton
         verify
-        </pre
-                >
+        </pre>
 
                 <p class="py-2" id="t02">
                 <b>1.2. Versión de conda</b> <br />
@@ -408,66 +359,45 @@
                 >
 
             <!-- Paquetes -->
-                <h3 class="h6 py-4" id="packages">
-                2. Paquetes <i>(Packages)</i>
-                </h3>
+                <h3 class="h6 py-4" id="packages">2. Paquetes <i>(Packages)</i></h3>
 
                 <p>
-                Los paquetes de Conda son archivos que contienen un conjunto de
-                recursos: generalmente bibliotecas y ejecutables, pero no
-                siempre.
+                    Los paquetes de Conda son archivos que contienen un conjunto de recursos: generalmente bibliotecas y ejecutables, pero no siempre.
+                
+                    <ul>
+                        <li>
+                            Otras herramientas como la GUI Anaconda Navigator también
+                            exponen las mismas capacidades.
+                        </li>
+                        <li>
+                            Los paquetes Conda también se pueden usar para empaquetar bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o simplemente para distribuir ejecutables binarios puros generados a partir de cualquier lenguaje de programación.
+                        </li>
+                    </ul>
+
+                    <b>Notas</b>
                 </p>
-                <ul>
-                <li>
-                    Otras herramientas como la GUI Anaconda Navigator también
-                    exponen las mismas capacidades.
-                </li>
-                <li>
-                    Los paquetes Conda también se pueden usar para empaquetar
-                    bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o
-                    simplemente para distribuir ejecutables binarios puros
-                    generados a partir de cualquier lenguaje de programación.
-                </li>
-                </ul>
 
                 <blockquote class="blockquote">
-                <p>
-                    <b>Notas</b>: Para
-                    <a
-                    href="https://packaging.python.org/tutorials/installing-packages/"
-                    >instalar un paquete</a
-                    >
-                    en Python, dependiendo del sistema operativo, es necesario
-                    conocer que se puede instalar mediante:
-                </p>
-                <ul>
-                    <li>
-                    <a
-                        href="https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing"
-                        >PIP</a
-                    >
-                    : instalador recomendado en Python (ya que conecta con PyPi)
-                    pero requiere manejar un sistema operativo Linux. <br />
-                    <p class="text-center my-4">
-                        <code>$pip install rasterio</code>
+                    <p>
+                        Para <a href="https://packaging.python.org/tutorials/installing-packages/">instalar un paquete</a> en Python, dependiendo del sistema operativo, es necesario conocer que se puede instalar mediante:
+
+                        <ul>
+                            <li>
+                                <a href="https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing">PIP</a>: instalador recomendado en Python (ya que conecta con PyPi) pero requiere manejar un sistema operativo Linux. <br />
+                                <p class="text-center my-4">
+                                    <code>$pip install rasterio</code>
+                                </p>
+                            </li>
+                            <li>
+                                Conda: Alternativo a PIP. Permite administrar ambientes virtuales e instalar paquetes fácilmente (mediante código en terminal o por interfaz gráfica en Anaconda). <br />
+                                <p class="text-center my-4">
+                                    <code>conda install -c conda-forge rasterio</code>
+                                </p>
+                            </li>
+                        </ul>
+                    
+                        <b>Recomendación:</b> Si se usa Anaconda en local, usar <code>conda</code> para instalar los paquetes necesarios, no PIP en la línea de comandos debido a que Anaconda prepara sus repositorios para ser descargados de manera eficiente con Conda.
                     </p>
-                    </li>
-                    <li>
-                    Conda: Alternativo a PIP. Permite administrar ambientes
-                    virtuales e instalar paquetes fácilmente (mediante código en
-                    terminal o por interfaz gráfica en Anaconda). <br />
-                    <p class="text-center my-4">
-                        <code>conda install -c conda-forge rasterio</code>
-                    </p>
-                    </li>
-                </ul>
-                <p>
-                    <b>Recomendación:</b> Si se usa Anaconda en local, usar
-                    <code>conda</code> para instalar los paquetes necesarios, no
-                    PIP en la línea de comandos debido a que Anaconda prepara sus
-                    repositorios para ser descargados de manera eficiente con
-                    Conda.
-                </p>
                 </blockquote>
 
                 <h3 class="h6 py-3" id="p1">2.1. Ayuda en paquetes</h3>

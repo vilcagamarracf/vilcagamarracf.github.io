@@ -182,7 +182,7 @@ section {
 .navbar .nav-link {
   font-size: 0.9rem;
   color: #000;
-  border-top: 2px solid transparent;
+  /* border-top: 2px solid transparent; */
   transition: all 0.3s;
 }
 
