@@ -1,5 +1,5 @@
 <p align='center'>
-   <img src="Cesar_Vilca_cover.png" alt="Cesar Vilca cover"/>
+   <img src="vilcagamarracf - Personal Website.png" alt="Cesar Vilca cover"/>
 </p>
 
 <h4 align="center">Página personal: tutoriales, blog y más</h4>
