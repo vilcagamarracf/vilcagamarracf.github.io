@@ -20,8 +20,6 @@
     <link rel="stylesheet" href="css/pe-icon-7-stroke.css" />
     <!-- Lightbox CSS-->
     <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css" />
-    <!-- Leaflet CSS-->
-    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="css/style.green.css" id="theme-stylesheet" />
     <!-- Custom stylesheet - for your changes-->
@@ -32,7 +30,9 @@
     <link rel="stylesheet" href="../css/style2.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
 
+    <!-- Efecto ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
+
     <style>
         body { 
             background:white;
@@ -76,158 +76,162 @@
     </nav>
 </header>
 
-<div>
-
-    <!-- Explora mi blog -->
-    <section class="cards-banner-one">
-        <div class="content">
-            <h3>Bienvenido</h3>
-            <p>
-                Agricultura de Precisión, Teledetección, Programación y más  <br> 
-            </p>
-            <a href="blog.html" class="btn">Explora mi blog <i class="fas fa-angle-double-right"></i></a>
-            <p style="font-size:12px">
-                <br> <br> 
-                Detección de Vegetación con Google Earth Engine <br>
-                Valle de Chincha, Ica
-            </p>
-        </div>
-    </section>
-
-    <div class="row" id="about-me">
-        <div class="col-1"></div>
-
-        <!-- Acerca de mí -->
-        <div class="col-10" style="margin-top: 25px; margin-bottom: 25px">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="container" style="margin-top: 50px" id="container1">
-                        <h3 class="h5 lined mb-4">Acerca de mí</h3>
-                        <p>
-                            Soy Cesar Vilca, bachiller de Ingeniería Agrícola, UNALM, Perú.  <br>
-                            Aficionado con la programación y SIG aplicados al procesamiento de imágenes satelitales en favor de la Agricultura.
-                        </p>
-                        <p>
-                            Siento un interés por la estadística espacial y el aprendizaje automático (<i>Machine Learning</i>) ya que veo futuro en dichos campos debido a las tecnologías que van emergiendo.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <img loading='lazy' src="img/foto_cesar_vilca.jpg" alt="" class="img-fluid rounded mx-auto d-block" style="width: 225px; height: 300px;"/>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-1"></div>
+<!-- Bienvenido: Explora mi blog -->
+<section class="cards-banner-one">
+    <div class="content">
+        <h3>Bienvenido</h3>
+        <p>
+            Agricultura de Precisión, Teledetección, Programación y más  <br> 
+        </p>
+        <a href="blog.html" class="btn">Explora mi blog <i class="fas fa-angle-double-right"></i></a>
+        <p style="font-size:12px">
+            <br> <br> 
+            Detección de Vegetación con Google Earth Engine <br>
+            Valle de Chincha, Ica
+        </p>
     </div>
-    
-    
-    <header class="showcase">
-        <div style='background: rgba(0, 0, 0, 0.7); border-radius: 10px; margin: 10px 0px 10px 0px;'>
-            <!-- <h2 style="text-align: center;">Bienvenido a mi sitio web</h2> -->
-            <br>
+</section>
 
-            <p class='h5' style="font-weight: bold; text-align: center;">Últimas entradas en el blog</p>
-            
-            <div class="indexContainer">
-                <div class="flex-container1" id="post1">
-                    <img loading='lazy' src="img/blog2.jpg" alt="blog_referencias"><br>
-                    <a class="h3" href="blog/blog_referencias.html">Agricultura Digital: Referencias</a>
-                </div>
-                <div class="flex-container1" id="post2">
-                    <img loading='lazy' src="img/blog3.jpg" alt="blog_cv"><br>
-                    <a class="h3" href="blog/blog_cv.html">Computer Vision en la Agricultura</a>
-                </div>
-                <div class="flex-container1" id="post3">
-                    <img loading='lazy' src="img/google-earth-engine.jpg" alt="blog_ee"><br>
-                    <a class="h3" href="blog/blog_earthengine.html">Google Earth Engine: <br> Breve Introducción</a>
-                </div>
-            </div>
-            <div class="indexContainer">
-                <div class="flex-container1" id="post4">
-                    <img loading='lazy' src="img/Anaconda_Logo.jpg" alt="blog_conda"><br>
-                    <a class="h3" href="blog/blog_conda.html">Manejo de paquetes <br> de Python con ANACONDA</a>
-                </div>
-                <div class="flex-container1" id="post5">
-                    <img loading='lazy' src="img/ml_image.jpeg" alt="blog_pythonML"><br>
-                    <a class="h3" href="blog/blog_pythonML.html">Aprendizaje Automático: <br> Primeros pasos</a>
-                </div>
-                <div class="flex-container1" id="post6">
-                    <img loading='lazy' src="img/crop_clasification.png" alt="blog_clasificacion"><br>
-                    <a class="h3" href="blog/blog_clasificacion.html">Clasificación de cultivos agrícolas <br> con Teledetección</a>
+<!-- Acerca de mí -->
+<div class="row" id="about-me">
+    <div class="col-1"></div>
+
+    <div class="col-10" style="margin-top: 25px; margin-bottom: 25px">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="container py-3" style="margin-top: 25px" id="container1">
+                    <h3 class="h5 lined mb-4">Acerca de mí</h3>
+                    <p>
+                        Soy Cesar Vilca, bachiller de Ingeniería Agrícola de la Universidad Nacional Agraria La Molina UNALM, Perú.  <br>
+                    </p>
+                    <p>
+                        Me gusta desarrollar proyectos personales sobre procesamiento de imágenes satelitales y SIG con ayuda de los siguientes lenguajes de programación:
+                        <ul>
+                            <li>Python y R: Procesamiento, análisis y visualización de datos.</li>
+                            <li>JavaScript: Procesamiento de imágenes satelitales con Google Earth Engine.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        Dichos proyectos los puedes encontrar en mi cuenta de <a href="https://github.com/vilcagamarracf" target="_blank">GitHub</a> para su revisión y replicación. 
+                    </p>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <div class="row" id="container2">
-
-        <div class="col-1"></div>
-
-        <!-- Acerca de mí -->
-        <div class="col-10" style="margin-top: 25px; margin-bottom: 15px;">
-            <div class="row">
-
-                <div class="col-lg-4">
-                    <figure>
-                        <img src="img/realidad.jpg" alt="" class="img-fluid rounded mx-auto d-block" style="width: 350px;"/>
-                        <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-                            Hay mucho por aprender y compartir ya que tenemos mucho por vivir y por experimentar.
-                        </figcaption>
-                    </figure>
-                </div>
-
-                <div class="col-lg-8">
-                    <div class="container" style="margin-top:40px">
-                        <h3 class="h5 lined mb-4">Acerca de esta página</h3>
-                        <p>
-                            En la presente página encontrarás posts sobre tecnologías relacionadas a la Agricultura de precisión con el objetivo de mejorar la productividad y calidad de los cultivos en el campo. <br>
-                            <br>
-                            Además, plasmar el conocimiento adquirido en
-                            sensoramiento remoto aplicado a la Agricultura de Precisión y reforzar
-                            lo aprendido hasta ahora.
-                        </p>
-
-                        <section class="social" style="margin-top: 50px;">
-                            <p>¡Comunícate conmigo!</p>
-                            <div class="links">
-                                <a href="https://www.facebook.com/vilcagamarra/" target="blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://twitter.com/CesarVilca19" target="blank">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/cesarvilca/" target="blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/vilcagamarracf" target="blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        
-        <div class="col-1"></div>
-
-    </div>
-    
-    <!-- Footer -->
-    <div class="py-1" style="background: rgba(0, 0, 0, 1)">
-        <div class="container">
-            <div class="text-center">
-                <p class="small text-gray mb-0">Cesar Vilca, 2021 --- Template by
-                <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a>
-                </p>
+            <div class="col-lg-4">
+                <img loading='lazy' src="img/foto_cesar_vilca.jpg" alt="" class="img-fluid rounded mx-auto d-block" style="width: 225px; height: 300px; margin-top: 10px""/>
             </div>
         </div>
     </div>
-    
+
+    <div class="col-1"></div>
 </div>
 
+<!-- Posts del blog -->
+<header class="showcase">
+    <div style='background: rgba(0, 0, 0, 0.7); border-radius: 10px; margin: 10px 0px 10px 0px;'>
+        <!-- <h2 style="text-align: center;">Bienvenido a mi sitio web</h2> -->
+        <br>
+
+        <p class='h5' style="font-weight: bold; text-align: center;">Últimas entradas en el blog</p>
+        
+        <div class="indexContainer">
+            <div class="flex-container1" id="post1">
+                <img loading='lazy' src="img/blog2.jpg" alt="blog_referencias"><br>
+                <a class="h3" href="blog/blog_referencias.html">Agricultura Digital: Referencias</a>
+            </div>
+            <div class="flex-container1" id="post2">
+                <img loading='lazy' src="img/blog3.jpg" alt="blog_cv"><br>
+                <a class="h3" href="blog/blog_cv.html">Computer Vision en la Agricultura</a>
+            </div>
+            <div class="flex-container1" id="post3">
+                <img loading='lazy' src="img/google-earth-engine.jpg" alt="blog_ee"><br>
+                <a class="h3" href="blog/blog_earthengine.html">Google Earth Engine: <br> Breve Introducción</a>
+            </div>
+        </div>
+        <div class="indexContainer">
+            <div class="flex-container1" id="post4">
+                <img loading='lazy' src="img/Anaconda_Logo.jpg" alt="blog_conda"><br>
+                <a class="h3" href="blog/blog_conda.html">Manejo de paquetes <br> de Python con ANACONDA</a>
+            </div>
+            <div class="flex-container1" id="post5">
+                <img loading='lazy' src="img/ml_image.jpeg" alt="blog_pythonML"><br>
+                <a class="h3" href="blog/blog_pythonML.html">Aprendizaje Automático: <br> Primeros pasos</a>
+            </div>
+            <div class="flex-container1" id="post6">
+                <img loading='lazy' src="img/crop_clasification.png" alt="blog_clasificacion"><br>
+                <a class="h3" href="blog/blog_clasificacion.html">Clasificación de cultivos agrícolas <br> con Teledetección</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Acerca de esta pagina -->
+<div class="row" id="container2">
+
+    <div class="col-1"></div>
+
+    <div class="col-10" style="margin-top: 25px; margin-bottom: 15px;">
+        <div class="row">
+            
+            <!-- Imagen -->
+            <div class="col-lg-4">
+                <figure>
+                    <img src="img/realidad.jpg" alt="" class="img-fluid rounded mx-auto d-block" style="width: 350px;"/>
+                    <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+                        Hay mucho por aprender y compartir ya que tenemos mucho por vivir y por experimentar.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Descripcion -->
+            <div class="col-lg-8">
+                <div class="container" style="margin-top:40px">
+                    <h3 class="h5 lined mb-4">Acerca de esta página</h3>
+                    <p>
+                        En la presente página encontrarás posts sobre tecnologías relacionadas a la Agricultura de precisión con el objetivo de mejorar la productividad y calidad de los cultivos en el campo. <br>
+                        <br>
+                        Además, plasmar el conocimiento adquirido en
+                        sensoramiento remoto aplicado a la Agricultura de Precisión y reforzar
+                        lo aprendido hasta ahora.
+                    </p>
+
+                    <section class="social" style="margin-top: 50px;">
+                        <p>¡Comunícate conmigo!</p>
+                        <div class="links">
+                            <a href="https://www.facebook.com/vilcagamarra/" target="blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/CesarVilca19" target="blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/cesarvilca/" target="blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/vilcagamarracf" target="blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="col-1"></div>
+
+</div>
+
+<!-- Footer -->
+<div class="py-1" style="background: rgba(0, 0, 0, 1)">
+    <div class="container">
+        <div class="text-center">
+            <p class="small text-gray mb-0">Cesar Vilca, 2021 --- Template by
+            <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a>
+            </p>
+        </div>
+    </div>
+</div>
+    
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
