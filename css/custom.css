@@ -4,11 +4,26 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
-	text-align: justify;
+	font-family: 'IBM Plex Sans', sans-serif;
+	/* text-align: justify; */
 	font-size: 14px;
 }
 
+ul {
+    display: block;
+    list-style-type: disc;
+    /* margin-block-start: 1em; */
+    /* margin-block-end: 1em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 25px;
+}
+
+.terminal {
+	display: block;
+	background: black;
+	color: white;
+}
 /* ----- Imágenes ----- */
 
 .blog-img {
@@ -17,6 +32,11 @@ body {
     border-radius: 5px;
     border: thin solid #ccc;
 }
+
+.imagen_espaciada {
+	padding: 20px 0 20px 0;
+}
+
 
 /* ----- FONDOS ----- */
 

@@ -11,7 +11,8 @@
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
     <!-- Google fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"/>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"/> -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <!-- Icon fonts-->
     <link rel="stylesheet" href="../css/pe-icon-7-stroke.css" />
     <!-- Lightbox CSS-->
@@ -32,13 +33,6 @@
     <!-- Disqus -->
 	<script id="dsq-count-scr" src="//vilcagamarracf-github-io.disqus.com/count.js" async></script>
 
-    <style>
-        pre {
-            display: block;
-            background: black;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -98,7 +92,7 @@
                 <ul class="list-unstyled components">
                 <li><a class="text-center" style="font-size: 16px;"><b>Manejo de paquetes de Python con ANACONDA</b></a> <br></li>
                 <li><a class="text-center"><b>Contenido</b></a></li>
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#inicio">Antes de empezar</a></li>
                 <li><a href="#conda">Qué es Conda</a></li>
                 <li><a href="#anaconda">¿y Anaconda?</a></li>
                 <li><a href="#tutorial">Tutorial</a></li>
@@ -152,14 +146,18 @@
         <div class="col-md-8" style="background: white; padding: 20px 30px 0px 30px;">
             <div class="container-fluid">
 
-            <h1 class="h4 py-4" id="inicio">Manejo de paquetes de Python con ANACONDA</h1>
+            <h1 class="h3 py-4">Manejo de paquetes de Python con ANACONDA</h1>
 
             <p>
                 <b>¡Saludos!</b>, el presente post tiene la intención de informar sobre el manejo de 
                 paquetes de Python usando la línea de comandos de ANACONDA.
             </p>
+
+            <!-- Antes de empezar -->
+            <section>
+            <h2 class="h4 py-3" id="inicio">Antes de empezar</h2>
             <p>
-                Antes de empezar cabe mencionar que hay dos formas trabajar con Python:
+                Cabe mencionar que hay dos formas trabajar con Python:
             </p>
             <ul>
                 <li class="py-2">
@@ -182,14 +180,17 @@
             <p>
                 Ahora sí podemos empezar. Comenzando por el título del post...
             </p>
+            </section>
+            
+            <!-- Que es conda -->
+            <section>
+            <h2 class="h4 py-4" id="conda">Qué es CONDA</h2>
 
-            <h2 class="h5" id="conda"  style="padding-top: 20px">Qué es CONDA</h2>
-
-            <img class="rounded mx-auto d-block" src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg" alt="Conda logo" width="250px"  style="padding-top: 20px; padding-bottom: 30px"/>
             <p>
                 Según su
                 <a href="https://docs.conda.io/projects/conda/en/latest/index.html">documentación</a>, es un sistema de gestión de paquetes de código abierto y un sistema de gestión del entorno que se ejecuta en Windows, macOS y Linux.
             </p>
+            <img class="rounded mx-auto d-block my-4" src="https://docs.conda.io/projects/conda/en/latest/_images/conda_logo.svg" alt="Conda logo" width="250px"/>
             <ul>
                 <li>Conda instala, ejecuta y actualiza rápidamente paquetes y sus dependencias.</li>
                 <li>Conda crea, guarda, carga y cambia fácilmente entre entornos en su computadora local.</li>
@@ -197,976 +198,925 @@
             </ul>
 
             <p>
-                Conda como administrador de paquetes le ayuda a encontrar e 
-                instalar paquetes. Si necesita un paquete que requiere una versión
-                diferente de Python, no es necesario que cambie a un administrador
-                de entorno diferente porque conda también es un administrador de
-                entorno. Con solo unos pocos comandos, puede configurar un entorno
-                totalmente separado para ejecutar esa versión diferente de Python,
-                mientras continúa ejecutando su versión habitual de Python en su
-                entorno normal.
+                Conda como administrador de paquetes le ayuda a encontrar e instalar paquetes. Si necesita un paquete que requiere una versión diferente de Python, no es necesario que cambie a un administrador de entorno diferente porque conda también es un administrador de entorno. Con solo unos pocos comandos, puede configurar un entorno totalmente separado para ejecutar esa versión diferente de Python, mientras continúa ejecutando su versión habitual de Python en su entorno normal.
             </p>
+            </section>
 
-            <h2 class="h5" id="anaconda" style="padding-top: 20px">¿y Anaconda?</h2>
-            <img class="rounded mx-auto d-block" src="../img/Anaconda_Logo1.jpg" alt="Anaconda logo" 
-            width="250px" style="padding-top: 20px; padding-bottom: 20px"/>
+            <!-- y anaconda? -->
+            <section>
+            <h2 class="h4 py-4" id="anaconda" style="padding-top: 20px">¿y Anaconda?</h2>
+
             <p>
-                Anaconda es una distribución de los lenguajes de programación
-                Python y R para computación científica (ciencia de datos,
-                aplicaciones de aprendizaje automático, procesamiento de datos a
-                gran escala, análisis predictivo, etc.), que tiene como objetivo
-                simplificar la administración y la implementación de paquetes.
+                Anaconda es una distribución de los lenguajes de programación Python y R para computación científica (ciencia de datos, aplicaciones de aprendizaje automático, procesamiento de datos a gran escala, análisis predictivo, etc.), que tiene como objetivo simplificar la administración y la implementación de paquetes.
             </p>
+            <img class="rounded mx-auto d-block" src="../img/Anaconda_Logo1.jpg" alt="Anaconda logo" width="250px" />
             <p>Entonces:</p>
             <ul>
                 <li>
-                    <b>Conda:</b> administrador de paquetes (en la documentación se menciona que es también un paquete). La herramienta de línea de comandos conda <b>se utiliza para instalar, eliminar y examinar paquetes</b>.                </li>
-                <li><b>Anaconda:</b> conjunto de paquetes y softwares para el desarrollo con Python, R y otros lenguajes de programación.</li>
+                    <b>Conda:</b> administrador de paquetes (en la documentación se menciona que es también un paquete). La herramienta de línea de comandos conda <b>se utiliza para instalar, eliminar y examinar paquetes</b>.                
+                </li>
+                <li>
+                    <b>Anaconda:</b> conjunto de paquetes y softwares para el desarrollo con Python, R y otros lenguajes de programación.
+                </li>
                 <li>
                     <b>Miniconda:</b> alternativa más pequeña a Anaconda ya que solo contiene a conda y sus dependencias, no las listadas anteriormente. Una vez que se tiene Miniconda, es posible instalar Anaconda fácilmente con <code>conda install anaconda</code>.
                 </li>
             </ul>
-
-            <h2 class="h5 py-4" id="tutorial">Tutorial</h2>
-
-            <p>El tutorial consta de 4 partes:</p>
-            <ul>
-                <li><a href="#t1">Conociendo la terminal de Anaconda (Anaconda prompt)</a></li>
-                <li><a href="#packages">Paquetes (Packages)</a></li>
-                <li><a href="#channels">Canales (Channels)</a></li>
-                <li><a href="#envs">Ambientes (Environments)</a></li>
-            </ul>
-
-                <h3 class="h6 py-2" id="t1">1. Primeros pasos</h3>
-
-                <p>
-                Para empezar, es necesario tener instalada alguna versión de
-                <a
-                    href="https://www.anaconda.com/products/individual"
-                    target="blank"
-                    >Anaconda</a
-                >. Posterior a ello, abrir el <code>Anaconda Prompt</code> como
-                se muestra a continuación:
-                </p>
-                <img
-                class="rounded mx-auto d-block my-4"
-                src="https://docs.conda.io/projects/conda/en/latest/_images/anaconda-prompt.png"
-                width="350px"
-                />
-                <p class="text-center">
-                También puede aparecer como
-                <code>Anaconda Prompt (anaconda3)</code>
-                </p>
-                <p>
-                Se visualizará el terminal de Anaconda como una ventana oscura
-                en la cual podemos escribir comandos de Conda. A continuación
-                veremos los principales comandos usados en el terminal de
-                Anaconda (los recuadros con fondo negro "simulan" el Anaconda
-                Prompt).
-                </p>
-
-                <p class="py-2" id="t01">
-                <b>1.1. Ver ayuda</b> <br />
-                <br />
-                Al manejar una herramienta nueva como Conda es entendible
-                perderse ni saber como empezar. Al trabajar con Conda, todos los
-                comandos deben iniciar con la palabra <code>conda</code> y
-                posterior a ello, los argumentos específicos. <br />
-                Cuando se escriba <code>--help</code> para argumentos
-                específicos, al final de cada resultado se mostrarán
-                ejemplos.<br />
-                <br />
-                Para ver la lista de comandos disponibles se usa
-                <code>conda --help</code> como se muestra a continuación:
-                </p>
-
-                <pre class="pre-scrollable">
-
-        (base) C:\Users\LENOVO>conda --help
-
-        o 
-
-        (base) C:\Users\LENOVO>conda -h
-        </pre>
-
-        <p>
-            Y debajo se mostrará el resultado de haber ingresado tal comando:
-        </p>
-        <pre class="pre-scrollable">
-
-        usage: conda-script.py [-h] [-V] command ...
-
-        conda is a tool for managing and deploying applications, environments and packages.
-
-        Options:
-
-        positional arguments:
-        command
-            clean       Remove unused packages and caches.
-            compare     Compare packages between conda environments.
-            config      Modify configuration values in .condarc. This is modeled 
-                        after the git config command. Writes to the user .condarc
-                        file (C:\Users\LENOVO\.condarc) by default.
-            create      Create a new conda environment from a list of specified
-                        packages.
-            help        Displays a list of available conda commands and their help
-                        strings.
-            info        Display information about current conda install.
-            init        Initialize conda for shell interaction. [Experimental]
-            install     Installs a list of packages into a specified conda
-                        environment.
-            list        List linked packages in a conda environment.
-            package     Low-level conda package utility. (EXPERIMENTAL)
-            remove      Remove a list of packages from a specified conda environment.
-            uninstall   Alias for conda remove.
-            run         Run an executable in a conda environment. [Experimental]
-            search      Search for packages and display associated information. The
-                        input is a MatchSpec, a query language for conda packages.
-                        See examples below.
-            update      Updates conda packages to the latest compatible version.
-            upgrade     Alias for conda update.
-
-        optional arguments:
-        -h, --help     Show this help message and exit.
-        -V, --version  Show the conda version number and exit.
-
-        conda commands available from other packages:
-        build
-        convert
-        debug
-        develop
-        env
-        index
-        inspect
-        metapackage
-        render
-        server
-        skeleton
-        verify
-        </pre>
-
-                <p class="py-2" id="t02">
-                <b>1.2. Versión de conda</b> <br />
-                <br />
-                Qué versión de conda tengo instalado con
-                <code>conda --version</code> .
-                </p>
-                <pre>
-
-        (base) C:\Users\LENOVO>conda --version
-
-        conda 4.9.2
-        </pre
-                >
-
-            <!-- Paquetes -->
-                <h3 class="h6 py-4" id="packages">2. Paquetes <i>(Packages)</i></h3>
-
-                <p>
-                    Los paquetes de Conda son archivos que contienen un conjunto de recursos: generalmente bibliotecas y ejecutables, pero no siempre.
-                
-                    <ul>
-                        <li>
-                            Otras herramientas como la GUI Anaconda Navigator también
-                            exponen las mismas capacidades.
-                        </li>
-                        <li>
-                            Los paquetes Conda también se pueden usar para empaquetar bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o simplemente para distribuir ejecutables binarios puros generados a partir de cualquier lenguaje de programación.
-                        </li>
-                    </ul>
-
-                    <b>Notas</b>
-                </p>
-
-                <blockquote class="blockquote">
+            </section>
+            
+            <!-- Tutorial -->
+            <section>
+                <h2 class="h4 py-4" id="tutorial">Tutorial</h2>
                     <p>
-                        Para <a href="https://packaging.python.org/tutorials/installing-packages/">instalar un paquete</a> en Python, dependiendo del sistema operativo, es necesario conocer que se puede instalar mediante:
-
+                        El tutorial consta de 4 partes:
                         <ul>
-                            <li>
-                                <a href="https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing">PIP</a>: instalador recomendado en Python (ya que conecta con PyPi) pero requiere manejar un sistema operativo Linux. <br />
-                                <p class="text-center my-4">
-                                    <code>$pip install rasterio</code>
-                                </p>
-                            </li>
-                            <li>
-                                Conda: Alternativo a PIP. Permite administrar ambientes virtuales e instalar paquetes fácilmente (mediante código en terminal o por interfaz gráfica en Anaconda). <br />
-                                <p class="text-center my-4">
-                                    <code>conda install -c conda-forge rasterio</code>
-                                </p>
-                            </li>
+                            <li><a href="#t1">Conociendo la terminal de Anaconda (Anaconda prompt)</a></li>
+                            <li><a href="#packages">Paquetes (Packages)</a></li>
+                            <li><a href="#channels">Canales (Channels)</a></li>
+                            <li><a href="#envs">Ambientes (Environments)</a></li>
                         </ul>
-                    
-                        <b>Recomendación:</b> Si se usa Anaconda en local, usar <code>conda</code> para instalar los paquetes necesarios, no PIP en la línea de comandos debido a que Anaconda prepara sus repositorios para ser descargados de manera eficiente con Conda.
                     </p>
-                </blockquote>
+                    <!-- 1. Primeros pasos -->
+                    <section>
+                        <h3 class="h5 py-2" id="t1">1. Primeros pasos</h3>
+                            <p>
+                                Para empezar, es necesario tener instalada alguna versión de
+                                <a href="https://www.anaconda.com/products/individual" target="blank" >Anaconda</a>. Posterior a ello, abrir el <code>Anaconda Prompt</code> como se muestra a continuación:
+                            </p>
+                            
+                            <p class="text-center">
+                                <img class="rounded mx-auto d-block my-4" src="https://docs.conda.io/projects/conda/en/latest/_images/anaconda-prompt.png" width="350px"/>
+                                También puede aparecer como
+                                <code>Anaconda Prompt (anaconda3)</code>
+                            </p>
+                            <p>
+                                Se visualizará el terminal de Anaconda como una ventana oscura
+                                en la cual podemos escribir comandos de Conda. A continuación
+                                veremos los principales comandos usados en el terminal de
+                                Anaconda (los recuadros con fondo negro "simulan" el Anaconda
+                                Prompt).
+                            </p>
 
-                <h3 class="h6 py-3" id="p1">2.1. Ayuda en paquetes</h3>
-                <p>
-                El comando relacionado con los paquetes es <code>list</code> y
-                para ver sus argumentos disponibles se usa
-                <code>conda list --help</code> .
-                </p>
+                            <h4 class="h6 py-2" id="t01">1.1. Ver ayuda</h4> 
+                                <p class="py-2">
+                                    Al manejar una herramienta nueva como Conda es entendible perderse ni saber como empezar. Al trabajar con Conda, todos los comandos deben iniciar con la palabra <code>conda</code> y posterior a ello, los argumentos específicos. <br />
+                                    Cuando se escriba <code>--help</code> para argumentos específicos, al final de cada resultado se mostrarán ejemplos.
+                                    <br />
+                                    <br />
+                                    Para ver la lista de comandos disponibles se usa <code>conda --help</code> como se muestra a continuación:
+                                </p>
 
-                <pre class="pre-scrollable">
-        
-        (base) C:\Users\LENOVO>conda list --help
-        </pre
-                >
+                                <pre class="terminal">
 
-                <pre class="pre-scrollable">
+                (base) C:\Users\LENOVO>conda --help
 
-        usage: conda-script.py list [-h] [-n ENVIRONMENT | -p PATH] [--json] [-v] [-q]
-                                    [--show-channel-urls] [-c] [-f] [--explicit]
-                                    [--md5] [-e] [-r] [--no-pip]
-                                    [regex]
-        
-        List linked packages in a conda environment.
-        
-        Options:
-        
-        positional arguments:
-            regex                 List only packages matching this regular expression.
-        
-        optional arguments:
-            -h, --help            Show this help message and exit.
-            --show-channel-urls   Show channel urls. Overrides the value given by `conda
-                                config --show show_channel_urls`.
-            -c, --canonical       Output canonical names of packages only. Implies --no-
-                                pip.
-            -f, --full-name       Only search for full names.
-            --explicit            List explicitly all installed conda packaged with URL
-                                (output may be used by conda create --file).
-            --md5                 Add MD5 hashsum when using --explicit
-            -e, --export          Output requirement string only (output may be used by
-                                conda create --file).
-            -r, --revisions       List the revision history and exit.
-            --no-pip              Do not include pip-only installed packages.
-        
-        Target Environment Specification:
-            -n ENVIRONMENT, --name ENVIRONMENT
-                                Name of environment.
-            -p PATH, --prefix PATH
-                                Full path to environment location (i.e. prefix).
-        
-        Output, Prompt, and Flow Control Options:
-            --json                Report all output as json. Suitable for using conda
-                                programmatically.
-            -v, --verbose         Use once for info, twice for debug, three times for
-                                trace.
-            -q, --quiet           Do not display progress bar.
-        
-        Examples:
-        
-        List all packages in the current environment:
-        
-            conda list
-        
-        List all packages installed into the environment 'myenv':
-        
-            conda list -n myenv
-        
-        Save packages for future use:
-        
-            conda list --export > package-list.txt
-        
-        Reinstall packages from an export file:
-        
-            conda create -n myenv --file package-list.txt
-        </pre
-                >
+                o 
 
-                <h3 class="h6 py-3" id="p2">2.2. Versionamiento Semántico</h3>
+                (base) C:\Users\LENOVO>conda -h
+                                </pre>
 
-                <p>
-                La mayoría de los paquetes de Conda utilizan un sistema llamado
-                control de versiones semántico para
-                <b
-                    >identificar distintas versiones de un paquete de software sin
-                    ambigüedades.</b
-                >
-                </p>
+                                <p>
+                                    Y debajo se mostrará el resultado de haber ingresado tal comando:
+                                </p>
 
-                <ul>
-                <li>
-                    Las etiquetas de versión generalmente las eligen los autores
-                    del proyecto, no necesariamente las mismas personas que
-                    empaquetan el proyecto como un paquete Conda.
-                </li>
-                <li>
-                    No existe ningún requisito técnico de que la etiqueta de la
-                    versión del autor del proyecto coincida con la etiqueta de la
-                    versión del paquete Conda, pero casi siempre se sigue la
-                    convención de hacerlo.
-                </li>
-                <li>
-                    Las etiquetas de la versión semántica se pueden comparar
-                    lexicográficamente y facilitan la determinación de cuál de las
-                    dos versiones es la versión posterior.
-                </li>
-                </ul>
-                <p>
-                En el control de versiones semántico, el software
-                <b
-                    >se etiqueta con un identificador de versión de tres partes de
-                    la forma</b
-                >
-                <b>MAJOR.MINOR.PATCH</b>; los componentes de la etiqueta son
-                números enteros no negativos separados por puntos. <br />
-                </p>
-                <ul>
-                <li>
-                    Suponiendo que todo el software comienza en la versión 0.0.0,
-                    el número de versión PRINCIPAL aumenta cuando se introduce una
-                    nueva funcionalidad significativa (a menudo con los cambios de
-                    API correspondientes).
-                </li>
-                <li>
-                    Los aumentos en el número de versión MINOR generalmente
-                    reflejan mejoras (por ejemplo, nuevas funciones) que evitan
-                    cambios de API incompatibles con versiones anteriores. Por
-                    ejemplo, agregar un argumento opcional a una función API (de
-                    una manera que permita que el código antiguo se ejecute sin
-                    cambios) es un cambio digno de aumentar el número de versión
-                    MINOR.
-                </li>
-                <li>
-                    Un incremento en el número de versión de PATCH es apropiado
-                    principalmente para correcciones de errores que conservan los
-                    mismos números de revisión MAYOR y MENOR.
-                </li>
-                <li>
-                    Los parches de software generalmente no introducen nuevas
-                    funciones ni cambian las API en absoluto (excepto a veces para
-                    abordar problemas de seguridad).
-                </li>
-                </ul>
-                <p>
-                Muchas herramientas de línea de comandos muestran su
-                identificador de versión ejecutando la herramienta --version.
-                Esta información a veces se puede mostrar o documentar de otras
-                formas. Por ejemplo, supongamos que en algún sistema, una
-                determinada versión de Python está instalada y usted pregunta al
-                respecto de esta manera:
-                </p>
-                <pre>
+                                <pre class="pre-scrollable terminal">
 
-            python -c "import sys; sys.version"
-            '1.0.1 (Mar 26 2014)'
-        </pre
-                >
-                <p>donde significa: La versión MAYOR es 1, el PATCH es 1.</p>
-                <h3 class="h6 py-2" id="p3">2.3. Listar paquetes instalados</h3>
+                usage: conda-script.py [-h] [-V] command ...
 
-                <pre class="pre-scrollable">
+                conda is a tool for managing and deploying applications, environments and packages.
 
-        (base) C:\Users\LENOVO>conda list    
-        </pre
-                >
+                Options:
 
-                <p>
-                Listará todos los paquetes instalados en local junto con sus
-                respectivas versiones.
-                </p>
-
-                <pre class="pre-scrollable">
-
-        # packages in environment at C:\Users\LENOVO\anaconda3:
-        #
-        # Name                    Version                   Build  Channel
-        _ipyw_jlab_nb_ext_conf    0.1.0                    py37_0
-        absl-py                   0.10.0           py37hc8dfbb8_1    conda-forge
-        aiohttp                   3.6.2            py37h4ab8f01_1    conda-forge
-        alabaster                 0.7.12                   py37_0
-        anaconda                  2020.02                  py37_0
-        anaconda-client           1.7.2                    py37_0
-        .                         .                             .
-        .                         .                             .
-        .                         .                             .
-        zipp                      6.2.0                      py_0
-        zlib                      1.2.11               h62dcd97_3
-        zstd                      1.3.7                h508b16e_0
-        </pre
-                >
-                Notese la ubicación de los packages:
-                <p class="text-center">
-                <code
-                    ># packages in environment at C:\Users\LENOVO\anaconda3</code
-                >
-                </p>
-
-                <h3 class="h6 py-2" id="p4">2.4. Instalar paquetes</h3>
-
-                <p>
-                Generalmente para instalar algo con Conda se usa
-                <code>conda install</code>. Veremos los argumentos disponibles
-                con:
-                </p>
-
-                <pre class="pre-scrollable">
-
-        (base) C:\Users\LENOVO>conda install --help    
-        </pre
-                >
-
-                <pre class="pre-scrollable">
-        
-        usage: conda-script.py install [-h] [--revision REVISION]
-                                    [-n ENVIRONMENT | -p PATH] [-c CHANNEL]
-                                    [--use-local] [--override-channels]
-                                    [--repodata-fn REPODATA_FNS]
-                                    [--strict-channel-priority]
-                                    [--no-channel-priority]
-                                    [--no-deps | --only-deps] [--no-pin] [--copy]
-                                    [--no-shortcuts] [-C] [-k] [--offline] [-d]
-                                    [--json] [-q] [-v] [-y] [--download-only]
-                                    [--show-channel-urls] [--file FILE]
-                                    [--force-reinstall]
-                                    [--freeze-installed | --update-deps | -S | --update-all | --update-specs]
-                                    [-m] [--clobber] [--dev]
-                                    [package_spec [package_spec ...]]
-        
-        Installs a list of packages into a specified conda environment.
-        
-            This command accepts a list of package specifications (e.g, bitarray=0.8)
-            and installs a set of packages consistent with those specifications and
-            compatible with the underlying environment. If full compatibility cannot
-            be assured, an error is reported and the environment is not changed.
-        
-            Conda attempts to install the newest versions of the requested packages. To
-            accomplish this, it may update some packages that are already installed, or
-            install additional packages. To prevent existing packages from updating,
-            use the --freeze-installed option. This may force conda to install older
-            versions of the requested packages, and it does not prevent additional
-            dependency packages from being installed.
-        
-            If you wish to skip dependency checking altogether, use the '--no-deps'
-            option. This may result in an environment with incompatible packages, so
-            this option must be used with great caution.
-        
-            conda can also be called with a list of explicit conda package filenames
-            (e.g. ./lxml-3.2.0-py27_0.tar.bz2). Using conda in this mode implies the
-            --no-deps option, and should likewise be used with great caution. Explicit
-            filenames and package specifications cannot be mixed in a single command.
-        
-        Options:
-        
-        positional arguments:
-        package_spec          Packages to install or update in the conda
+                positional arguments:
+                command
+                    clean       Remove unused packages and caches.
+                    compare     Compare packages between conda environments.
+                    config      Modify configuration values in .condarc. This is modeled 
+                                after the git config command. Writes to the user .condarc
+                                file (C:\Users\LENOVO\.condarc) by default.
+                    create      Create a new conda environment from a list of specified
+                                packages.
+                    help        Displays a list of available conda commands and their help
+                                strings.
+                    info        Display information about current conda install.
+                    init        Initialize conda for shell interaction. [Experimental]
+                    install     Installs a list of packages into a specified conda
                                 environment.
-        
-        optional arguments:
-        -h, --help            Show this help message and exit.
-        --revision REVISION   Revert to the specified REVISION.
-        --file FILE           Read package versions from the given file. Repeated
-                                file specifications can be passed (e.g. --file=file1
-                                --file=file2).
-        --dev                 Use `sys.executable -m conda` in wrapper scripts
-                                instead of CONDA_EXE. This is mainly for use during
-                                tests where we test new conda source against old
-                                Python versions.
-        
-        Target Environment Specification:
-        -n ENVIRONMENT, --name ENVIRONMENT
-                                Name of environment.
-        -p PATH, --prefix PATH
-                                Full path to environment location (i.e. prefix).
-        
-        Channel Customization:
-        -c CHANNEL, --channel CHANNEL
-                                Additional channel to search for packages. These are
-                                URLs searched in the order they are given (including
-                                local directories using the 'file://' syntax or simply
-                                a path like '/home/conda/mychan' or '../mychan').
-                                Then, the defaults or channels from .condarc are
-                                searched (unless --override-channels is given). You
-                                can use 'defaults' to get the default packages for
-                                conda. You can also use any name and the .condarc
-                                channel_alias value will be prepended. The default
-                                channel_alias is http://conda.anaconda.org/.
-        --use-local           Use locally built packages. Identical to '-c local'.
-        --override-channels   Do not search default or .condarc channels. Requires
-                                --channel.
-        --repodata-fn REPODATA_FNS
-                                Specify name of repodata on remote server. Conda will
-                                try whatever you specify, but will ultimately fall
-                                back to repodata.json if your specs are not
-                                satisfiable with what you specify here. This is used
-                                to employ repodata that is reduced in time scope. You
-                                may pass this flag more than once. Leftmost entries
-                                are tried first, and the fallback to repodata.json is
-                                added for you automatically.
-        
-        Solver Mode Modifiers:
-        --strict-channel-priority
-                                Packages in lower priority channels are not considered
-                                if a package with the same name appears in a higher
-                                priority channel.
-        --no-channel-priority
-                                Package version takes precedence over channel
-                                priority. Overrides the value given by `conda config
-                                --show channel_priority`.
-        --no-deps             Do not install, update, remove, or change
-                                dependencies. This WILL lead to broken environments
-                                and inconsistent behavior. Use at your own risk.
-        --only-deps           Only install dependencies.
-        --no-pin              Ignore pinned file.
-        --force-reinstall     Ensure that any user-requested package for the current
-                                operation is uninstalled and reinstalled, even if that
-                                package already exists in the environment.
-        --freeze-installed, --no-update-deps
-                                Do not update or change already-installed
-                                dependencies.
-        --update-deps         Update dependencies.
-        -S, --satisfied-skip-solve
-                                Exit early and do not run the solver if the requested
-                                specs are satisfied. Also skips aggressive updates as
-                                configured by 'aggressive_update_packages'. Similar to
-                                the default behavior of 'pip install'.
-        --update-all, --all   Update all installed packages in the environment.
-        --update-specs        Update based on provided specifications.
-        
-        Package Linking and Install-time Options:
-        --copy                Install all packages using copies instead of hard- or
-                                soft-linking.
-        --no-shortcuts        Don't install start menu shortcuts
-        -m, --mkdir           Create the environment directory if necessary.
-        --clobber             Allow clobbering of overlapping file paths within
-                                packages, and suppress related warnings.
-        
-        Networking Options:
-        -C, --use-index-cache
-                                Use cache of channel index files, even if it has
-                                expired.
-        -k, --insecure        Allow conda to perform "insecure" SSL connections and
-                                transfers. Equivalent to setting 'ssl_verify' to
-                                'false'.
-        --offline             Offline mode. Don't connect to the Internet.
-        
-        Output, Prompt, and Flow Control Options:
-        -d, --dry-run         Only display what would have been done.
-        --json                Report all output as json. Suitable for using conda
-                                programmatically.
-        -q, --quiet           Do not display progress bar.
-        -v, --verbose         Can be used multiple times. Once for INFO, twice for
-                                DEBUG, three times for TRACE.
-        -y, --yes             Do not ask for confirmation.
-        --download-only       Solve an environment and ensure package caches are
-                                populated, but exit prior to unlinking and linking
-                                packages into the prefix.
-        --show-channel-urls   Show channel urls. Overrides the value given by `conda
-                                config --show show_channel_urls`.
-        
-        Examples:
-        
-            conda install -n myenv scipy
-        </pre
-                >
+                    list        List linked packages in a conda environment.
+                    package     Low-level conda package utility. (EXPERIMENTAL)
+                    remove      Remove a list of packages from a specified conda environment.
+                    uninstall   Alias for conda remove.
+                    run         Run an executable in a conda environment. [Experimental]
+                    search      Search for packages and display associated information. The
+                                input is a MatchSpec, a query language for conda packages.
+                                See examples below.
+                    update      Updates conda packages to the latest compatible version.
+                    upgrade     Alias for conda update.
 
-                <p>Y para instalar un paquete específico usaremos:</p>
-                <pre>
+                optional arguments:
+                -h, --help     Show this help message and exit.
+                -V, --version  Show the conda version number and exit.
 
-            conda install PKGNAME
-        </pre
-                >
-                <p>donde PKGNAME es el nombre del paquete.</p>
-                <h3 class="h6 py-3" id="p5">
-                2.5. Instalar versión específica de un paquete
-                </h3>
-                <p>
-                Tres formas de instalar paquetes con versiones específicas. Es
-                opcional usar <code>--yes</code> al final para omitir la
-                pregunta de <code>[y]/[n]</code> .
-                </p>
-                <pre>
+                conda commands available from other packages:
+                build
+                convert
+                debug
+                develop
+                env
+                index
+                inspect
+                metapackage
+                render
+                server
+                skeleton
+                verify
+                                </pre>
 
-            conda install PACKAGE=12.3          # ultima version dentro de una serie
+                            <h4 class="h6 py-3" id="t02">1.2. Versión de conda</h4>
+                                <p>
+                                    Qué versión de conda tengo instalado con
+                                    <code>conda --version</code> .
+                                </p>
+                                
+                                <pre class="terminal">
 
-            conda install PACKAGE=13
+                (base) C:\Users\LENOVO>conda --version
 
-            conda install PACKAGE=14.3.2        # versión exacta
-        </pre
-                >
+                conda 4.9.2
+                                </pre>
+                    </section>
+                    
+                    <!-- 2. Paquetes -->
+                    <section>
+                        <h3 class="h5 py-4" id="packages">2. Paquetes <i>(Packages)</i></h3>
+                            <p>
+                                Los paquetes de Conda son archivos que contienen un conjunto de recursos: generalmente bibliotecas y ejecutables, pero no siempre.
+                                <ul>
+                                    <li>
+                                        Otras herramientas como la GUI Anaconda Navigator también
+                                        exponen las mismas capacidades.
+                                    </li>
+                                    <li>
+                                        Los paquetes Conda también se pueden usar para empaquetar bibliotecas en otros lenguajes (como R, Scala, Julia, etc.) o simplemente para distribuir ejecutables binarios puros generados a partir de cualquier lenguaje de programación.
+                                    </li>
+                                </ul>
+                            </p>
 
-                <p>
-                También es posible usar condicionales para la instalación pero
-                generalmente se usan solo los nombres ya que ésto permite la que
-                se instale la última versión del mismo.
-                </p>
+                            <blockquote class="blockquote">
+                                <p> 
+                                    <p class="py-0" style="font-weight: bold" >Nota</p>
+                                    Para <a href="https://packaging.python.org/tutorials/installing-packages/">instalar un paquete</a> en Python, dependiendo del sistema operativo, es necesario conocer que se puede instalar mediante:
 
-                <h3 class="h6 py-3" id="p6">
-                2.6. Búsqueda de paquetes instalados
-                </h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://packaging.python.org/tutorials/installing-packages/#use-pip-for-installing">PIP</a>: instalador recomendado en Python (ya que conecta con PyPi) pero requiere manejar un sistema operativo Linux. <br />
+                                            <p class="text-center my-4">
+                                                <code>$pip install rasterio</code>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            Conda: Alternativo a PIP. Permite administrar ambientes virtuales e instalar paquetes fácilmente (mediante código en terminal o por interfaz gráfica en Anaconda). <br />
+                                            <p class="text-center my-4">
+                                                <code>conda install -c conda-forge rasterio</code>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                
+                                    <b>Recomendación:</b> Si se usa Anaconda en local, usar <code>conda</code> para instalar los paquetes necesarios, no PIP en la línea de comandos debido a que Anaconda prepara sus repositorios para ser descargados de manera eficiente con Conda.
+                                </p>
+                            </blockquote>
 
-                <pre>
+                        <!-- 2.1. Ayuda en paquetes -->
+                        <section>
+                    
+                            <h4 class="h6 py-3" id="p1">2.1. Ayuda en paquetes</h4>
+                            <p>
+                                El comando relacionado con los paquetes es <code>list</code> y para ver sus argumentos disponibles se usa <code>conda list --help</code> .
+                            </p>
 
-            (base) C:\Users\LENOVO>conda list PKGNAME
-        </pre
-                >
+                            <pre class="pre-scrollable terminal">
+                            
+                (base) C:\Users\LENOVO>conda list --help
+                            </pre>
 
-                <p>
-                Podemos escribir el nombre del paquete completo o parte del
-                nombre. En el siguiente ejemplo buscaré el paquete
-                <code>earthengine-api</code> solamente como <code>earth</code>:
-                </p>
-                <pre>
+                            <pre class="pre-scrollable terminal">
 
-            (base) C:\Users\LENOVO>conda list earth
+                usage: conda-script.py list [-h] [-n ENVIRONMENT | -p PATH] [--json] [-v] [-q]
+                                            [--show-channel-urls] [-c] [-f] [--explicit]
+                                            [--md5] [-e] [-r] [--no-pip]
+                                            [regex]
+                
+                List linked packages in a conda environment.
+                
+                Options:
+                
+                positional arguments:
+                    regex                 List only packages matching this regular expression.
+                
+                optional arguments:
+                    -h, --help            Show this help message and exit.
+                    --show-channel-urls   Show channel urls. Overrides the value given by `conda
+                                        config --show show_channel_urls`.
+                    -c, --canonical       Output canonical names of packages only. Implies --no-
+                                        pip.
+                    -f, --full-name       Only search for full names.
+                    --explicit            List explicitly all installed conda packaged with URL
+                                        (output may be used by conda create --file).
+                    --md5                 Add MD5 hashsum when using --explicit
+                    -e, --export          Output requirement string only (output may be used by
+                                        conda create --file).
+                    -r, --revisions       List the revision history and exit.
+                    --no-pip              Do not include pip-only installed packages.
+                
+                Target Environment Specification:
+                    -n ENVIRONMENT, --name ENVIRONMENT
+                                        Name of environment.
+                    -p PATH, --prefix PATH
+                                        Full path to environment location (i.e. prefix).
+                
+                Output, Prompt, and Flow Control Options:
+                    --json                Report all output as json. Suitable for using conda
+                                        programmatically.
+                    -v, --verbose         Use once for info, twice for debug, three times for
+                                        trace.
+                    -q, --quiet           Do not display progress bar.
+                
+                Examples:
+                
+                List all packages in the current environment:
+                
+                    conda list
+                
+                List all packages installed into the environment 'myenv':
+                
+                    conda list -n myenv
+                
+                Save packages for future use:
+                
+                    conda list --export > package-list.txt
+                
+                Reinstall packages from an export file:
+                
+                    conda create -n myenv --file package-list.txt
+                            </pre>
 
-            # packages in environment at C:\Users\LENOVO\anaconda3:
+                        </section>
 
-            # Name                    Version                   Build  Channel
-            earthengine-api           0.1.251                  pypi_0    pypi
-        </pre
-                >
+                        <!-- 2.2. Versionamiento semántico -->
+                        <section>
+                            <h4 class="h6 py-3" id="p2">2.2. Versionamiento Semántico</h4>
+                            <p>
+                                La mayoría de los paquetes de Conda utilizan un sistema llamado control de versiones semántico para 
+                                <b>identificar distintas versiones de un paquete de software sin ambigüedades.</b>
+                            </p>
+                            <ul>
+                                <li>
+                                    Las etiquetas de versión generalmente las eligen los autores del proyecto, no necesariamente las mismas personas que empaquetan el proyecto como un paquete Conda.
+                                </li>
+                                <li>
+                                    No existe ningún requisito técnico de que la etiqueta de la versión del autor del proyecto coincida con la etiqueta de la versión del paquete Conda, pero casi siempre se sigue la convención de hacerlo.
+                                </li>
+                                <li>
+                                    Las etiquetas de la versión semántica se pueden comparar lexicográficamente y facilitan la determinación de cuál de las dos versiones es la versión posterior.
+                                </li>
+                            </ul>
+                            <p>
+                                En el control de versiones semántico, el software <b>se etiqueta con un identificador de versión de tres partes de la forma</b>
+                                <b>MAJOR.MINOR.PATCH</b>; los componentes de la etiqueta son números enteros no negativos separados por puntos. <br />
+                            </p>
+                            <ul>
+                                <li>
+                                    Suponiendo que todo el software comienza en la versión 0.0.0, el número de versión PRINCIPAL aumenta cuando se introduce una nueva funcionalidad significativa (a menudo con los cambios de API correspondientes).
+                                </li>
+                                <li>
+                                    Los aumentos en el número de versión MINOR generalmente reflejan mejoras (por ejemplo, nuevas funciones) que evitan cambios de API incompatibles con versiones anteriores. Por ejemplo, agregar un argumento opcional a una función API (de una manera que permita que el código antiguo se ejecute sin cambios) es un cambio digno de aumentar el número de versión MINOR.
+                                </li>
+                                <li>
+                                    Un incremento en el número de versión de PATCH es apropiado principalmente para correcciones de errores que conservan los mismos números de revisión MAYOR y MENOR.
+                                </li>
+                                <li>
+                                    Los parches de software generalmente no introducen nuevas funciones ni cambian las API en absoluto (excepto a veces para abordar problemas de seguridad).
+                                </li>
+                            </ul>
+                            <p>
+                                Muchas herramientas de línea de comandos muestran su identificador de versión ejecutando la herramienta --version. Esta información a veces se puede mostrar o documentar de otras formas. Por ejemplo, supongamos que en algún sistema, una determinada versión de Python está instalada y usted pregunta al respecto de esta manera:
+                            </p>
+                            <pre class="terminal">
 
-                <h3 class="h6 py-3" id="p7">2.7. Actualizar un paquete</h3>
-                <pre>
+                python -c "import sys; sys.version"
+                '1.0.1 (Mar 26 2014)'
+                            </pre>
+                            <p>donde significa: La versión MAYOR es 1, el PATCH es 1.</p>
+                        </section>
+                        
+                        <!-- 2.3. Listar paquetes instalados -->
+                        <section>
+
+                            <h4 class="h6 py-3" id="p3">2.3. Listar paquetes instalados</h4>
+
+                            <pre class="pre-scrollable terminal">
+
+                (base) C:\Users\LENOVO>conda list    
+                            </pre>
+
+                            <p>
+                                Listará todos los paquetes instalados en local junto con sus respectivas versiones.
+
+                                <pre class="pre-scrollable terminal">
+
+                # packages in environment at C:\Users\LENOVO\anaconda3:
+                #
+                # Name                    Version                   Build  Channel
+                _ipyw_jlab_nb_ext_conf    0.1.0                    py37_0
+                absl-py                   0.10.0           py37hc8dfbb8_1    conda-forge
+                aiohttp                   3.6.2            py37h4ab8f01_1    conda-forge
+                alabaster                 0.7.12                   py37_0
+                anaconda                  2020.02                  py37_0
+                anaconda-client           1.7.2                    py37_0
+                .                         .                             .
+                .                         .                             .
+                .                         .                             .
+                zipp                      6.2.0                      py_0
+                zlib                      1.2.11               h62dcd97_3
+                zstd                      1.3.7                h508b16e_0
+                                </pre>
+
+                                Notese la ubicación de los packages:
+                            </p>
+
+                            <p class="text-center">
+                                <code># packages in environment at C:\Users\LENOVO\anaconda3</code>
+                            </p>
+
+                        </section>
+
+                        <!-- 2.4. Instalar paquetes -->
+                        <section>
+                            <h4 class="h6 py-3" id="p4">2.4. Instalar paquetes</h4>
+
+                            <p>
+                            Generalmente para instalar algo con Conda se usa
+                            <code>conda install</code>. Veremos los argumentos disponibles
+                            con:
+                            </p>
+
+                            <pre class="pre-scrollable terminal">
+
+                (base) C:\Users\LENOVO>conda install --help    
+                            </pre>
+
+                            <pre class="pre-scrollable terminal">
+                                
+                usage: conda-script.py install [-h] [--revision REVISION]
+                                            [-n ENVIRONMENT | -p PATH] [-c CHANNEL]
+                                            [--use-local] [--override-channels]
+                                            [--repodata-fn REPODATA_FNS]
+                                            [--strict-channel-priority]
+                                            [--no-channel-priority]
+                                            [--no-deps | --only-deps] [--no-pin] [--copy]
+                                            [--no-shortcuts] [-C] [-k] [--offline] [-d]
+                                            [--json] [-q] [-v] [-y] [--download-only]
+                                            [--show-channel-urls] [--file FILE]
+                                            [--force-reinstall]
+                                            [--freeze-installed | --update-deps | -S | --update-all | --update-specs]
+                                            [-m] [--clobber] [--dev]
+                                            [package_spec [package_spec ...]]
+                
+                Installs a list of packages into a specified conda environment.
+                
+                    This command accepts a list of package specifications (e.g, bitarray=0.8)
+                    and installs a set of packages consistent with those specifications and
+                    compatible with the underlying environment. If full compatibility cannot
+                    be assured, an error is reported and the environment is not changed.
+                
+                    Conda attempts to install the newest versions of the requested packages. To
+                    accomplish this, it may update some packages that are already installed, or
+                    install additional packages. To prevent existing packages from updating,
+                    use the --freeze-installed option. This may force conda to install older
+                    versions of the requested packages, and it does not prevent additional
+                    dependency packages from being installed.
+                
+                    If you wish to skip dependency checking altogether, use the '--no-deps'
+                    option. This may result in an environment with incompatible packages, so
+                    this option must be used with great caution.
+                
+                    conda can also be called with a list of explicit conda package filenames
+                    (e.g. ./lxml-3.2.0-py27_0.tar.bz2). Using conda in this mode implies the
+                    --no-deps option, and should likewise be used with great caution. Explicit
+                    filenames and package specifications cannot be mixed in a single command.
+                
+                Options:
+                
+                positional arguments:
+                package_spec          Packages to install or update in the conda
+                                        environment.
+                
+                optional arguments:
+                -h, --help            Show this help message and exit.
+                --revision REVISION   Revert to the specified REVISION.
+                --file FILE           Read package versions from the given file. Repeated
+                                        file specifications can be passed (e.g. --file=file1
+                                        --file=file2).
+                --dev                 Use `sys.executable -m conda` in wrapper scripts
+                                        instead of CONDA_EXE. This is mainly for use during
+                                        tests where we test new conda source against old
+                                        Python versions.
+                
+                Target Environment Specification:
+                -n ENVIRONMENT, --name ENVIRONMENT
+                                        Name of environment.
+                -p PATH, --prefix PATH
+                                        Full path to environment location (i.e. prefix).
+                
+                Channel Customization:
+                -c CHANNEL, --channel CHANNEL
+                                        Additional channel to search for packages. These are
+                                        URLs searched in the order they are given (including
+                                        local directories using the 'file://' syntax or simply
+                                        a path like '/home/conda/mychan' or '../mychan').
+                                        Then, the defaults or channels from .condarc are
+                                        searched (unless --override-channels is given). You
+                                        can use 'defaults' to get the default packages for
+                                        conda. You can also use any name and the .condarc
+                                        channel_alias value will be prepended. The default
+                                        channel_alias is http://conda.anaconda.org/.
+                --use-local           Use locally built packages. Identical to '-c local'.
+                --override-channels   Do not search default or .condarc channels. Requires
+                                        --channel.
+                --repodata-fn REPODATA_FNS
+                                        Specify name of repodata on remote server. Conda will
+                                        try whatever you specify, but will ultimately fall
+                                        back to repodata.json if your specs are not
+                                        satisfiable with what you specify here. This is used
+                                        to employ repodata that is reduced in time scope. You
+                                        may pass this flag more than once. Leftmost entries
+                                        are tried first, and the fallback to repodata.json is
+                                        added for you automatically.
+                
+                Solver Mode Modifiers:
+                --strict-channel-priority
+                                        Packages in lower priority channels are not considered
+                                        if a package with the same name appears in a higher
+                                        priority channel.
+                --no-channel-priority
+                                        Package version takes precedence over channel
+                                        priority. Overrides the value given by `conda config
+                                        --show channel_priority`.
+                --no-deps             Do not install, update, remove, or change
+                                        dependencies. This WILL lead to broken environments
+                                        and inconsistent behavior. Use at your own risk.
+                --only-deps           Only install dependencies.
+                --no-pin              Ignore pinned file.
+                --force-reinstall     Ensure that any user-requested package for the current
+                                        operation is uninstalled and reinstalled, even if that
+                                        package already exists in the environment.
+                --freeze-installed, --no-update-deps
+                                        Do not update or change already-installed
+                                        dependencies.
+                --update-deps         Update dependencies.
+                -S, --satisfied-skip-solve
+                                        Exit early and do not run the solver if the requested
+                                        specs are satisfied. Also skips aggressive updates as
+                                        configured by 'aggressive_update_packages'. Similar to
+                                        the default behavior of 'pip install'.
+                --update-all, --all   Update all installed packages in the environment.
+                --update-specs        Update based on provided specifications.
+                
+                Package Linking and Install-time Options:
+                --copy                Install all packages using copies instead of hard- or
+                                        soft-linking.
+                --no-shortcuts        Don't install start menu shortcuts
+                -m, --mkdir           Create the environment directory if necessary.
+                --clobber             Allow clobbering of overlapping file paths within
+                                        packages, and suppress related warnings.
+                
+                Networking Options:
+                -C, --use-index-cache
+                                        Use cache of channel index files, even if it has
+                                        expired.
+                -k, --insecure        Allow conda to perform "insecure" SSL connections and
+                                        transfers. Equivalent to setting 'ssl_verify' to
+                                        'false'.
+                --offline             Offline mode. Don't connect to the Internet.
+                
+                Output, Prompt, and Flow Control Options:
+                -d, --dry-run         Only display what would have been done.
+                --json                Report all output as json. Suitable for using conda
+                                        programmatically.
+                -q, --quiet           Do not display progress bar.
+                -v, --verbose         Can be used multiple times. Once for INFO, twice for
+                                        DEBUG, three times for TRACE.
+                -y, --yes             Do not ask for confirmation.
+                --download-only       Solve an environment and ensure package caches are
+                                        populated, but exit prior to unlinking and linking
+                                        packages into the prefix.
+                --show-channel-urls   Show channel urls. Overrides the value given by `conda
+                                        config --show show_channel_urls`.
+                
+                Examples:
+                
+                    conda install -n myenv scipy
+                            </pre>
+
+                            <p>
+                                Y para instalar un paquete específico usaremos:</p>
+                                <pre class="terminal">
+
+                conda install PKGNAME
+                                </pre>
+
+                            <p>donde PKGNAME es el nombre del paquete.</p>
+                        </section>
+                    
+                        <!-- 2.5. Instalar version especifica -->
+                        <section>
+                            <h4 class="h6 py-3" id="p5">2.5. Instalar versión específica de un paquete</h4>
+                                <p>
+                                    Tres formas de instalar paquetes con versiones específicas. Es opcional usar <code>--yes</code> al final para omitir la pregunta de <code>[y]/[n]</code>.
+                                </p>
+
+                                <pre class="terminal">
+
+                conda install PACKAGE=12.3          # ultima version dentro de una serie
+
+                conda install PACKAGE=13
+
+                conda install PACKAGE=14.3.2        # versión exacta
+                                </pre>
+
+                                <p>
+                                    También es posible usar condicionales para la instalación pero generalmente se usan solo los nombres ya que ésto permite la que se instale la última versión del mismo.
+                                </p>
+                        </section>
+
+                        <!-- 2.6. Busqueda de paquetes instalados -->
+                        <section>
+                            <h4 class="h6 py-3" id="p6">2.6. Búsqueda de paquetes instalados</h4>
+
+                                <pre class="terminal">
+
+                (base) C:\Users\LENOVO>conda list PKGNAME
+                                </pre>
+
+                                <p>
+                                    Podemos escribir el nombre del paquete completo o parte del nombre. En el siguiente ejemplo buscaré el paquete <code>earthengine-api</code> solamente como <code>earth</code>:
+                                </p>
+                                
+                                <pre class="terminal">
+
+                (base) C:\Users\LENOVO>conda list earth
+
+                # packages in environment at C:\Users\LENOVO\anaconda3:
+
+                # Name                    Version                   Build  Channel
+                earthengine-api           0.1.251                  pypi_0    pypi
+                                </pre>
+                        </section>
+
+                        <!-- 2.7. Actualizar un paquete -->
+                        <section>
+                            <h4 class="h6 py-3" id="p7">2.7. Actualizar un paquete</h4>
+                                <pre class="terminal">
+                            
+                conda update PKGNAME                
+                                </pre>
+                        </section>
+                                
+                        <!-- 2.8. Remover un paquete -->
+                        <section>
+                            <h4 class="h6 py-3" id="p8">2.8. Remover un paquete</h4>
+                                <pre class="terminal">
+                            
+                conda remove pandas -y              # Ojo: tener cuidado con eliminar paquetes
+                                </pre>
+                        </section>
+                            
+                        <!-- 2.9 -->
+                        <section>
+                            <h4 class="h6 py-3" id="p9">2.9. Búsqueda de paquetes no instalados</h4>
+                                <pre class="terminal">
+                            
+                conda search PKGNAME 
+                                </pre>
+                        </section>
+                            
+                        <!-- 2.10 -->
+                        <section>
+                            <h4 class="h6 py-3" id="p10">2.10. Encontrar dependencias para un paquete</h4>
+                                <pre class="terminal">
+                            
+                conda search PKGNAME --info
+                                </pre>
+                        </section>
+                            
+                    </section>
+
+                    <!-- 3. Canales -->
+                    <section>
+                        <h3 class="h5 py-4" id="channels">3. Canales <i>(Channels)</i></h3>
+                            <p>
+                                Todos los paquetes vistos hasta ahora son publicados en el <code>main</code> o <code>default</code> channel de Anaconda Cloud (<a href="https://repo.anaconda.com/pkgs/main/">ver aquí</a>). Un Channel es un identificador de un path (dirección) del cual los paquetes Conda pueden ser obtenidos. Usando la public cloud, instalando sin especificar.
+                            </p>
+
+                        <!-- 3.1. -->
+                        <section>
+                            <h4 class="h6 py-3" id="channel1">3.1. Búsqueda de canales</h4>
+
+                                <pre class="terminal">
+
+                # busqueda de canales
+                conda search -c conda-forge 
+
+                # filtrado: omite los canales por defecto 
+                conda search -c conda-forge --override-channels
+                                </pre>
+
+                                <p><b>Ejemplo</b>: busqueda de <code>rasterio</code></p>
+
+                                <pre class="pre-scrollable terminal">
+
+                (base) C:\Users\LENOVO>anaconda search rasterio
+
+                Using Anaconda API: https://api.anaconda.org
+                Packages:
+                    Name                      |  Version | Package Types   | Platforms       | Builds
+                    ------------------------- |   ------ | --------------- | --------------- | ----------
+                    DigitalGlobe/rasterio     |    1.0a9 | conda           | linux-64, win-32, osx-64, win-64 | 
+                                                        : Rasterio reads and writes geospatial raster datasets.
+                    IOOS/rasterio             |    1.0a2 | conda           | linux-64, win-32, osx-64, win-64 | 
+                    Terradue/rasterio         |   0.32.0 | conda           | linux-64        | py27_0
+                                                        : Fast and direct raster I/O for use with Numpy and Sc
+                    anaconda/rasterio         |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, os
+                                                        : Rasterio reads and writes geospatial raster datasets
+                    bucricket/rasterio        |   0.32.0 | conda           | osx-64          | py27_0
+                    conda-forge/rasterio      |    1.2.0 | conda           | linux-64, win-32, win-64, osx-64 | 
+                                                        : Rasterio reads and writes geospatial raster datasets
+                    dharhas/rasterio          |   0.23.0 | conda           | win-64          | py27_0
+                                                        : Rasterio reads and writes geospatial raster datasets.
+                    erdc/rasterio             |   0.23.0 | conda           | win-64          | py27_0
+                                                        : Rasterio reads and writes geospatial raster datasets.
+                    free/rasterio             |   0.36.0 | conda           | linux-64, win-32, win-64, linux-32,
+                                                        : Read and write geospatial raster datasets
+                    jesserobertson/rasterio   |   0.23.0 | conda           | linux-64, linux-32, osx-64 | py27_0
+                    jhamman/rasterio_to_xarray | 2016.03.16-1558 | ipynb           | []              |
+                                                        : IPython notebook
+                    kitware-danesfield-cf/rasterio |    1.0.9 | conda           | linux-64        | py36h1b5fcde
+                                                        : Rasterio reads and writes geospatial raster datasets
+                    krisvanneste/rasterio     |   0.26.0 | conda           | win-64          | py27_0
+                    main/rasterio             |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, os
+                                                        : Rasterio reads and writes geospatial raster datasets
+                    nricklin/rasterio         |    1.0a9 | conda           | osx-64          | np113py27_0
+                                                        : Rasterio reads and writes geospatial raster datasets.
+                    omgarcia/rasterio         |   0.25.0 | conda           | linux-64        | np110py27_0
+                    robintw/rasterio          |   0.35.1 | conda           | osx-64          | py35_1
+                                                        : Rasterio reads and writes geospatial raster datasets
+                    sage-group/rasterio       |    1.1.8 | conda           | linux-ppc64le   | py36h5ca1d4c_0, p
+                                                        : Rasterio reads and writes geospatial raster datasets
+                    sgillies/rasterio         |     0.15 | conda           | osx-64          | py27_0
+                    test_org_002/rasterio     |   0.36.0 | conda           | []              | np111py27_0, np11
+                    x_xxj/rasterio            |    1.1.4 | pypi            | []              |
+                    ztessler/rasterio         |   0.31.0 | conda           | osx-64          | py35_0, py27_0
+                                                        : Fast and direct raster I/O for use with Numpy and SciPy
+                Found 22 packages
+
+                Run 'anaconda show <USER/PACKAGE>' to get installation details
+                                </pre>
+                        </section>
+
+                    </section>
+
+                    <!-- 4. Ambientes -->
+                    <section>
+                        <h3 class="h5 py-4" id="envs">4. Ambientes <i>(Environments)</i></h3>
+
+                            <!-- 4.1. listar ambientes -->
+                            <section>
+                                <h4 class="h6 py-3" id="env1">4.1. Listar ambientes</h4>
+                                    <pre class="terminal">
+                                        
+                                        (base) C:\Users\LENOVO>conda env list
+                                    </pre>
+                                    <pre class="terminal">
+
+                # conda environments:
+                #
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
+                base                  *  C:\Users\LENOVO\anaconda3
+                gee                      C:\Users\LENOVO\anaconda3\envs\gee
+                python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
+                                    </pre>
+                                    <p>
+                                        Estoy usando el environment <code>base</code> según el <code>*</code> ubicado a la izquierda de la dirección.
+                                    </p>
+                            </section>
+
+                            <!-- 4.2. -->
+                            <section>
+                                <h4 class="h6 py-3" id="env2">4.2. Listar paquetes en un ambiente</h4>
+                                    <pre class="terminal">
+
+                (base) C:\Users\LENOVO>conda list numpy
+                # packages in environment at C:\Users\LENOVO\anaconda3:
+                #
+                # Name                    Version                   Build  Channel
+                numpy                     1.18.1           py37h93ca92e_0
+                numpy-base                1.18.1           py37hc3f5095_1
+                numpydoc                  0.9.2                      py_0
+
+
+                (base) C:\Users\LENOVO>conda list pandas
+                # packages in environment at C:\Users\LENOVO\anaconda3:
+                #
+                # Name                    Version                   Build  Channel
+                pandas                    1.0.1            py37h47e9c7a_0
+                                    </pre>
+                            </section>
+
+                            <!-- 4.3. -->
+                            <section>
+                                <h4 class="h6 py-3" id="env3">4.3. Listar paquetes en otro ambiente</h4>
+                                    <p>
+                                        Para ver los packages instalados en otro environment:
+                                        <p style="text-align:center">
+                                            <code>conda env --name ENVNAME</code>
+                                        </p>                                        
+                                        A continuación tres ejemplos:
+                                    </p>
+
+                                    <pre class="terminal">
+
+                (base) C:\Users\LENOVO>conda list --name python_foundation rasterio
+                # packages in environment at C:\Users\LENOVO\anaconda3\envs\python_foundation:
+                #
+                # Name                    Version                   Build  Channel
+                rasterio                  1.1.8            py37hc4b0cd6_0    conda-forge
+
+
+                (base) C:\Users\LENOVO>conda list --name gee rasterio
+                # packages in environment at C:\Users\LENOVO\anaconda3\envs\gee:
+                #
+                # Name                    Version                   Build  Channel
+
+
+                (base) C:\Users\LENOVO>conda list --name gee earth
+                # packages in environment at C:\Users\LENOVO\anaconda3\envs\gee:
+                #
+                # Name                    Version                   Build  Channel
+                earthengine-api           0.1.229            pyh9f0ad1d_0    conda-forge
+                                    </pre>
+
+                                    <li>En el primer caso busqué rasterio en el environment <code>python_foundation</code>: Sí está.</li>
+                                    <li>En el segundo caso busqué rasterio en el environment <code>gee</code>: No está.</li>
+                                    <li>
+                                        En el tercer caso busqué las iniciales del paquete <code>earthengine-api</code> en el environment <code>gee</code>: Sí está.
+                                    </li>
+                            </section>
+
+                            <!-- 4.4. -->
+                            <section>
+                                <h4 class="h6 py-3" id="env4">4.4. Cambiar a otro ambiente</h4>
+                                    <pre class="terminal">
+
+                conda activate ENVNAME
+                                    </pre>
+
+                                    <p>Ejemplo:</p>
+                                    <pre class="terminal">
+
+                # 1. Ver lista de environments
+
+                (base) C:\Users\LENOVO>conda env list
+                # conda environments:
+                #
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
+                base                  *  C:\Users\LENOVO\anaconda3
+                gee                      C:\Users\LENOVO\anaconda3\envs\gee
+                python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
+
+                # 2. Hacer el cambio
+
+                (base) C:\Users\LENOVO>conda activate python_foundation
+                (python_foundation) C:\Users\LENOVO>_ 
+                                    </pre>
+                                    
+                                    <p>
+                                        En caso de querer volver al environment base:
+                                        <code>conda deactivate</code>
+                                    </p>
+                                    <pre class="terminal">
+
+                (python_foundation) C:\Users\LENOVO>conda deactivate
+                (base) C:\Users\LENOVO>
+                                    </pre>
+                            </section>
+
+                            <!-- 4.5. -->
+                            <section>
+                                <h4 class="h6 py-3" id="env5">4.5. Crear nuevo ambiente</h4>
+                                    <p style="text-align:center">
+                                        <code>conda create -n ENVNAME</code>
+                                    </p>
+
+                                    <pre class="pre-scrollable terminal">
+
+                (base) C:\Users\LENOVO>conda create -n env_prueba
+                Collecting package metadata (current_repodata.json): done
+                Solving environment: done
+
+                ## Package Plan ##
+
+                environment location: C:\Users\LENOVO\anaconda3\envs\env_prueba
+
+                Proceed ([y]/n)? y
+
+                Preparing transaction: done
+                Verifying transaction: done
+                Executing transaction: done
+                #
+                # To activate this environment, use
+                #
+                #     $ conda activate env_prueba
+                #
+                # To deactivate an active environment, use
+                #
+                #     $ conda deactivate
+
+                (base) C:\Users\LENOVO>conda env list
+                # conda environments:
+                #
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
+                base                  *  C:\Users\LENOVO\anaconda3
+                env_prueba               C:\Users\LENOVO\anaconda3\envs\env_prueba
+                python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
+                                    </pre>
+
+                                    <p>Notese que está vacío el nuevo environment.</p>
+
+                                    <pre class="terminal">
+
+                (base) C:\Users\LENOVO>conda activate env_prueba
+
+                (env_prueba) C:\Users\LENOVO>conda list
+                # packages in environment at C:\Users\LENOVO\anaconda3\envs\env_prueba:
+                #
+                # Name                    Version                   Build  Channel
+                                    </pre>
+                            </section>
+
+                            <!-- 4.6. -->
+                            <section>
+                                <h4 class="h6 py-3" id="env6">4.6. Remover ambientes</h4>
+                                    <p style="text-align:center">
+                                        <code>conda env remove --name ENVNAME</code> (es posible usar
+                                        <code>--name</code> o <code>-n</code> )
+                                    </p>
+                                    <p>Ejemplo: Removiendo el environment <code>gee</code></p>
+
+                                    <pre class="terminal">
+
+                (base) C:\Users\LENOVO>conda env remove -n gee
+
+                Remove all packages in environment C:\Users\LENOVO\anaconda3\envs\gee:
+                                    </pre>
+
+                                    <p>Resultado:</p>
+
+                                    <pre class="terminal">
+
+                (base) C:\Users\LENOVO>conda env list
+                # conda environments:
+                #
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1
+                                        C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
+                base                  *  C:\Users\LENOVO\anaconda3
+                python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
+
+                (base) C:\Users\LENOVO>
+                                    </pre>
+                            </section>
+
+                            <hr/>
+
+                            <p>
+                                Link alternativo:
+                                <a href="https://alimanfoo.github.io/2017/05/18/installing-python.html">Alistair Miles - Installing Python for data analysis</a>
+                            </p>
+                    </section>
+
+            </section>
             
-            conda update PKGNAME                
-        </pre
-                >
-
-                <h3 class="h6 py-3" id="p8">2.8. Remover un paquete</h3>
-                <pre>
+            <!-- Conclusiones -->
+            <section>
+                <h2 class="h4 py-4" id="end">Conclusiones</h5>
+                    <p>
+                        El manejo de datos en local como en la nube (Colab) tiene sus ventajas y desventajas: Colab permite la instalación rápida de paquetes mediante <code>pip install</code> o <code>sudo apt</code> al usar máquinas virtuales (en los servidores de google) pero la información se pierde al pasar 12 horas. En cambio trabajar en local demanda conocer los métodos de instalación y manejo de paquetes pero permite aprovechar el rápido procesamiento de una máquina personal (puede variar dependiendo de su hardware y demás). 
+                    </p>
+                    <p>Gracias por leer :)</p>
+            </section>
             
-            conda remove pandas -y              # Ojo: tener cuidado con eliminar paquetes
-        </pre
-                >
-
-                <h3 class="h6 py-3" id="p9">
-                2.9. Búsqueda de paquetes no instalados
-                </h3>
-                <pre>
-            
-            conda search PKGNAME 
-        </pre
-                >
-
-                <h3 class="h6 py-3" id="p10">
-                2.10. Encontrar dependencias para un paquete
-                </h3>
-                <pre>
-            
-            conda search PKGNAME --info
-        </pre
-                >
-
-            <h6 class="py-4" id="channels">3. Canales <i>(Channels)</i></h6>
-            <p>
-                Todos los paquetes vistos hasta ahora son publicados en el
-                <code>main</code> o <code>default</code> channel de Anaconda Cloud
-                (<a href="https://repo.anaconda.com/pkgs/main/">ver aquí</a>). Un
-                Channel es un identificador de un path (dirección) del cual los
-                paquetes Conda pueden ser obtenidos. Usando la public cloud,
-                instalando sin especificar.
-            </p>
-            <h6 class="py-4" id="channel1">3.1. Búsqueda de canales</h6>
-
-            <pre>
-
-            # busqueda de canales
-            conda search -c conda-forge 
-
-            # filtrado: omite los canales por defecto 
-            conda search -c conda-forge --override-channels
-        </pre
-            >
-
-            <p><b>Ejemplo</b>: busqueda de rasterio</p>
-            <pre class="pre-scrollable">
-
-
-            (base) C:\Users\LENOVO>anaconda search rasterio
-
-            Using Anaconda API: https://api.anaconda.org
-            Packages:
-                Name                      |  Version | Package Types   | Platforms       | Builds
-                ------------------------- |   ------ | --------------- | --------------- | ----------
-                DigitalGlobe/rasterio     |    1.0a9 | conda           | linux-64, win-32, osx-64, win-64 | 
-                                                    : Rasterio reads and writes geospatial raster datasets.
-                IOOS/rasterio             |    1.0a2 | conda           | linux-64, win-32, osx-64, win-64 | 
-                Terradue/rasterio         |   0.32.0 | conda           | linux-64        | py27_0
-                                                    : Fast and direct raster I/O for use with Numpy and Sc
-                anaconda/rasterio         |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, os
-                                                    : Rasterio reads and writes geospatial raster datasets
-                bucricket/rasterio        |   0.32.0 | conda           | osx-64          | py27_0
-                conda-forge/rasterio      |    1.2.0 | conda           | linux-64, win-32, win-64, osx-64 | 
-                                                    : Rasterio reads and writes geospatial raster datasets
-                dharhas/rasterio          |   0.23.0 | conda           | win-64          | py27_0
-                                                    : Rasterio reads and writes geospatial raster datasets.
-                erdc/rasterio             |   0.23.0 | conda           | win-64          | py27_0
-                                                    : Rasterio reads and writes geospatial raster datasets.
-                free/rasterio             |   0.36.0 | conda           | linux-64, win-32, win-64, linux-32,
-                                                    : Read and write geospatial raster datasets
-                jesserobertson/rasterio   |   0.23.0 | conda           | linux-64, linux-32, osx-64 | py27_0
-                jhamman/rasterio_to_xarray | 2016.03.16-1558 | ipynb           | []              |
-                                                    : IPython notebook
-                kitware-danesfield-cf/rasterio |    1.0.9 | conda           | linux-64        | py36h1b5fcde
-                                                    : Rasterio reads and writes geospatial raster datasets
-                krisvanneste/rasterio     |   0.26.0 | conda           | win-64          | py27_0
-                main/rasterio             |    1.1.0 | conda           | linux-ppc64le, linux-64, win-32, os
-                                                    : Rasterio reads and writes geospatial raster datasets
-                nricklin/rasterio         |    1.0a9 | conda           | osx-64          | np113py27_0
-                                                    : Rasterio reads and writes geospatial raster datasets.
-                omgarcia/rasterio         |   0.25.0 | conda           | linux-64        | np110py27_0
-                robintw/rasterio          |   0.35.1 | conda           | osx-64          | py35_1
-                                                    : Rasterio reads and writes geospatial raster datasets
-                sage-group/rasterio       |    1.1.8 | conda           | linux-ppc64le   | py36h5ca1d4c_0, p
-                                                    : Rasterio reads and writes geospatial raster datasets
-                sgillies/rasterio         |     0.15 | conda           | osx-64          | py27_0
-                test_org_002/rasterio     |   0.36.0 | conda           | []              | np111py27_0, np11
-                x_xxj/rasterio            |    1.1.4 | pypi            | []              |
-                ztessler/rasterio         |   0.31.0 | conda           | osx-64          | py35_0, py27_0
-                                                    : Fast and direct raster I/O for use with Numpy and SciPy
-            Found 22 packages
-
-            Run 'anaconda show <USER/PACKAGE>' to get installation details
-        </pre
-            >
-
-            <!-- <p>
-        Searching across channels
-        <pre>
-            
-            code here
-        </pre>
-    </p>
-    <p>
-        Default, non-default, and special channels
-        <pre>
-            
-            code here
-        </pre>
-    </p>
-    <p>
-        Installing from a channel
-        <pre>
-            
-            code here
-        </pre>
-    </p> -->
-            <h6 class="py-4" id="envs">4. Ambientes <i>(Environments)</i></h6>
-            <h6 class="py-3" id="env1">4.1. Listar ambientes</h6>
-            <pre>
-
-            (base) C:\Users\LENOVO>conda env list
-        </pre
-            >
-            <pre>
-
-            # conda environments:
-            #
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
-            base                  *  C:\Users\LENOVO\anaconda3
-            gee                      C:\Users\LENOVO\anaconda3\envs\gee
-            python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
-        </pre
-            >
-            <p>
-                Estoy usando el environment <code>base</code> según el
-                <code>*</code> ubicado a la izquierda de la dirección.
-            </p>
-            <h6 class="py-3" id="env2">4.2. Listar paquetes en un ambiente</h6>
-            <pre>
-
-            (base) C:\Users\LENOVO>conda list numpy
-            # packages in environment at C:\Users\LENOVO\anaconda3:
-            #
-            # Name                    Version                   Build  Channel
-            numpy                     1.18.1           py37h93ca92e_0
-            numpy-base                1.18.1           py37hc3f5095_1
-            numpydoc                  0.9.2                      py_0
-
-
-            (base) C:\Users\LENOVO>conda list pandas
-            # packages in environment at C:\Users\LENOVO\anaconda3:
-            #
-            # Name                    Version                   Build  Channel
-            pandas                    1.0.1            py37h47e9c7a_0
-        </pre
-            >
-
-            <h6 class="py-3" id="env3">
-                4.3. Listar paquetes en otro ambiente
-            </h6>
-            <p>
-                Para ver los packages instalados en otro environment:
-                <code>conda env --name ENVNAME</code> <br />
-                A continuación tres ejemplos:
-            </p>
-            <pre>
-
-            (base) C:\Users\LENOVO>conda list --name python_foundation rasterio
-            # packages in environment at C:\Users\LENOVO\anaconda3\envs\python_foundation:
-            #
-            # Name                    Version                   Build  Channel
-            rasterio                  1.1.8            py37hc4b0cd6_0    conda-forge
-
-
-            (base) C:\Users\LENOVO>conda list --name gee rasterio
-            # packages in environment at C:\Users\LENOVO\anaconda3\envs\gee:
-            #
-            # Name                    Version                   Build  Channel
-
-
-            (base) C:\Users\LENOVO>conda list --name gee earth
-            # packages in environment at C:\Users\LENOVO\anaconda3\envs\gee:
-            #
-            # Name                    Version                   Build  Channel
-            earthengine-api           0.1.229            pyh9f0ad1d_0    conda-forge
-        </pre
-            >
-            <li>
-                En el primer caso busqué rasterio en el environment
-                <code>python_foundation</code>: Sí está.
-            </li>
-            <li>
-                En el segundo caso busqué rasterio en el environment
-                <code>gee</code>: No está.
-            </li>
-            <li>
-                En el tercer caso busqué las iniciales del paquete
-                <code>earthengine-api</code> en el environment <code>gee</code>:
-                Sí está.
-            </li>
-
-            <h6 class="py-3" id="env4">4.4. Cambiar a otro ambiente</h6>
-            <pre>
-
-            <code>conda activate ENVNAME</code>
-        </pre>
-            <p>Ejemplo:</p>
-            <pre>
-
-            # 1. Ver lista de environments
-
-            (base) C:\Users\LENOVO>conda env list
-            # conda environments:
-            #
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
-            base                  *  C:\Users\LENOVO\anaconda3
-            gee                      C:\Users\LENOVO\anaconda3\envs\gee
-            python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
-
-            # 2. Hacer el cambio
-
-            (base) C:\Users\LENOVO>conda activate python_foundation
-            (python_foundation) C:\Users\LENOVO>_ 
-
-        </pre
-            >
-            <p>
-                En caso de querer volver al environment base:
-                <code>conda deactivate</code>
-            </p>
-            <pre>
-
-            (python_foundation) C:\Users\LENOVO>conda deactivate
-            (base) C:\Users\LENOVO>
-        </pre
-            >
-
-            <h6 class="py-3" id="env5">4.5. Crear nuevo ambiente</h6>
-            <p>
-                <code>conda create -n ENVNAME</code>
-            </p>
-            <pre class="pre-scrollable">
-
-            (base) C:\Users\LENOVO>conda create -n env_prueba
-            Collecting package metadata (current_repodata.json): done
-            Solving environment: done
-
-            ## Package Plan ##
-
-            environment location: C:\Users\LENOVO\anaconda3\envs\env_prueba
-
-            Proceed ([y]/n)? y
-
-            Preparing transaction: done
-            Verifying transaction: done
-            Executing transaction: done
-            #
-            # To activate this environment, use
-            #
-            #     $ conda activate env_prueba
-            #
-            # To deactivate an active environment, use
-            #
-            #     $ conda deactivate
-
-            (base) C:\Users\LENOVO>conda env list
-            # conda environments:
-            #
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
-            base                  *  C:\Users\LENOVO\anaconda3
-            env_prueba               C:\Users\LENOVO\anaconda3\envs\env_prueba
-            python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
-
-        </pre
-            >
-            <p>Notese que está vacío el nuevo environment.</p>
-            <pre>
-
-            (base) C:\Users\LENOVO>conda activate env_prueba
-
-            (env_prueba) C:\Users\LENOVO>conda list
-            # packages in environment at C:\Users\LENOVO\anaconda3\envs\env_prueba:
-            #
-            # Name                    Version                   Build  Channel
-        </pre
-            >
-
-            <h6 class="py-3" id="env6">4.6. Remover ambientes</h6>
-            <p>
-                <code>conda env remove --name ENVNAME</code> (es posible usar
-                <code>--name</code> o <code>-n</code> )
-            </p>
-            <p>Ejemplo: Removiendo el environment <code>gee</code></p>
-            <pre>
-
-            (base) C:\Users\LENOVO>conda env remove -n gee
-
-            Remove all packages in environment C:\Users\LENOVO\anaconda3\envs\gee:
-        </pre
-            >
-            <p>Resultado:</p>
-            <pre>
-
-            (base) C:\Users\LENOVO>conda env list
-            # conda environments:
-            #
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1
-                                    C:\Users\LENOVO\AppData\Local\R-MINI~1\envs\r-reticulate
-            base                  *  C:\Users\LENOVO\anaconda3
-            python_foundation        C:\Users\LENOVO\anaconda3\envs\python_foundation
-
-            (base) C:\Users\LENOVO>
-        </pre>
-
-            <hr/>
-            <p>
-                Link alternativo:
-                <a href="https://alimanfoo.github.io/2017/05/18/installing-python.html">Alistair Miles - Installing Python for data analysis</a>
-            </p>
-
-            <h5 class="py-4" id="end">Conclusiones</h5>
-            <p>
-                El manejo de datos en local como en la nube (Colab) tiene sus
-                ventajas y desventajas: Colab permite la instalación rápida de
-                paquetes mediante <code>pip install</code> o
-                <code>sudo apt</code> al usar máquinas virtuales (en los
-                servidores de google) pero la información se pierde al pasar 12
-                horas. En cambio trabajar en local demanda conocer los métodos de
-                instalación y manejo de paquetes pero permite aprovechar el rápido
-                procesamiento de una máquina personal (puede variar dependiendo de
-                su hardware y demás). <br /><br />
-                Gracias por leer :)
-            </p>
-
             <div class="container py-lg-5">
                 <ul class="pagination justify-content-center">
                     <li class="page-item"><a class="page-link" href="blog_earthengine.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
@@ -1176,7 +1126,6 @@
             </div>
 
             <!-- Inicio de sección disqus -->
-		
             <p style="text-align: center; padding: 10px">
                 Muchas gracias por leer y sientete libre de dejarme un mensaje sobre el presente artículo. Saludos! <i class="fa fa-rocket"></i>
             </p>
@@ -1206,12 +1155,11 @@
                     <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
                 </script>
             </div>
-            
             <!-- Fin de sección disqus -->
 
-            <!--Footer-->
             <hr />
 
+            <!--Footer-->
             <div class="py-2">
                 <ul class="list-inline text-center">
                     <li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
