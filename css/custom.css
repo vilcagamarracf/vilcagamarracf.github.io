@@ -67,6 +67,7 @@ p.whiteBold{
 	/* Para agregar un post: cambiar aquí el número*/
 	align-items: flex-start;
 	justify-content: center;
+	grid-row-gap: 10px;
 	/* margin-top: 10px; */
 }
 
