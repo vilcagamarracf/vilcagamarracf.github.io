@@ -57,7 +57,7 @@
                 <div id="navbarSupportedContent" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
                         <li class="nav-item">
-                            <a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Inicio</a>
+                            <a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog</a>
@@ -85,7 +85,7 @@
         </button>
         
         <!-- COLUMNA IZQUIERDA -->
-        <div class="col-md-2">
+        <div class="col-2 fondo">
             <div class="wrapper">
             <nav id="sidebar">
 
@@ -143,7 +143,7 @@
         </div>
 
         <!-- Columna central -->
-        <div class="col-md-8" style="background: white; padding: 20px 30px 0px 30px;">
+        <div class="col-lg-8" style="background: white; padding: 20px 30px 0px 30px;">
             <div class="container-fluid">
 
             <h1 class="h3 py-4">Manejo de paquetes de Python con ANACONDA</h1>
@@ -1114,10 +1114,14 @@
                     <p>
                         El manejo de datos en local como en la nube (Colab) tiene sus ventajas y desventajas: Colab permite la instalación rápida de paquetes mediante <code>pip install</code> o <code>sudo apt</code> al usar máquinas virtuales (en los servidores de google) pero la información se pierde al pasar 12 horas. En cambio trabajar en local demanda conocer los métodos de instalación y manejo de paquetes pero permite aprovechar el rápido procesamiento de una máquina personal (puede variar dependiendo de su hardware y demás). 
                     </p>
-                    <p>Gracias por leer :)</p>
             </section>
             
-            <div class="container py-lg-5">
+            <!-- Saludos -->
+            <p style="text-align: center; padding: 20px">
+                Muchas gracias por leer. Saludos! <i class="fa fa-rocket"></i>
+            </p>
+
+            <div class="container py-lg-2">
                 <ul class="pagination justify-content-center">
                     <li class="page-item"><a class="page-link" href="blog_earthengine.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
                     <li class="page-item"><a class="page-link" href="../blog.html">Volver al blog</a></li>
@@ -1125,46 +1129,13 @@
                 </ul>
             </div>
 
-            <!-- Inicio de sección disqus -->
-            <p style="text-align: center; padding: 10px">
-                Muchas gracias por leer y sientete libre de dejarme un mensaje sobre el presente artículo. Saludos! <i class="fa fa-rocket"></i>
-            </p>
-
-            <div class="container py-4">
-                <div id="disqus_thread"></div>
-                <script>
-                    /**
-                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                    /*
-                    var disqus_config = function () {
-                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                    };
-                    */
-                    (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://vilcagamarracf-github-io.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                    })();
-                </script>
-
-                <script>
-                    // Please enable JavaScript to view the 
-                    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-                </script>
-            </div>
-            <!-- Fin de sección disqus -->
-
-            <hr />
-
             <!--Footer-->
+            <hr />
             <div class="py-2">
                 <ul class="list-inline text-center">
                     <li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/"class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/vilcagamarracf" class="social-link"><i class="fab fa-twitter"></i></a></li>
                     <li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
@@ -1173,7 +1144,7 @@
         </div>
 
         <!-- Columna Derecha -->
-        <div class="col-md-2">
+        <div class="col-2 fondo">
         </div>
 
         </div>

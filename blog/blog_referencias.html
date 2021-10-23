@@ -54,7 +54,7 @@
 			<div id="navbarSupportedContent" class="collapse navbar-collapse">
 				<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
 					<li class="nav-item">
-						<a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active">Inicio</a>
+						<a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
 					</li>
 					<li class="nav-item">
 						<a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog</a>
@@ -70,180 +70,172 @@
 
 <!-- Redacción de post -->
 <div class="container-fluid" style="background: rgb(0, 0, 0, 0.6);">
-<div class="row">
+	<div class="row">
 
-<!-- BOTONES -->
+	<!-- BOTONES -->
+	<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+		<i class="fas fa-align-left"></i>
+	</button>
 
-<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
-<i class="fas fa-align-left"></i>
-</button>
+	<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+		<i class="fas fa-arrow-up"></i>
+	</button>
+	<!-- FIN DE BOTONES -->
 
-<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
-<i class="fas fa-arrow-up"></i>
-</button>
+	<!-- Columna de la izquierda -->
+	<div class="col-2 fondo">
 
-<!-- FIN DE BOTONES -->
+		<div class="wrapper">
+		<nav id="sidebar">
 
-<!-- Columna de la izquierda -->
-<div class="col-md-2">
+			<ul class="list-unstyled components">
+				<li><a class="text-center" style="font-size: 16px;"><b>Agricultura Digital: Referencias</b></a> <br></li>
+				<li><a class="text-center"><b>Contenido</b></a></li>
+				<li><a href="#pageSubmenu" 
+					data-toggle="collapse" 
+					aria-expanded="false" 
+					class="dropdown-toggle">Blogs</a>
 
-	<div class="wrapper">
-	<nav id="sidebar">
+					<ul class="collapse list-unstyled" id="pageSubmenu">
+						<li><a class='padd' href="#free">Gratuitos</a></li>
+						<li><a class='padd' href="#nofree">De pago</a></li>
+					</ul>
 
-		<ul class="list-unstyled components">
-			<li><a class="text-center" style="font-size: 16px;"><b>Agricultura Digital: Referencias</b></a> <br></li>
-			<li><a class="text-center"><b>Contenido</b></a></li>
-			<li><a href="#pageSubmenu" 
-				data-toggle="collapse" 
-				aria-expanded="false" 
-				class="dropdown-toggle">Blogs</a>
+				</li>
+				<li><a href="#paper">Artículos Científicos</a></li>
+			</ul>
 
-				<ul class="collapse list-unstyled" id="pageSubmenu">
-					<li><a class='padd' href="#free">Gratuitos</a></li>
-					<li><a class='padd' href="#nofree">De pago</a></li>
-				</ul>
-
-			</li>
-			<li><a href="#paper">Artículos Científicos</a></li>
-		</ul>
-
-	</nav>
-	</div>	
-	
-</div>
-
-<!-- Columna central -->
-<div class="col-md-8" style="background: white; padding: 20px 30px 0px 30px;">
-<div class="container-fluid">
-
-	<h1 class="h3 py-4" id="Inicio">Agricultura Digital: Referencias</h1>
-	<p>
-		<b>Objetivo:</b> Recopilar información relacionada al campo de la Agricultura, específicamente su interacción con tecnologias emergentes. 
-	</p>
-
-
-	<h2 class="h4 py-3" id="intro">Introducción</h2>
-	<p>
-		Internet se ha vuelto hoy en día el medio de comunicación más influyente sobre las personas, entendiendo pues que cada año aumenta significativamente la cantidad de información disponible la cual se vuelve a su vez casi imposible de asimilar en el tiempo promedio que poseemos. Por ello, una forma de divulgar información de interés de manera selecta y concisa es mediante los blogs. 
-	</p>
-	<p>
-		Durante estos últimos meses de búsqueda bibliográfica, sobre la tesis que ando realizando, me he dado con la sopresa de encontrar buena información de manera concisa (e incluyendo código) sobre algunos temas relacionados al campo de las ciencias de la computación en forma de artículos. El portal que voy a comentar es <strong>Medium</strong>.
-	</p>
-	<img class='rounded mx-auto d-block img-fluid py-4' src="../img/medium_logo.png">
-
-
-	<h2 class="h4 py-3" id="medium">¿Qué es Medium?</h2>
-
-	<p>
-		Según <a href="https://es.wikipedia.org/wiki/Medium_(servicio)" target="blank">Wikipedia</a>, <a href="https://medium.com/" target="blank">Medium</a> es un servicio de publicación de blogs fundada por los cofundadores de Twitter en 2012 con el objetivo de permitir a usuarios de Twitter escribir posts más largos (más allá de los 280 caracteres por post de la plataforma). La plataforma presenta blogs escritos por profesionales y no profesionales brindando así información enriquecedora sobre distintas áreas.
-	</p>
-
-	<p class="my-4">
-		<blockquote class="blockquote my-4">
-		En Medium, hay dos tipos de blogs: de paga y gratuita. Algunos autores limitan el acceso a sus publicaciones para el público que tenga una cuenta con membresía en la plataforma (podría entenderse que dichos autores publican de forma independiente siendo el pago de una membresía una forma de retribución a su trabajo). Las membresías, al igual que cualquier otro portal de información, se adquieren por plazos de tiempo: mensual, anual, etc. Adquirir una membresía tampoco es muy cara en pocas palabras pero, en caso adquirir una membresía, la plataforma brinda dos accesos gratuitos a cualquier publicación de paga al mes. 
-		</blockquote>
-	</p>
-	
-
-	<h2 class="h4 py-3" id="blogs">Blogs</h2>
-	
-	<h4 class="h5 py-2" id="free">De acceso gratuito</h4>
-	<ul>
-		<li class="my-2"><a href="https://www.forbes.com/sites/erikkobayashisolomon/2018/10/31/agtech-a-great-investment-for-the-future/?sh=236d80d11a09" target="blank">Artículo: AgTech: A Great Investment For The Futureh [Forbes]</a> : Explicación del término AgTech y su impacto en la Agricultura a futuro.</li>
-		<li class="my-2"><a href="https://ivanovigor.medium.com/" target="blank">Medium - Ivanov Igor</a> : CEO y Co-Fundador de Gamaya, posee una vasta experiencia en el campo de la agricultura de precisión, teledetección y principalmente, manejo de startups.</li>
-		<li class="my-2"><a href="https://medium.com/remote-sensing-in-agriculture" target="blank">Medium - Gamaya Blog</a> : Blog de una Startup Suiza en el campo del AgTech. Su principal (y único) editor es Ivanov Igor, el mismo CEO de la startup.</li>
-	</ul>
-
-
-	<h4 class="h5 py-2" id="nofree">De pago</h4>
-	<p>
-		Para visualizar gratuitamente las publicaciones de pago puedes usar el modo incógnito de tu navegador (aunque no entiendo cómo ésto permite su completa visualización).
-	</p>
-	<ul>
-		<li class="my-2"><a href="https://medium.com/sciforce/machine-learning-in-agriculture-applications-and-techniques-6ab501f4d1b5" target="blank">Sciforce - Machine Learning in Agriculture: Applications and Techniques</a> : Cómo el aprendizaje automático (<i>Machine Learning</i> en inglés) puede aplicarse en casos variados como: Manejo de especies (plantas), gestión de condiciones de campo (manejo del suelo y agua), manejo del cultivo (predicción de rendimiento, calidad del cultivo, detección de enfermedades y detección de malezas) y manejo del ganado.</li>
-		<li class="my-2"><a href="https://medium.com/@sonals_78445/mapping-crops-with-smartphone-crowdsourcing-satellite-imagery-and-deep-learning-200e8fe8bca" target="blank">Mapping Crops with Smartphone Crowdsourcing, Satellite Imagery, and Deep Learning</a> : Como el uso de smartphones (celulares) permite a agricultores conocer enfermedades de sus cultivos con solo tomar fotos de los mismos.</li>
-		<li class="my-2"><a href="https://medium.com/nam-r/estimating-vegetated-surfaces-with-computer-vision-how-we-improved-our-model-and-scaled-up-66426b6e9fc6" target="blank">Estimating Vegetated Surfaces with Computer Vision: how we improved our model and scaled up</a></li>
-	</ul>
-
-
-	<h2 class="h4 py-3" id="paper">Artículos Científicos</h2>
-	<ul>
-		<li class="my-2"><a href="https://doi.org/10.3390/s18082674" target="blank">(2018) Machine Learning in Agriculture: A Review</a> : 
-			Publicación de contenido general en el cual presenta breves definiciones de Aprendizaje Automático (<i>Machine Learning</i>) en la Agricultura.
-		</li>
-		<li  class="my-2"><a href="https://doi.org/10.1016/j.rse.2019.111605" target="blank">
-			(2019) A robust spectral-spatial approach to identifying heterogeneous crops using remote sensing imagery with high spectral and spatial resolutions</a> 
-			: Elaboración de un método robusto de clasificación de cultivos usando información espectral (224 bandas espectrales, 0.4 - 2.5 &mu;m) mediante el <i>Airborne/Visible infrared Imaging Spectrometer <a href="https://aviris.jpl.nasa.gov/" target="blank">(AVIRIS)</a></i> y la aplicación de métodos del campo de Aprendizaje Automático (<i>Machine Learning</i>) como Random Forest y Support Vector Machines.</li>
-	</ul>
-
-
-	<!-- Banner -->
-	<div class="text-center py-4">	
-		<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
-	</div>
-	
-	<div class="container py-lg-5">
-		<ul class="pagination justify-content-center">
-			<li class="page-item"><a class="page-link" href="../blog.html">Volver al blog</a></li>
-			<li class="page-item"><a class="page-link" href="blog_cv.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
-		</ul>
-	</div>
-
-	<!-- Inicio de sección disqus -->
+		</nav>
+		</div>	
 		
-	<p style="text-align: center; padding: 10px">
-		Muchas gracias por leer y te agradecería si me dejas un mensaje sobre el presente artículo. Saludos! <i class="fa fa-rocket"></i>
-	</p>
-
-	<div class="container py-4">
-		<div id="disqus_thread"></div>
-		<script>
-			/**
-			*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-			*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-			/*
-			var disqus_config = function () {
-			this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-			*/
-			(function() { // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-			s.src = 'https://vilcagamarracf-github-io.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-			})();
-		</script>
-
-		<script>
-			// Please enable JavaScript to view the 
-			<a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-		</script>
 	</div>
-	
-	
-	<!-- Fin de sección disqus -->
+
+	<!-- Columna central -->
+	<div class="col-lg-8" style="background: white; padding: 20px 30px 0px 30px;">
+	<div class="container-fluid">
+
+		<h1 class="h3 py-4" id="Inicio">Agricultura Digital: Referencias</h1>
+		<p>
+			<b>Objetivo:</b> Recopilar información relacionada al campo de la Agricultura, específicamente su interacción con tecnologias
+			emergentes. 
+		</p>
 
 
-	<!--Footer-->
-	<hr>
-	<div class="py-2" style="background: #eee, ;">
-	<ul class="list-inline text-center">
-		<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
-			<i class="fab fa-facebook-f"></i></a></li>
-		<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-		<li class="list-inline-item"><a href="https://twitter.com/CesarVilca19" class="social-link"><i class="fab fa-twitter"></i></a></li>
-		<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
-	</ul>
+		<h2 class="h4 py-3" id="intro">Introducción</h2>
+		<p>
+			Internet se ha vuelto hoy en día el medio de comunicación más influyente sobre las personas, entendiendo pues que cada año 
+			aumenta significativamente la cantidad de información disponible la cual se vuelve a su vez casi imposible de asimilar en el 
+			tiempo promedio que poseemos. Por ello, una forma de divulgar información de interés de manera selecta y concisa es mediante 
+			los blogs. 
+		</p>
+		<p>
+			Durante estos últimos meses de búsqueda bibliográfica, sobre la tesis que ando realizando, me he dado con la sopresa de 
+			encontrar buena información de manera concisa (e incluyendo código) sobre algunos temas relacionados al campo de las ciencias 
+			de la computación en forma de artículos. El portal que voy a comentar es <strong>Medium</strong>.
+		</p>
+		<img class='rounded mx-auto d-block img-fluid py-4' src="../img/medium_logo.png">
+
+
+		<h2 class="h4 py-3" id="medium">¿Qué es Medium?</h2>
+
+		<p>
+			Según <a href="https://es.wikipedia.org/wiki/Medium_(servicio)" target="blank">Wikipedia</a>, <a href="https://medium.com/" 
+			target="blank">Medium</a> es un servicio de publicación de blogs fundada por los cofundadores de Twitter en 2012 con el 
+			objetivo de permitir a usuarios de Twitter escribir posts más largos (más allá de los 280 caracteres por post de la plataforma)
+			. La plataforma presenta blogs escritos por profesionales y no profesionales brindando así información enriquecedora sobre 
+			distintas áreas.
+			<br><br>
+			En Medium, hay dos tipos de blogs: de paga y gratuita. Algunos autores limitan el acceso a sus publicaciones para el público 
+			que tenga una cuenta con membresía en la plataforma (podría entenderse que dichos autores publican de forma independiente 
+			siendo el pago de una membresía una forma de retribución a su trabajo). Las membresías, al igual que cualquier otro portal de 
+			información, se adquieren por plazos de tiempo: mensual, anual, etc. Adquirir una membresía tampoco es muy cara en pocas 
+			palabras pero, en caso adquirir una membresía, la plataforma brinda dos accesos gratuitos a cualquier publicación de paga al 
+			mes. 
+		</p>
+		
+
+		<h2 class="h4 py-3" id="blogs">Blogs</h2>
+		
+		<h4 class="h5 py-2" id="free">De acceso gratuito</h4>
+		<ul>
+			<li class="my-2"><a href="https://www.forbes.com/sites/erikkobayashisolomon/2018/10/31/agtech-a-great-investment-for-the-future/?sh=236d80d11a09" target="blank">Forbes - AgTech: A Great Investment For The Future</a> : Explicación del término AgTech y su impacto en la Agricultura a futuro.
+			<blockquote class="blockquote my-2">
+				AgTech represents the application of technology – especially software and hardware technology – to the field of farming. AgTech is an industry that encompasses diverse solutions to almost every step in the food production process. 
+			</blockquote>
+			</li>
+			<li class="my-2"><a href="https://ivanovigor.medium.com/" target="blank">Medium - Ivanov Igor</a> : CEO y Co-Fundador de Gamaya, posee una vasta experiencia en el campo de la agricultura de precisión, teledetección y principalmente, manejo de startups.</li>
+			<li class="my-2"><a href="https://medium.com/remote-sensing-in-agriculture" target="blank">Medium - Gamaya Blog</a> : Blog de una Startup Suiza en el campo del AgTech. Su principal (y único) editor es Ivanov Igor, el mismo CEO de la startup.</li>
+		</ul>
+
+
+		<h4 class="h5 py-2" id="nofree">De pago</h4>
+		<p>
+			Para visualizar gratuitamente las publicaciones de pago puedes usar el modo incógnito de tu navegador (aunque no entiendo cómo ésto permite su completa visualización).
+		</p>
+		<ul>
+			<li class="my-2"><a href="https://medium.com/sciforce/machine-learning-in-agriculture-applications-and-techniques-6ab501f4d1b5" target="blank">Sciforce - Machine Learning in Agriculture: Applications and Techniques</a> : Cómo el aprendizaje automático (<i>Machine Learning</i> en inglés) puede aplicarse en casos variados como: 
+				<ul class="my-2">
+					<li>Manejo de especies (plantas), </li>
+					<li>Gestión de condiciones de campo (manejo del suelo y agua), </li>
+					<li>Manejo del cultivo (predicción de rendimiento, calidad del cultivo, detección de enfermedades y detección de malezas) </li>
+					<li>y Manejo del ganado.</li>
+				</ul>
+			</li>
+			<li class="my-2"><a href="https://medium.com/@sonals_78445/mapping-crops-with-smartphone-crowdsourcing-satellite-imagery-and-deep-learning-200e8fe8bca" target="blank">Mapping Crops with Smartphone Crowdsourcing, Satellite Imagery, and Deep Learning</a> : Como el uso de smartphones (celulares) permite a agricultores conocer enfermedades de sus cultivos con solo tomar fotos de los mismos.</li>
+			<li class="my-2"><a href="https://medium.com/nam-r/estimating-vegetated-surfaces-with-computer-vision-how-we-improved-our-model-and-scaled-up-66426b6e9fc6" target="blank">Estimating Vegetated Surfaces with Computer Vision: how we improved our model and scaled up</a></li>
+		</ul>
+
+
+		<h2 class="h4 py-3" id="paper">Artículos Científicos</h2>
+		<ul>
+			<li class="my-2"><a href="https://doi.org/10.3390/s18082674" target="blank">(2018) Machine Learning in Agriculture: A Review</a> : 
+				Publicación de contenido general en el cual presenta breves definiciones de Aprendizaje Automático (<i>Machine Learning</i>) en la Agricultura.
+			</li>
+			<li  class="my-2"><a href="https://doi.org/10.1016/j.rse.2019.111605" target="blank">
+				(2019) A robust spectral-spatial approach to identifying heterogeneous crops using remote sensing imagery with high 
+				spectral and spatial resolutions</a> 
+				: Elaboración de un método robusto de clasificación de cultivos usando información espectral (224 bandas espectrales, 0.4 - 
+				2.5 &mu;m) mediante el <i>Airborne/Visible infrared Imaging Spectrometer <a href="https://aviris.jpl.nasa.gov/" target="blank">(AVIRIS)</a></i> y la aplicación de métodos del campo de Aprendizaje Automático (<i>Machine Learning</i>) 
+				como Random Forest y Support Vector Machines.</li>
+		</ul>
+
+		<!-- Banner "en proceso"-->
+		<div class="text-center py-4">	
+			<marquee width= 30% direction= "left" height="30px"><b class="my-4">¡En proceso!</b></marquee>
+		</div>
+			
+		<!-- Saludos -->
+		<p style="text-align: center; padding: 20px">
+			Muchas gracias por leer. Saludos! <i class="fa fa-rocket"></i>
+		</p>
+
+		<!-- Cambio de post -->
+		<div class="container py-lg-2">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="../blog.html">Volver al blog</a></li>
+				<li class="page-item"><a class="page-link" href="blog_cv.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+
+		<!--Footer-->
+		<hr>
+		<div class="py-2" style="background: #eee, ;">
+		<ul class="list-inline text-center">
+			<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link">
+				<i class="fab fa-facebook-f"></i></a></li>
+			<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+			<li class="list-inline-item"><a href="https://twitter.com/vilcagamarracf" class="social-link"><i class="fab fa-twitter"></i></a></li>
+			<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
+		</ul>
+		</div>
+		
+		</div>
 	</div>
-	
-	</div>
-</div>
 
-<!-- Columna Derecha -->
-<div class="col-md-2"></div>
+	<!-- Columna Derecha -->
+	<div class="col-2 fondo"></div>
 
-</div> <!-- Fin de los rows -->
+	</div> <!-- Fin de los rows -->
 </div> <!-- Fin del container -->
 
 
