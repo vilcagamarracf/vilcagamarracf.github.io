@@ -65,15 +65,20 @@ p.whiteBold{
 	color: rgb(255, 255, 255);
 }
 
-/* --- Manejando los containers en el blog ------------ */
 
+/* --------------- BLOG --------------- */
+
+/* Manejando los containers en el blog */
 
 .blogContainer {
+	font-size: 13px;
 	display: grid;
-	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: auto;
+	/* column-gap: 0px; */
+	/* grid-template-rows: repeat(6, 1fr); */
 	/* Para agregar un post: cambiar aquí el número*/
-	align-items: flex-start;
-	justify-content: center;
+	/* align-items: flex-start; */
+	/* justify-content: center; */
 	/* grid-row-gap: 10px; */
 	/* margin-top: 10px; */
 }
@@ -87,9 +92,11 @@ p.whiteBold{
 
 .flex-container {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	/* espaciado a los costados */
-	margin: 0 50px;
+	/* margin: 0px 25px 10px 20px; */
+	margin: 0 25px;
 
 }
 
@@ -99,7 +106,7 @@ p.whiteBold{
 }
 
 .flex-container > div h3 {
-	font-size: 16px;
+	font-size: 15px;
 	color: #429244;
 	/* margin-top: px; */
 }
