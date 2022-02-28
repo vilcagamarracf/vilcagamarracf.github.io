@@ -12,26 +12,33 @@
 }
 
 
+/* Listar Referencias */
 ul {
     list-style-type: disc;
 }
 
-/* Listar referencias de manera espaciada */
 .li-ref {
+	/* Listar referencias de manera espaciada */
 	padding: 2.5px;
 }
 
+/* Objetivo en cada post */
+dd {
+	padding: 10px;
+	padding-inline-start: 10px;
+	margin-bottom: 0;
+}
 
 
-
+/* Estilo parecido a una terminal para el post de Anaconda */
 .terminal {
 	display: block;
 	background: black;
 	color: white;
 }
 
-/* ----- Imágenes ----- */
 
+/* ----- Imágenes ----- */
 .blog-img {
     width: 14em;
     max-width: 100%;
