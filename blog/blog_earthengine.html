@@ -92,7 +92,7 @@
 			</div> -->
 
 			<ul class="list-unstyled components">
-				<li><a class="text-center" style="font-size: 16px;"><b>Google Earth Engine: Breve Introducción</b></a> <br></li>
+				<li><a class="text-center" style="font-size: 14px;"><b>Google Earth Engine: Breve Introducción</b></a> <br></li>
 				<p class="text-center text-center"><b>Contenido</b></p>
 				
 				<li><a href="#intro">Introducción</a></li>
@@ -121,11 +121,31 @@
 	<div class="container-fluid">
 
 		<h1 class="h3 py-4">Google Earth Engine: Breve Introducción</h1>
-		<b>Objetivo:</b> Brindar una breve introducción a la plataforma, recopilación de aplicaciones en la Agricultura y links relacionados (al final del post).
 
-		<img class="rounded mx-auto d-block img-fluid" src="../img/google-earth-engine.jpg" alt="Earth Engine Logo">
+		<!-- Imagen -->
+		<div class="py-4">
+			<figure>
+				<img class="rounded mx-auto d-block" src="https://www.researchgate.net/publication/318246365/figure/fig3/AS:667869226483731@1536243840816/The-Earth-Engine-interactive-development-environment_W640.jpg" alt="Earth Engine Logo" width="80%">
+				<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+					<a href="#paper">
+						Google Earth Engine: Planetary-scale geospatial analysis for everyone (2017)
+					</a>
+				</figcaption>
+			</figure>
+		</div>
 
-		<h2 class="h4" id="intro" style="padding-bottom: 20px;">Introducción</h2>
+		<!-- Contenido del post -->
+		<blockquote class="blockquote">
+			<dl>
+				<dt>Objetivo</dt>
+				<dd>
+					Brindar una breve introducción a la plataforma, recopilación de aplicaciones en la Agricultura y links relacionados. 
+				</dd>
+			</dl>
+        </blockquote>		
+
+
+		<h2 class="h4 py-4" id="intro" style="padding-bottom: 20px;">Introducción</h2>
 		<p>
 			<a href="https://earthengine.google.com/">Google Earth Engine</a> nace a partir de una necesidad: disponer de una base de datos geoespaciales a investigadores con poca o nula experiencia previa en administración de bases de datos.
 		</p>
@@ -189,18 +209,29 @@
 		<p> 
 			Con Earth Engine Apps es posible construir y diseñar interfaces gráficas dinámicas que realicen análisis específicos y poder compartirlas con otros usuarios de manera privada o pública. 
 		</p>
-		<p>Una clara aplicación a nivel nacional es la del MIDAGRI: <a href="https://minagri-geoespacial.users.earthengine.app/view/dinamicaagricolav3">Monitoreo de la Dinámica Agrícola</a>. Dicha aplicación permite clasificar cultivos según tipo transitorio, permanente o de descanso a nivel departamental (imagen a continuación).</p>
+		<p> Un ejemplo es la <b><a target="_blank" href="https://minagri-geoespacial.users.earthengine.app/view/dinamicaagricolav3">aplicación</a></b> realizada por el MIDAGRI con nombre <em>Monitoreo de la Dinámica Agrícola</em>, la cual permite clasificar cultivos de carácter transitorio, permanente o de descanso a nivel departamental. <br>
+			A continuación se muestra un vistazo de la misma.
+		</p>
 
-		<a href="../img/earthengineapp.PNG" data-lightbox="gallery" data-title="MIDAGRI: Monitoreo de la Dinámica Agrícola" class="mx-auto d-block col-lg-8 img-fluid m-4">
-				<img src="../img/earthengineapp.PNG" alt="" class="img-fluid"></a>
-		
+		<!-- Imagen -->
+		<div class="py-2">
+			<figure>
+				<img class="rounded mx-auto d-block" src="../img/earthengineapp.PNG" alt="" width="100%">
+				<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+					Aplicación "Monitoreo de la Dinámica Agrícola" - MIDAGRI
+				</figcaption>
+			</figure>
+		</div>
+
 		<p>
 			Además, Philipp Gärtner presenta en su blog una recopilación de aplicaciones realizadas por usuarios de Earth Engine:
+
 			<ul>
-				<li><a href="https://philippgaertner.github.io/2020/12/ee-apps-table-searchable/">Google Earth Engine Apps - Updated 23th December 2020</a> - Lista actualizada</li>
-				<li><a href="https://philippgaertner.github.io/2020/03/ee-apps/">Google Earth Engine Apps (March 27, 2020)</a> - Adjunta visualizaciones</li>
+				<li class="li-ref"><a target="_blank" href="https://philippgaertner.github.io/2020/12/ee-apps-table-searchable/">Google Earth Engine Apps - Updated 23th December 2020</a> - Lista actualizada</li>
+				<li class="li-ref"><a target="_blank" href="https://philippgaertner.github.io/2020/03/ee-apps/">Google Earth Engine Apps (March 27, 2020)</a> - Adjunta visualizaciones</li>
 			</ul> 
-			Para más información puedes visitar en la documentación, la sección <a href="https://developers.google.com/earth-engine/guides/apps">Apps and User Interfaces - Earth Engine Apps</a> donde explica cómo elaborar paso a paso una interfaz gráfica con Earth Engine. 
+
+			Para más información puedes visitar en la documentación, la sección <a target="_blank" href="https://developers.google.com/earth-engine/guides/apps">Apps and User Interfaces - Earth Engine Apps</a> donde explica cómo elaborar paso a paso una interfaz gráfica con Earth Engine. 
 		</p>
 
 		
@@ -249,46 +280,36 @@
 		</p>
 		
 		<h2 class="h4 py-4" id="links">Referencias</h2>
-		<p>
-			Con el objetivo de no perderse con la documentación de Earth Engine (y agilizar el proceso de aprendizaje), he recopilado los links más importantes.
-			<ul> 
-				<li><a href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">
-					Google Earth Engine: Planetary-scale geospatial analysis for everyone</a> - Artículo científico elaborado por el grupo de desarrollo de Earth Engine.</li>
-				<li><a href="https://earthengine.google.com/">
-					Google Earth Engine - Portal</a></li>
-				<li><a href="https://earthengine.google.com/signup/">
-					Google Earth Engine - Creación de cuenta</a></li>
-				<li><a href="https://earthengine.google.com/faq/">
-					Google Earth Engine - Preguntas frecuentes (FAQ)</a></li>
-				<li><a href="https://developers.google.com/earth-engine/">
-					Google Earth Engine - Documentación</a></li>
-				<li>Ambientes de Desarrollo e Integraciones disponibles:
-					<ul style="padding-left: 1.5rem;"> 
-						<li><a href="https://developers.google.com/earth-engine/guides/getstarted">
-							JavaScript: Get Started with Earth Engine</a></li>
-						<li><a href="https://developers.google.com/earth-engine/guides/python_install">
-							Python:  Instalación de la API de Python</a></li>
-						<li><a href="https://r-spatial.github.io/rgee/">
-							R:  Google Earth Engine for R</a></li>
-						<li><a href="https://gee-community.github.io/qgis-earthengine-plugin/">
-							QGIS: Integrates Google Earth Engine and QGIS using Python API</a></li>
-					</ul>
-				</li>
-				<li><a href="https://github.com/google/earthengine-api">Google Earth Engine API - Repositorio en Github</a></li>
-				<li><a href="https://developers.google.com/earth-engine/apidocs">
-					Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
-				<li><a href="https://developers.google.com/earth-engine/guides">
-					Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
-				<li><a href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">
-					Google Earth Engine - Tutoriales</a></li>
-			</ul>
+
+		<ul> 
+			<li class="li-ref" id="paper"> 
+				Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). <em>Google Earth Engine: Planetary-scale geospatial analysis for everyone.</em> Remote sensing of Environment, 202, 18-27. 
+				<a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0034425717302900">http://dx.doi.org/10.1016/j.rse.2017.06.031</a>
+			</li>
 			
-		</p>
+			<li class="li-ref"><a target="_blank" href="https://earthengine.google.com/">Google Earth Engine - Portal</a></li>
+			<li class="li-ref"><a target="_blank" href="https://earthengine.google.com/signup/">Google Earth Engine - Creación de cuenta</a></li>
+			<li class="li-ref"><a target="_blank" href="https://earthengine.google.com/faq/">Google Earth Engine - Preguntas frecuentes (FAQ)</a></li>
+			<li class="li-ref"><a target="_blank" href="https://developers.google.com/earth-engine/">Google Earth Engine - Documentación</a></li>
+			<li class="li-ref">Ambientes de Desarrollo e Integraciones disponibles:
+				<ul style="padding-left: 1.5rem;"> 
+					<li class="li-ref"><a target="_blank" href="https://developers.google.com/earth-engine/guides/getstarted">JavaScript: Get Started with Earth Engine</a></li>
+					<li class="li-ref"><a target="_blank" href="https://developers.google.com/earth-engine/guides/python_install">Python:  Instalación de la API de Python</a></li>
+					<li class="li-ref"><a target="_blank" href="https://r-spatial.github.io/rgee/">R:  Google Earth Engine for R</a></li>
+					<li class="li-ref"><a target="_blank" href="https://gee-community.github.io/qgis-earthengine-plugin/">QGIS: Integrates Google Earth Engine and QGIS using Python API</a></li>
+				</ul>
+			</li>
+			<li class="li-ref"><a target="_blank" href="https://github.com/google/earthengine-api">Google Earth Engine API - Repositorio en Github</a></li>
+			<li class="li-ref"><a target="_blank" href="https://developers.google.com/earth-engine/apidocs">Google Earth Engine - Referencia de la API</a>: todos los comandos disponibles en Earth Engine</li>
+			<li class="li-ref"><a target="_blank" href="https://developers.google.com/earth-engine/guides">Google Earth Engine - Guías</a>: (en su mayoría en lenguaje <code>JavaScript</code>)</li>
+			<li class="li-ref"><a target="_blank" href="https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard">
+				Google Earth Engine - Tutoriales</a></li>
+		</ul>
 		
 		
 		<!-- Saludos -->
 		<p style="text-align: center; padding: 20px">
-			Muchas gracias por leer. Saludos! <i class="fa fa-rocket"></i>
+			Muchas gracias por leer. Saludos!
 		</p>
 
 		<div class="container py-lg-2">
