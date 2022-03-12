@@ -97,14 +97,14 @@
 				<li>
                     <a class="text-center" style="font-size: 12px;" href="#0">
 						<b>
-							Estimación del requerimiento hídrico en cultivos agrícolas usando Teledetección
+							Visualizaciones en Python 
 						</b>
                     </a> 
                 </li>
 				<p class="text-center"><b>Contenido</b></p>
 				
 				<li><a href="#1">1. Importancia</a></li>
-				<li><a href="#2">2. Antecedentes</a></li>
+				<li><a href="#2">2. Librerías en Python</a></li>
 				<li><a href="#3">3. Referencias</a></li>
 
 				<!-- <li><a href="#class" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -130,17 +130,17 @@
 	<div class="container-fluid">
 
 		<h1 class="h4 py-4" id="0">
-            Estimación del requerimiento hídrico en cultivos agrícolas usando Teledetección
+           Visualizaciones con Python
         </h1>
 
 		<!-- Imagen -->
 		<div class="py-2">
 			<figure>
 				<img class="rounded mx-auto d-block" 
-                src="https://portiarroz.com.ec/wp-content/uploads/2019/08/arroz-portilla-milagro-guayaquil-ecuador.jpg" 
-                alt="Cultivo de Arroz" width="85%">
+                src="../img/prueba-matplotlib.jpg" 
+                alt="Gráfico en Matplotlib" width="100%">
 				<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-					Cultivo de Arroz regado por inundación
+					Gráfico realizado con datos de imágenes satelitales en Google Earth Engine
 				</figcaption>
 			</figure>
 		</div>
@@ -150,7 +150,7 @@
 			<dl>
 				<dt>Objetivo</dt>
 				<dd>
-					Recopilar literatura sobre evapotranspiración en cultivos agrícolas relacionados con metodologías de estimación usando Teledetección.    
+					Presentar los gráficos que he realizado usando diversas librerías con Python en Colab.    
 				</dd>
 			</dl>
         </blockquote>
@@ -158,16 +158,41 @@
 		<h2 class="h5 py-4" id="1">1. Importancia</h2>
 		
 		<p>
-            La evapotranspiración es un factor importante en el ciclo del agua que provoca la transferencia de agua desde la superficie terrestre hacia la 
-            atmósfera. Para el campo de la Agricultura, su estimación permite desarrollar eficientemente un calendario de riego que utilice óptimamente el recurso hídrico.  
+            La elaboración de gráficos (sean estáticos o interactivos) deben cumplir el objetivo de transmitir un mensaje al espectador, mucho mejor si es entendible para personas ajenas al campo en el que te encuentras. 
+        </p>
+
+        <p>
+            Una de las formas de generar gráficos o visualizaciones de manera llamativa es usando lenguajes de programación ya que te permiten editar de manera libre tu presentación, pero ello es a su vez una gran limitante, ya que se requiere del conocimiento de las herramientas que se empleará.
         </p>
 
 
-		<h2 class="h5 py-4" id="2">2. Antecedentes</h2>
+		<h2 class="h5 py-4" id="2">2. Librerías en Python</h2>
 
 		<p>
-            En proceso...
-		</p> 
+            Existen muchas librerias pero es necesario no perder de vista el objetivo que se busca cumplir: ¿gráfico interactivo o estático?. A continuación presento una imagen (de internet) que nos ayudará a decidir que librería usar (no son todas pero están las más conocidas).
+            
+            <figure>
+				<img class="rounded mx-auto d-block" 
+                src="https://pbpython.com/images/Python-plot-tools.png" 
+                alt="Gráfico en Matplotlib" width="70%">
+				<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+					Practical Python Business - <a href="https://pbpython.com/python-vis-flowchart.html">Choosing a Python Visualization Tool</a>
+				</figcaption>
+			</figure>
+
+            Entre las más conocidas tenemos: <br>
+
+            <ul>
+                <li class='li-ref'>Matplotlib</li>
+                <li class='li-ref'>Seaborn</li>
+                <li class='li-ref'>Pandas</li>
+                <li class='li-ref'>Altair</li>
+                <li class='li-ref'>Plotly</li>
+                <li class='li-ref'>Bokeh</li>
+            </ul>
+        </p> 
+
+        <img src="../img/grafico_plotly.gif" alt="Gráfico con Plotly en Python" width="100%">
 
 		<!-- <h3 class="h6 py-2" id="21">2.1. Clasificación Estadística</h3>
 		<p>
@@ -196,31 +221,61 @@
 
 		<p> 
 
-			Libro
+			Matplotlib
 
 			<ul>
 				<li class="li-ref">
-					Allen, R. G., Pereira, L. S., Raes, D., & Smith, M. (2006). Evapotranspiración del cultivo: guías para la determinación de los requerimientos de agua de los cultivos. Roma: FAO, 298(0). <br>
-					<a target="_blank" href="https://www.fao.org/3/x0490s/x0490s00.htm">https://www.fao.org/3/x0490s/x0490s00.htm</a>
+					<a target="_blank" href="https://matplotlib.org/">Matplotlib: Visualization with Python</a>
 				</li>
 			</ul>
 
-			Artículos
+			Plotly
             
-			<ol>
+			<ul>
+    	        <li class="li-ref">
+					<a target="_blank" href="https://plotly.com/python/">Plotly Python Open Source Graphing Library</a> 
+				</li>
+                
+                <li class="li-ref">
+                    <a target="_blank" href="https://plotly.com/python/graph-objects/">Graph Objects in Python</a>
+                </li>
 				<li class="li-ref">
-					Kalma, J. D., McVicar, T. R., & McCabe, M. F. (2008). Estimating land surface evaporation: A review of methods using remotely sensed surface temperature data. <em>Surveys in Geophysics</em>, 29(4), 421-469. <br> 
-					<a target="_blank" href="https://www.researchgate.net/publication/225112136_Estimating_Land_Surface_Evaporation_A_Review_of_Methods_Using_Remotely_Sensed_Surface_Temperature_Data">10.1007/s10712-008-9037-z</a> 
+					<a target="_blank" href="https://community.plotly.com/t/plotly-colours-list/11730">Plotly: Colours list</a> 
 				</li>
 				<li class="li-ref">
-					Tol, C. v. d. , & Parodi, G. N. (2012). Guidelines for remote sensing of evapotranspiration. <em>Evapotranspiration—Remote sensing and modeling</em>, 227, 250. <br>
-					<a target="_blank" href="https://www.intechopen.com/chapters/26107">https://doi.org/10.5772/18582</a>
-				</li
-				
-				<!-- <li><a href='https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf'>INEGI - Clasificación de cultivos agrícolas</a></li> -->
-				<!-- <li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li> -->
-				<!-- <li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li> -->
-			</ol>
+					<a target="_blank" href="https://plotly.com/python/axes/">Plotly: Axes in Python</a>
+                </li>
+                <li class="li-ref">
+					<a target="_blank" href="https://stackoverflow.com/questions/61631230/plotly-how-to-change-the-background-color-of-each-subplot">Stackoverflow: Plotly: How to change the background color of each subplot?</a>
+                </li>
+				<li class="li-ref">
+					<a target="_blank" href="https://digitallythrive.com/how-to-format-plotly-hover-dates-show-month-days-year/">Plotly: Cambiar formato de Hover para fechas con XHOVERFORMAT</a>
+                </li>
+				<li class="li-ref">
+					<a target="_blank" href="https://plotly.com/python/hover-text-and-formatting/">Plotly: Hover Text and Formatting in Python</a>
+                </li>
+	            <li class="li-ref">
+					<a target="_blank" href="https://plotly.com/python/time-series/">Time Series and Date Axes in Python</a>
+                </li>
+                <li class="li-ref">
+					<a target="_blank" href="https://plotly.com/python/creating-and-updating-figures/">Creating and Updating Figures in Python</a>
+                </li>
+	
+	
+			</ul>
+            
+            Blogs
+            
+			<ul>
+				<li class="li-ref">
+					Practical Business Python - 
+					<a target="_blank" href="https://pbpython.com/python-vis-flowchart.html">Choosing a Python Visualization Tool</a> 
+				</li>
+				<li class="li-ref">
+                    Medium - 
+					<a target="_blank" href="https://towardsdatascience.com/pyviz-simplifying-the-data-visualisation-process-in-python-1b6d2cb728f1">PyViz: Simplifying the Data Visualisation process in Python.</a>
+                </li>
+			</ul>
 
 		</p>
 
