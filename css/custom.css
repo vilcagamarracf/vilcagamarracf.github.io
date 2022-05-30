@@ -1,16 +1,21 @@
 * body {
 	/* Fonts */
-	font-family: 'IBM Plex Sans';
+	font-family: 'Lato';
 	/* text-align: justify; */
 	font-size: 14px;
 }
 
 /* Fonts */
 @font-face {
-	font-family: 'IBM Plex Sans';
-	src: url(../fonts/IBMPlexSans-Regular.ttf);
+	font-family: 'Lato';
+	src: url(../fonts/Lato-Regular.ttf) 
 }
 
+/* Centrar todo lo que se encuentre dentro de un paragraph 
+Enfocado en imagenes */
+.centerp {
+	text-align: center;
+}
 
 /* Listar Referencias */
 ul {
