@@ -1,6 +1,9 @@
-// BOTON -----------------------------------
+// -----------------------------------
+// BOTON 
+// -----------------------------------
 
-// https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+// Referencia
+// - https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 
 //Get the button
 var mybutton = document.getElementById("myBtn");
@@ -22,10 +25,12 @@ function topFunction() {
     document.documentElement.scrollTop = 0;
 }
 
-// FIN DE BOTON ----------------------------------
 
-//  SIDEBAR ---------------------------------
-// Según veo el signo dollar es para el JQuery
+// -----------------------------------
+//  SIDEBAR
+// -----------------------------------
+
+// - Según veo el signo dollar es para el JQuery
 
 $(document).ready(function () {
 
@@ -45,4 +50,3 @@ $(document).ready(function () {
 
 });
 
-// FIN DE SIDEBAR --------------------------------
