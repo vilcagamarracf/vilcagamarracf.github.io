@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,10 +34,15 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
 </head>
 
+<!-- 
+    ----------------------------------
+                Body 
+    ----------------------------------
+-->
+
 <body>
 
-
-<!--Header-->
+<!-- Header -->
 <header class="header">
 	<nav class="navbar navbar-expand-sm py-lg-0">
 		<div class="container">
@@ -71,49 +75,72 @@
 	</nav>
 </header>
 
-<!-- Redacción de post -->
+
+<!-- 
+    ----------------------------------
+            Redacción del post
+    ----------------------------------
+-->
 <div class="container-fluid">
 <div class="row">
 
 	<!-- BOTONES -->
+    <!-- 1. Go to top -->
 	<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
 	<i class="fas fa-align-left"></i>
 	</button>
 
+    <!-- 2. Table of contents -->
 	<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
 	<i class="fas fa-arrow-up"></i>
 	</button>
 
+
 	<!-- Columna Izquierda -->
 	<div class="col-2 fondo">
+        
+        <!-- 
+            Aquí va la sección de los títulos  
+            
+            Modificable:
+            - Título del contenido
+            - Títulos
+        -->
 
 		<div class="wrapper">
 		<nav id="sidebar">
-			<!-- <div class="sidebar-header">
-				<h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
-			</div> -->
 
 			<ul class="list-unstyled components">
+
+                <!-- Lista de títulos -->
 				<li>
-                    <a class="text-center" style="font-size: 12px;" href="#0">
+                    <a class="text-center" style="font-size: 12px;">
 						<b>
 							Estimación del requerimiento hídrico en cultivos agrícolas usando Teledetección
 						</b>
                     </a> 
                 </li>
-				<p class="text-center"><b>Contenido</b></p>
+				<p class="text-center">
+                    <b>Contenido</b>
+                </p>
 				
-				<li><a href="#1">Evapotranspiración</a></li>
-				<li><a href="#2">2.</a></li>
-				<li><a href="#3">Referencias</a></li>
+                <!-- Tipo de contenido 1 -->
 
-				<!-- <li><a href="#class" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-						2. Clasificación
+				<li><a href="#1">Evapotranspiración</a></li>
+				<li><a href="#11" class="padd">Conceptos</a></li>
+				<li><a href="#3">Referencias</a></li>
+				<!-- <li><a href="#3">Referencias</a></li> -->
+
+                <!-- Tipo de contenido 2: Contenido colapsable  -->
+                <!-- Nota: No permite ir a la posición del título padre  -->        
+				
+                <!-- <li>
+                    <a href="#class" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+						Evapotranspiración
                     </a>
 					<ul class="collapse list-unstyled" id="class">
-						<li><a class='padd' href="#cl1">2.1. Estadística</a></li>
-						<li><a class='padd' href="#cl2">2.2. Percepción Remota</a></li>
-						<li><a class='padd' href="#cl3">2.3. Aprendizaje Automático</a></li>
+						<li><a class='padd' href="#11">Conceptos</a></li>
+						<li><a class='padd' href="#32">Subtítulo 2 h2</a></li>
 					</ul>
 				</li> -->
 
@@ -127,180 +154,195 @@
 
 	<!-- Columna Central -->
 	<div class="col-lg-8" style="background: white; padding: 20px 30px 0px 30px;">
-	<div class="container-fluid">
 
-		<h1 class="h4 py-4" id="0">
-            Estimación del requerimiento hídrico en cultivos agrícolas usando Teledetección
-        </h1>
+        <!-- Aquí va el contenido del artículo -->
 
-		<!-- Imagen -->
-		<div class="py-2">
-			<!-- src="https://portiarroz.com.ec/wp-content/uploads/2019/08/arroz-portilla-milagro-guayaquil-ecuador.jpg"  -->
-			<figure>
-				<img class="rounded mx-auto d-block" 
-				src="../img/DSC_0126.jpg"
-                alt="Cultivo de Arroz" width="85%">
-				<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-					Pozas de Arroz con riego por inundación
-				</figcaption>
-			</figure>
-		</div>
+        <div class="container-fluid">
 
-        <!-- Contenido del post -->
-		<blockquote class="blockquote">
-			<dl>
-				<dt>Objetivo</dt>
-				<dd>
-					Recopilar literatura sobre evapotranspiración en cultivos agrícolas relacionados con metodologías de estimación usando Teledetección.    
-				</dd>
-			</dl>
-        </blockquote>
+            <h1 class="h4 py-4" id="0">
+                Estimación del requerimiento hídrico en cultivos agrícolas usando Teledetección
+            </h1>
 
-		<h2 class="h5 py-4" id="1">Evapotranspiración</h2>
+            <!-- Imagen -->
+            <div class="py-2">
+                <figure>
+                    <img class="rounded mx-auto d-block" 
+                    src="../img/DSC_0126.jpg"
+                    alt="Cultivo de Arroz" width="85%">
+                    <figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+                        Pozas de Arroz con riego por inundación
+                    </figcaption>
+                </figure>
+            </div>
 
-		<p>
-            La evapotranspiración es un factor importante en el ciclo del agua que provoca la transferencia de agua desde la superficie terrestre hacia la atmósfera. Para el campo de la agricultura, su estimación permite desarrollar eficientemente un calendario de riego que utilice óptimamente el recurso hídrico.  
-        </p>
 
-		<p>
-			Según el estudio de la FAO 56, elaborado por Allen R., Pereira L., Raes D. Smith M. (1998), la evapotranspiración es la combinación de dos procesos separados por los que el agua se pierde a través de la superficie del suelo por evaporación y por otra parte, mediante transpiración del cultivo. Ambos procesos ocurren simultáneamente y no hay manera sencilla de distinguir entre ambos. 
-		</p>
+            <!-- Objetivo -->
+            <blockquote class="blockquote">
+                <dl>
+                    <dt>Objetivo</dt>
+                    <dd>
+                        Recopilar literatura sobre evapotranspiración en cultivos agrícolas relacionados con metodologías 
+                        de estimación usando Teledetección.   
+                    </dd>
+                </dl>
+            </blockquote>
 
-		<p>
-			En las primeras etapas del cultivo, el agua se pierde principalmente por evaporación directa del suelo, pero con el desarrollo del cultivo y finalmente cuando este cubre totalmente el suelo, la transpiración se convierte en el proceso principal.
-		</p>
+            <!-- 
+                ----------------------------------
+                        Redacción del post
+                ----------------------------------
 
-		<h3 class="h6 py-2">Conceptos</h3>
-		
-		<ol>
-			<li><b>Evapotranspiración potencial (ETP)</b></li>
-			<p>
-				Concepto popularizado por Thornthwaite (1948), en el contexto climático es definido como la máxima cantidad de agua que puede evaporarse desde un suelo cubierto de vegetación, con desarollo óptimo y en el supuesto de no existir limitaciones de agua (por lluvia o riego). <br>
-				
-				La ETP es controlada por factores meteorológicos, además de las características de la vegetación y del suelo, sin depender de las condiciones de humedad del suelo.
-			</p>
+                Para poder usar la navegación es necesario usar el identificador "id"y modificar la sección "Columna izquierda"
+            -->
 
-			<li><b>Evapotranspiración del cultivo de referencia (ETo)</b></li>
-			<p>
-				Es la tasa de pérdida de agua en un césped verde estándar (superficie hipotética) bajo la disponibilidad de humedad adecuada del suelo. La superficie de referencia representa una superficie extensa de césped verde, bien regado, de altura uniforme (15 cm), que crece activamente y sombrea completamente el suelo. Como no hay escasez de humedad en el suelo, solo la influencia de los parámetros climáticos considerados y la evapotranspiración de referencia se introduce para medir la demanda de evaporación de la atmósfera, independientemente del tipo de cultivo, el desarrollo del cultivo y las prácticas de manejo. 
-			</p>
+            <h2 class="h5 py-4" id="1">Evapotranspiración</h2>
 
-			<li><b>Evapotranspiración máxima (ETm)</b></li>
-			<p>
-				Es la pérdida de agua que es capaz de evaporar y transpirar el sistema suelo-vegetación, en condiciones no limitantes de disponibilidad hídrica. El proceso de evapotranspiración que se produce en una superficie natural no siempre se encuentra en las condiciones hipotéticas planteadas. Por o tanto, es importante definir el concepto de evapotranspiración real.
-			</p>
+            <p>
+                La evapotranspiración es un factor importante en el ciclo del agua que provoca la transferencia de agua desde 
+                la superficie terrestre hacia la atmósfera. Para el campo de la agricultura, su estimación permite desarrollar 
+                eficientemente un calendario de riego que utilice óptimamente el recurso hídrico.  
+            </p>
 
-			<li><b>Evapotranspiración real (ETr)</b></li>
-			<p>
-				Es la cantidad de agua verdaderamente perdida por el suelo y depende de las condiciones atmosféricas, el contenido de agua en el suelo y las características de la vegetación. Por lo tato, la ETr puede ser muy diferente a la ETm, aunque en general tiende a ser menor o en el caso límite igual a ésta. Raras veces la ETr puede ser mayor a la máxima, como es el caso posterior a una lluvia, cuando el follaje intercepta agua y ésta es perdida directamente a la atmósfera.
-			</p>
-		</ol>
-		
-		<h3 class="h6 py-2">Medición</h3>
+            <p>
+                Según el estudio de la FAO 56, elaborado por Allen R., Pereira L., Raes D. Smith M. (1998), la evapotranspiración 
+                es la combinación de dos procesos separados por los que el agua se pierde a través de la superficie del suelo 
+                por evaporación y por otra parte, mediante transpiración del cultivo. Ambos procesos ocurren simultáneamente y no 
+                hay manera sencilla de distinguir entre ambos. 
+            </p>
 
-		<!-- <h3 class="h6 py-2" id="21">2.1. Clasificación Estadística</h3>
-		<p>
-			Según <a href="https://es.wikipedia.org/wiki/Clasificaci%C3%B3n_estad%C3%ADstica">Wikipedia</a>, la <b>clasificación</b> es el problema de identificar a cuál de un conjunto de categorías (subpoblaciones) pertenece una nueva observación, sobre la base de un conjunto de datos de formación que contiene observaciones (o instancias) cuya categoría de miembros es conocida.
-		</p>
+            <p>
+                En las primeras etapas del cultivo, el agua se pierde principalmente por evaporación directa del suelo, pero 
+                con el desarrollo del cultivo y finalmente cuando este cubre totalmente el suelo, la transpiración se convierte 
+                en el proceso principal.
+            </p>
 
-		<h3 class="h6 my-4" id="22">2.3. Clasificación en Percepción Remota</h3>
-		<p>Según <a href="https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf">INEGI</a>, <b>la clasificación de cultivos</b> puede ser abordada como un problema de reconocimiento de patrones que utiliza procesamiento de imágenes y que está formado por varias etapas: 
-			<ol>
-				<li>Selección del método o medio a través del cual se obtiene la imagen,</li>
-				<li>Procesamiento de ésta (imagen) como en la extracción de rasgos </li>
-				<li>Selección  y  aplicación  de  algoritmos  de  clasificación. </li>
-			</ol>
-		</p>
-		
-		<h3 class="h6 py-2" id="23">2.2. Clasificación en Aprendizaje Automático</h3>
-
-		<p>La clasificación está considerada como un caso de <b>aprendizaje supervisado</b>, es decir, un aprendizaje en el que se dispone de un conjunto de observaciones correctamente identificadas. El procedimiento <b>no supervisado</b> se conoce como <b>clustering</b>, e implica agrupar los datos y categorías basadas en alguna medida de similitud o distancia inherente.</p>
-
-		<p>En este campo, las observaciones se conocen a menudo como <b>instancias</b>, las variables explicativas se denominan <b>características</b> (agrupadas en un vector de características) y las posibles categorías a predecir son <b>clases</b>.</p>
-
-		<p>Un algoritmo que implementa la clasificación, especialmente en una implementación concreta, se conoce como un <b>clasificador</b>. El término "clasificación" algunas veces refiere a la función matemática, implementada por un algoritmo de clasificación, que asocia los datos de entrada a una categoría.</p>
-		 -->
-
-        <h2 class="h5 py-4" id="3">Referencias</h2>
-
-		<p> 
-
-			Libro
-
-			<ul>
-				<li class="li-ref">
-					Allen, R. G., Pereira, L. S., Raes, D., & Smith, M. (2006). Evapotranspiración del cultivo: guías para la determinación de los requerimientos de agua de los cultivos. Roma: FAO, 298(0). <br>
-					<a target="_blank" href="https://www.fao.org/3/x0490s/x0490s00.htm">https://www.fao.org/3/x0490s/x0490s00.htm</a>
-				</li>
-			</ul>
-		</p>
-
-		<p>
-			
-			Artículos
+            <h3 class="h6 py-2" id="11">Conceptos</h3>
             
-			<ol>
-				<li class="li-ref">
-					Kalma, J. D., McVicar, T. R., & McCabe, M. F. (2008). Estimating land surface evaporation: A review of methods using remotely sensed surface temperature data. <em>Surveys in Geophysics</em>, 29(4), 421-469. <br> 
-					<a target="_blank" href="https://www.researchgate.net/publication/225112136_Estimating_Land_Surface_Evaporation_A_Review_of_Methods_Using_Remotely_Sensed_Surface_Temperature_Data">10.1007/s10712-008-9037-z</a> 
-				</li>
-				<li class="li-ref">
-					Tol, C. v. d. , & Parodi, G. N. (2012). Guidelines for remote sensing of evapotranspiration. <em>Evapotranspiration—Remote sensing and modeling</em>, 227, 250. <br>
-					<a target="_blank" href="https://www.intechopen.com/chapters/26107">https://doi.org/10.5772/18582</a>
-				</li>
-				
-				<li><a href='https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf'>INEGI - Clasificación de cultivos agrícolas</a></li>
-				<!-- <li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li> -->
-				<!-- <li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li> -->
-			</ol>
+            <ol>
+                <li><b>Evapotranspiración potencial (ETP)</b></li>
+                <p>
+                    Concepto popularizado por Thornthwaite (1948), en el contexto climático es definido como la máxima cantidad 
+                    de agua que puede evaporarse desde un suelo cubierto de vegetación, con desarollo óptimo y en el supuesto de 
+                    no existir limitaciones de agua (por lluvia o riego). <br>
+                    
+                    La ETP es controlada por factores meteorológicos, además de las características de la vegetación y del suelo, 
+                    sin depender de las condiciones de humedad del suelo.
+                </p>
 
-		</p>
+                <li><b>Evapotranspiración del cultivo de referencia (ETo)</b></li>
+                <p>
+                    Es la tasa de pérdida de agua en un césped verde estándar (superficie hipotética) bajo la disponibilidad de 
+                    humedad adecuada del suelo. La superficie de referencia representa una superficie extensa de césped verde, 
+                    bien regado, de altura uniforme (15 cm), que crece activamente y sombrea completamente el suelo. Como no hay 
+                    escasez de humedad en el suelo, solo la influencia de los parámetros climáticos considerados y la 
+                    evapotranspiración de referencia se introduce para medir la demanda de evaporación de la atmósfera, 
+                    independientemente del tipo de cultivo, el desarrollo del cultivo y las prácticas de manejo. 
+                </p>
 
-        
+                <li><b>Evapotranspiración máxima (ETm)</b></li>
+                <p>
+                    Es la pérdida de agua que es capaz de evaporar y transpirar el sistema suelo-vegetación, en condiciones no 
+                    limitantes de disponibilidad hídrica. El proceso de evapotranspiración que se produce en una superficie natural 
+                    no siempre se encuentra en las condiciones hipotéticas planteadas. Por o tanto, es importante definir el 
+                    concepto de evapotranspiración real.
+                </p>
 
-		<!-- <p>Por revisar:</p>
-		<ul>
-			<li><a href="http://dx.doi.org/10.1016/j.compag.2012.07.015">[2012] Crop type mapping using spectral–temporal profiles and phenological information</a></li>
-			<li><a href="https://doi.org/10.1016/j.rse.2017.08.027">[2017] Detection of cropland field parcels from Landsat imagery</a></li>
-			<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2">[2019] Satellite Image Analysis: Clustering and Classification</a></li>
-			<li><a href="https://doi.org/10.1016/j.rse.2018.10.031">[2019] Intra-annual reflectance composites from Sentinel-2 and Landsat for national-scale crop and land cover mapping</a></li>
+                <li><b>Evapotranspiración real (ETr)</b></li>
+                <p>
+                    Es la cantidad de agua verdaderamente perdida por el suelo y depende de las condiciones atmosféricas, el 
+                    contenido de agua en el suelo y las características de la vegetación. Por lo tato, la ETr puede ser muy 
+                    diferente a la ETm, aunque en general tiende a ser menor o en el caso límite igual a ésta. Raras veces la 
+                    ETr puede ser mayor a la máxima, como es el caso posterior a una lluvia, cuando el follaje intercepta agua 
+                    y ésta es perdida directamente a la atmósfera.
+                </p>
+            </ol>
 
-			<hr>
+            <!-- 
+                ----------------------------------
+                    Sección de referencias
+                ----------------------------------
+            -->
 
-			<li><a href="https://www.amazon.com/Remote-Sensing-Environment-International-Perspective/dp/1292021705" id="1">[1]</a> Jensen, J. R. (2013). Remote Sensing of the Environment: Pearson New International Edition: An Earth Resource Perspective (2nd edition). Pearson Education Limited.</li>
-			<li><a href="https://link.springer.com/book/10.1007/978-981-13-6424-2" id="2">[2]</a> Borra, S., Thanki, R., & Dey, N. (2019). Satellite Image Analysis: Clustering and Classification. SpringerBriefs in Applied Sciences and Technology, 5-7. https://doi.org/10.1007/978-981-13-6424-2</li>
-		</ul>
-		</p> -->
+            <h2 class="h5 py-4" id="3">Referencias</h2>
+            
+            <!-- Libros -->
+            <h3 class="h6 py-2" id="31">Libros</h3>
 
+            <ul>
+                <li class="li-ref">
+                    Allen, R. G., Pereira, L. S., Raes, D., & Smith, M. (2006). Evapotranspiración del cultivo: guías para la determinación de los requerimientos de agua de los cultivos. Roma: FAO, 298(0). <br>
+                    <a target="_blank" href="https://www.fao.org/3/x0490s/x0490s00.htm">https://www.fao.org/3/x0490s/x0490s00.htm</a>
+                </li>
+            </ul>
 
-        <!-- Fin del Contenido del post -->
+            <!-- Artículos -->
+            <h3 class="h6 py-2" id="32">Artículos</h3>
+            <ol>
+                <li class="li-ref">
+                    Kalma, J. D., McVicar, T. R., & McCabe, M. F. (2008). Estimating land surface evaporation: A review of methods using remotely sensed surface temperature data. <em>Surveys in Geophysics</em>, 29(4), 421-469. <br> 
+                    <a target="_blank" href="https://www.researchgate.net/publication/225112136_Estimating_Land_Surface_Evaporation_A_Review_of_Methods_Using_Remotely_Sensed_Surface_Temperature_Data">10.1007/s10712-008-9037-z</a> 
+                </li>
+                <li class="li-ref">
+                    Tol, C. v. d. , & Parodi, G. N. (2012). Guidelines for remote sensing of evapotranspiration. <em>Evapotranspiration—Remote sensing and modeling</em>, 227, 250. <br>
+                    <a target="_blank" href="https://www.intechopen.com/chapters/26107">https://doi.org/10.5772/18582</a>
+                </li>
+                <li class="li-ref">
+                    <a href='https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf'>INEGI - Clasificación de cultivos agrícolas</a>
+                </li>
+                <!-- <li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li> -->
+                <!-- <li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li> -->
+            </ol>
 
+            <!-- 
+                ----------------------------------
+                        Contenido adicional
+                ----------------------------------
+            -->
 
-		<!-- Saludos -->
-		<p style="text-align: center; padding: 20px">
-			Muchas gracias por leer. Saludos!
-		</p>
+            <!-- Mensaje de despedida -->
+            <p style="text-align: center; padding: 20px">
+                Muchas gracias por leer. Saludos!
+            </p>
 
-		<div class="container py-lg-2">
-			<ul class="pagination justify-content-center">
-                <li class="page-item"><a class="page-link" href="blog_clasificacion.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
-				<li class="page-item"><a class="page-link" href="../blog.html">Volver al blog</a></li>
-                <li class="page-item"><a class="page-link" href="blog_visualizaciones.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-		
-		<!--Footer-->
-		<hr>
-		<div class="py-2" style="background: #eee, ;">
-		<ul class="list-inline text-center">
-			<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-			<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-			<li class="list-inline-item"><a href="https://twitter.com/vilcagamarracf" class="social-link"><i class="fab fa-twitter"></i></a></li>
-			<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
-		</ul>
-		</div>
-		
-		</div>
+            <!-- Botones de navegación entre artículos -->
+            <div class="container py-lg-2">
+                <ul class="pagination justify-content-center">
+                    
+                    <!-- Página anterior -->
+                    <li class="page-item">
+                        <a class="page-link" href="blog_clasificacion.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    </li>
+                    
+                    <!-- Volver al blog -->
+                    <li class="page-item">
+                        <a class="page-link" href="../blog.html">Volver al blog</a></li>
+
+                    <!-- Página siguiente -->
+                    <li class="page-item">
+                        <a class="page-link" href="blog_visualizaciones.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+            
+            <!-- ----- Línea de división ----- -->
+            <hr>
+
+            <!--Footer con redes sociales-->
+            <div class="py-2" style="background: #eee, ;">
+            <ul class="list-inline text-center">
+                <!-- Facebook -->
+                <li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+                <!-- Linkedin -->
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+                <!-- Twitter -->
+                <li class="list-inline-item"><a href="https://twitter.com/vilcagamarracf" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <!-- Github -->
+                <li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
+            </ul>
+            </div>
+            
+        </div>
 	</div>
 
 	<!-- Columna Derecha -->
@@ -320,12 +362,19 @@
 	</div>
 </div>
 	
-<!-- JavaScript files-->
+
+<!-- 
+    ----------------------------------
+            JavaScript files
+    ----------------------------------
+-->
+
 <script src="../vendor/jquery/jquery.min.js"></script>
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../vendor/lightbox2/js/lightbox.min.js"></script>
-<script src="../vendor/leaflet/leaflet.js"></script>
+<!-- <script src="../vendor/leaflet/leaflet.js"></script> -->
 <script src="../js/custom.js"></script>
+
 <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
