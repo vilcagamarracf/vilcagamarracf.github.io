@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cesar Vilca: Posts</title>
+	<title>Cesar Vilca: Fórmulas METRIC</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="all,follow">
@@ -31,12 +31,23 @@
 	<!-- Our Custom CSS -->
 	<link rel="stylesheet" href="../css/style2.css">
 	<!-- Scrollbar Custom CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
     <!-- Uso de fórmulas con MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+            };
+    </script>
+    	
 </head>
 
 <!-- 
@@ -119,9 +130,9 @@
 
                 <!-- Lista de títulos -->
 				<li>
-                    <a class="text-center" style="font-size: 12px;">
+                    <a class="text-center py-4" style="font-size: 12px;">
 						<b>
-							Título del contenido
+							Fórmulas METRIC
 						</b>
                     </a> 
 
@@ -133,12 +144,14 @@
 				
                 <!-- Tipo de contenido 1 -->
 
-				<li><a href="#1">1. Titulo 1</a></li>
-				<li><a href="#11" class="padd">1.1. Subtitulo 1</a></li>
-				<li><a href="#2">2. Titulo 2</a></li>
-				<li><a href="#3">3. Titulo 3</a></li>
-				<li><a href="#31" class="padd">3.1. Subtitulo 1</a></li>
-				<li><a href="#32" class="padd">3.2. Subtitulo 2</a></li>
+				<li><a href="#1">1. Descripción del modelo METRIC</a></li>
+				<li><a href="#2">2. Balance de energía</a></li>
+				<li><a href="#21" class="padd">2.1. Radiación Neta</a></li>
+				<li><a href="#22" class="padd">2.2. Flujo del calor del suelo</a></li>
+				<li><a href="#23" class="padd">2.3. Flujo de calor sensible</a></li>
+				<li><a href="#3">3. Referencias</a></li>
+				<li><a href="#31" class="padd">3.1. Libros</a></li>
+				<li><a href="#32" class="padd">3.2. Artículos</a></li>
 
 				<!-- <li><a href="#3">Referencias</a></li> -->
 
@@ -171,7 +184,7 @@
         <div class="container-fluid">
 
             <h1 class="h4 py-4" id="0">
-                Título del artículo 
+                Fórmulas METRIC
             </h1>
 
             <!-- Ejemplo de Imagen -->
@@ -192,7 +205,7 @@
                 <dl>
                     <dt>Objetivo</dt>
                     <dd>
-                        Aquí va el objetivo.    
+                        Presentar las fórmulas del modelo METRIC usando el motor de visualización de JavaScript llamado MathJax en una página web.
                     </dd>
                 </dl>
             </blockquote>
@@ -204,30 +217,100 @@
 
                 Para poder usar la navegación es necesario usar el identificador "id"y modificar la sección "Columna izquierda"
             -->
-            <h2 class="h5 py-4" id="1">Título 1 h2</h2>
+            <h2 class="h5 py-4" id="1">1. Descripción del modelo METRIC</h2>
+            
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus ullam in eum repellat, dolorem rem, velit reiciendis hic voluptate sint maiores vero, iste autem obcaecati rerum delectus doloremque nemo dignissimos.
-                Aliquid enim corrupti, unde, ipsa facere eius dignissimos dolores, eveniet doloremque excepturi expedita aliquam? Rerum doloremque ut laudantium rem itaque porro vel, totam dolor aliquid dolores. Expedita ea iusto rerum!
+                Mapping evapotranspiration at high resolution with internalized calibration (METRIC) is a satellite-based 
+                image-processing model for calculating evapotranspiration (ET) as a residual of the surface energy balance. 
+                METRIC uses as its foundation the pioneering SEBAL energy balance process developed in The Netherlands by 
+                Bastiaanssen, where the near-surface temperature gradients are an indexed function of radiometric surface 
+                temperature, thereby eliminating the need for absolutely accurate surface temperature and the need for 
+                air-temperature measurements
+                (<a target="_blank" href="https://www.researchgate.net/publication/228615269_Satellite-Based_Energy_Balance_for_Mapping_Evapotranspiration_With_Internalized_Calibration_METRIC_-_Model">Allen et al., 2007</a>).
             </p>
 
-            <h3 class="h6 py-2">Subtítulo 1 h3</h3>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore modi, nulla quasi atque ad sequi possimus vitae! Accusamus tenetur dignissimos cupiditate. Temporibus maiores maxime tempore, ex explicabo odit aliquam quis.
-                Culpa obcaecati aliquid, soluta iure deleniti inventore quod veniam consequuntur delectus quia repellat dolorum aspernatur fugiat voluptatum itaque sit a esse quidem optio voluptates. Officiis perferendis quos ab autem! Tenetur?
-            </p>
-
-            <h3 class="h6 py-2">Subtítulo 2 h3</h3>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum, perspiciatis reiciendis autem neque doloremque? Similique, possimus ea, adipisci veniam, exercitationem voluptatem incidunt provident voluptatum aliquam ipsam aliquid. Placeat, neque.
-                Deserunt facilis iure voluptatum debitis! Aspernatur consequuntur reprehenderit magnam soluta illo perspiciatis vel nisi dolores alias assumenda magni hic dolorum eius dolorem autem obcaecati, dolor quia quae! Reiciendis, numquam quo.
-            </p>
-
-            <h2 class="h5 py-2" id="2">Título 2 h5</h2>
+            <h2 class="h5 py-4" id="2">2. Balance de energía</h2>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi dignissimos neque dolorem possimus accusamus in. Inventore, officiis soluta suscipit doloremque cumque blanditiis! Cupiditate necessitatibus animi esse cum ab aut maiores?
-                Maxime, provident magni corporis similique necessitatibus delectus ad obcaecati. Doloribus facilis magnam culpa? Ducimus laboriosam soluta quas voluptates dolores earum molestias culpa veritatis, officia quidem, tempora nemo maiores eligendi perferendis.
+                Actual net radiation flux at the surface (Rn) represents the radiant energy at the surface that is partitioned into H, G, and LE. Rn is computed by subtracting all outgoing radiant fluxes from all incoming radiant fluxes and includes solar and thermal radiation.
             </p>
+
+            <h3 class="h6 py-2" id="21">2.1. Radiación Neta</h3>
+
+            <p>
+                The net radiation flux at the surface ($R_n$) represents the actual radiant energy available at the surface.
+            </p>
+
+            $$
+            R_n = R_{S\downarrow} - \alpha R_{S\downarrow} + R_{L\downarrow} - R_{L\uparrow} - (1- \varepsilon_0)R_{L\downarrow}
+            $$
+
+            $$
+            R_n = (1- \alpha)R_{S\downarrow} + (R_{L\downarrow} - R_{L\uparrow}) - (1- \varepsilon_0)R_{L\downarrow}
+            $$
+
+            $$
+            \text{Net surface radiation} = \text{gains} - \text{losses}
+            $$
+
+            <p>
+                Dónde:
+                <ul>
+                <li>$R_n \;$ : Flujo de radiación neta $[W/m^2]$</li>
+                <li>$\alpha \;\;\;$ : Albedo de superficie $[-]$</li>
+                <li>$R_{S\downarrow}$ : Radiación de onda corta entrante $[W/m^2]$</li>
+                <li>$R_{L\downarrow}$ : Radiación de onda larga entrante $[W/m^2]$</li>
+                <li>$R_{L\uparrow}$ : Radiación de onda larga saliente $[W/m^2]$</li>
+                <li>$\epsilon_0 \;\;\;$ : Emisividad del ancho de banda en la superficie / broad-band surface thermal emissivity</li>
+                </ul>
+            </p>
+
+            <p>
+                El término $(1- \epsilon_0)R_{L\downarrow}$ representa la fracción de radiación entrante de onda larga (incoming long-wave radiation) reflejada desde la superficie.
+            </p>
+
+            <br>
+
+            <h3 class="h6 py-2" id="22">2.2. Flujo del calor del suelo</h3>
+
+            <p>
+                Soil heat flux is the rate of heat storage in the soil and vegetation due to conduction. General METRIC applications compute G as a ratio $G/R_n$ using an empirical equation by Bastiaanssen (2000) representing values near midday
+            </p>
+
+            $$
+            \frac{G}{R_n} = ( T_s - 273.15 ) (0.0038 + 0.0074 \alpha ) (1-0.98 \; \text{NDVI}^4) \; \; \; \; \text{(26)}
+            $$
+
+            <p>Dónde</p>
+            <ul>
+               <li>$T_s$ : surface temperature $[K]$</li> 
+               <li>$\alpha$ : surface albedo $[-]$</li>
+            </ul>
+
+            <p>
+                G is then calculated by multiplying $G/R_n$ by $R_n$. 
+            </p>
+
+            <br>
+
+            <h3 class="h6 py-2" id="23">2.3. Flujo de calor sensible</h3>
+
+            <p>
+                Sensible heat flux is the rate of heat loss to the air by convection and conduction, due to a temperature difference. It is computed using the following one-dimensional, aerodynamic, temperature gradient based equation for heat transport:
+
+                $$
+                    H = \rho_{\text{air}} C_p \frac{dT}{ r_{\text{ah}} }
+                $$
+
+                Dónde:
+                <ul>
+                    <li>$\rho_{\text{air}}$: air density $[kg/m^{3}]$</li>
+                    <li>$C_p$: air specific heat $[1004 \; J/kg/K]$</li>
+                    <li>$dT$: temperature difference (T1 - T2) between two heights (z1 and z2) $[K]$</li>
+                    <li>$r_{\text{ah}}$: aerodynamic resistance to heat transport $[s/m]$</li>
+                </ul>
+            </p>
+
             <!-- 
                 ----------------------------------
                     Sección de referencias
@@ -250,6 +333,10 @@
             <h3 class="h6 py-2" id="32">Artículos</h3>
             <ol>
                 <li class="li-ref">
+                    Allen, R. G., Tasumi, M., & Trezza, R. (2007). Satellite-based energy balance for mapping evapotranspiration with internalized calibration (METRIC)—Model. Journal of irrigation and drainage engineering, 133(4), 380-394.
+                    <a target="_blank" href="https://www.researchgate.net/publication/228615269_Satellite-Based_Energy_Balance_for_Mapping_Evapotranspiration_With_Internalized_Calibration_METRIC_-_Model">https://doi.org/10.1061/(ASCE)0733-9437(2007)133:4(395)</a>)
+                </li>
+                <!-- <li class="li-ref">
                     Kalma, J. D., McVicar, T. R., & McCabe, M. F. (2008). Estimating land surface evaporation: A review of methods using remotely sensed surface temperature data. <em>Surveys in Geophysics</em>, 29(4), 421-469. <br> 
                     <a target="_blank" href="https://www.researchgate.net/publication/225112136_Estimating_Land_Surface_Evaporation_A_Review_of_Methods_Using_Remotely_Sensed_Surface_Temperature_Data">10.1007/s10712-008-9037-z</a> 
                 </li>
@@ -259,7 +346,7 @@
                 </li>
                 <li class="li-ref">
                     <a href='https://rde.inegi.org.mx/rde_16/doctos/rde_16_art5.pdf'>INEGI - Clasificación de cultivos agrícolas</a>
-                </li>
+                </li> -->
                 <!-- <li><a href='https://siea.midagri.gob.pe/portal/normas'>Superficie Agrícola Oficial - SIEA MIDAGRI</a></li> -->
                 <!-- <li><a href='https://www.slideshare.net/CIMMYT/herbold-cimmyt-remote-sensing-technology-for-crop-insurancedecember-2013'>Remote sensing technology for crop insurance – Applications and limitations</a></li> -->
             </ol>
@@ -281,7 +368,7 @@
                     
                     <!-- Página anterior -->
                     <li class="page-item">
-                        <a class="page-link" href="blog_clasificacion.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                        <a class="page-link" href="blog_visualizaciones.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                     </li>
                     
                     <!-- Volver al blog -->
@@ -289,9 +376,9 @@
                         <a class="page-link" href="../blog.html">Volver al blog</a></li>
 
                     <!-- Página siguiente -->
-                    <li class="page-item">
+                    <!-- <li class="page-item">
                         <a class="page-link" href="blog_visualizaciones.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>
