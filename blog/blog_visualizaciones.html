@@ -33,6 +33,9 @@
 	<link rel="stylesheet" href="../css/style2.css">
 	<!-- Scrollbar Custom CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
+
+	<!-- CDN Actualizado (28 Abril, 2024) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
 </head>
 
 <body>
@@ -96,28 +99,18 @@
 			<ul class="list-unstyled components">
 				<li>
                     <a class="text-center" style="font-size: 12px;" href="#0">
-						<b>
-							Visualizaciones en Python 
+						<b>Visualizaciones en Python 
 						</b>
                     </a> 
                 </li>
 				<p class="text-center"><b>Contenido</b></p>
 				
-				<li><a href="#1">1. Importancia</a></li>
-				<li><a href="#2">2. Librerías en Python</a></li>
-				<li><a href="#3">3. Ejemplos</a></li>
-				<li><a href="#4">4. Referencias</a></li>
-
-				<!-- <li><a href="#class" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-						2. Clasificación
-                    </a>
-					<ul class="collapse list-unstyled" id="class">
-						<li><a class='padd' href="#cl1">2.1. Estadística</a></li>
-						<li><a class='padd' href="#cl2">2.2. Percepción Remota</a></li>
-						<li><a class='padd' href="#cl3">2.3. Aprendizaje Automático</a></li>
-					</ul>
-				</li> -->
-
+				<li><a href="#1">Importancia</a></li>
+				<li><a href="#2">Librerías en Python</a></li>
+				<li><a class='padd' href="#31">Series temporales</a></li>
+				<li><a class='padd' href="#32">Imagenes satelitales</a></li>
+				<li><a href="#4">Referencias</a></li>
+				</li>	
 
 			</ul>
 
@@ -166,7 +159,7 @@
 
                 Para poder usar la navegación es necesario usar el identificador "id"y modificar la sección "Columna izquierda"
             -->
-			<h2 class="h5 py-4" id="1">1. Importancia</h2>
+			<h2 class="h5 py-2" id="1">Importancia</h2>
 			
 			<p>
 				La elaboración de gráficos (sean estáticos o interactivos) deben cumplir el objetivo de transmitir un mensaje al espectador, mucho mejor si es entendible para personas ajenas al campo en el que te encuentras. 
@@ -177,10 +170,10 @@
 			</p>
 
 
-			<h2 class="h5 py-4" id="2">2. Librerías en Python</h2>
+			<h2 class="h5 py-2" id="2">Librerías en Python</h2>
 
 			<p>
-				Existen muchas librerias pero es necesario no perder de vista el objetivo que se busca cumplir: ¿gráfico interactivo o estático?. A continuación presento una imagen (de internet) que nos ayudará a decidir que librería usar (no son todas pero están las más conocidas).
+				Existen muchas librerias pero es necesario no perder de vista el objetivo que se busca cumplir: ¿gráfico interactivo o estático?. A continuación presento una imagen que nos ayudará a decidir que librería podemos usar.
 				
 				<figure>
 					<img class="rounded mx-auto d-block" 
@@ -204,14 +197,14 @@
 
 			</p> 
 
-			<h2 class="h5 py-4" id="3">3. Ejemplos</h2>
+			<h2 class="h5 py-2" id="3">Ejemplos</h2>
 			<p>
 				A continuación unos ejemplos realizados con Plotly a partir datos de imágenes satelitales en Google Earth Engine. 
 			</p>
 			
 			<!-- Galería de fotos -->
-			
-			<p>Series temporales:</p>
+			<h3 class="h6 py-2" id="31">Series temporales</h3>
+			<p>Porcentajes de nubosidad en imágenes satelitales Landsat y Sentinel-2 con plotly.</p>
 
 			<!-- Panel 1 -->
 			<div class="row container-fluid">
@@ -219,92 +212,26 @@
 					<img loading='lazy' src="../img/grafico_plotly.gif" alt="Gráfico" class="img-fluid"></a>
 				<a href="../img/grafico_plotly_3.gif" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
 					<img loading='lazy' src="../img/grafico_plotly_3.gif" alt="Gráfico" class="img-fluid"></a>
-				<a href="../img/grafico_plotly_2.gif" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
+
+				<div style="margin-top: 20px;">
+					<p>Con plotly fue posible realizar una visualización interactiva de datos de una estación meteorológica. En este caso se puede ver datos de temperatura.</p>
+				</div>
+					<a href="../img/grafico_plotly_2.gif" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
 					<img loading='lazy' src="../img/grafico_plotly_2.gif" alt="Gráfico" class="img-fluid"></a>
 			</div>
 
 
 			<!-- Panel 2 -->
-			<br>
-			<p>Imágenes satelitales:</p>
+			<h3 class="h6 py-2" style="margin-top: 20px;" id="32">Imagenes satelitales</h3>
+			<p style="margin-bottom: 0px;">Se utilizó la librería cartoee de geemap para obtener visualizaciones tipo publicación científica. Posteriormente, se realizó un gif. </p>
+			
 			<div class="row container-fluid py-1">
 				<a href="../img/gif_sentinel_historico.gif" data-lightbox="gallery" data-title="Imágenes RGB de Sentinel-2 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque." class="mx-auto d-block col-lg-6">
 					<img loading='lazy' src="../img/gif_sentinel_historico.gif" alt="GIF" class="img-fluid"></a>
 				<a href="../img/gif_landsat_historico.gif" data-lightbox="gallery" data-title="Imágenes RGB de Landsat 8 y 9 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque." class="mx-auto d-block col-lg-6">
 					<img loading='lazy' src="../img/gif_landsat_historico.gif" alt="GIF" class="img-fluid"></a>
-				<!-- <a href="../img/ee_foto2_l7_chincha.JPG" data-lightbox="gallery" data-title="Valle de Chincha, Dataset: Landsat 7 (Nótese el error del escáner a bordo del sátelite lo cual produjo la pérdida del 22% de data en imágenes)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_foto2_l7_chincha.JPG" alt="" class="img-fluid"></a>
-				<a href="../img/ee_foto3_nevado_yerupaja.JPG" data-lightbox="gallery" data-title="Nevado Yerupajá, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_foto3_nevado_yerupaja.JPG" alt="" class="img-fluid"></a>
-				<a href="../img/ee_foto4_l7_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 7" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_foto4_l7_peru.JPG" alt="" class="img-fluid"></a>
-				<a href="../img/ee_foto5_l8_peru.JPG" data-lightbox="gallery" data-title="Perú, Dataset: Landsat 8" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_foto5_l8_peru.JPG" alt="" class="img-fluid"></a>
-				<a href="../img/ee_foto6_l8_peru.JPG" data-lightbox="gallery" data-title="Valle de Chincha - NDVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_foto6_l8_peru.JPG" alt="" class="img-fluid"></a>
-				<a href="../img/ee_foto7_s2_evi.JPG" data-lightbox="gallery" data-title="Valle de Chincha - EVI, Dataset: Sentinel-2A" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_foto7_s2_evi.JPG" alt="" class="img-fluid"></a>
-				<a href="../img/ee_canny_detector.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_canny_detector.png" alt="" class="img-fluid"></a>
-				<a href="../img/canny.png" data-lightbox="gallery" data-title="Detector Canny - El algoritmo busca los bordes y los traza" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/canny.png" alt="" class="img-fluid"></a>
-				<a href="../img/ee_sample.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_sample.png" alt="" class="img-fluid"></a>
-				<a href="../img/ee_sampleo.png" data-lightbox="gallery" data-title="Prueba de sampleo para Clasificación Supervisada" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_sampleo.png" alt="" class="img-fluid"></a>
-				<a href="../img/ee_split_panel.png" data-lightbox="gallery" data-title="Split Panel: Landsat 8 (lado izquierdo) y Sentinel-2A (lado derecho)" class="mx-auto d-block col-lg-3 col-sm-6 p-0 blog-img">
-					<img loading='lazy' src="../img/ee_split_panel.png" alt="" class="img-fluid"></a> -->
-			</div>
 
-			<!-- Imagenes -->
-			<!-- <div class="py-2">
-				<figure>
-					<img class="rounded mx-auto d-block" 
-					src="../img/grafico_plotly.gif"
-					alt="Gráfico con Plotly en Python" width="100%">
-				</figure>
 			</div>
-
-			<div class="py-2">
-				<figure>
-					<img class="rounded mx-auto d-block" 
-					src="../img/grafico_plotly_3.gif"
-					alt="Gráfico con Plotly en Python" width="100%">
-				</figure>
-			</div>
-			
-			<div class="py-0">
-				<figure>
-					<img class="rounded mx-auto d-block" 
-					src="../img/grafico_plotly_2.gif"
-					alt="Gráfico con Plotly en Python" width="100%">
-					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-						Gráficos con Plotly en Python
-					</figcaption>
-				</figure>
-			</div>
-
-			<div class="py-0">
-				<figure>
-					<img class="rounded mx-auto d-block" 
-					src="../img/gif_sentinel_historico.gif"
-					alt="Gráfico con Plotly en Python">
-					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-						Imágenes RGB de Sentinel-2 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque.
-					</figcaption>
-				</figure>
-			</div>
-			
-			<div class="py-0">
-				<figure>
-					<img class="rounded mx-auto d-block" 
-					src="../img/gif_landsat_historico.gif" 
-					alt="Gráfico con Plotly en Python">
-					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-						Imágenes RGB de Landsat 8 y 9 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque.
-					</figcaption>			
-				</figure>
-			</div> -->
 
 			<!-- 
                 ----------------------------------
@@ -312,7 +239,7 @@
                 ----------------------------------
             -->
 
-			<h2 class="h5 py-4" id="4">4. Referencias</h2>
+			<h2 class="h5 py-4" id="4">Referencias</h2>
 
 			<p> 
 				Matplotlib
