@@ -103,13 +103,17 @@
 						</b>
                     </a> 
                 </li>
+
 				<p class="text-center"><b>Contenido</b></p>
 				
 				<li><a href="#1">Importancia</a></li>
-				<li><a href="#2">Librerías en Python</a></li>
-				<li><a class='padd' href="#31">Series temporales</a></li>
-				<li><a class='padd' href="#32">Imagenes satelitales</a></li>
-				<li><a href="#4">Referencias</a></li>
+				<li><a href="#2">Gráficas con Python</a></li>
+				<li><a href="#3">Eligiendo una librería</a></li>
+				<li><a href="#4">Ejemplos</a></li>
+				<li><a class='padd' href="#41">Datos meteorológicos</a></li>
+				<li><a class='padd' href="#42">Imágenes satelitales</a></li>
+				<li><a class='padd' href="#43">Exploración de metadatos en imágenes satelitales</a></li>
+				<li><a href="#5">Referencias</a></li>
 				</li>	
 
 			</ul>
@@ -130,24 +134,12 @@
 				Visualizaciones con Python
 			</h1>
 
-			<!-- Imagen -->
-			<div class="py-2">
-				<figure>
-					<img class="rounded mx-auto d-block" 
-					src='../img/data_vis.png' 
-					alt="Gráfico en Matplotlib" width="75%">
-					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-						Librerías populares en Python - Data Visualzation libraries for Python | Evangelos (Angelo) T. en <a href="https://www.linkedin.com/pulse/data-visualisation-libraries-python-evangelos-tzimopoulos/">LinkedIn</a>
-					</figcaption>
-				</figure>
-			</div>
-
 			<!-- Objetivo -->
 			<blockquote class="blockquote">
 				<dl>
 					<dt>Objetivo</dt>
 					<dd>
-						Presentar los gráficos que he realizado usando diversas librerías con Python en Colab.    
+						Presentar información sobre elaboración de gráficos con Python y algunos ejemplos.    
 					</dd>
 				</dl>
 			</blockquote>
@@ -162,30 +154,25 @@
 			<h2 class="h5 py-2" id="1">Importancia</h2>
 			
 			<p>
-				La elaboración de gráficos (sean estáticos o interactivos) deben cumplir el objetivo de transmitir un mensaje al espectador, mucho mejor si es entendible para personas ajenas al campo en el que te encuentras. 
+				Los gráficos deben cumplir el objetivo de transmitir un mensaje al espectador, mucho mejor si personas ajenas al público ojetivo 
+				logran captar dicho mensaje. Para su elaboración se dispone de una gran variedad de herramientas, siendo este el caso de usar lenguajes de
+				programación, ya que permite tener el mayor control posible sobre los gráficos a elaborar, además de quedar mucho mejor que los gráficos 
+				elaborados en Excel.
 			</p>
 
 			<p>
-				Una de las formas de generar gráficos o visualizaciones de manera llamativa es usando lenguajes de programación ya que te permiten editar de manera libre tu presentación, pero ello es a su vez una gran limitante, ya que se requiere del conocimiento de las herramientas que se empleará.
+				La ventaja de realizar una gráfica usando lenguajes de programación (sea Python, R, o incluso JavaScript) es la posibilidad de realizar 
+				muchos cambios y ajustar nuestras necesidades al gráfico, siendo esto a su vez una desventaja ya que se requiere de un mayor conocimiento 
+				sobre las opciones disponibles, métodos y formas para obtener dicho gráfico. 
 			</p>
 
 
-			<h2 class="h5 py-2" id="2">Librerías en Python</h2>
+			<h2 class="h5 py-2" id="2">Gráficas con Python</h2>
 
 			<p>
-				Existen muchas librerias pero es necesario no perder de vista el objetivo que se busca cumplir: ¿gráfico interactivo o estático?. A continuación presento una imagen que nos ayudará a decidir que librería podemos usar.
+				Python permite elaborar gráficas mediante el uso de libreríasa específicas, siendo el más conocido 
+				<a href="https://matplotlib.org/" target=_blank>Matplotlib</a>. Entre otras librerías tenemos:
 				
-				<figure>
-					<img class="rounded mx-auto d-block" 
-					src="https://pbpython.com/images/Python-plot-tools.png" 
-					alt="Gráfico en Matplotlib" width="70%">
-					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-						Practical Python Business - <a href="https://pbpython.com/python-vis-flowchart.html">Choosing a Python Visualization Tool</a>
-					</figcaption>
-				</figure>
-
-				Entre las más conocidas tenemos: <br>
-
 				<ul>
 					<li class='li-ref'>Matplotlib</li>
 					<li class='li-ref'>Seaborn</li>
@@ -195,43 +182,178 @@
 					<li class='li-ref'>Bokeh</li>
 				</ul>
 
-			</p> 
+			</p>
 
-			<h2 class="h5 py-2" id="3">Ejemplos</h2>
+			<h2 class="h5 py-2" id="3">Eligiendo una librería</h2>
+
 			<p>
-				A continuación unos ejemplos realizados con Plotly a partir datos de imágenes satelitales en Google Earth Engine. 
+				Según nuestra necesidad, Los gráficos pueden ser estáticos o interactivos. Los gráficos estáticos son meramente eso, estáticos. Se presentan en 
+				documentos, presentaciones y cumplen la función de mostrar un mensaje. Los gráficos interactivos por su parte, permiten interactuar con los 
+				datos empleados. Estos pueden integrarse en aplicaciones y dashboards, entre otras más.
+
+			</p>
+
+			<p>
+				A continuación presento una imagen que nos ayudará a decidir qué librería podemos usar de acuerdo a nuestra necesidad.
+				
+				<!-- Imagen -->
+				<!-- <figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/data_vis.png' 
+					alt="Gráfico en Matplotlib" width="75%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Librerías populares en Python - Data Visualzation libraries for Python | Evangelos 
+						(Angelo) T. en 
+						<a href="https://www.linkedin.com/pulse/data-visualisation-libraries-python-evangelos-tzimopoulos/">LinkedIn</a>
+					</figcaption>
+				</figure> -->
+
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src="https://pbpython.com/images/Python-plot-tools.png" 
+					alt="Gráfico en Matplotlib" width="70%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Practical Python Business - 
+						<a href="https://pbpython.com/python-vis-flowchart.html">Choosing a Python Visualization Tool</a>
+					</figcaption>
+				</figure>
+
+				El siguiente paso es dirigirnos a su documentación. Todas las librerías mencionadas poseen documentación online de acceso libre por lo que 
+				es cuestión de uno el aprender su uso. 
+			</p> 
+			
+			<p>
+				Algunos comentarios sobre las librerías:
+				<ul>
+					<li><b>Matplotlib</b> es la librería más conocida. Permite hacer muchas cosas pero otras librerías ya agilizan su uso.</li>
+					<li><b>Pandas</b>: Usa Matplotlib. No es como tal una librería para graficación pero permite realizar gráficas rápidas a 
+						partir de un dataframe.</li>
+					<li><b>Seaborn</b>: También usa Matplotlib. Añade métodos para graficar cosas más complejas que tomaría muchas 
+						líneas de código su implementación 
+						al solo usar Matplotlib.</li>
+					<li><b>Bokeh y Plotly</b>: Permiten realizar gráficos interactivos pero se requiere de conocimiento de programación web 
+						para su implementación.</li>
+				</ul>
+			</p>
+
+			<h2 class="h5 py-2" id="4">Ejemplos</h2>
+			<p>
+				A continuación le presente gráficas realizadas con algunas librerías ya antes mencionadas.  
 			</p>
 			
 			<!-- Galería de fotos -->
-			<h3 class="h6 py-2" id="31">Series temporales</h3>
-			<p>Porcentajes de nubosidad en imágenes satelitales Landsat y Sentinel-2 con plotly.</p>
+			<h3 class="h6 py-2" id="41">
+				Gráfica de datos meteorológicos
+			</h3>
+			
+			<p>
+				Tuve la oportunidad de realizar estas gráficas para proyectos de investigación. Primero realicé esta gráfica 
+				con datos de estación meteorológica en la estación del INIA en Lambayeque (Vista Florida).
+
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src="../img/blog-graficas/Figura-articulo2-min.png" 
+					alt="Gráfico" width="75%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Gráfica elaborada para un experimento de maíz en Lambayeque.
+					</figcaption>
+				</figure>
+
+			</p>
+
+			<p>
+				Posteriormente, en la estación del INIA en Arequipa (Anexo Santa Rita), pude mejorar la gráfica añadiendo 
+				la variable de evapotranspiración potencial, obtenida con el método de Penman-Monteith 
+				usando la librería <a href="https://github.com/pyet-org/pyet">pyet</a>. Presenta además información de 
+				fechas en la que se desarrolla el cultivo como anotaciones con flechas de color azul.
+
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src="../img/blog-graficas/Figura-articulo1-min.png" 
+					alt="Gráfico" width="80%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Gráfica elaborada para un experimento de ají escabeche en Arequipa.
+					</figcaption>
+				</figure>
+			</p>
+				
+			<p>
+				Ahora un gráfico interactivo.
+			</p>
+
+			<p>
+				Con Plotly pude realizar una visualización interactiva sobre los datos de temperatura de la estación 
+				meteorológica de Tinajones para las 3pm (en sí debió ser para las 11 am por un desconocimiento de 
+				que las imágenes Landsat 8 y 9 trabajan con horas UTC mientras que para la zona de estudio se usa UTC-5). 
+				
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src="../img/grafico_plotly_2.gif" 
+					alt="Gráfico" width="80%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Gráfica interactiva de variable Temperatura usando Plotly.
+					</figcaption>
+				</figure>
+			</p>
+
+			<h3 class="h6 py-2" id="42">
+				Imágenes satelitales
+			</h3>
+			
+			<p>
+				En este caso se trató de representar la variación temporal y espacial de la zona de estudio (arrozales en Lambayeque) con imágenes satelitales. 
+				Se utilizó la librería cartoee de geemap para obtener visualizaciones tipo publicación científica. Posteriormente, se realizó un gif. 
+
+				<!-- Panel 2 -->
+				<div class="row container-fluid py-1">
+					<a href="../img/gif_sentinel_historico.gif" data-lightbox="gallery" data-title="Imágenes RGB de Sentinel-2 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque." class="mx-auto d-block col-lg-6">
+						<img loading='lazy' src="../img/gif_sentinel_historico.gif" alt="GIF" class="img-fluid"></a>
+					<a href="../img/gif_landsat_historico.gif" data-lightbox="gallery" data-title="Imágenes RGB de Landsat 8 y 9 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque." class="mx-auto d-block col-lg-6">
+						<img loading='lazy' src="../img/gif_landsat_historico.gif" alt="GIF" class="img-fluid"></a>
+	
+				</div>
+			</p>
+			
+			
+			<h3 class="h6 py-2" id="43">
+				Exploración de metadatos en imágenes satelitales
+			</h3>
+			
+			<p>
+				Con Plotly pude realizar la exploración de datos de Porcentaje de Nubosidad para imágenes satelitales disponibles de Landsat y Sentinel-2 con  
+				el fin de tener una noción de qué imágenes usar en función al bajo porcentaje de nubosidad. Para procesamiento de dichos productos se requiere 
+				de imágenes con cielo despejado. Con esta gráfica me permitió realizar comparaciones entre imágenes disponibles.
+
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src="../img/grafico_plotly.gif" 
+					alt="Gráfico" width="80%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Gráfica interactiva de porcentajes de nubosidad usando Plotly.
+					</figcaption>
+				</figure>
+				
+				Además, pude añadir otra curva con datos de Landsat 9 (color rojo).
+				
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src="../img/grafico_plotly_3.gif" 
+					alt="Gráfico" width="80%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Gráfica interactiva de porcentajes de nubosidad con Sentinel-2, Landsat 8 y 9 usando Plotly.
+					</figcaption>
+				</figure>
+
+			</p>
 
 			<!-- Panel 1 -->
-			<div class="row container-fluid">
-				<a href="../img/grafico_plotly.gif" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
+			<!-- <div class="row container-fluid">
+				<a href="" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
 					<img loading='lazy' src="../img/grafico_plotly.gif" alt="Gráfico" class="img-fluid"></a>
-				<a href="../img/grafico_plotly_3.gif" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
+				<a href="" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
 					<img loading='lazy' src="../img/grafico_plotly_3.gif" alt="Gráfico" class="img-fluid"></a>
 
-				<div style="margin-top: 20px;">
-					<p>Con plotly fue posible realizar una visualización interactiva de datos de una estación meteorológica. En este caso se puede ver datos de temperatura.</p>
-				</div>
-					<a href="../img/grafico_plotly_2.gif" data-lightbox="gallery" data-title="Gráfico con Plotly en Python" class="mx-auto d-block col-lg-12">
-					<img loading='lazy' src="../img/grafico_plotly_2.gif" alt="Gráfico" class="img-fluid"></a>
-			</div>
-
-
-			<!-- Panel 2 -->
-			<h3 class="h6 py-2" style="margin-top: 20px;" id="32">Imagenes satelitales</h3>
-			<p style="margin-bottom: 0px;">Se utilizó la librería cartoee de geemap para obtener visualizaciones tipo publicación científica. Posteriormente, se realizó un gif. </p>
-			
-			<div class="row container-fluid py-1">
-				<a href="../img/gif_sentinel_historico.gif" data-lightbox="gallery" data-title="Imágenes RGB de Sentinel-2 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque." class="mx-auto d-block col-lg-6">
-					<img loading='lazy' src="../img/gif_sentinel_historico.gif" alt="GIF" class="img-fluid"></a>
-				<a href="../img/gif_landsat_historico.gif" data-lightbox="gallery" data-title="Imágenes RGB de Landsat 8 y 9 usando geemap y cartoee. Zona de estudio: Ferreñafe, Lambayeque." class="mx-auto d-block col-lg-6">
-					<img loading='lazy' src="../img/gif_landsat_historico.gif" alt="GIF" class="img-fluid"></a>
-
-			</div>
+			</div> -->
 
 			<!-- 
                 ----------------------------------
@@ -239,7 +361,7 @@
                 ----------------------------------
             -->
 
-			<h2 class="h5 py-4" id="4">Referencias</h2>
+			<h2 class="h5 py-4" id="5">Referencias</h2>
 
 			<p> 
 				Matplotlib
