@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cesar Vilca: Posts</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="all,follow">
+	<!-- Bootstrap CSS-->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- Google fonts-->
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"> -->
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+	<!-- Icon fonts-->
+	<link rel="stylesheet" href="../css/pe-icon-7-stroke.css">
+	<!-- Lightbox CSS-->
+	<link rel="stylesheet" href="../vendor/lightbox2/css/lightbox.min.css">
+	<!-- Leaflet CSS-->
+	<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+	<!-- theme stylesheet-->
+	<link rel="stylesheet" href="../css/style.green.css" id="theme-stylesheet">
+	<!-- Custom stylesheet - for your changes-->
+	<link rel="stylesheet" href="../css/custom.css">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<!-- Tweaks for older IEs--><!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+	
+		<!-- Our Custom CSS -->
+	<link rel="stylesheet" href="../css/style2.css">
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">	
+
+	<!-- CDN Actualizado (28 Abril, 2024) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+</head>
+
+<body>
+
+
+<!--Header-->
+<header class="header">
+	<nav class="navbar navbar-expand-sm py-lg-0">
+		<div class="container">
+			<p class="font-weight-bold text-uppercase mb-0"><img src="../img/favicon.png" alt="Cesar Vilca logo" style="width:75px;"> Cesar Vilca</p>
+			<button 
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+				class="navbar-toggler navbar-toggler-right small">
+				<span class="text-uppercase mr-2">Menu</span>
+				<i class="fas fa-bars"></i>
+			</button>
+			<div id="navbarSupportedContent" class="collapse navbar-collapse">
+				<ul class="navbar-nav ml-auto d-lg-flex align-items-lg-center">
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a href="../blog.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a href="../contact.html" class="nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4">Contacto</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<!-- Redacción de post -->
+<div class="container-fluid">
+<div class="row">
+
+	<!-- BOTONES -->
+	<button type="button" id="sidebarCollapse" class="btn btn-info menu-btn">
+	<i class="fas fa-align-left"></i>
+	</button>
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top" class="btn btn-info menu-btn-up">
+	<i class="fas fa-arrow-up"></i>
+	</button>
+
+	<!-- Columna Izquierda -->
+	<div class="col-2 fondo">
+
+		<div class="wrapper">
+		<nav id="sidebar">
+			<!-- <div class="sidebar-header">
+				<h3 class="h5">Post: Hablemos de Aprendizaje Automático</h3>
+			</div> -->
+
+			<ul class="list-unstyled components">
+				<li>
+                    <a class="text-center" style="font-size: 12px;" href="#0">
+						<b>Visualizaciones en Python 
+						</b>
+                    </a> 
+                </li>
+
+				<p class="text-center"><b>Contenido</b></p>
+				
+				<li><a href="#1">Importancia</a></li>
+				<li><a href="#2">Gráficas con Python</a></li>
+				<li><a href="#3">Eligiendo una librería</a></li>
+				<li><a href="#4">Ejemplos</a></li>
+				<li><a class='padd' href="#40">Curvas de absorción de nutrientes</a></li>
+				<li><a class='padd' href="#41">Datos meteorológicos</a></li>
+				<li><a class='padd' href="#42">Imágenes satelitales</a></li>
+				<li><a class='padd' href="#43">Exploración de metadatos en imágenes satelitales</a></li>
+				<li><a href="#5">Referencias</a></li>
+				</li>	
+
+			</ul>
+
+		</nav>
+		</div>
+
+	</div>
+
+	<!-- Columna Central -->
+	<div class="col-lg-8" style="background: white; padding: 20px 30px 0px 30px;">
+
+		<!-- Aquí va el contenido del artículo -->
+
+		<div class="container-fluid">
+
+			<h1 class="h4 py-4" id="0">
+				Elaboración de reportes PDF con Python usando ReportLab
+			</h1>
+
+			<!-- Objetivo -->
+			<blockquote class="blockquote">
+				<dl>
+					<dt>Objetivo</dt>
+					<dd>
+						Mostrar paso a paso cómo se genera un reporte de tipo PDF usando el lenguaje de programación Python.     
+					</dd>
+				</dl>
+			</blockquote>
+
+			<!-- 
+                ----------------------------------
+                        Redacción del post
+                ----------------------------------
+
+                Para poder usar la navegación es necesario usar el identificador "id"y modificar la sección "Columna izquierda"
+            -->
+			<h2 class="h5 py-2" id="1">¿Por qué un reporte?</h2>
+			
+			<p>
+				En el trabajo se necesitaba presentar de forma más "visual y entendible" los resultados de análisis de laboratorio por lo que se me planteó la idea de generar algo similar a un dashboard pero que se genere por cada documento emitido.
+
+				Se debía generar reportes, y un archivo PDF es un formato universal para ello. La primera opción parecía 
+				ser PowerBi pero como se iba a generar reportes muy seguidamente y para muchos PDFs (más de 100 algunas veces)
+				pues se buscó la forma de automatizar dicha generación de reportes.
+			</p>
+
+			<p>
+				A partir de datos en Excel (sea .xlsx o .csv) se generaró un reporte del siguiente tipo:
+
+				<!-- Imagen -->
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/reporte-min.png' 
+					alt="Reporte" width="85%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Reporte generado a partir de un archivo .csv
+					</figcaption>
+				</figure>
+
+				Donde se puede notar que presenta información del cliente, resultados en forma numérica y gráfica.
+			</p>
+
+			<p>
+				Ahora el cómo se generó si que fué algo complicado de realizar. Se buscó librerías que permitan generar reportes
+				y sólo había información de implementaciones para plataformas web, ya que un ejemplo sería el de emitir boletas electrónica. 
+				<br>
+				<br>
+				Encontré la librería ReportLab que resultó amigable pero no estaba preparado para lo que me esperaba: elaborar un PDF.
+			</p>
+
+			<h2 class="h5 py-2" id="2">Librería ReportLab</h2>
+
+			<p>
+				ReportLab es una una herramienta poderosa y flexible que permite crear documentos en el Formato de Documento Portátil de Adobe (PDF) usando el lenguaje Python.
+			</p>
+
+			<p>
+				Entre sus principales características se tiene:
+				
+				<ul>
+					<li class='li-ref'>Generación de PDFs complejos con Python</li>
+					<li class='li-ref'>Creación de elementos gráficos</li>
+					<li class='li-ref'>Soporte para tablas</li>
+					<li class='li-ref'>Flexibilidad de diseño</li>
+					<li class='li-ref'>Código abierto</li>
+				</ul>
+			</p>
+
+			<p>
+				Los documentos que se pueden generar se presentan a continuación:
+				
+				<ul>
+					<li class='li-ref'>Generación de informes a partir de bases de datos.</li>
+					<li class='li-ref'>Generar facturas personalizadas de clientes y productos.</li>
+					<li class='li-ref'>Creación de certificados para eventos, cursos o logros.</li>
+					<li class='li-ref'>Generación de gráficos</li>
+					<li class='li-ref'>Documentación automatizada</li>
+				</ul>
+				
+				ReportLab es una herramienta poderosa pero presenta una curva de aprendizaje tediosa, especialmente para
+				diseños complejos y elaborados. A su vez proporciona un control muy preciso pese a su complejidad de uso.
+			</p>
+			
+			<h2 class="h5 py-2" id="3">Elaboración del reporte</h2>
+			<p>
+				Se tiene los siguientes datos en una tabla de Excel. 
+
+				<!-- Imagen -->
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/reporte-datos.png' 
+					alt="Reporte" width="100%">
+					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
+						Editor de código Google Colab
+					</figcaption>
+				</figure>
+
+			</p>
+			<p>
+				Se procedió a identificar los puntos a presentar en la gráfica:
+				
+				<ul>
+					<li class='li-ref'>Título del documento</li>
+					<li class='li-ref'>Información del cliente</li>
+					<li class='li-ref'>Secciones de resultados</li>
+					<li class='li-ref'>Gráficos de barra y pie</li>
+					<li class='li-ref'>Líneas divisorias</li>
+				</ul>
+
+			</p>
+
+			<h2 class="h5 py-2" id="4">Ejemplos</h2>
+			<p>
+				A continuación le presente gráficas realizadas con algunas librerías ya antes mencionadas.  
+			</p>
+			
+			
+			<h3 class="h6 py-2" id="40">
+				Curvas de absorción de nutrientes
+			</h3>
+			
+
+			<!-- 
+                ----------------------------------
+                    Sección de referencias
+                ----------------------------------
+            -->
+
+			<h2 class="h5 py-4" id="5">Referencias</h2>
+
+			<!-- <p> 
+				Matplotlib
+				<ul>
+					<li class="li-ref">
+						<a target="_blank" href="https://matplotlib.org/">Matplotlib: Visualization with Python</a>
+					</li>
+				</ul>
+
+				Plotly		
+				<ul>
+					<li class="li-ref">
+						<a target="_blank" href="https://plotly.com/python/">Plotly Python Open Source Graphing Library</a> 
+					</li>
+					
+					<li class="li-ref">
+						<a target="_blank" href="https://plotly.com/python/graph-objects/">Graph Objects in Python</a>
+					</li>
+					<li class="li-ref">
+						<a target="_blank" href="https://community.plotly.com/t/plotly-colours-list/11730">Plotly: Colours list</a> 
+					</li>
+					<li class="li-ref">
+						<a target="_blank" href="https://plotly.com/python/axes/">Plotly: Axes in Python</a>
+					</li>
+					<li class="li-ref">
+						<a target="_blank" href="https://stackoverflow.com/questions/61631230/plotly-how-to-change-the-background-color-of-each-subplot">Stackoverflow: Plotly: How to change the background color of each subplot?</a>
+					</li>
+					<li class="li-ref">
+						<a target="_blank" href="https://digitallythrive.com/how-to-format-plotly-hover-dates-show-month-days-year/">Plotly: Cambiar formato de Hover para fechas con XHOVERFORMAT</a>
+					</li>
+					<li class="li-ref">
+						<a target="_blank" href="https://plotly.com/python/hover-text-and-formatting/">Plotly: Hover Text and Formatting in Python</a>
+					</li>
+					<li class="li-ref">
+						<a target="_blank" href="https://plotly.com/python/time-series/">Time Series and Date Axes in Python</a>
+					</li>
+					<li class="li-ref">
+						<a target="_blank" href="https://plotly.com/python/creating-and-updating-figures/">Creating and Updating Figures in Python</a>
+					</li>
+			
+				</ul>
+				
+				Blogs
+				<ul>
+					<li class="li-ref">
+						Practical Business Python - 
+						<a target="_blank" href="https://pbpython.com/python-vis-flowchart.html">Choosing a Python Visualization Tool</a> 
+					</li>
+					<li class="li-ref">
+						Medium - 
+						<a target="_blank" href="https://towardsdatascience.com/pyviz-simplifying-the-data-visualisation-process-in-python-1b6d2cb728f1">PyViz: Simplifying the Data Visualisation process in Python.</a>
+					</li>
+				</ul>
+
+			</p> -->
+
+
+            <!-- 
+                ----------------------------------
+                        Contenido adicional
+                ----------------------------------
+            -->
+
+            <!-- Mensaje de despedida -->
+			<p style="text-align: center; padding: 20px">
+				Muchas gracias por leer. Saludos!
+			</p>
+
+			<!-- Botones de navegación entre artículos -->
+			<div class="container py-lg-2">
+				<ul class="pagination justify-content-center">
+
+					<!-- Página anterior -->
+					<li class="page-item">
+						<a class="page-link" href="blog_etp.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+					</li>
+					
+					<!-- Volver al blog -->
+					<li class="page-item">
+						<a class="page-link" href="../blog.html">Volver al blog</a>
+					</li>
+					
+					<!-- Página siguiente -->
+					<li class="page-item">
+						<a class="page-link" href="blog_formulas_metric.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</li>
+
+				</ul>
+			</div>
+			
+			<!-- ----- Línea de división ----- -->
+			<hr>
+
+			<!--Footer con redes sociales-->
+			<div class="py-2" style="background: #eee, ;">
+			<ul class="list-inline text-center">
+				<!-- Facebook -->
+				<li class="list-inline-item"><a href="https://www.facebook.com/vilcagamarra/" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+				<!-- Linkedin -->
+				<li class="list-inline-item"><a href="https://www.linkedin.com/in/cesar-francisco-vilca-gamarra-916614148/" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
+				<!-- Twitter -->
+				<li class="list-inline-item"><a href="https://twitter.com/vilcagamarracf" class="social-link"><i class="fab fa-twitter"></i></a></li>
+				<!-- Github -->
+				<li class="list-inline-item"><a href="https://github.com/vilcagamarracf" class="social-link"><i class="	fab fa-github"></i></a></li>
+			</ul>
+			</div>
+		
+		</div>
+	</div>
+
+	<!-- Columna Derecha -->
+	<div class="col-2 fondo">
+	</div>
+
+</div>
+</div>
+
+
+<!-- Footer de template -->
+<div class="py-1 stickyFooter" style="background: rgba(0, 0, 0, 1); ">    
+	<div class="container">
+		<div class="text-center">
+			<p class="small text-gray mb-0">2021 - Cesar Vilca --- Template by <a href="https://bootstrapious.com" class="text-gray">Bootstrapious.com</a></p>
+		</div>
+	</div>
+</div>
+	
+<!-- 
+    ----------------------------------
+            JavaScript files
+    ----------------------------------
+-->
+
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/lightbox2/js/lightbox.min.js"></script>
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../js/custom.js"></script>
+
+<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+</body>
+</html>
