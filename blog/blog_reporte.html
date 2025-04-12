@@ -99,22 +99,23 @@
 			<ul class="list-unstyled components">
 				<li>
                     <a class="text-center" style="font-size: 12px;" href="#0">
-						<b>Visualizaciones en Python 
+						<b>
+							Elaboración de reportes PDF con Python usando ReportLab 
 						</b>
                     </a> 
                 </li>
 
 				<p class="text-center"><b>Contenido</b></p>
 				
-				<li><a href="#1">Importancia</a></li>
-				<li><a href="#2">Gráficas con Python</a></li>
-				<li><a href="#3">Eligiendo una librería</a></li>
-				<li><a href="#4">Ejemplos</a></li>
-				<li><a class='padd' href="#40">Curvas de absorción de nutrientes</a></li>
-				<li><a class='padd' href="#41">Datos meteorológicos</a></li>
-				<li><a class='padd' href="#42">Imágenes satelitales</a></li>
-				<li><a class='padd' href="#43">Exploración de metadatos en imágenes satelitales</a></li>
-				<li><a href="#5">Referencias</a></li>
+				<li><a href="#1">Algo de contexto</a></li>
+				<li><a href="#2">Librería ReportLab</a></li>
+				<li><a href="#3">Elaboración del reporte</a></li>
+				<li><a class='padd' href="#31">Datos a usar</a></li>
+				<li><a class='padd' href="#32">Partes del reporte</a></li>
+				<li><a class='padd' href="#33">Instalando ReportLab</a></li>
+				<li><a class='padd' href="#34">Elaborando una función que genere los reportes</a></li>
+				<li><a class='padd' href="#35">Algunos detalles</a></li>
+				<li><a href="#4">Referencias</a></li>
 				</li>	
 
 			</ul>
@@ -152,18 +153,14 @@
 
                 Para poder usar la navegación es necesario usar el identificador "id"y modificar la sección "Columna izquierda"
             -->
-			<h2 class="h5 py-2" id="1">¿Por qué un reporte?</h2>
+			<h2 class="h5 py-2" id="1">Algo de contexto</h2>
 			
 			<p>
-				En el trabajo se necesitaba presentar de forma más "visual y entendible" los resultados de análisis de laboratorio por lo que se me planteó la idea de generar algo similar a un dashboard pero que se genere por cada documento emitido.
-
-				Se debía generar reportes, y un archivo PDF es un formato universal para ello. La primera opción parecía 
-				ser PowerBi pero como se iba a generar reportes muy seguidamente y para muchos PDFs (más de 100 algunas veces)
-				pues se buscó la forma de automatizar dicha generación de reportes.
+				En este post les presento la forma de generar reportes automatizados en PDF a partir de  archivos .csv. Se tiene datos de resultados de análisis de laboratorio como ejemplo práctico.
 			</p>
 
 			<p>
-				A partir de datos en Excel (sea .xlsx o .csv) se generaró un reporte del siguiente tipo:
+				A partir de datos en Excel (sea .xlsx o .csv) se generó un reporte del siguiente tipo:
 
 				<!-- Imagen -->
 				<figure>
@@ -220,22 +217,37 @@
 			</p>
 			
 			<h2 class="h5 py-2" id="3">Elaboración del reporte</h2>
+			<h3 class="h6 py-2" id="31">Datos a usar</h3>
 			<p>
-				Se tiene los siguientes datos en una tabla de Excel. 
-
+				En el editor web Google Colab, importamos nuestros datos. En mi caso he conectado mi cuenta de Google Drive a
+				la libreta para acceder a mis datos. A continuación se presenta la tabla a extraer datos.
+				
 				<!-- Imagen -->
 				<figure>
 					<img class="rounded mx-auto d-block" 
 					src='../img/blog-reportlab/reporte-datos.png' 
 					alt="Reporte" width="100%">
-					<figcaption class="text-muted text-center py-3 text-uppercase font-weight-bold small">
-						Editor de código Google Colab
-					</figcaption>
 				</figure>
 
 			</p>
+
 			<p>
-				Se procedió a identificar los puntos a presentar en la gráfica:
+				Se procede a revisar que cada columna presente el tipo de dato correcto, ya que en algunas partes se usan los 
+				datos numéricos para realizar operaciones matemáticas.
+				
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/reporte-libreta0.png' 
+					alt="Reporte">
+				</figure>
+
+				Se observa que hay campos de tipo float64 que serían números con decimales, así como de tipo int64 los cuales 
+				serían números enteros. Los de tipo object son detectados como textos.
+			</p>
+			
+			<h3 class="h6 py-2" id="32">Partes del reporte</h3>
+			<p>
+				Se procedió a identificar los puntos a presentar en el reporte:
 				
 				<ul>
 					<li class='li-ref'>Título del documento</li>
@@ -244,82 +256,122 @@
 					<li class='li-ref'>Gráficos de barra y pie</li>
 					<li class='li-ref'>Líneas divisorias</li>
 				</ul>
-
+				
 			</p>
-
-			<h2 class="h5 py-2" id="4">Ejemplos</h2>
+			
+			<h3 class="h6 py-2" id="33">Instalando ReportLab</h3>
+			
 			<p>
-				A continuación le presente gráficas realizadas con algunas librerías ya antes mencionadas.  
+				Ya que estamos usando Colab, la instalación se realiza mediante el siguiente comando:
+				
+				<!-- Imagen -->
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/reporte-libreta1.png' 
+					alt="Reporte" width="100%">
+				</figure>
+				
+			</p>
+
+			<h3 class="h6 py-2" id="34">Elaborando una función que genere los reportes</h3>
+			
+			<p>
+				Se busca generar un reporte para cada fila en la tabla mostrada previamente. Para el presente ejemplo se tiene 
+				10 filas por lo que debe realizarse 10 reportes. Dicha función debe ser sencilla de usar así que la he diseñado 
+				para que solo reciba por argumento la ruta del archivo .csv. La función generará un reporte para cada fila que 
+				tenga el archivo .csv que se le adjunte, y en la misma carpeta donde se ubique dicho archivo.
 			</p>
 			
+			<p>
+				A continuación se presenta una parte de la función elaborada. Al final del post adjunto el 
+				enlace para el acceso al código completo.
+				
+				<!-- Imagen -->
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/reporte-funcion.png' 
+					alt="Reporte" >
+				</figure>
+			</p>
 			
-			<h3 class="h6 py-2" id="40">
-				Curvas de absorción de nutrientes
-			</h3>
-			
+			<p>
+				Finalmente se realiza la generación del reporte. 
+				
+				<!-- Imagen -->
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/reporte-libretaresultados.png' 
+					alt="Reporte">
+				</figure>
+				
+			</p>
 
+			<p>
+				Se han generado 10 reportes para cada fila dentro del archivo .csv. 
+									
+				<!-- Imagen -->
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/Prueba.gif' 
+					alt="Reporte" width="100%">
+				</figure>
+
+				Para revisar el código, les comparto la libreta empleada la cual se encuentra alojada en mi <b>
+					<a href="https://github.com/vilcagamarracf/Python_Snippets/blob/main/GenerarPDF.ipynb">repositorio de GitHub</a>. 
+				</b>
+			</p>
+
+			<h3 class="h6 py-2" id="35">Algunos detalles</h3>
+		
+			<p>
+				El código escrito para el presente ejemplo se tornó muy extenso, llegando a alcanzar solamente para la función 
+				alrededor de 735 líneas de código (incluyendo comentarios). 
+				
+				<!-- Imagen -->
+				<figure>
+					<img class="rounded mx-auto d-block" 
+					src='../img/blog-reportlab/reporte-detalles.png' 
+					alt="Reporte">
+				</figure>
+				
+				Las partes más complicadas de realizar se mencionan a continuación: la 
+				<ul>
+					<li>Entender que el PDF es como un lienzo en blanco que a su vez actúa como un sistema de coordenadas,
+						donde cada cosa que irá en el PDF lleva una coordenada.
+					</li>
+					<li>Incluir el logo y ubicarlo en la esquina superior izquierda.</li>
+					<li>Dividir la hoja en dos columnas y probar las coordenadas junto con espaciamientos entre textos.</li>
+					<li>Realizar tablas y que no se rompa la estructura de ellas cuando hay textos que presentan dos líneas 
+						de texto</li>
+					<li>Gráficas de barra: ya que cada cosa tiene coordenadas, las coordenadas de las  divisiones dentro de 
+						las barras también fueron calculadas para que varíe con cada dato.
+					</li>
+					<li>Los gráficos de pie resultaron no tan difíciles como los de barra, el tema era incorporarlo ya que 
+						requiere usar otro enfoque de tipo flowable que necesitó su revisión profunda de la documentación de la librería.
+					</li>
+				</ul>
+			</p>
 			<!-- 
                 ----------------------------------
                     Sección de referencias
                 ----------------------------------
             -->
 
-			<h2 class="h5 py-4" id="5">Referencias</h2>
+			<h2 class="h5 py-4" id="4">Referencias</h2>
 
-			<!-- <p> 
-				Matplotlib
+			<p> 
+				Reportlab
 				<ul>
+					<li class="li-ref">Documentación de ReportLab:
+						<a target="_blank" href="https://docs.reportlab.com/reportlab/userguide/ch1_intro/">ReportLab Docs - Introduction</a> 
+					</li>
 					<li class="li-ref">
-						<a target="_blank" href="https://matplotlib.org/">Matplotlib: Visualization with Python</a>
+						Elaboración de gráficas, columnas y demás:
+						<a target="_blank" href="https://docs.reportlab.com/reportlab/userguide/ch5_platypus/">PLATYPUS - Page Layout and Typography Using Scripts
+						</a> 
 					</li>
 				</ul>
-
-				Plotly		
-				<ul>
-					<li class="li-ref">
-						<a target="_blank" href="https://plotly.com/python/">Plotly Python Open Source Graphing Library</a> 
-					</li>
-					
-					<li class="li-ref">
-						<a target="_blank" href="https://plotly.com/python/graph-objects/">Graph Objects in Python</a>
-					</li>
-					<li class="li-ref">
-						<a target="_blank" href="https://community.plotly.com/t/plotly-colours-list/11730">Plotly: Colours list</a> 
-					</li>
-					<li class="li-ref">
-						<a target="_blank" href="https://plotly.com/python/axes/">Plotly: Axes in Python</a>
-					</li>
-					<li class="li-ref">
-						<a target="_blank" href="https://stackoverflow.com/questions/61631230/plotly-how-to-change-the-background-color-of-each-subplot">Stackoverflow: Plotly: How to change the background color of each subplot?</a>
-					</li>
-					<li class="li-ref">
-						<a target="_blank" href="https://digitallythrive.com/how-to-format-plotly-hover-dates-show-month-days-year/">Plotly: Cambiar formato de Hover para fechas con XHOVERFORMAT</a>
-					</li>
-					<li class="li-ref">
-						<a target="_blank" href="https://plotly.com/python/hover-text-and-formatting/">Plotly: Hover Text and Formatting in Python</a>
-					</li>
-					<li class="li-ref">
-						<a target="_blank" href="https://plotly.com/python/time-series/">Time Series and Date Axes in Python</a>
-					</li>
-					<li class="li-ref">
-						<a target="_blank" href="https://plotly.com/python/creating-and-updating-figures/">Creating and Updating Figures in Python</a>
-					</li>
-			
-				</ul>
-				
-				Blogs
-				<ul>
-					<li class="li-ref">
-						Practical Business Python - 
-						<a target="_blank" href="https://pbpython.com/python-vis-flowchart.html">Choosing a Python Visualization Tool</a> 
-					</li>
-					<li class="li-ref">
-						Medium - 
-						<a target="_blank" href="https://towardsdatascience.com/pyviz-simplifying-the-data-visualisation-process-in-python-1b6d2cb728f1">PyViz: Simplifying the Data Visualisation process in Python.</a>
-					</li>
-				</ul>
-
-			</p> -->
+			</p>
 
 
             <!-- 
@@ -339,7 +391,7 @@
 
 					<!-- Página anterior -->
 					<li class="page-item">
-						<a class="page-link" href="blog_etp.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+						<a class="page-link" href="blog_visualizaciones.html"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
 					</li>
 					
 					<!-- Volver al blog -->
@@ -349,7 +401,7 @@
 					
 					<!-- Página siguiente -->
 					<li class="page-item">
-						<a class="page-link" href="blog_formulas_metric.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+						<a class="page-link" href="blog_referencias.html"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
 					</li>
 
 				</ul>
