@@ -7,19 +7,19 @@
 }
 
 /* Navbar */
-.nav {
+/* .nav {
     background-color: #2e7d32;
-}
+} */
 
-.nav a {
+/* .nav a {
     color: #ffffff !important;
-}
+} */
 
 /* Botones y acentos */
 .button,
 a.button {
-    background-color: #2e7d32;
-    color: #ffffff;
+    background-color: #000000;
+    color: #000000;
     border: none;
 }
 

@@ -8,3 +8,45 @@ theme = "PaperMod"
   author = "Cesar Vilca"
   ShowReadingTime = true
   ShowShareButtons = false
+
+  [params.profileMode]
+    enabled = true
+    title = "Cesar Vilca"
+    subtitle = "Agricultura de Precisión · Teledetección · Programación"
+    imageUrl = "/img/foto_perfil.jpg"
+    imageTitle = "Cesar Vilca"
+
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "/posts/"
+
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "/cv/"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/vilcagamarracf"
+
+[[params.socialIcons]]
+  name = "twitter"
+  url = "https://twitter.com/vilcagamarracf"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/cesarvilca/"
+
+[[menus.main]]
+  name = "About"
+  url = "/"
+  weight = 1
+
+[[menus.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 2
+
+[[menus.main]]
+  name = "CV"
+  url = "/cv/"
+  weight = 3
