@@ -4,3 +4,11 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Hugo output
+public/
+# Hugo build lock
+.hugo_build.lock
+# OS
+.DS_Store
+Thumbs.db
