@@ -8,45 +8,40 @@ theme = "PaperMod"
   author = "Cesar Vilca"
   ShowReadingTime = true
   ShowShareButtons = false
+  customCSS = ["css/extended/custom.css"]
 
   [params.profileMode]
     enabled = true
     title = "Cesar Vilca"
-    subtitle = "Agricultura de Precisión · Teledetección · Programación"
-    imageUrl = "/img/foto_perfil.jpg"
-    imageTitle = "Cesar Vilca"
+    subtitle = "Agricultura de Precisión · Teledetección · Estadística · Programación"
+    imageUrl = "/img/foto_perfil_vf.jpg"
 
     [[params.profileMode.buttons]]
       name = "Blog"
       url = "/posts/"
-
-    [[params.profileMode.buttons]]
-      name = "CV"
-      url = "/cv/"
 
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/vilcagamarracf"
 
 [[params.socialIcons]]
-  name = "twitter"
+  name = "x"
   url = "https://twitter.com/vilcagamarracf"
 
 [[params.socialIcons]]
   name = "linkedin"
   url = "https://www.linkedin.com/in/cesarvilca/"
 
+[[params.socialIcons]]
+  name = "googlescholar"
+  url = "https://scholar.google.com/citations?user=GDn7H2wAAAAJ&hl=en"
+
 [[menus.main]]
   name = "About"
-  url = "/"
+  url = "/about/"
   weight = 1
 
 [[menus.main]]
   name = "Blog"
   url = "/posts/"
   weight = 2
-
-[[menus.main]]
-  name = "CV"
-  url = "/cv/"
-  weight = 3
