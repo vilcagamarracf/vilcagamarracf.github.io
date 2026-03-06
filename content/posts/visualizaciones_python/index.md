@@ -1,7 +1,7 @@
 +++
 title = 'Visualizaciones en Python'
 date = '2026-03-06T03:25:38-05:00'
-draft = true
+draft = false
 description = 'Conjunto de gráficas realizadas en Python.'
 tags = []
 categories = []
