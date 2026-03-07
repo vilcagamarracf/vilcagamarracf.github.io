@@ -5,6 +5,7 @@ draft = false
 description = ''
 tags = []
 categories = []
+weight = 2
 +++
 
 Presento una breve introducción a la plataforma de análisis geoespacial de escala mundial además de links de importancia.

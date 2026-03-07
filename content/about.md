@@ -4,7 +4,7 @@ draft = false
 title = 'Acerca de mí'
 +++
 
-![Cesar Vilca](/img/foto_perfil_vf.jpg)
+![Cesar Vilca](/img/foto_perfil_vf.jpg#center)
 
 Bachiller de Ingeniería Agrícola  
 Universidad Nacional Agraria La Molina, Perú

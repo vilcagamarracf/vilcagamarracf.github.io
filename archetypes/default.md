@@ -5,4 +5,9 @@ draft = true
 description = ''
 tags = []
 categories = []
+
+weight = ''
+showtoc = true
+ShowPostNavLinks = true
+
 +++

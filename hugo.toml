@@ -1,13 +1,18 @@
 baseURL = "https://vilcagamarracf.github.io/"
-languageCode = "es-PE"
+defaultContentLanguage = 'es'
+languageCode = "es-pe"
 title = "Cesar Vilca"
 theme = "PaperMod"
 
+[markup.goldmark.renderer]
+  unsafe = true
+  
 [params]
   description = "Agricultura de Precisión, Teledetección y Programación"
   author = "Cesar Vilca"
   ShowReadingTime = true
   ShowShareButtons = false
+  ShowCodeCopyButtons = true
   customCSS = ["css/extended/custom.css"]
 
   [params.profileMode]
@@ -37,7 +42,7 @@ theme = "PaperMod"
   url = "https://scholar.google.com/citations?user=GDn7H2wAAAAJ&hl=en"
 
 [[menus.main]]
-  name = "About"
+  name = "Sobre mí"
   url = "/about/"
   weight = 1
 
