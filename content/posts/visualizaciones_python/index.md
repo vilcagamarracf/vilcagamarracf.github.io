@@ -9,7 +9,6 @@ categories = []
 weight = 1
 showtoc = true
 ShowPostNavLinks = true
-ShareButtons = ['x']
 
 +++
 
@@ -159,5 +158,7 @@ Para mi tesis, se plasmó los focos de calor en función al filtrado de valores 
   - Medium - [PyViz: Simplifying the Data Visualisation process in Python](https://towardsdatascience.com/pyviz-simplifying-the-data-visualisation-process-in-python-1b6d2cb728f1)
 
 
-Estos son las gráficas más representativas que he realizado para investigaciones hasta la fecha. Conforme vaya generando más, las incluiré aquí. Muchas gracias por leer.
+Estos son las gráficas más representativas que he realizado para investigaciones hasta la fecha usando Python. Conforme vaya generando más, las iré incluyendo por aquí. 
+
+Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.
 
