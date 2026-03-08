@@ -17,6 +17,8 @@ math = true
   
 [params]
   description = "Agricultura de Precisión, Teledetección y Programación"
+
+
   author = "Cesar Vilca"
   ShowReadingTime = true
   ShowShareButtons = false

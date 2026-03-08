@@ -1,8 +1,8 @@
 +++
-title = 'Google Earth Engine: Breve Introducción'
+title = 'Google Earth Engine: Procesamiento de imágenes satelitales con JavaScript y Python'
 date = '2026-03-06T03:33:32-05:00'
 draft = false
-description = ''
+description = 'Breve introducción a la plataforma, así como la recopilación de aplicaciones en la Agricultura y demás recursos'
 tags = ['Google Earth Engine', 'Python']
 categories = []
 
@@ -11,16 +11,15 @@ showtoc = true
 ShowPostNavLinks = true
 +++
 
-Breve introducción a la plataforma, así como la recopilación de aplicaciones en la Agricultura y demás recursos.
-
 ![](img/google-earth-engine.jpg#center)
 
-## Introducción
-[Google Earth Engine](https://earthengine.google.com/) nace a partir de una necesidad: disponer de una base de datos geoespaciales a investigadores con poca o nula experiencia previa en administración de bases de datos.
+## ¿Qué es exactamente?
+
+[Google Earth Engine](https://earthengine.google.com/) es una plataforma para el análisis científico y la visualización de conjuntos de datos geoespaciales, para usuarios académicos, organizaciones sin fines de lucro, comerciales y gubernamentales.
+Nace a partir de una necesidad: disponer de una base de datos geoespaciales a investigadores con poca o nula experiencia previa en administración de bases de datos.
 
 ![alt text](image.png)
 
-## ¿Qué es exactamente?
 En la sección de Preguntas más frecuentes (FAQ) se menciona lo siguiente:
 
 > Earth Engine es una plataforma para el análisis científico y la visualización de conjuntos de datos geoespaciales, para usuarios académicos, sin fines de lucro, comerciales y gubernamentales.

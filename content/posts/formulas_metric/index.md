@@ -1,5 +1,5 @@
 +++
-title = 'Fórmulas estilo "publicación" usando LaTeX'
+title = 'Fórmulas científicas en la web con LaTeX y MathJax'
 date = '2026-03-06T03:36:35-05:00'
 draft = false
 description = 'Fórmulas con lenguaje Latex renderizados en la web usando Mathjax.'
@@ -14,9 +14,9 @@ math = true
 
 +++
 
-## Qué es LaTeX
+## ¿Qué es LaTeX?
 
-$\LaTeX$ es un sistema de composición de textos de alta calidad, utilizado mayormente en documentos técnicos o científicos de todo tipo de tamaños y empleandose en cualquier formato editorial. Es muy utilizado para la composición de artículos académicos, tesis y libros técnicos, donde la calidad tipográfica son comparables a la de una editorial científica de primera línea. Es considerado un programa profesional para creación de documentos donde su principal ventaja es que siempre generar un único resultado, el cual puede ser exportado a numerosos formatos. Tiene a su vez en cuenta numerosos aspectos tipográficos editables.
+LaTeX es un sistema de composición de textos de alta calidad, utilizado mayormente en documentos técnicos o científicos de todo tipo de tamaños y empleandose en cualquier formato editorial. Es muy utilizado para la composición de artículos académicos, tesis y libros técnicos, donde la calidad tipográfica son comparables a la de una editorial científica de primera línea. Es considerado un programa profesional para creación de documentos donde su principal ventaja es que siempre generar un único resultado, el cual puede ser exportado a numerosos formatos. Tiene a su vez en cuenta numerosos aspectos tipográficos editables.
 
 A pesar de ello, lo que nos trae aquí es una parte pequeña de ese universo, las fórmulas. Cuando redactamos un documento técnico científico hay momentos donde debemos presentar una fórmula. Usualmente se trabaja con Word ya que es el más común de todos al ser popular en el sistema Windows. A continuación te presento una forma sencilla de cómo usar la IA de ChatGPT para generar la fórmula y usarla en Word. 
 

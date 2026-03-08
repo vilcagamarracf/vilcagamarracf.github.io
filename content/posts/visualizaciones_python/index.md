@@ -1,5 +1,5 @@
 +++
-title = 'Visualizaciones en Python'
+title = 'Visualizaciones científicas con Python para agricultura e investigación'
 date = '2026-03-06T03:25:38-05:00'
 draft = false
 description = 'Conjunto de gráficas realizadas en Python.'

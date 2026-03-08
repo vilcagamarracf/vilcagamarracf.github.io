@@ -1,5 +1,5 @@
 +++
-title = 'Elaboración de reportes PDF con Python usando ReportLab'
+title = 'Generación de reportes PDF con Python y ReportLab'
 date = '2026-03-06T03:35:27-05:00'
 draft = false
 description = 'Presentar el proceso para elaborar un reporte PDF usando el lenguaje de programación Python.'

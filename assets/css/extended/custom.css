@@ -86,6 +86,13 @@ h2, h3 {
     color: #ffffff !important;
 } */
 
+figcaption {
+    text-align: center;
+    font-size: 0.85em;
+    color: #666;
+    /* margin-top: 6px; */
+}
+
 /* Botones y acentos */
 .button,
 a.button {
