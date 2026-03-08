@@ -1,13 +1,13 @@
 +++
-date = '2026-03-06T02:02:12-05:00'
 draft = false
 title = 'Acerca de mí'
+hideMeta = true
 +++
 
 ![Cesar Vilca](/img/foto_perfil_vf.jpg#center)
+*Foto en la estación meteorológica del INIA-Vista Florida, Lambayeque.*
 
-Bachiller de Ingeniería Agrícola  
-Universidad Nacional Agraria La Molina, Perú
+Soy Cesar Vilca, Bachiller de Ingeniería Agrícola de la Universidad Nacional Agraria La Molina, Perú.
 
 Especializado en procesamiento de imágenes satelitales y SIG aplicado a la 
 Agricultura. Uso de lenguajes de programación como Python y R para 
