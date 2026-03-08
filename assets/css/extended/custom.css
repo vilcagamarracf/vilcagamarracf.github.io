@@ -39,9 +39,12 @@ html {
 
 body {
     font-size: 1.125rem; /* 18px: Legible y profesional */
-    line-height: 1.65;
+    /* line-height: 1.65; */
     color: #333;
     -webkit-font-smoothing: antialiased;
+
+    hyphens: auto; 
+    word-break: break-word;
 }
 
 /* Título principal (Solo uno por página) */
