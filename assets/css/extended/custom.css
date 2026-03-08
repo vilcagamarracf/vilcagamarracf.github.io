@@ -1,11 +1,3 @@
-:root {
-    --theme: #ffffff;
-    --entry: #ffffff;
-    --primary: #2e7d32;
-    --secondary: #4a4a4a;
-    --border: #e0e0e0;
-}
-
 /* Eliminar bordes y fondo de las cards de posts */
 .post-entry {
     border: none;
@@ -40,7 +32,7 @@ html {
 body {
     font-size: 1.125rem; /* 18px: Legible y profesional */
     /* line-height: 1.65; */
-    color: #333;
+    /* color: #333; */
     -webkit-font-smoothing: antialiased;
 
     hyphens: auto; 
@@ -86,30 +78,7 @@ h2, h3 {
     color: #ffffff !important;
 } */
 
-figcaption {
-    text-align: center;
-    font-size: 0.85em;
-    color: #666;
-    /* margin-top: 6px; */
-}
 
-/* Botones y acentos */
-.button,
-a.button {
-    /* background-color: #000000; */
-    color: #000000;
-    border: none;
-}
 
-.button:hover {
-    /* background-color: #1b5e20;  verde más oscuro al hover */
-}
 
-/* Links */
-a {
-    color: #2e7d32;
-}
 
-a:hover {
-    color: #1b5e20;
-}
