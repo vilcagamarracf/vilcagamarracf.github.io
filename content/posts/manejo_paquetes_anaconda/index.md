@@ -1,21 +1,17 @@
 +++
-title = 'Manejo_paquetes_anaconda'
+title = 'Manejo de paquetes y ambientes con Anaconda'
 date = '2026-03-06T03:35:58-05:00'
 draft = false
 description = ''
 tags = []
 categories = []
 
-weight = 1
+weight = 10
 showtoc = true
 ShowPostNavLinks = true
 +++
 
-# Manejo de paquetes y ambientes con Anaconda: Guía de Supervivencia
-
 En el desarrollo de proyectos científicos y de ciencia de datos, la gestión de dependencias es uno de los mayores retos. Trabajar en **local** (con herramientas como Anaconda o PyCharm) ofrece estabilidad y persistencia, mientras que trabajar en la **nube** (como Google Colab) prioriza la inmediatez y el uso de recursos externos. Este post se centra en dominar la terminal de Anaconda para un flujo de trabajo eficiente.
-
----
 
 ## 1. Conceptos Fundamentales: Conda vs. Anaconda
 
@@ -25,8 +21,6 @@ Es común confundir estos términos, pero entender su diferencia es clave para s
 * **Anaconda:** Es la "suite" completa. Una distribución que incluye Python, R y cientos de paquetes científicos preinstalados.
 * **Miniconda:** Una versión minimalista que solo incluye Conda y sus dependencias básicas. Ideal si prefieres instalar solo lo que necesitas.
 
-
----
 
 ## 2. Gestión de Paquetes (Packages)
 
@@ -45,7 +39,6 @@ Para instalar paquetes en Python, se recomienda usar **Conda** en lugar de PIP c
 
 > **Nota sobre Versionamiento:** Conda utiliza el sistema **MAJOR.MINOR.PATCH**. Un cambio en *Major* implica cambios drásticos, *Minor* añade funciones y *Patch* corrige errores sin afectar la compatibilidad.
 
----
 
 ## 3. Canales (Channels)
 
@@ -53,8 +46,6 @@ Los canales son las direcciones o repositorios de donde se descargan los paquete
 
 * **Buscar en un canal específico:** `conda search -c conda-forge NOMBRE`
 * **Instalar desde un canal:** `conda install -c conda-forge NOMBRE`
-
----
 
 ## 4. Gestión de Ambientes (Environments)
 
@@ -73,7 +64,6 @@ Los ambientes permiten aislar proyectos. Por ejemplo, puedes tener un ambiente c
 4.  **Eliminar un ambiente:**
     `conda env remove -n mi_proyecto`.
 
----
 
 ## Conclusiones
 

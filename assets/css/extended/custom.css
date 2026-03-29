@@ -64,6 +64,13 @@ h3 {
     font-weight: 600;
 }
 
+/* Subtítulos de cuarto nivel */
+h4 {
+    font-size: 12pt !important; /* 22px */
+    /* margin-top: 2rem; */
+    font-weight: 500;
+}
+
 h2, h3 {
     /* Da un poco de aire antes del párrafo */
     margin-bottom: 0.5rem; 

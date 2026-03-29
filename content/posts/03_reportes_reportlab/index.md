@@ -3,10 +3,10 @@ title = 'Generación de reportes PDF con Python y ReportLab'
 date = '2026-03-06T03:35:27-05:00'
 draft = false
 description = 'Presentar el proceso para elaborar un reporte PDF usando el lenguaje de programación Python.'
-tags = ['Python']
+tags = ['python']
 categories = []
 
-weight = 2
+weight = 3
 showtoc = true
 ShowPostNavLinks = true
 +++
@@ -15,7 +15,7 @@ En este post les presento la forma de generar reportes automatizados en PDF a pa
 
 A partir de datos en Excel (sea .xlsx o .csv) se generó un reporte del siguiente tipo:
 
-![](img/reporte.png)
+![](img/reporte.png#center)
 
 Donde se puede notar que presenta información del cliente, resultados en forma numérica y gráfica.
 
@@ -49,11 +49,11 @@ Esta herramienta es poderosa pero presenta una curva de aprendizaje tediosa, esp
 ### Datos a usar
 En el editor web Google Colab, importamos nuestros datos. En mi caso he conectado mi cuenta de Google Drive a la libreta para acceder a mis datos. A continuación se presenta la tabla a extraer datos.
 
-![](img/reporte_datos.png)
+![](img/reporte_datos.png#center)
 
 Se procede a revisar que cada columna presente el tipo de dato correcto, ya que en algunas partes se usan los datos numéricos para realizar operaciones matemáticas.
 
-![](img/reporte-libreta0.png)
+![](img/reporte-libreta0.png#center)
 
 Se observa que hay campos de tipo float64 que serían números con decimales, así como de tipo int64 los cuales serían números enteros. Los de tipo object son detectados como textos.
 
@@ -77,11 +77,11 @@ Se busca generar un reporte para cada fila en la tabla mostrada previamente. Par
 
 A continuación se presenta una parte de la función elaborada. Al final del post adjunto el enlace para el acceso al código completo.
 
-![](img/reporte-funcion.png)
+![](img/reporte-funcion.png#center)
 
 Finalmente se realiza la generación del reporte.
 
-![](img/reporte-libretaresultados.png)
+![](img/reporte-libretaresultados.png#center)
 
 Se han generado 10 reportes para cada fila dentro del archivo .csv.
 
@@ -92,7 +92,7 @@ Para revisar el código, les comparto la libreta empleada la cual se encuentra a
 ### Algunos detalles
 El código escrito para el presente ejemplo se tornó muy extenso, llegando a alcanzar solamente para la función alrededor de 735 líneas de código (incluyendo comentarios).
 
-![](img/reporte-detalles.png)
+![](img/reporte-detalles.png#center)
 
 Las partes más complicadas de realizar se mencionan a continuación:
 - Entender que el PDF es como un lienzo en blanco que a su vez actúa como un sistema de coordenadas, donde cada cosa que irá en el PDF lleva una coordenada.
@@ -104,8 +104,7 @@ Las partes más complicadas de realizar se mencionan a continuación:
 
 ## Referencias
 
-- Reportlab
-  - Documentación de ReportLab: [ReportLab Docs - Introduction](https://docs.reportlab.com/reportlab/userguide/ch1_intro/)
-  - Elaboración de gráficas, columnas y demás: [PLATYPUS - Page Layout and Typography Using Scripts](https://docs.reportlab.com/reportlab/userguide/ch5_platypus/)
+- ReportLab Docs: Introduction. [Enlace](https://docs.reportlab.com/reportlab/userguide/ch1_intro/)
+- ReportLab Docs: PLATYPUS - Page Layout and Typography Using Scripts. [Enlace](https://docs.reportlab.com/reportlab/userguide/ch5_platypus/)
 
 Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.

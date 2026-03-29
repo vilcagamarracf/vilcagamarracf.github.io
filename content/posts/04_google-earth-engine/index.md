@@ -6,7 +6,7 @@ description = 'Breve introducción a la plataforma, así como la recopilación d
 tags = ['Google Earth Engine', 'Python']
 categories = []
 
-weight = 3
+weight = 4
 showtoc = true
 ShowPostNavLinks = true
 +++
@@ -110,22 +110,23 @@ La plataforma se encuentra operando desde el año 2011 y ha ido ganando populari
 
 ## Referencias
 
-- Artículo
-  - Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote sensing of Environment*, 202, 18-27. [http://dx.doi.org/10.1016/j.rse.2017.06.031](https://www.sciencedirect.com/science/article/pii/S0034425717302900)
-- Sitios web
-  - [Google Earth Engine - Portal](https://earthengine.google.com/)
-  - [Google Earth Engine - Creación de cuenta](https://earthengine.google.com/signup/)
-  - [Google Earth Engine - Preguntas frecuentes (FAQ)](https://earthengine.google.com/faq/)
-  - [Google Earth Engine - Documentación](https://developers.google.com/earth-engine/)
-  - Ambientes de Desarrollo e Integraciones disponibles:
-    - [JavaScript: Get Started with Earth Engine](https://developers.google.com/earth-engine/guides/getstarted)
-    - [Python: Instalación de la API de Python](https://developers.google.com/earth-engine/guides/python_install)
-    - [R: Google Earth Engine for R](https://r-spatial.github.io/rgee/)
-    - [QGIS: Integrates Google Earth Engine and QGIS using Python API](https://gee-community.github.io/qgis-earthengine-plugin/)
-  - [Google Earth Engine API - Repositorio en Github](https://github.com/google/earthengine-api)
-  - [Google Earth Engine - Referencia de la API: todos los comandos disponibles en Earth Engine](https://developers.google.com/earth-engine/apidocs)
-  - [Google Earth Engine - Guías](https://developers.google.com/earth-engine/guides): (en su mayoría en lenguaje JavaScript)
-  - [Google Earth Engine - Tutoriales](https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard)
+Artículo científico
+- Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote sensing of Environment*, 202, 18-27. [Enlace](http://dx.doi.org/10.1016/j.rse.2017.06.031)
+
+Sitios web
+- Google Earth Engine - Portal. [Enlace](https://earthengine.google.com/)
+- Google Earth Engine - Creación de cuenta. [Enlace](https://earthengine.google.com/signup/)
+- Google Earth Engine - Preguntas frecuentes (FAQ). [Enlace](https://earthengine.google.com/faq/)
+- Google Earth Engine - Documentación. [Enlace](https://developers.google.com/earth-engine/)
+- Ambientes de Desarrollo e Integraciones disponibles:
+  - JavaScript: Get Started with Earth Engine. [Enlace](https://developers.google.com/earth-engine/guides/getstarted)
+  - Python: Instalación de la API de Python. [Enlace](https://developers.google.com/earth-engine/guides/python_install)
+  - R: Google Earth Engine for R. [Enlace](https://r-spatial.github.io/rgee/)
+  - QGIS: Integrates Google Earth Engine and QGIS using Python API. [Enlace](https://gee-community.github.io/qgis-earthengine-plugin/)
+- Google Earth Engine API - Repositorio en Github. [Enlace](https://github.com/google/earthengine-api)
+- Google Earth Engine - Referencia de la API: todos los comandos disponibles en Earth Engine. [Enlace](https://developers.google.com/earth-engine/apidocs)
+- Google Earth Engine - Guías : [Enlace](https://developers.google.com/earth-engine/guides)
+- Google Earth Engine - Tutoriales. [Enlace](https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard)
 
 Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.
 
