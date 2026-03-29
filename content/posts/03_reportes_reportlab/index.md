@@ -102,9 +102,17 @@ Las partes más complicadas de realizar se mencionan a continuación:
 - Gráficas de barra: ya que cada cosa tiene coordenadas, las coordenadas de las divisiones dentro de las barras también fueron calculadas para que varíe con cada dato.
 - Los gráficos de pie resultaron no tan difíciles como los de barra, el tema era incorporarlo ya que requiere usar otro enfoque de tipo flowable que necesitó su revisión profunda de la documentación de la librería.
 
+## Conclusiones
+
+Es cierto que tiene su complejidad en un inicio tener que elaborar el flujo de trabajo desde cero, pero una vez conseguido
+los resultados que uno espera pues solo le queda agilizar el proceso. Tiene también sus limitaciones como es el caso de 
+recibir datos incompletos o quizás archivos no estructurados al formato que se estableció para este flujo, pero cada cambio o 
+implementación permite comprender mejor nuestro trabajo.
+
 ## Referencias
 
 - ReportLab Docs: Introduction. [Enlace](https://docs.reportlab.com/reportlab/userguide/ch1_intro/)
 - ReportLab Docs: PLATYPUS - Page Layout and Typography Using Scripts. [Enlace](https://docs.reportlab.com/reportlab/userguide/ch5_platypus/)
 
+---
 Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.

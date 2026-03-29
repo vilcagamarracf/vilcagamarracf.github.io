@@ -57,6 +57,11 @@ math = true
   weight = 1
 
 [[menus.main]]
+  name = "Publicaciones"
+  url = "/publications/"
+  weight = 2
+
+[[menus.main]]
   name = "Blog"
   url = "/posts/"
-  weight = 2
+  weight = 3

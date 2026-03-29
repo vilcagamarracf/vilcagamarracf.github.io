@@ -109,7 +109,6 @@ Valle de Chincha - EVI, Dataset: Sentinel-2A
 La plataforma se encuentra operando desde el año 2011 y ha ido ganando popularidad con el paso de los años debido a la potencia computacional que ofrece de manera gratuita a los investigadores, lo cual ha permitido el aumento de publicaciones académicas en gran cantidad.
 
 ## Referencias
-
 Artículo científico
 - Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R. (2017). Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote sensing of Environment*, 202, 18-27. [Enlace](http://dx.doi.org/10.1016/j.rse.2017.06.031)
 
@@ -127,6 +126,8 @@ Sitios web
 - Google Earth Engine - Referencia de la API: todos los comandos disponibles en Earth Engine. [Enlace](https://developers.google.com/earth-engine/apidocs)
 - Google Earth Engine - Guías : [Enlace](https://developers.google.com/earth-engine/guides)
 - Google Earth Engine - Tutoriales. [Enlace](https://developers.google.com/earth-engine/tutorials/community/intro-to-python-api-guiattard)
+
+---
 
 Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.
 

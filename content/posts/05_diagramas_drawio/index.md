@@ -21,8 +21,14 @@ ShowPostNavLinks = true
 Presento a continuación el diagrama de flujo sobre la estimación de evapotranspiración diaria en mi tesis:
 ![](Diagramas-METRIC.svg#center)
 
+## Conclusiones
+
+Si bien existe otros programas para realizar diagramas, draw.io es una opción simple y sencilla el cual da opciones de exportación
+amplio, de tal manera que puedes compartir tu resultado en distintos formatos.
+
 ## Referencias
 
 - Draw.io. [Enlace](https://app.diagrams.net/)
 
+---
 Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.

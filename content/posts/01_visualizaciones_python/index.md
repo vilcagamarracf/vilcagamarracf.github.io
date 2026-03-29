@@ -137,6 +137,14 @@ Para mi tesis, se plasmó los focos de calor en función al filtrado de valores 
   <img src="2022-03-10_PC.png" alt="" style="width: 50%;">
 </div>
 
+## Conclusiones
+Python, a pesar de ser un lenguaje ya con años de desarrollo, sigue siendo una alternativa para el desarrollo de figuras 
+con este estilo. Es cierto que uno puede modificar a gusto hasta obtener los resultados que mejor le agraden a uno, pero también
+saber que el generar una imagen así también dependerá del lenguaje con el que hayas realizado los demás análisis. Si uno
+realizó el análisis en R, sugiero exportar los resultados en archivos .csv para poder utilizarlos con Python, o sino desarrollar
+la figura directamente en el mismo R, con el fin de tener todo el flujo en un mismo ambiente.
+
+Estos son las gráficas más representativas que he realizado para investigaciones hasta la fecha. Conforme vaya generando más, las iré incluyendo por aquí.
 
 ## Referencias
 
@@ -157,8 +165,5 @@ Para mi tesis, se plasmó los focos de calor en función al filtrado de valores 
   - Practical Business Python - [Choosing a Python Visualization Tool](https://pbpython.com/python-vis-flowchart.html)
   - Medium - [PyViz: Simplifying the Data Visualisation process in Python](https://towardsdatascience.com/pyviz-simplifying-the-data-visualisation-process-in-python-1b6d2cb728f1)
 
-
-Estos son las gráficas más representativas que he realizado para investigaciones hasta la fecha usando Python. Conforme vaya generando más, las iré incluyendo por aquí. 
-
+---
 Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.
-

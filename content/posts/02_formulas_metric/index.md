@@ -48,7 +48,7 @@ Para poder utilizar esta fórmula puedes dar click derecho sobre la fórmula ren
 
 ![alt text](image-1.png#center)
 
-## Ejemplos de fórmulas
+## Ejemplos
 
 ### Índice de calidad del suelo ponderado (SQIw)
 
@@ -207,6 +207,12 @@ Calor latente de vaporización:
 
 $$\lambda = \left(2.501 - 0.00236\,(T_s - 273.15)\right) \times 10^6$$
 
+## Conclusiones
+
+El disponer estas fórmulas en este blog permite reutilizarlas en futuros trabajos que requieran dichos análisis permitiendo
+agilizar con los detalles finales. Invito al lector a aprender un poco más sobre LaTeX ya que es una forma de obtener
+resultados de estilo publicación, el cual le da una mejor presentación.
+
 ## Referencias
 
 Sitios web
@@ -218,6 +224,8 @@ Artículos científicos
 - Poma-Chamana, R., Vilca-Gamarra, C., Hermoza, N., Mercado, R., Mejía, S., Rengifo, R., & Quispe, K. (2025). Estimation and mapping of soil fertility index in arid agricultural environments of the Tambo Valley using regression kriging. *Frontiers in Soil Science*, 5, 1706974. [Enlace](https://doi.org/10.3389/fsoil.2025.1706974)
 - Poma-Chamana, R., Vilca-Gamarra, C., Linares-Escapa, S., Puma-Huacani, K., Carrillo, A., Villalta-Soto, M., & Quispe, K. (2026). Soil Quality in Olive Orchards of Southern Peru Using a Weighted Soil Quality Index (SQIw): Constraints by Salinity, Organic Matter and Sustainable Management Approach. *Frontiers in Soil Science*, 6, 1724235. [Enlace](https://doi.org/10.3389/fsoil.2026.1724235)
 - Allen, R. G., Tasumi, M., & Trezza, R. (2007). Satellite-based energy balance for mapping evapotranspiration with internalized calibration (METRIC)—Model. *Journal of irrigation and drainage engineering*, 133(4), 380-394. [Enlace](https://www.researchgate.net/publication/228615269_Satellite-Based_Energy_Balance_for_Mapping_Evapotranspiration_With_Internalized_Calibration_METRIC_-_Model)
+
+---
 
 Muchas gracias por leer. Te invito a revisar los demás posts mediante los tags aquí abajo.
 
