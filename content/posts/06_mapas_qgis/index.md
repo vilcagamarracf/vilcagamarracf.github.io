@@ -54,7 +54,7 @@ De forma similar, en [Poma et al. (2026)](https://doi.org/10.3389/fsoil.2026.172
 ![alt text](Mapa_BU-2.jpeg)
 
 Así como la representación de agrupaciones entre datos mediante análisis LISA.
-![alt text](Mapa_OC-1-1.jpeg)
+![alt text](Mapa_OC-1.jpeg)
 
 ## Referencias
 
